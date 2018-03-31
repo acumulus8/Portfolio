@@ -1,0 +1,42 @@
+.project {
+    width: 90%;
+    display: flex;
+    padding: 2rem 0 2rem 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid $mainGray;
+
+    &__image-container {
+        width: 25%;
+        margin: 0 5% 8% 10%;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &__text {
+        width: 50%;
+        font-weight: $font-light;
+    }
+
+    &__heading {
+        margin: 0;
+    }
+
+    h4 {
+        margin-top: .2rem;
+    }
+
+    &__link {
+        margin-right: 30px;
+
+        a:hover {
+            color: pink;
+        }
+        
+        a:active {
+            color: blue;
+        }
+    }
+}

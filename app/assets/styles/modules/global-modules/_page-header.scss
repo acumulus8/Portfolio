@@ -1,0 +1,14 @@
+.page-header {
+    font-size: 5rem;
+    margin: 10% 0 10% 10%;
+
+    &--portfolio {
+        @include heading-border(blue);
+        @include heading-padding(10px);
+    }
+
+    &--skills {
+        @include heading-border(green);
+        @include heading-padding(0);
+    }
+}

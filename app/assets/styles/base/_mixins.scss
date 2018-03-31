@@ -1,0 +1,9 @@
+@mixin heading-border($color) {
+    border-left: 1rem solid $color;
+    border-bottom: 1rem solid $color;
+}
+
+@mixin heading-padding($bottom) {
+    padding-left: 20px;
+    padding-bottom: $bottom;
+}
