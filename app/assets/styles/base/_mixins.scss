@@ -1,6 +1,6 @@
 @mixin heading-border($color) {
-    border-left: 1rem solid $color;
-    border-bottom: 1rem solid $color;
+    border-left: .8rem solid $color;
+    border-bottom: .8rem solid $color;
 }
 
 @mixin heading-padding($bottom) {

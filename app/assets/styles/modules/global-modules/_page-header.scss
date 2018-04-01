@@ -9,6 +9,11 @@
 
     &--skills {
         @include heading-border(green);
+        @include heading-padding(10px);
+    }
+
+    &--about {
+        @include heading-border(red);
         @include heading-padding(0);
     }
 }

@@ -18,6 +18,7 @@
     &__text {
         width: 50%;
         font-weight: $font-light;
+        position: relative;
     }
 
     &__heading {
@@ -30,13 +31,25 @@
 
     &__link {
         margin-right: 30px;
+        position: absolute;
 
-        a:hover {
-            color: pink;
+        &--move-right {
+            left: 30%;
         }
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            transition: all .22s ease-out;
+
+            &:hover {
+                font-size: 1.1rem;
+                color: green;
+            }
         
-        a:active {
-            color: blue;
+            &:active {
+                color: blue;
+            }
         }
     }
 }
