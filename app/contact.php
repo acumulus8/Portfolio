@@ -1,4 +1,5 @@
 <?php
+/*
     //Message vars
     $msg = '';
     $msgClass = '';
@@ -51,3 +52,4 @@
         }
     }
 ?>
+*/

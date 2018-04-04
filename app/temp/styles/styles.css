@@ -387,3 +387,8 @@ footer {
         color: green; }
       .project__link a:active {
         color: blue; }
+
+.button {
+  display: none; }
+  .button--is-visible {
+    display: block; }
