@@ -1,6 +1,18 @@
+////fonts////
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+$primaryFont: Roboto, sans-serif;
+$font-light: 300;
+
 ////colors////
 $mainGray: #333;
-
-////fonts////
-$primaryFont: Roboto, 'sans serif';
-$font-light: 300;
+$mainBlack: #0A0908;
+$mainBlue: #0A2463;
+$secondaryBlue: #2274A5;
+$accentRed: #EF6461;

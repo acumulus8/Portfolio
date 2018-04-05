@@ -3,17 +3,22 @@
     margin: 10% 0 10% 10%;
 
     &--portfolio {
-        @include heading-border(blue);
+        @include heading-border($secondaryBlue);
         @include heading-padding(10px);
     }
 
     &--skills {
-        @include heading-border(green);
+        @include heading-border($secondaryBlue);
         @include heading-padding(10px);
     }
 
     &--about {
-        @include heading-border(red);
+        @include heading-border($secondaryBlue);
+        @include heading-padding(0);
+    }
+
+    &--thanks {
+        @include heading-border($accentRed);
         @include heading-padding(0);
     }
 }

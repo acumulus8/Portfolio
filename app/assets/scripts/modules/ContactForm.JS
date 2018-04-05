@@ -4,20 +4,28 @@ class ContactForm {
     constructor() {
         this.alert = $('#alert');
         this.form = $('#contact-form');
-        this.name = $('#name');
-        this.email = $('#emial');
-        this.message = $('#message');
-        this.button = $('.button');
-        this.showError();
+        this.name = $('#name').val().length;
+        this.email = $('#emial').val();
+        this.message = $('#message').val().length;
+        this.button = $('#button');
+        this.showButton();
     }
 
-    showError() {
-        if (this.name.value && this.email.value && this.message.value) {
-            this.button.toggleClass('btn btn-primary button--is-visible');
-            console.log('This is working');
+    showButton() {
+        if (this.name > 10) {
+            this.button.addClass('button--is-visible');
+            console.log(this.name);
+        } else {
+            console.log('not working :(')
         }
     }
-};
+
+    addClass() {
+        
+    }
+
+    
+}
 
 export default ContactForm;
 

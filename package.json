@@ -1,10 +1,16 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "scripts": {
+    "webpack": "webpack",
+    "watch": "gulp watch"
+  },
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "webpack": "^3.8.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-sass": "^3.2.1",
