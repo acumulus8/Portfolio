@@ -308,6 +308,13 @@ template {
   src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format("woff2");
   unicode-range: U+0370-03FF; }
 
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyC0ITw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -321,7 +328,8 @@ img {
   height: 100%; }
 
 p {
-  line-height: 1.4; }
+  line-height: 1.4;
+  font-family: Raleway, sans-serif; }
 
 footer {
   position: relative;
@@ -337,9 +345,20 @@ footer {
   align-items: center;
   padding-left: 2rem; }
 
+.wrapper {
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; }
+
+.page-section {
+  padding: 1.2rem 0; }
+
 .page-header {
   font-size: 5rem;
-  margin: 10% 0 10% 10%; }
+  margin-left: 10%; }
   .page-header--portfolio {
     border-left: 0.8rem solid #2274A5;
     border-bottom: 0.8rem solid #2274A5;
@@ -361,12 +380,30 @@ footer {
     padding-left: 20px;
     padding-bottom: 0; }
 
+.button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #EF6461;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all .35s ease-out;
+  -o-transition: all .35s ease-out;
+  transition: all .35s ease-out; }
+  .button:hover {
+    -webkit-box-shadow: 4px 3px 8px #333;
+    box-shadow: 4px 3px 8px #333;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01); }
+
 .project {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0;
   margin-left: 5%;
   margin-right: 5%;
   border-bottom: 1px solid #333; }
@@ -399,3 +436,15 @@ footer {
         color: green; }
       .project__link a:active {
         color: blue; }
+
+.contact-form {
+  width: 100%; }
+  @media (min-width: 570px) {
+    .contact-form {
+      width: 50%; } }
+  .contact-form__group {
+    width: 100%; }
+  .contact-form__label {
+    width: 10%; }
+  .contact-form__input {
+    width: 100%; }

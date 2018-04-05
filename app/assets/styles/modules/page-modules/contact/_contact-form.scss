@@ -1,0 +1,19 @@
+.contact-form {
+    width: 100%;
+
+    @include screenSize(atSmall) {
+        width: 50%;
+    }
+
+    &__group {
+        width: 100%;
+    }
+
+    &__label {
+        width: 10%;
+    }
+
+    &__input {
+        width: 100%;
+    }
+}

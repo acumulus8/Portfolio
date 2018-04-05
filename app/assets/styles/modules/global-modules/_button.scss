@@ -1,0 +1,15 @@
+.button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: $accentRed;
+    color: #fff;
+    cursor: pointer;
+    transition: all .35s ease-out;
+
+    &:hover {
+        box-shadow: 4px 3px 8px $mainGray;
+        transform: scale(1.01);
+    }
+}

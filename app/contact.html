@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="temp/styles/styles.css">
 </head>
 
@@ -38,26 +37,26 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="wrapper">
 
-        <div class="alert " id="alert">
+        <div id="alert">
         </div>
 
-        <form action="https://formspree.io/timwilburninfo@gmail.com" method="POST" id="contact-form">
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="name" class="form-control" value="" id="name">
+        <form action="https://formspree.io/timwilburninfo@gmail.com" method="POST" class="contact-form" id="contact-form">
+            <div class="contact-form__group">
+                <label class="contact-form__label">Name</label>
+                <input type="text" name="name" class="contact-form__input" value="" id="name">
             </div>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="_replyto" class="form-control" value="" id="email">
+            <div class="contact-form__group">
+                <label class="contact-form__label">Email</label>
+                <input type="email" name="_replyto" class="contact-form__input" value="" id="email">
             </div>
-            <div class="form-group">
-                <label>Message</label>
-                <textarea name="message" class="form-control" id="message" ></textarea>
+            <div class="contact-form__group contact-form__group--textarea">
+                <label class="contact-form__label">Message</label>
+                <textarea name="message" class="contact-form__input" id="message" ></textarea>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary button" id="button">Submit</button>
+            <button type="submit" class="button button--contact-form" id="button">Submit</button>
             <input type="hidden" name="_next" value="thankyou.html" />
         </form>
     </div>

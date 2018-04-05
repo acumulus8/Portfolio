@@ -7,3 +7,20 @@
     padding-left: 20px;
     padding-bottom: $bottom;
 }
+
+@mixin screenSize($size) {
+    $atSmall: "min-width: 570px";
+    $atMedium: "min-width: 1010px";
+    $atLarge: "min-width: 1600px";
+
+    @if $size == atsSmall {
+        @media ($atSmall) {@content;}
+    } 
+    @else if $size == atMedium {
+        @media ($atMedium) {@content;}
+    }
+    @else if $size == atLarge {
+        @media ($atLarge) {@content;}
+    }
+    
+}
