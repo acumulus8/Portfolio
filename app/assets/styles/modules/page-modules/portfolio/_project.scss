@@ -32,6 +32,8 @@
     &__link {
         margin-right: 30px;
         position: absolute;
+        width: 140px;
+        text-align: center;
 
         &--move-right {
             left: 30%;
@@ -44,11 +46,11 @@
 
             &:hover {
                 font-size: 1.1rem;
-                color: green;
+                color: $accentRed;
             }
         
             &:active {
-                color: blue;
+                color: $mainBlue;
             }
         }
     }

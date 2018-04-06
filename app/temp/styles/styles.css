@@ -494,7 +494,9 @@ footer {
     margin-top: .2rem; }
   .project__link {
     margin-right: 30px;
-    position: absolute; }
+    position: absolute;
+    width: 140px;
+    text-align: center; }
     .project__link--move-right {
       left: 30%; }
     .project__link a {
@@ -505,9 +507,9 @@ footer {
       transition: all .22s ease-out; }
       .project__link a:hover {
         font-size: 1.1rem;
-        color: green; }
+        color: #da413e; }
       .project__link a:active {
-        color: blue; }
+        color: #0A2463; }
 
 .contact-form {
   width: 100%;
@@ -539,4 +541,4 @@ footer {
     padding: .65rem; }
     .contact-form__input:focus {
       outline: none;
-      border-color: #da413e; }
+      border-color: #89d14f; }
