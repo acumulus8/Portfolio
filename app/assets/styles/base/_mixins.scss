@@ -1,19 +1,9 @@
-@mixin heading-border($color) {
-    border-left: .8rem solid $color;
-    border-bottom: .8rem solid $color;
-}
-
-@mixin heading-padding($bottom) {
-    padding-left: 20px;
-    padding-bottom: $bottom;
-}
-
 @mixin screenSize($size) {
     $atSmall: "min-width: 570px";
     $atMedium: "min-width: 1010px";
     $atLarge: "min-width: 1600px";
 
-    @if $size == atsSmall {
+    @if $size == atSmall {
         @media ($atSmall) {@content;}
     } 
     @else if $size == atMedium {
@@ -23,4 +13,28 @@
         @media ($atLarge) {@content;}
     }
     
+}
+
+@mixin heading-border($color) {
+    border-left: .4rem solid $color;
+    border-bottom: .4rem solid $color;
+
+    @include screenSize(atSmall) {
+        border-left: .7rem solid $color;
+        border-bottom: .7rem solid $color;
+    }
+
+    @include screenSize(atMedium) {
+        border-left: .9rem solid $color;
+        border-bottom: .9rem solid $color;
+    }
+}
+
+@mixin heading-padding($bottom) {
+    padding-left: 10px;
+    padding-bottom: $bottom;
+
+    @include screenSize(atSmall) {
+        padding-left: 20px;
+    }
 }

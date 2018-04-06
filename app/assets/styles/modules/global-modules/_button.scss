@@ -1,15 +1,21 @@
 .button {
     border: none;
     border-radius: 4px;
-    padding: 10px;
+    padding: .75rem 1.8rem;
     margin-bottom: 10px;
     background-color: $accentRed;
     color: #fff;
     cursor: pointer;
-    transition: all .35s ease-out;
+    transition: all .25s ease-out;
+    letter-spacing: .1rem;
+    font-weight: $fontBold;
 
     &:hover {
         box-shadow: 4px 3px 8px $mainGray;
         transform: scale(1.01);
+    }
+
+    &--contact-form {
+        width: 200px;
     }
 }

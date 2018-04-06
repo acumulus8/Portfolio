@@ -1,6 +1,21 @@
 .page-header {
-    font-size: 5rem;
-    margin-left: 10%;
+    font-size: 2rem;
+    //margin-left: 10%;
+
+    @include screenSize(atSmall) {
+        font-size: 3rem;
+        //margin-left: 14%;
+    }
+
+    @include screenSize(atMedium) {
+        font-size: 4rem;
+        //margin-left: 18%;
+    }
+
+    @include screenSize(atLarge) {
+        font-size: 5rem;
+        //margin-left: 18%;
+    }
 
     &--portfolio {
         @include heading-border($secondaryBlue);
@@ -13,6 +28,11 @@
     }
 
     &--about {
+        @include heading-border($secondaryBlue);
+        @include heading-padding(0);
+    }
+
+    &--contact {
         @include heading-border($secondaryBlue);
         @include heading-padding(0);
     }

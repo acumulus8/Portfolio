@@ -36,30 +36,39 @@
             </div>
         </nav>
     </header>
+    <h1 class="page-header page-header--contact wrapper">Contact</h1>
+    
 
     <div class="wrapper">
 
         <div id="alert">
         </div>
 
-        <form action="https://formspree.io/timwilburninfo@gmail.com" method="POST" class="contact-form" id="contact-form">
-            <div class="contact-form__group">
-                <label class="contact-form__label">Name</label>
-                <input type="text" name="name" class="contact-form__input" value="" id="name">
-            </div>
-            <div class="contact-form__group">
-                <label class="contact-form__label">Email</label>
-                <input type="email" name="_replyto" class="contact-form__input" value="" id="email">
+        <form action="https://formspree.io/timwilburninfo@gmail.com" method="POST" class="contact-form page-section" id="contact-form">
+            <h2>Let's Work Together!</h2>
+            <div class="contact-form__info-group">
+                <div class="contact-form__group">
+                    <label class="contact-form__label">Name</label>
+                    <input type="text" name="name" class="contact-form__input" value="" id="name">
+                </div>
+                <div class="contact-form__group">
+                    <label class="contact-form__label">Email</label>
+                    <input type="email" name="_replyto" class="contact-form__input" value="" id="email">
+                </div>
             </div>
             <div class="contact-form__group contact-form__group--textarea">
                 <label class="contact-form__label">Message</label>
-                <textarea name="message" class="contact-form__input" id="message" ></textarea>
+                <textarea name="message" class="contact-form__input" id="message"></textarea>
             </div>
             <br>
             <button type="submit" class="button button--contact-form" id="button">Submit</button>
             <input type="hidden" name="_next" value="thankyou.html" />
         </form>
     </div>
+
+    <footer>
+        Copyright &copy; 2018 Tim Wilburn. All rights reserved.
+    </footer>
 
     <script src="temp/scripts/App-bundled.js"></script>
 </body>
