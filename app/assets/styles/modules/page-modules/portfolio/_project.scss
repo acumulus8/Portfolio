@@ -1,14 +1,11 @@
 .project {
-    width: 90%;
+    width: 100%;
     display: flex;
-    padding: 2rem 0;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-bottom: 1px solid $mainGray;
+    margin-bottom: 3rem;
 
     &__image-container {
-        width: 25%;
-        margin: 0 5% 8% 10%;
+        width: 50%;
+        margin: 0 5% 8% 0;
     }
 
     &:last-child {
@@ -26,7 +23,8 @@
     }
 
     h4 {
-        margin-top: .2rem;
+        margin-top: .5rem;
+        font-weight: $fontLight;
     }
 
     &__link {

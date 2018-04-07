@@ -10,15 +10,23 @@
 </head>
 
 <body>
+
     <header>
-        <!-- Navbar with dropdown menu -->
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="./index.html">Tim Wilburn: Web Development</a>
+        <nav class="site-header site-header--not-index">
+            <div class="site-header__container wrapper">
+                <div class="site-header__brand">
+                    <div class="site-header__logo">
+                        <a href="./index.html">
+                            <img src="assets/images/Logo-black.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="site-header__text">
+                        <a class="site-header__text-name" href="./index.html">TIMOTHY WILBURN</a>
+                        <p class="site-header_text-quote">Clean and responsive, coding and design.</p>
+                    </div>
                 </div>
-                <div class="" id="">
-                    <ul class="nav navbar-nav navbar-right">
+                <div class="primary-nav">
+                    <ul>
                         <li>
                             <a href="./about.html">About</a>
                         </li>
@@ -36,8 +44,9 @@
             </div>
         </nav>
     </header>
-    <h1 class="page-header page-header--contact wrapper">Contact</h1>
-    
+
+    <h1 class="page-header page-header--contact">Contact Me</h1>
+
 
     <div class="wrapper">
 
@@ -49,16 +58,16 @@
             <div class="contact-form__info-group">
                 <div class="contact-form__group">
                     <label class="contact-form__label">Name</label>
-                    <input type="text" name="name" class="contact-form__input" value="" id="name">
+                    <input type="text" name="name" class="contact-form__input" id="name" placeholder="Name">
                 </div>
                 <div class="contact-form__group">
                     <label class="contact-form__label">Email</label>
-                    <input type="email" name="_replyto" class="contact-form__input" value="" id="email">
+                    <input type="email" name="_replyto" class="contact-form__input" id="email" placeholder="Email">
                 </div>
             </div>
             <div class="contact-form__group contact-form__group--textarea">
                 <label class="contact-form__label">Message</label>
-                <textarea name="message" class="contact-form__input" id="message"></textarea>
+                <textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
             </div>
             <br>
             <button type="submit" class="button button--contact-form" id="button">Submit</button>

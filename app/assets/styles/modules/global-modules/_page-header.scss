@@ -1,24 +1,26 @@
 .page-header {
     font-size: 2rem;
-    //margin-left: 10%;
+    margin-left: 10%;
+    margin: 6rem 0 5rem 0;
+    text-shadow: 1px 1px $mainGray;
 
     @include screenSize(atSmall) {
         font-size: 3rem;
-        //margin-left: 14%;
+        margin-left: 14%;
     }
 
     @include screenSize(atMedium) {
         font-size: 4rem;
-        //margin-left: 18%;
+        margin-left: 18%;
     }
 
     @include screenSize(atLarge) {
         font-size: 5rem;
-        //margin-left: 18%;
+        margin-left: 18%;
     }
 
     &--portfolio {
-        @include heading-border($secondaryBlue);
+        @include heading-border($accentRed);
         @include heading-padding(10px);
     }
 

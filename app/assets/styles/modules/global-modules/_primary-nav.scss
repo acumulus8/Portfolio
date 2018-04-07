@@ -1,0 +1,24 @@
+.primary-nav {
+    display: flex;
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            margin-left: 2rem;
+
+            a {
+                position: relative;
+                color: rgb(209, 209, 209);
+                font-weight: $fontLight;
+                letter-spacing: .09rem;
+                transition: color .3s ease-out;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.site-header {
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transform: scale(1.2);
+    padding-top: 1.75rem;
+
+    &--not-index {
+        background-color: rgba(34, 117, 165, 0.85);
+        transform: scale(1);
+        padding-top: 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    &__logo {
+        max-width: 120px;
+        filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.7));
+    }
+
+    &__text {
+
+        &-name {
+            font-weight: $fontBold;
+            letter-spacing: .2rem;
+            text-shadow: 1px 1px $mainGray;
+        }
+
+        p {
+            margin: 0;
+            color: #fff;
+            font-size: .8rem;
+            text-shadow: 1px 1px $mainGray;
+        }
+    }
+}

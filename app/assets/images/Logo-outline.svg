@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="AI_layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 640 480" style="enable-background:new 0 0 640 480;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_1_);stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st3{fill:url(#SVGID_2_);stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st4{fill:#FFFFFF;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+</style>
+<rect x="42" y="722.4" class="st0" width="184" height="141.5"/>
+<polygon class="st1" points="161.5,745 161.5,782.6 114.3,782.6 114.3,840.8 84.8,840.8 84.8,782.6 66.4,782.6 66.4,745 "/>
+<polygon class="st1" points="202,745 202,840.8 172.9,840.8 172.5,840.5 163,830.9 153,840.8 153,840.8 124.6,840.8 124.6,791.9 
+	153,791.9 153,812.8 163,802.1 172.5,812.4 172.5,745 "/>
+<radialGradient id="SVGID_1_" cx="322.5423" cy="710.6845" r="64.0613" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="8.510864e-02" style="stop-color:#FFEDD8"/>
+	<stop  offset="0.2082" style="stop-color:#FFD5A7"/>
+	<stop  offset="0.3345" style="stop-color:#FFC17D"/>
+	<stop  offset="0.462" style="stop-color:#FFB05B"/>
+	<stop  offset="0.591" style="stop-color:#FFA340"/>
+	<stop  offset="0.7222" style="stop-color:#FF9A2D"/>
+	<stop  offset="0.8568" style="stop-color:#FF9522"/>
+	<stop  offset="1" style="stop-color:#FF931E"/>
+</radialGradient>
+<polygon class="st2" points="386.4,646.4 386.4,696.9 323,696.9 323,775 283.5,775 283.5,696.9 258.7,696.9 258.7,646.4 "/>
+<radialGradient id="SVGID_2_" cx="386.8412" cy="710.6845" r="58.4362" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="8.510864e-02" style="stop-color:#FFEDD8"/>
+	<stop  offset="0.2082" style="stop-color:#FFD5A7"/>
+	<stop  offset="0.3345" style="stop-color:#FFC17D"/>
+	<stop  offset="0.462" style="stop-color:#FFB05B"/>
+	<stop  offset="0.591" style="stop-color:#FFA340"/>
+	<stop  offset="0.7222" style="stop-color:#FF9A2D"/>
+	<stop  offset="0.8568" style="stop-color:#FF9522"/>
+	<stop  offset="1" style="stop-color:#FF931E"/>
+</radialGradient>
+<polygon class="st3" points="438.8,646.4 438.8,775 399.7,775 399.2,774.5 386.4,761.7 373,775 373,775 334.9,775 334.9,709.3 
+	373,709.3 373,737.4 386.4,723.1 399.2,736.8 399.2,646.4 "/>
+<polygon class="st4" points="261.1,624 261.1,636.9 245.4,636.9 245.4,652.1 233,652.1 233,624 "/>
+<polygon class="st4" points="435.9,796.9 435.9,784 451.6,784 451.6,768.8 464,768.8 464,796.9 "/>
+<polygon class="st4" points="373.4,96.3 373.4,198.1 245.6,198.1 245.6,355.7 165.8,355.7 165.8,198.1 115.9,198.1 115.9,96.3 "/>
+<polygon class="st4" points="479.1,96.3 479.1,355.7 400.3,355.7 399.3,354.7 373.4,328.9 346.5,355.7 346.5,355.7 269.6,355.7 
+	269.6,223.1 346.5,223.1 346.5,279.9 373.5,251 399.3,278.7 399.3,96.3 "/>
+<polygon class="st4" points="120.7,51.1 120.7,77.1 89,77.1 89,107.8 64,107.8 64,51.1 "/>
+<polygon class="st4" points="473.3,399.9 473.3,374 505,374 505,343.2 530,343.2 530,399.9 "/>
+</svg>

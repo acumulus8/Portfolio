@@ -1,0 +1,43 @@
+.large-hero {
+    position: relative;
+
+    &__image-container {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 4;
+
+        img {
+            filter: blur(4px);
+        }
+    }
+
+    &__filter {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: 5;
+        background-color: rgba(34, 117, 165, 0.75);
+    }
+
+    &__content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        text-align: center;
+        text-shadow: 2px 2px $mainGray;
+        z-index: 6;
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: $fontBold;
+        }
+
+        p {
+            text-shadow: 1px 1px $mainGray;
+        }
+    }
+}

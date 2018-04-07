@@ -11,14 +11,21 @@
 <body>
 
     <header>
-        <!-- Navbar with dropdown menu -->
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="./index.html">Tim Wilburn: Web Development</a>
+        <nav class="site-header">
+            <div class="site-header__container wrapper">
+                <div class="site-header__brand">
+                    <div class="site-header__logo">
+                        <a href="./index.html">
+                            <img src="assets/images/Logo-black.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="site-header__text">
+                        <a class="site-header__text-name" href="./index.html">TIMOTHY WILBURN</a>
+                        <p class="site-header_text-quote">Clean and responsive, coding and design.</p>
+                    </div>
                 </div>
-                <div class="" id="">
-                    <ul class="nav navbar-nav navbar-right">
+                <div class="primary-nav">
+                    <ul>
                         <li>
                             <a href="./about.html">About</a>
                         </li>
@@ -31,34 +38,32 @@
                         <li>
                             <a href="./contact.html">Contact</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section id="jumbotron">
-            <div class="jumbotron">
-                <div id="jumbo-container" class="container">
-                    <div class="jumbo-text">
-                        <h1>Tim Wilburn</h1>
-                        <p id="jumbotron-p">Web designer with a passion for creating beautiful, responsive, websites.</p>
-                        <br />
-                        <p>
-                            <a class="btn btn-primary btn-lg" href="./about.html" role="button">
-                                Learn More
-                            </a>
-                        </p>
-                    </div>
-                    <div class="image-container image-responsive">
-                        <img id="jumbo-img-2" src="./resources/images/wireframe.jpg" alt="a web developer's wireframe drawing" />
-                        <img id="jumbo-img" src="./resources/images/code.jpg" alt="a web developer's wireframe drawing" />
-                    </div>
-                </div>
+    <div class="large-hero">
+        <div class="large-hero__filter"></div>
+        <div class="large-hero__image-container">
+            <img src="assets/images/hero.jpeg" class="large-hero__image" alt="">
+        </div>
+        <div class="large-hero__content">
+            <div class="wrapper">
+                <h1>Web Design and Development</h1>
+                <p>Web designer with a passion for creating beautiful, responsive, websites.</p>
+                <br />
+                <button class="button button--large-hero">
+                    <a href="./about.html" role="button">
+                        Learn More
+                    </a>
+                </button>
             </div>
-        </section>
+        </div>
+    </div>
+
+    <main>
 
         <section id="tech-skills">
             <div class="fuid-container">
@@ -88,7 +93,7 @@
                 <div class="row portfolio-pics">
                     <div class="col-sm-4">
                         <a href="#">
-                            <img class="img-responsive" src="resources/images/Colmar.png">
+                            <img class="img-responsive" src="">
                         </a>
                     </div>
                     <div class="col-sm-4">
