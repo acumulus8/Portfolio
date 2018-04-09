@@ -650,7 +650,8 @@ footer {
 .large-hero {
   position: relative;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
   .large-hero__image-container {
     position: absolute;
     -webkit-transform: translateZ(-1px);
@@ -661,7 +662,7 @@ footer {
     overflow-y: auto;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 200%;
     -webkit-filter: blur(4px);
     filter: blur(4px);
     background-image: url("../../../../assets/images/hero.jpeg");
@@ -678,10 +679,7 @@ footer {
   .large-hero__content {
     width: 100%;
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 35%;
     color: #fff;
     text-align: center;
     text-shadow: 2px 2px #333;
