@@ -12,7 +12,13 @@
     @else if $size == atLarge {
         @media ($atLarge) {@content;}
     }
-    
+}
+
+@mixin parallaxEffect {
+    transform: translateZ(-1px);
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 @mixin heading-border($color) {

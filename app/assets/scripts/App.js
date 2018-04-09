@@ -1,5 +1,5 @@
-import ContactForm from './modules/ContactForm';
+import StickyHeader from './modules/StickyHeader';
 
-let contactForm = new ContactForm();
+let stickyHeader = new StickyHeader();
 
 console.log('hey dawg');
