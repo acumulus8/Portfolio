@@ -520,9 +520,9 @@ footer {
   width: 100%;
   top: 0;
   z-index: 10;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
   padding-top: 1.75rem;
   -webkit-transition: all .5s ease-out;
   -o-transition: all .5s ease-out;
@@ -679,7 +679,8 @@ footer {
   .large-hero__content {
     width: 100%;
     position: absolute;
-    top: 35%;
+    top: 50%;
+    margin-top: -154px;
     color: #fff;
     text-align: center;
     text-shadow: 2px 2px #333;

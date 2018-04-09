@@ -1,7 +1,7 @@
 import StickyHeader from './modules/StickyHeader';
-import HeaderParallax from './modules/HeaderParllax';
+import HeroParallax from './modules/HeroParllax';
 
 let stickyHeader = new StickyHeader();
-let headerParallax = new HeaderParallax();
+let heroParallax = new HeroParallax();
 
 console.log('hey dawg');

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class HeaderParallax {
+class HeroParallax {
     constructor() {
         this.background = $('.large-hero__image-container');
         this.content = $('.large-hero__content');
@@ -18,10 +18,10 @@ class HeaderParallax {
             });
 
             that.content.css({
-                'transform' : 'translate(0px, '+ windowScroll /12 +'%)'
+                'transform' : 'translate(0px, '+ windowScroll /13 +'%)'
             });
         });
     }
 }
 
-export default HeaderParallax;
+export default HeroParallax;

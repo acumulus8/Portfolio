@@ -10445,14 +10445,14 @@ var _StickyHeader = __webpack_require__(2);
 
 var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
-var _HeaderParllax = __webpack_require__(4);
+var _HeroParllax = __webpack_require__(4);
 
-var _HeaderParllax2 = _interopRequireDefault(_HeaderParllax);
+var _HeroParllax2 = _interopRequireDefault(_HeroParllax);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var stickyHeader = new _StickyHeader2.default();
-var headerParallax = new _HeaderParllax2.default();
+var heroParallax = new _HeroParllax2.default();
 
 console.log('hey dawg');
 
@@ -11297,9 +11297,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var HeaderParallax = function () {
-    function HeaderParallax() {
-        _classCallCheck(this, HeaderParallax);
+var HeroParallax = function () {
+    function HeroParallax() {
+        _classCallCheck(this, HeroParallax);
 
         this.background = (0, _jquery2.default)('.large-hero__image-container');
         this.content = (0, _jquery2.default)('.large-hero__content');
@@ -11307,7 +11307,7 @@ var HeaderParallax = function () {
         this.scrollImage();
     }
 
-    _createClass(HeaderParallax, [{
+    _createClass(HeroParallax, [{
         key: 'scrollImage',
         value: function scrollImage() {
             var that = this;
@@ -11319,16 +11319,16 @@ var HeaderParallax = function () {
                 });
 
                 that.content.css({
-                    'transform': 'translate(0px, ' + windowScroll / 12 + '%)'
+                    'transform': 'translate(0px, ' + windowScroll / 13 + '%)'
                 });
             });
         }
     }]);
 
-    return HeaderParallax;
+    return HeroParallax;
 }();
 
-exports.default = HeaderParallax;
+exports.default = HeroParallax;
 
 /***/ })
 /******/ ]);
