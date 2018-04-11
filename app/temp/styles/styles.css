@@ -505,14 +505,14 @@ footer {
       margin-left: 2rem; }
       .primary-nav ul li a {
         position: relative;
-        color: #d1d1d1;
+        color: #fff;
         font-weight: 300;
         letter-spacing: .09rem;
-        -webkit-transition: color .3s ease-out;
-        -o-transition: color .3s ease-out;
-        transition: color .3s ease-out; }
+        -webkit-transition: color .25s ease-out;
+        -o-transition: color .25s ease-out;
+        transition: color .25s ease-out; }
         .primary-nav ul li a:hover {
-          color: #fff; }
+          color: #10358b; }
 
 .site-header {
   position: absolute;
@@ -545,8 +545,8 @@ footer {
       color: #fff; }
   .site-header__logo {
     max-width: 120px;
-    -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.7));
-    filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.7)); }
+    -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.568));
+    filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.568)); }
   .site-header__text-name {
     font-weight: 700;
     letter-spacing: .2rem;

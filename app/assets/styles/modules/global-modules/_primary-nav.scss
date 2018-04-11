@@ -10,13 +10,13 @@
 
             a {
                 position: relative;
-                color: rgb(209, 209, 209);
+                color: #fff;
                 font-weight: $fontLight;
                 letter-spacing: .09rem;
-                transition: color .3s ease-out;
+                transition: color .25s ease-out;
 
                 &:hover {
-                    color: #fff;
+                    color: $mainBlueLight;
                 }
             }
         }

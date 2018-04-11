@@ -10449,8 +10449,13 @@ var _HeroParllax = __webpack_require__(4);
 
 var _HeroParllax2 = _interopRequireDefault(_HeroParllax);
 
+var _FormValidate = __webpack_require__(5);
+
+var _FormValidate2 = _interopRequireDefault(_FormValidate);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var formValidate = new _FormValidate2.default();
 var stickyHeader = new _StickyHeader2.default();
 var heroParallax = new _HeroParllax2.default();
 
@@ -11329,6 +11334,33 @@ var HeroParallax = function () {
 }();
 
 exports.default = HeroParallax;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var FormValidate = function FormValidate() {
+    _classCallCheck(this, FormValidate);
+};
+
+;
+
+exports.default = FormValidate;
 
 /***/ })
 /******/ ]);
