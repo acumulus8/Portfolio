@@ -22,7 +22,9 @@
                     </div>
                     <div class="site-header__text">
                         <a class="site-header__text-name" href="./index.html">TIMOTHY WILBURN</a>
-                        <a href="./index.html"><p class="site-header_text-quote">Clean and responsive, coding and design.</p></a>
+                        <a href="./index.html">
+                            <p class="site-header_text-quote">Clean and responsive, coding and design.</p>
+                        </a>
                     </div>
                 </div>
                 <div class="primary-nav">
@@ -57,20 +59,26 @@
             <h2>Let's Work Together!</h2>
             <div class="contact-form__info-group">
                 <div class="contact-form__group">
-                    <label class="contact-form__label">Name</label>
+                    <label class="contact-form__label">*Name</label>
                     <input type="text" name="name" class="contact-form__input" id="name" placeholder="Name">
                 </div>
                 <div class="contact-form__group">
-                    <label class="contact-form__label">Email</label>
+                    <label class="contact-form__label">*Email</label>
                     <input type="email" name="_replyto" class="contact-form__input" id="email" placeholder="Email">
                 </div>
             </div>
             <div class="contact-form__group contact-form__group--textarea">
-                <label class="contact-form__label">Message</label>
+                <label class="contact-form__label">*Message</label>
                 <textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
             </div>
             <br>
-            <button type="submit" class="button button--contact-form" id="button">Submit</button>
+            <div class="contact-form__button-group">
+                <input class="button button--contact-form" id="button" readonly="readonly" value="submit">
+                <div class="contact-form__error contact-form__error--is-hidden" id="error">
+                    <img src="assets/images/exclamation-circle.svg">
+                    <p>Don't forget to fill in all fields!</p>
+                </div>
+            </div>
             <input type="hidden" name="_next" value="thankyou.html" />
         </form>
     </div>

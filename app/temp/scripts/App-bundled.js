@@ -11346,6 +11346,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11354,9 +11356,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var FormValidate = function FormValidate() {
-    _classCallCheck(this, FormValidate);
-};
+var FormValidate = function () {
+    function FormValidate() {
+        _classCallCheck(this, FormValidate);
+
+        this.form = (0, _jquery2.default)('#contact-form');
+        this.name = (0, _jquery2.default)('#name');
+        this.email = (0, _jquery2.default)('#email');
+        this.message = (0, _jquery2.default)('#message');
+        this.button = (0, _jquery2.default)('#button');
+        this.buttonContainer = (0, _jquery2.default)('a');
+        this.error = (0, _jquery2.default)('#error');
+        this.validateForm();
+        this.errorMessage();
+    }
+
+    _createClass(FormValidate, [{
+        key: 'validateForm',
+        value: function validateForm() {
+            var that = this;
+            this.form.keyup(function () {
+                if (that.email.val() !== '' && that.name.val() !== '' && that.message.val() !== '') {
+                    that.button.addClass('button--contact-form--is-validated');
+                    that.error.addClass('contact-form__error--is-hidden');
+                    that.button.attr('type', 'submit');
+                } else {
+                    that.button.removeClass('button--contact-form--is-validated');
+                    that.button.removeAttr('type', 'submit');
+                };
+            });
+        }
+    }, {
+        key: 'errorMessage',
+        value: function errorMessage() {
+            var that = this;
+            this.button.click(function () {
+                if (that.email.val() == '' || that.name.val() == '' || that.message.val() == '') {
+                    that.error.removeClass('contact-form__error--is-hidden');
+                } else {
+                    that.error.addClass('contact-form__error--is-hidden');
+                }
+            });
+        }
+    }]);
+
+    return FormValidate;
+}();
 
 ;
 
