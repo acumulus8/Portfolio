@@ -10,14 +10,29 @@
     letter-spacing: .1rem;
     font-weight: $fontBold;
 
-    &:hover {
-        box-shadow: 3px 2px 8px $mainGray;
-        transform: scale(1.01);
-    }
-
     &--contact-form {
         width: 200px;
-        background-color: $mainGreen;
+        align-self: flex-start;
+        background-color: $mainGray;
+        opacity: 0.5;
+        transition: all .6s ease-out;
+        
+        &:hover {
+            box-shadow: none;
+            transform: scale(1);
+            cursor: default;
+        }
+
+        &--is-validated {
+            background-color: $mainGreen;
+            opacity: 1;
+            transition: all .3s ease-out;
+
+            &:hover {
+                box-shadow: 3px 2px 8px $mainGray;
+                transform: scale(1.02);
+            }
+        }
     }
 
     &--large-hero {
@@ -29,7 +44,6 @@
 
         &:hover {
             background-color: rgb(231, 106, 103);
-            box-shadow: none;
         }
     }
 }
