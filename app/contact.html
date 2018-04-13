@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Us</title>
+    <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="temp/styles/styles.css">
 </head>
 
@@ -47,41 +47,50 @@
         </nav>
     </header>
 
-    <h1 class="page-header page-header--contact">Contact Me</h1>
-
-
-    <div class="wrapper">
-
-        <div id="alert">
+    <main>
+        <div class="page-header">
+            <h1 class="page-header__h1 page-header__h1--contact">Contact Me</h1>
+            <h2 class="page-header__h2 page-header__h2--contact">- Let's Work Together!</h2>
         </div>
 
-        <form action="https://formspree.io/timwilburninfo@gmail.com" method="POST" class="contact-form page-section" id="contact-form">
-            <h2>Let's Work Together!</h2>
-            <div class="contact-form__info-group">
-                <div class="contact-form__group">
-                    <label class="contact-form__label">*Name</label>
-                    <input type="text" name="name" class="contact-form__input" id="name" placeholder="Name">
+        <div class="wrapper">
+            <form action="https://formspree.io/timwilburninfo@gmail.com" method="POST" class="contact-form page-section" id="contact-form">
+                <h2>
+                    I'm looking forward to hearing from you!
+                </h2>
+                <p>Use this form to send me some basic personal information, project information, or any specific services you require.</p>
+                <p>
+                    Input all the fields below, submit, and I will respond to you as soon as I am able. <br>
+                    <em>Your information will nort be used for any other puprose than direct communication between you and myself.
+                    </em> <br> <br>
+                    * = required field
+                </p>
+                <div class="contact-form__info-group">
+                    <div class="contact-form__group">
+                        <label class="contact-form__label">*Name</label>
+                        <input type="text" name="name" class="contact-form__input" id="name" placeholder="Name">
+                    </div>
+                    <div class="contact-form__group">
+                        <label class="contact-form__label">*Email</label>
+                        <input type="email" name="_replyto" class="contact-form__input" id="email" placeholder="Email">
+                    </div>
                 </div>
-                <div class="contact-form__group">
-                    <label class="contact-form__label">*Email</label>
-                    <input type="email" name="_replyto" class="contact-form__input" id="email" placeholder="Email">
+                <div class="contact-form__group contact-form__group--textarea">
+                    <label class="contact-form__label">*Message</label>
+                    <textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
                 </div>
-            </div>
-            <div class="contact-form__group contact-form__group--textarea">
-                <label class="contact-form__label">*Message</label>
-                <textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
-            </div>
-            <br>
-            <div class="contact-form__button-group">
-                <input class="button button--contact-form" id="button" readonly="readonly" value="submit">
-                <div class="contact-form__error contact-form__error--is-hidden" id="error">
-                    <img src="assets/images/exclamation-circle.svg">
-                    <p>Don't forget to fill in all fields!</p>
+                <br>
+                <div class="contact-form__button-group">
+                    <input class="button button--contact-form" id="button" readonly="readonly" value="submit">
+                    <div class="contact-form__error contact-form__error--is-hidden" id="error">
+                        <img src="assets/images/exclamation-circle.svg">
+                        <p>Don't forget to fill in all fields!</p>
+                    </div>
                 </div>
-            </div>
-            <input type="hidden" name="_next" value="thankyou.html" />
-        </form>
-    </div>
+                <input type="hidden" name="_next" value="thankyou.html" />
+            </form>
+        </div>
+    </main>
 
     <footer>
         Copyright &copy; 2018 Tim Wilburn. All rights reserved.
