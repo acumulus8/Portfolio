@@ -4,6 +4,13 @@
     flex-direction: column;
     margin-bottom: 2rem;
 
+    &__alert {
+        background-color: rgba(255, 175, 2, 0.9);
+        color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
     &__group {
         width: 100%;
         margin-top: 1rem;
@@ -73,5 +80,9 @@
         &--is-hidden {
             opacity: 0;
         }
+    }
+
+    &--error-highlight {
+        border: 7px solid #812222;
     }
 }

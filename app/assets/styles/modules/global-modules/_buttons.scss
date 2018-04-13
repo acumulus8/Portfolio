@@ -10,30 +10,9 @@
     letter-spacing: .1rem;
     font-weight: $fontBold;
 
-    &--contact-form {
-        width: 200px;
-        align-self: flex-start;
-        background-color: $mainGray;
-        opacity: 0.5;
-        transition: all .6s ease-out;
-        
-        &:hover {
-            box-shadow: none;
-            transform: scale(1);
-            cursor: default;
-        }
-
-        &--is-validated {
-            background-color: $mainGreen;
-            opacity: 1;
-            cursor: pointer;
-            transition: all .3s ease-out;
-
-            &:hover {
-                box-shadow: 3px 2px 8px $mainGray;
-                transform: scale(1.02);
-            }
-        }
+    &:hover {
+        box-shadow: none;
+        transform: scale(1);
     }
 
     &--large-hero {
@@ -45,6 +24,41 @@
 
         &:hover {
             background-color: rgb(231, 106, 103);
+        }
+    }
+
+    &--contact-form {
+        width: 200px;
+        align-self: flex-start;
+        text-align: center;
+        background-color: $mainGray;
+        opacity: 0.5;
+        transition: all .6s ease-out;
+
+        &--is-validated {
+            background-color: $mainGreen;
+            opacity: 1;
+            cursor: pointer;
+            transition: all .3s ease-out;
+
+            &:hover {
+                transform: scale(1.04);
+                opacity: .8;
+            }
+        }
+    }
+
+    &--thank-you {
+        display: block;
+        margin: 3rem auto 3rem auto;
+        transition: opacity .4s ease-out;
+
+        a {
+            color: #fff;
+        }
+
+        &:hover {
+            opacity: .75; 
         }
     }
 }

@@ -10391,9 +10391,9 @@ jQuery.isNumeric = function( obj ) {
 // https://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
 
 if ( true ) {
-	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function() {
 		return jQuery;
-	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+	}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 }
 
@@ -11369,6 +11369,7 @@ var FormValidate = function () {
         this.error = (0, _jquery2.default)('#error');
         this.validateForm();
         this.errorMessage();
+        this.inputErrorHighlight();
     }
 
     _createClass(FormValidate, [{
@@ -11384,6 +11385,18 @@ var FormValidate = function () {
                     that.button.removeClass('button--contact-form--is-validated');
                     that.button.removeAttr('type', 'submit');
                 };
+
+                if (that.email.val() !== '') {
+                    that.email.removeClass('contact-form--error-highlight');
+                };
+
+                if (that.name.val() !== '') {
+                    that.name.removeClass('contact-form--error-highlight');
+                };
+
+                if (that.message.val() !== '') {
+                    that.message.removeClass('contact-form--error-highlight');
+                };
             });
         }
     }, {
@@ -11396,6 +11409,27 @@ var FormValidate = function () {
                 } else {
                     that.error.addClass('contact-form__error--is-hidden');
                 }
+            });
+        }
+
+        //refactor into mulitple if statements
+
+    }, {
+        key: 'inputErrorHighlight',
+        value: function inputErrorHighlight() {
+            var that = this;
+            this.button.click(function () {
+                if (that.email.val() == '') {
+                    that.email.addClass('contact-form--error-highlight');
+                };
+
+                if (that.name.val() == '') {
+                    that.name.addClass('contact-form--error-highlight');
+                };
+
+                if (that.message.val() == '') {
+                    that.message.addClass('contact-form--error-highlight');
+                };
             });
         }
     }]);

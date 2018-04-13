@@ -2,9 +2,20 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: $primaryFont;
     color: $mainGray;
+    height: 100%;
+    overflow: auto;
+}
+
+main {
+    overflow: auto;
+    margin-top: 94px;
 }
 
 img {

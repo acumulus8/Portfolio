@@ -11,6 +11,7 @@ class FormValidate {
         this.error = $('#error');
         this.validateForm();
         this.errorMessage();
+        this.inputErrorHighlight();
     }
 
     validateForm() {
@@ -24,6 +25,18 @@ class FormValidate {
                 that.button.removeClass('button--contact-form--is-validated');
                 that.button.removeAttr('type', 'submit');
             };
+
+            if (that.email.val() !== '') {
+                that.email.removeClass('contact-form--error-highlight');
+            };
+
+            if (that.name.val() !== '') {
+                that.name.removeClass('contact-form--error-highlight');
+            }; 
+
+            if (that.message.val() !== '') {
+                that.message.removeClass('contact-form--error-highlight');
+            };
         });
     }
 
@@ -35,6 +48,24 @@ class FormValidate {
             } else {
                 that.error.addClass('contact-form__error--is-hidden');
             }
+        });
+    }
+
+    //refactor into mulitple if statements
+    inputErrorHighlight() {
+        const that = this;
+        this.button.click(function() {
+            if (that.email.val() == '') {
+                that.email.addClass('contact-form--error-highlight');
+            };
+
+            if (that.name.val() == '') {
+                that.name.addClass('contact-form--error-highlight');
+            }; 
+
+            if (that.message.val() == '') {
+                that.message.addClass('contact-form--error-highlight');
+            };
         });
     }
 };

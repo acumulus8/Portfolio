@@ -13,10 +13,10 @@
                 color: #fff;
                 font-weight: $fontLight;
                 letter-spacing: .09rem;
-                transition: color .25s ease-out;
+                transition: all .4s ease-out;
 
                 &:hover {
-                    color: $mainBlueLight;
+                    text-decoration: underline;
                 }
             }
         }

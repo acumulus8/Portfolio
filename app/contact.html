@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Us</title>
+    <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="temp/styles/styles.css">
 </head>
 
@@ -23,7 +23,7 @@
                     <div class="site-header__text">
                         <a class="site-header__text-name" href="./index.html">TIMOTHY WILBURN</a>
                         <a href="./index.html">
-                            <p class="site-header_text-quote">Clean and responsive, coding and design.</p>
+                            <p class="site-header_text-quote">Clean code, responsive design.</p>
                         </a>
                     </div>
                 </div>
@@ -47,41 +47,65 @@
         </nav>
     </header>
 
-    <h1 class="page-header page-header--contact">Contact Me</h1>
+    <main>
+        <header class="page-header">
+            <h1 class="page-header__h1 page-header__h1--contact">Contact Me</h1>
+            <h2 class="page-header__h2 page-header__h2--contact">- Let's Work Together!</h2>
+        </header>
 
+        <div class="wrapper">
+            <form action="https://formspree.io/timwilburninfo@gmail.com" method="POST" class="contact-form page-section--contact" id="contact-form">
+                <article>
+                    <h2>
+                        I'm looking forward to hearing from you!
+                    </h2>
+                    <p>
+                        I am available to work for almost any small to medium size project
+                        <strong>:</strong> designing, prototyping, and coding. I am currently only a one man operation, so projects
+                        with large scalability will take more time. Let me know about your project and we can begin a conversation
+                        about the details and nuances to fit your project needs.
+                    </p>
+                    <p>Use the form below to send me some basic personal information, project information, or any specific services your project may require.
+                    </p>
+                    <p>
+                        <div class="contact-form__alert">
+                            Input all the fields below, submit, and I will respond to you as soon as I am able.
+                            <br>
+                            <em>Your information will not be used for any other puprose than direct communication between you
+                                and myself.
+                            </em>
+                        </div>
+                        <br>
+                        <br> * = required field
+                    </p>
+                </article>
 
-    <div class="wrapper">
-
-        <div id="alert">
+                <div class="contact-form__info-group">
+                    <div class="contact-form__group">
+                        <label class="contact-form__label">*Name</label>
+                        <input type="text" name="name" class="contact-form__input" id="name" placeholder="Name">
+                    </div>
+                    <div class="contact-form__group">
+                        <label class="contact-form__label">*Email</label>
+                        <input type="email" name="_replyto" class="contact-form__input" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="contact-form__group contact-form__group--textarea">
+                    <label class="contact-form__label">*Message</label>
+                    <textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
+                </div>
+                <br>
+                <div class="contact-form__button-group">
+                    <input class="button button--contact-form" id="button" readonly="readonly" value="submit">
+                    <div class="contact-form__error contact-form__error--is-hidden" id="error">
+                        <img src="assets/images/exclamation-circle.svg">
+                        <p>Don't forget to fill in all fields!</p>
+                    </div>
+                </div>
+                <input type="hidden" name="_next" value="thankyou.html" />
+            </form>
         </div>
-
-        <form action="https://formspree.io/timwilburninfo@gmail.com" method="POST" class="contact-form page-section" id="contact-form">
-            <h2>Let's Work Together!</h2>
-            <div class="contact-form__info-group">
-                <div class="contact-form__group">
-                    <label class="contact-form__label">*Name</label>
-                    <input type="text" name="name" class="contact-form__input" id="name" placeholder="Name">
-                </div>
-                <div class="contact-form__group">
-                    <label class="contact-form__label">*Email</label>
-                    <input type="email" name="_replyto" class="contact-form__input" id="email" placeholder="Email">
-                </div>
-            </div>
-            <div class="contact-form__group contact-form__group--textarea">
-                <label class="contact-form__label">*Message</label>
-                <textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
-            </div>
-            <br>
-            <div class="contact-form__button-group">
-                <input class="button button--contact-form" id="button" readonly="readonly" value="submit">
-                <div class="contact-form__error contact-form__error--is-hidden" id="error">
-                    <img src="assets/images/exclamation-circle.svg">
-                    <p>Don't forget to fill in all fields!</p>
-                </div>
-            </div>
-            <input type="hidden" name="_next" value="thankyou.html" />
-        </form>
-    </div>
+    </main>
 
     <footer>
         Copyright &copy; 2018 Tim Wilburn. All rights reserved.
