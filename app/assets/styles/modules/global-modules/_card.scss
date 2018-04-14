@@ -1,7 +1,14 @@
 .card {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     margin: 1.5rem;
+=======
+    display: block;
+    height: 450px;
+    width: 800px;
+    margin: 7rem auto;
+>>>>>>> 196d65765274dcbbe075b897018f8787a00a9be3
     border-radius: 25px;
     box-shadow: 0 0 40px $mainGray;
 }
