@@ -325,12 +325,8 @@ html {
 body {
   font-family: Roboto, sans-serif;
   color: #333;
-<<<<<<< HEAD
   height: 100%;
   overflow: auto; }
-=======
-  height: 100%; }
->>>>>>> 196d65765274dcbbe075b897018f8787a00a9be3
 
 main {
   overflow: auto;
@@ -501,11 +497,8 @@ footer {
     @media (min-width: 1600px) {
       .page-header__h2 {
         font-size: 2.5rem; } }
-<<<<<<< HEAD
   .page-header--thanks {
     margin-bottom: 0; }
-=======
->>>>>>> 196d65765274dcbbe075b897018f8787a00a9be3
 
 .button {
   border: none;
@@ -556,7 +549,6 @@ footer {
         opacity: .8; }
   .button--thank-you {
     display: block;
-<<<<<<< HEAD
     margin: 3rem auto 3rem auto;
     -webkit-transition: opacity .4s ease-out;
     -o-transition: opacity .4s ease-out;
@@ -565,12 +557,6 @@ footer {
       color: #fff; }
     .button--thank-you:hover {
       opacity: .75; }
-=======
-    margin: 0 auto;
-    margin-top: 6rem; }
-    .button--thank-you a {
-      color: #fff; }
->>>>>>> 196d65765274dcbbe075b897018f8787a00a9be3
 
 .primary-nav {
   display: -webkit-box;
@@ -641,7 +627,7 @@ footer {
     font-size: .8rem;
     text-shadow: 1px 1px #333; }
   .site-header--fill-in-color {
-    background-color: rgba(34, 117, 165, 0.85);
+    background-color: rgba(34, 117, 165, 0.88);
     -webkit-box-shadow: 6px 0 10px #333;
     box-shadow: 6px 0 10px #333;
     -webkit-transform: scale(1);
@@ -713,15 +699,6 @@ footer {
     top: 88%;
     border-right: 6px solid #da413e;
     border-bottom: 6px solid #da413e; } }
-
-.card {
-  display: block;
-  height: 450px;
-  width: 800px;
-  margin: 7rem auto;
-  border-radius: 25px;
-  -webkit-box-shadow: 0 0 40px #333;
-  box-shadow: 0 0 40px #333; }
 
 .project {
   width: 100%;
