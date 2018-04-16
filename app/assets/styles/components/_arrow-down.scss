@@ -33,4 +33,10 @@
             border-bottom: 6px solid $accentRed;
         }
     }
+
+    transition: opacity .8s ease-out;
+
+    &--fade {
+        opacity: 0;
+    }
 }

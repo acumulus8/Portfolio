@@ -18,7 +18,7 @@ class HeroParallax {
             });
 
             that.content.css({
-                'transform' : 'translate(0px, '+ windowScroll /13 +'%)'
+                'transform' : 'translate(0px, '+ windowScroll /8 +'%)'
             });
         });
     }

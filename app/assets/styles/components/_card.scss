@@ -1,0 +1,11 @@
+.card {
+    position: relative;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 0 40px $mainGray;
+    background-color: #fff;
+}

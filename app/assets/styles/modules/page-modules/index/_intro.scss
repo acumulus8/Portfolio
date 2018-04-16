@@ -1,0 +1,11 @@
+.intro {
+    height: 50vh;
+    margin-top: 3rem;
+
+    &__img-container {
+        width: 60%;
+        border-radius: 50% 50% 50% 50%;
+        overflow: hidden;
+        margin-right: 3rem;
+    }
+}

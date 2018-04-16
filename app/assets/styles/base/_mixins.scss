@@ -44,3 +44,9 @@
         padding-left: 20px;
     }
 }
+
+@mixin clearFloats {
+    content: "";
+    clear: both;
+    display: table;
+}

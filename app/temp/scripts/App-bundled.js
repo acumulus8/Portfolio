@@ -10492,6 +10492,7 @@ var StickyHeader = function () {
 
         this.siteHeader = (0, _jquery2.default)('.site-header');
         this.headerTriggerElement = (0, _jquery2.default)('#large-hero__title');
+        this.arrowDown = (0, _jquery2.default)('.arrow-down');
         this.createColorWaypoint();
     }
 
@@ -10504,8 +10505,10 @@ var StickyHeader = function () {
                 handler: function handler(direction) {
                     if (direction == "down") {
                         that.siteHeader.addClass('site-header--fill-in-color');
+                        that.arrowDown.addClass('arrow-down--fade');
                     } else {
                         that.siteHeader.removeClass('site-header--fill-in-color');
+                        that.arrowDown.removeClass('arrow-down--fade');
                     }
                 },
                 offset: "18%"
@@ -11324,7 +11327,7 @@ var HeroParallax = function () {
                 });
 
                 that.content.css({
-                    'transform': 'translate(0px, ' + windowScroll / 13 + '%)'
+                    'transform': 'translate(0px, ' + windowScroll / 8 + '%)'
                 });
             });
         }

@@ -5,6 +5,7 @@ class StickyHeader {
     constructor() {
         this.siteHeader = $('.site-header');
         this.headerTriggerElement = $('#large-hero__title');
+        this.arrowDown = $('.arrow-down');
         this.createColorWaypoint();
     }
 
@@ -15,8 +16,10 @@ class StickyHeader {
             handler: function(direction) {
                 if (direction == "down") {
                     that.siteHeader.addClass('site-header--fill-in-color');
+                    that.arrowDown.addClass('arrow-down--fade');
                 } else {
                     that.siteHeader.removeClass('site-header--fill-in-color');
+                    that.arrowDown.removeClass('arrow-down--fade');
                 }
             },
             offset: "18%"
