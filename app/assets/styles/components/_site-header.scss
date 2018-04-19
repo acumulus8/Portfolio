@@ -4,7 +4,7 @@
     width: 100%;
     top: 0;
     z-index: 10;
-    transform: scale(1.15);
+    //transform: scale(1.12);
     padding-top: 1.75rem;
     box-shadow: 6px 0 10px transparent;
     transition: all .5s ease-out;
@@ -46,17 +46,21 @@
     }
 
     &--fill-in-color {
-        background-color: rgba(34, 117, 165, 0.88);
+        background-color: $transBlue;
         box-shadow: 6px 0 10px $mainGray;
         transform: scale(1);
         padding-top: 0;
-        transition: all .8s ease-out;
+        transition: all .6s ease-out;
     }
 
     &--not-index {
-        background-color: rgba(34, 117, 165, 0.85);
+        background-color: $transBlue;
         transform: scale(1);
         padding-top: 0;
         box-shadow: 6px 0 10px $mainGray;
+    }
+
+    &--hide {
+        transform: translateY(-100%);
     }
 }

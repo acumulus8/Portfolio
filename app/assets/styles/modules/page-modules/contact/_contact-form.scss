@@ -59,6 +59,27 @@
         }
     }
 
+    &__checkmark-container {
+        position: relative;
+        height: 70px;
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 15px 0 15px;
+        opacity: 0;
+        color: $mainGreen;
+        font-weight: $fontBold;
+        font-size: 2rem;
+        transition: opacity .6s ease-out;
+
+        &--is-showing {
+            opacity: 1;
+        }
+    }
+
     &__error {
         width: 15rem;
         border: 4px solid #812222;

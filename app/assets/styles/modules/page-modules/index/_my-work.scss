@@ -1,0 +1,49 @@
+.my-work {
+    text-align: center;
+    margin-top: 3rem;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        //grid-gap: 1rem;
+        padding: 0 5rem 5rem 5rem;
+    }
+
+    &__img {
+       position: relative;
+       overflow: hidden;
+
+        a {
+            color: #fff;
+        }
+
+        img {
+            display: block;
+            transform: scale(1);
+            transition: all .4s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.12);
+            }
+
+            .my-work__img--modal {
+                left: 0%;
+                background: $transBlue;
+            }
+        }
+
+        &--modal {
+            position: absolute;
+            bottom: 0px;
+            left: -100%;
+            right: 0px;
+            top: 0px;
+            padding: 2rem 0 2rem 1rem;
+            text-align: left;
+            background: transparent;
+            transition: all .4s ease-in-out;
+        }
+    }
+}

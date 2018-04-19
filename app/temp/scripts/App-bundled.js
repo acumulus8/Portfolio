@@ -10453,11 +10453,16 @@ var _FormValidate = __webpack_require__(5);
 
 var _FormValidate2 = _interopRequireDefault(_FormValidate);
 
+var _HideHeader = __webpack_require__(6);
+
+var _HideHeader2 = _interopRequireDefault(_HideHeader);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var formValidate = new _FormValidate2.default();
 var stickyHeader = new _StickyHeader2.default();
 var heroParallax = new _HeroParllax2.default();
+var hideHeader = new _HideHeader2.default();
 
 console.log('hey dawg');
 
@@ -11368,58 +11373,51 @@ var FormValidate = function () {
         this.email = (0, _jquery2.default)('#email');
         this.message = (0, _jquery2.default)('#message');
         this.button = (0, _jquery2.default)('#button');
-        this.buttonContainer = (0, _jquery2.default)('a');
         this.error = (0, _jquery2.default)('#error');
-        this.validateForm();
-        this.errorMessage();
-        this.inputErrorHighlight();
+        this.checkmark = (0, _jquery2.default)('#checkmark');
+        this.handleButton();
+        this.handleErrorMessage();
+        this.handleErrorHighlight();
     }
 
     _createClass(FormValidate, [{
-        key: 'validateForm',
-        value: function validateForm() {
+        key: 'handleButton',
+        value: function handleButton() {
             var that = this;
             this.form.keyup(function () {
                 if (that.email.val() !== '' && that.name.val() !== '' && that.message.val() !== '') {
                     that.button.addClass('button--contact-form--is-validated');
-                    that.error.addClass('contact-form__error--is-hidden');
                     that.button.attr('type', 'submit');
+                    that.checkmark.addClass('contact-form__checkmark--is-showing');
                 } else {
                     that.button.removeClass('button--contact-form--is-validated');
                     that.button.removeAttr('type', 'submit');
-                };
-
-                if (that.email.val() !== '') {
-                    that.email.removeClass('contact-form--error-highlight');
-                };
-
-                if (that.name.val() !== '') {
-                    that.name.removeClass('contact-form--error-highlight');
-                };
-
-                if (that.message.val() !== '') {
-                    that.message.removeClass('contact-form--error-highlight');
+                    that.checkmark.removeClass('contact-form__checkmark--is-showing');
                 };
             });
         }
     }, {
-        key: 'errorMessage',
-        value: function errorMessage() {
+        key: 'handleErrorMessage',
+        value: function handleErrorMessage() {
             var that = this;
             this.button.click(function () {
                 if (that.email.val() == '' || that.name.val() == '' || that.message.val() == '') {
                     that.error.removeClass('contact-form__error--is-hidden');
                 } else {
                     that.error.addClass('contact-form__error--is-hidden');
-                }
+                    that.showCheckmark();
+                };
+            });
+
+            this.form.keyup(function () {
+                if (that.email.val() !== '' && that.name.val() !== '' && that.message.val() !== '') {
+                    that.error.addClass('contact-form__error--is-hidden');
+                };
             });
         }
-
-        //refactor into mulitple if statements
-
     }, {
-        key: 'inputErrorHighlight',
-        value: function inputErrorHighlight() {
+        key: 'handleErrorHighlight',
+        value: function handleErrorHighlight() {
             var that = this;
             this.button.click(function () {
                 if (that.email.val() == '') {
@@ -11434,6 +11432,20 @@ var FormValidate = function () {
                     that.message.addClass('contact-form--error-highlight');
                 };
             });
+
+            this.form.keyup(function () {
+                if (that.email.val() !== '') {
+                    that.email.removeClass('contact-form--error-highlight');
+                };
+
+                if (that.name.val() !== '') {
+                    that.name.removeClass('contact-form--error-highlight');
+                };
+
+                if (that.message.val() !== '') {
+                    that.message.removeClass('contact-form--error-highlight');
+                };
+            });
         }
     }]);
 
@@ -11443,6 +11455,104 @@ var FormValidate = function () {
 ;
 
 exports.default = FormValidate;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var HideHeader = function () {
+    function HideHeader() {
+        _classCallCheck(this, HideHeader);
+
+        this.window = (0, _jquery2.default)(window);
+        this.siteHeader = (0, _jquery2.default)('.site-header');
+        this.triggerElement = (0, _jquery2.default)('.large-hero__content');
+        this.toggleHeader();
+    }
+
+    _createClass(HideHeader, [{
+        key: 'toggleHeader',
+        value: function toggleHeader() {
+            var that = this;
+            var didScroll = void 0;
+            var lastScrollTop = 0;
+            var delta = 5;
+            var heroHeight = this.triggerElement.outerHeight();
+
+            // on scroll, let the interval function know the user has scrolled
+            (0, _jquery2.default)(window).scroll(function (event) {
+                didScroll = true;
+            });
+            // run hasScrolled() and reset didScroll status
+            setInterval(function () {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 250);
+            function hasScrolled() {
+                var st = that.window.scrollTop();
+                if (Math.abs(lastScrollTop - st) <= delta) return;
+                if (st > lastScrollTop && st > heroHeight) {
+                    // Scroll Down
+                    that.siteHeader.addClass('site-header--hide');
+                } else {
+                    // Scroll Up
+                    if (st + (0, _jquery2.default)(window).height() < (0, _jquery2.default)(document).height()) {
+                        that.siteHeader.removeClass('site-header--hide');
+                    }
+                }
+
+                lastScrollTop = st;
+            }
+        }
+
+        /*
+                new Waypoint ({
+                    element: this.triggerElement[0],
+                    handler: function(direction) {
+                        if (direction == 'down') {
+                            that.window.scroll(function(e) {
+                                let st = that.window.scrollTop();
+                                if (st > lastScrollTop) {
+                                    that.siteHeader.addClass('site-header--hide');
+                                    lastScrollTop = st;
+                                    console.log(st);
+                                } else {
+                                    that.siteHeader.removeClass('site-header--hide');
+                                    lastScrollTop = st;
+                                    console.log(st);
+                                }
+                            })
+                        } else {
+                            console.log('above trigger now');
+                        }
+                    }
+                }) */
+
+    }]);
+
+    return HideHeader;
+}();
+
+exports.default = HideHeader;
 
 /***/ })
 /******/ ]);

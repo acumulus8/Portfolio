@@ -1,11 +1,26 @@
 .intro {
-    height: 50vh;
+    //height: 50vh;
     margin-top: 3rem;
+    grid-template-columns: 1fr 1fr;
 
     &__img-container {
-        width: 60%;
-        border-radius: 50% 50% 50% 50%;
+        float: left;
+        width: 35%;
         overflow: hidden;
         margin-right: 3rem;
+        border-radius: 50%;
+    }
+
+    &__content {
+        width: 50%;
+        float: left;
+
+        p {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &:after {
+        @include clearFloats;
     }
 }

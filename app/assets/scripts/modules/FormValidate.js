@@ -7,52 +7,50 @@ class FormValidate {
         this.email = $('#email');
         this.message = $('#message');
         this.button = $('#button');
-        this.buttonContainer = $('a');
         this.error = $('#error');
-        this.validateForm();
-        this.errorMessage();
-        this.inputErrorHighlight();
+        this.checkmark = $('#checkmark');
+        this.handleButton();
+        this.handleErrorMessage();
+        this.handleErrorHighlight();
     }
+    
 
-    validateForm() {
+    handleButton() {
         const that = this;
         this.form.keyup(function() {
             if (that.email.val() !== '' && that.name.val() !== '' && that.message.val() !== '') {
                 that.button.addClass('button--contact-form--is-validated');
-                that.error.addClass('contact-form__error--is-hidden');
                 that.button.attr('type', 'submit');
+                that.checkmark.addClass('contact-form__checkmark--is-showing');
             } else {
                 that.button.removeClass('button--contact-form--is-validated');
                 that.button.removeAttr('type', 'submit');
-            };
-
-            if (that.email.val() !== '') {
-                that.email.removeClass('contact-form--error-highlight');
-            };
-
-            if (that.name.val() !== '') {
-                that.name.removeClass('contact-form--error-highlight');
-            }; 
-
-            if (that.message.val() !== '') {
-                that.message.removeClass('contact-form--error-highlight');
+                that.checkmark.removeClass('contact-form__checkmark--is-showing');
             };
         });
     }
 
-    errorMessage() {
+
+    handleErrorMessage() {
         const that = this;
         this.button.click(function() {
             if (that.email.val() == '' || that.name.val() == '' || that.message.val() == '') {
                 that.error.removeClass('contact-form__error--is-hidden');
             } else {
                 that.error.addClass('contact-form__error--is-hidden');
-            }
+                that.showCheckmark();
+            };    
+        });
+
+        this.form.keyup(function() {
+            if (that.email.val() !== '' && that.name.val() !== '' && that.message.val() !== '') {
+                that.error.addClass('contact-form__error--is-hidden');
+            };
         });
     }
 
-    //refactor into mulitple if statements
-    inputErrorHighlight() {
+
+    handleErrorHighlight() {
         const that = this;
         this.button.click(function() {
             if (that.email.val() == '') {
@@ -67,7 +65,22 @@ class FormValidate {
                 that.message.addClass('contact-form--error-highlight');
             };
         });
+
+        this.form.keyup(function() {
+            if (that.email.val() !== '') {
+                that.email.removeClass('contact-form--error-highlight');
+            };
+
+            if (that.name.val() !== '') {
+                that.name.removeClass('contact-form--error-highlight');
+            }; 
+
+            if (that.message.val() !== '') {
+                that.message.removeClass('contact-form--error-highlight');
+            };
+        });
     }
+
 };
 
 export default FormValidate;
