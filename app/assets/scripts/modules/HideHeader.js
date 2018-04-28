@@ -4,7 +4,7 @@ class HideHeader {
     constructor() {
         this.window = $(window);
         this.siteHeader = $('.site-header');
-        this.triggerElement = $('.large-hero__content');
+        this.triggerElement = $('#trigger');
         this.toggleHeader();
     }
 
@@ -43,33 +43,7 @@ class HideHeader {
                 lastScrollTop = st;
             }
             
-        }
-
-
-
-/*
-        new Waypoint ({
-            element: this.triggerElement[0],
-            handler: function(direction) {
-                if (direction == 'down') {
-                    that.window.scroll(function(e) {
-                        let st = that.window.scrollTop();
-                        if (st > lastScrollTop) {
-                            that.siteHeader.addClass('site-header--hide');
-                            lastScrollTop = st;
-                            console.log(st);
-                        } else {
-                            that.siteHeader.removeClass('site-header--hide');
-                            lastScrollTop = st;
-                            console.log(st);
-                        }
-                    })
-                } else {
-                    console.log('above trigger now');
-                }
-            }
-        }) */
-    
+        } 
 }
 
 export default HideHeader;

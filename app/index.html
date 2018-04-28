@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta content="width=device-width" name="viewport">
     <title>Tim Wilburn: Developer</title>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="temp/styles/styles.css" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -17,7 +19,7 @@
                 <div class="site-header__brand">
                     <div class="site-header__logo">
                         <a href="./index.html">
-                            <img src="assets/images/Logo-black.svg" alt="logo">
+                            <img src="assets/images/new-logo.svg" alt="logo">
                         </a>
                     </div>
                     <div class="site-header__text">
@@ -53,7 +55,7 @@
         </div>
         <div class="large-hero__image-container">
         </div>
-        <div class="large-hero__content">
+        <div class="large-hero__content" id="trigger">
             <div class="wrapper">
                 <h1 id="large-hero__title">Web Design and Development</h1>
                 <p>I love designing, problem solving, and creating things with code. </p>
@@ -73,8 +75,10 @@
                 <img src="assets/images/profile.jpg" alt="Picture of Timothy Wilburn">
             </div>
             <div class="intro__content">
-                <h1 id="greeting">Hi, I'm Tim!</h1>
-                <p>I'm a web designer and developer based in Lexington Kentucky. I am available for freelance, office, or remote work. I specialize in front end work, as well as UI design and prototyping. I can help you in any stage of the project, and get your ideas out there.</p>
+                <h1 class="section-header" id="greeting">Hi, I'm Tim!</h1>
+                <p>I'm a web designer and developer based in Lexington Kentucky. I am available for freelance, office, or remote
+                    work. I specialize in front end work, as well as UI design and prototyping. I can help you in any stage
+                    of the project, and get your ideas out there.</p>
                 <button class="button button--about">
                     <a href="./about.html" role="button">
                         About Me
@@ -85,28 +89,32 @@
 
         <section class="skills">
             <div class="wrapper">
-                <h1 class="skills__title">What can I do for you?...</h1>
+                <h1 class="skills__title section-header">What can I do for you?</h1>
                 <p class="skills__description"></p>
                 <div class="skills__figure-container">
                     <figure class="skills__figure">
                         <i class="far fa-map fa-4x skills__icon"></i>
                         <h2 class="skills__figure-title">Planning</h2>
                         <figcaption>
-                            I can help you plan out your ideas into concise, user centered design: from the visual presentation, to the functionality that will best serve your targeted customers.
+                            I can help you plan out your ideas into concise, user centered design: from the visual presentation, to the functionality
+                            that will best serve your targeted customers.
                         </figcaption>
                     </figure>
                     <figure class="skills__figure">
                         <i class="fas fa-pencil-alt fa-4x skills__icon"></i>
                         <h2 class="skills__figure-title">Design</h2>
                         <figcaption>
-                            I can help you organize your assets and help you through the prototyping faze until we find something that fits your vision. From standard usabilty focused design, to highly modern and flashy, I can help make your vision a reality.
+                            I can help you organize your assets and help you through the prototyping faze until we find something that fits your vision.
+                            From standard usabilty focused design, to highly modern and flashy, I can help make your vision
+                            a reality.
                         </figcaption>
                     </figure>
                     <figure class="skills__figure">
                         <i class="fas fa-code fa-4x skills__icon"></i>
                         <h2 class="skills__figure-title">Coding</h2>
                         <figcaption>
-                            I can take those static designs and use my knowledge of code to turn your project into a production ready reality! With high proficiency in HTML, CSS, JavaScript and React, no challenge is insurmountable.
+                            I can take those static designs and use my knowledge of code to turn your project into a production ready reality! With high
+                            proficiency in HTML, CSS, JavaScript and React, no challenge is insurmountable.
                         </figcaption>
                     </figure>
                 </div>
@@ -115,7 +123,7 @@
 
         <section class="my-work">
             <div class="wrapper">
-                <h1>My Work</h1>
+                <h1 class="section-header">My Work</h1>
                 <h2>Start Exploring!</h2>
                 <div class="my-work__container">
                     <figure class="my-work__img">
@@ -155,15 +163,6 @@
                         </a>
                     </figure>
                     <figure class="my-work__img">
-                        <a href="./portfolio.html#my-times">
-                            <img src="assets/images/my-times.png">
-                            <figcaption class="my-work__img--modal">
-                                <h3>My Times</h3>
-                                <p>Website - View more about this!</p>
-                            </figcaption>
-                        </a>
-                    </figure>
-                    <figure class="my-work__img">
                         <a href="portfolio.html#game">
                             <img src="assets/images/game-of-life.png">
                             <figcaption class="my-work__img--modal">
@@ -172,7 +171,15 @@
                             </figcaption>
                         </a>
                     </figure>
+                    <div class="button-container">
+                        <button class="button button--large-hero button button--large-hero--my-work" id="large-hero__button">
+                            <a href="./contact.html" role="button">
+                                I am available for hire!
+                            </a>
+                        </button>
+                    </div>
                 </div>
+
             </div>
         </section>
 

@@ -11483,7 +11483,7 @@ var HideHeader = function () {
 
         this.window = (0, _jquery2.default)(window);
         this.siteHeader = (0, _jquery2.default)('.site-header');
-        this.triggerElement = (0, _jquery2.default)('.large-hero__content');
+        this.triggerElement = (0, _jquery2.default)('#trigger');
         this.toggleHeader();
     }
 
@@ -11523,30 +11523,6 @@ var HideHeader = function () {
                 lastScrollTop = st;
             }
         }
-
-        /*
-                new Waypoint ({
-                    element: this.triggerElement[0],
-                    handler: function(direction) {
-                        if (direction == 'down') {
-                            that.window.scroll(function(e) {
-                                let st = that.window.scrollTop();
-                                if (st > lastScrollTop) {
-                                    that.siteHeader.addClass('site-header--hide');
-                                    lastScrollTop = st;
-                                    console.log(st);
-                                } else {
-                                    that.siteHeader.removeClass('site-header--hide');
-                                    lastScrollTop = st;
-                                    console.log(st);
-                                }
-                            })
-                        } else {
-                            console.log('above trigger now');
-                        }
-                    }
-                }) */
-
     }]);
 
     return HideHeader;

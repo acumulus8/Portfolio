@@ -1,18 +1,20 @@
 .skills {
-    //height: 100vh;
-    margin-top: 3rem;
-    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    //height: 80vh;
+    //margin-top: 3rem;
+    padding: 5.5rem 0;
     text-align: center;
     background-color: $lightGray;
     color: #fff;
 
     &__title {
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
     }
 
     &__icon {
         color: $mainYellow;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
     }
 
     &__figure-container {
@@ -24,9 +26,14 @@
     &__figure {
         margin: 0;
 
+        h2 {
+            font-style: italic;
+        }
+
         figcaption {
             padding: 1rem;
             font-family: $paragraphFont;
+            font-size: 1.5rem;
             line-height: 1.65;
         }
     }
