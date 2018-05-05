@@ -10457,12 +10457,17 @@ var _HideHeader = __webpack_require__(6);
 
 var _HideHeader2 = _interopRequireDefault(_HideHeader);
 
+var _ImageCarousel = __webpack_require__(7);
+
+var _ImageCarousel2 = _interopRequireDefault(_ImageCarousel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var formValidate = new _FormValidate2.default();
 var stickyHeader = new _StickyHeader2.default();
 var heroParallax = new _HeroParllax2.default();
 var hideHeader = new _HideHeader2.default();
+var imageCarousel = new _ImageCarousel2.default();
 
 console.log('hey dawg');
 
@@ -11315,6 +11320,7 @@ var HeroParallax = function () {
         _classCallCheck(this, HeroParallax);
 
         this.background = (0, _jquery2.default)('.large-hero__image-container');
+        this.hero = (0, _jquery2.default)('.large-hero');
         this.content = (0, _jquery2.default)('.large-hero__content');
         this.window = (0, _jquery2.default)(window);
         this.scrollImage();
@@ -11324,16 +11330,21 @@ var HeroParallax = function () {
         key: 'scrollImage',
         value: function scrollImage() {
             var that = this;
+            var heroHeight = this.hero.height();
+
             this.window.scroll(function () {
                 var windowScroll = that.window.scrollTop();
 
-                that.background.css({
-                    'transform': 'translate(0px, -' + windowScroll / 16 + '%)'
-                });
+                if (windowScroll <= heroHeight) {
+                    that.background.css({
+                        'transform': 'translate(0px, -' + windowScroll / 14.8 + '%)'
+                    });
 
-                that.content.css({
-                    'transform': 'translate(0px, ' + windowScroll / 8 + '%)'
-                });
+                    that.content.css({
+                        'transform': 'translate(0px, ' + windowScroll / 8 + '%)'
+                    });
+                    console.log(windowScroll);
+                }
             });
         }
     }]);
@@ -11529,6 +11540,195 @@ var HideHeader = function () {
 }();
 
 exports.default = HideHeader;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ImageCarousel = function () {
+    function ImageCarousel() {
+        _classCallCheck(this, ImageCarousel);
+
+        this.slider = (0, _jquery2.default)('.slider');
+        this.slideContainer = (0, _jquery2.default)('#slideContainer');
+        this.img = (0, _jquery2.default)('.img');
+        this.imgWidth = (0, _jquery2.default)('.img').width();
+        this.currentSlide = 1;
+        this.slideNumber = 1;
+        this.pause = 3000;
+        this.dot1 = (0, _jquery2.default)('#dot1');
+        this.dot2 = (0, _jquery2.default)('#dot2');
+        this.dot3 = (0, _jquery2.default)('#dot3');
+        this.dot4 = (0, _jquery2.default)('#dot4');
+        this.next = (0, _jquery2.default)('#next');
+        this.prev = (0, _jquery2.default)('#prev');
+        this.slideImage();
+        this.previousImage();
+        this.nextImage();
+        this.changeDotColor();
+    }
+
+    _createClass(ImageCarousel, [{
+        key: 'slideImage',
+        value: function slideImage() {
+            var that = this;
+            var interval = void 0;
+
+            function startSlider() {
+                interval = setInterval(function () {
+                    console.log('fire slide move');
+                    that.slideContainer.animate({ 'margin-left': '-=' + that.imgWidth }, 1500, function () {
+                        that.currentSlide++;
+                        that.slideNumber++;
+                        if (that.currentSlide == that.img.length - 1) {
+                            that.currentSlide = 1;
+                            that.slideNumber = 1;
+                            that.slideContainer.css('margin-left', 0);
+                        }
+                    });
+
+                    console.log(that.currentSlide);
+                }, that.pause);
+            }
+
+            startSlider();
+
+            function stopSlider() {
+                clearInterval(interval);
+            }
+
+            function mouseStuff() {
+                that.slider.mouseenter(function () {
+                    console.log('mouse in');
+                    stopSlider();
+                });
+                that.slider.mouseleave(function () {
+                    console.log('mouse out');
+                    startSlider();
+                });
+            }
+
+            mouseStuff();
+        }
+    }, {
+        key: 'previousImage',
+        value: function previousImage() {
+            var that = this;
+            this.prev.on('click', function () {
+                console.log('previous');
+                that.slideContainer.animate({ 'margin-left': '+=' + that.imgWidth }, 1500, function () {
+                    that.currentSlide--;
+                    that.slideNumber--;
+                    if (that.currentSlide === 0) {
+                        that.currentSlide = that.img.length - 2;
+                        that.slideContainer.css('margin-left', '-=' + that.imgWidth * 4);
+                    }
+                });
+            });
+        }
+    }, {
+        key: 'nextImage',
+        value: function nextImage() {
+            var that = this;
+            this.next.on('click', function () {
+                console.log('next');
+                that.slideContainer.animate({ 'margin-left': '-=' + that.imgWidth }, 1500, function () {
+                    that.currentSlide++;
+                    that.slideNumber++;
+                    if (that.currentSlide == that.img.length - 1) {
+                        that.currentSlide = 1;
+                        that.slideContainer.css('margin-left', 0);
+                    }
+                });
+            });
+        }
+    }, {
+        key: 'changeDotColor',
+        value: function changeDotColor() {
+            var that = this;
+            var interval = void 0;
+
+            function increaseSlideNumber() {
+                that.slideNumber++;
+            }
+
+            function resetSlideNumber() {
+                that.slideNumber = 1;
+            }
+
+            function startSlider() {
+                interval = setInterval(function () {
+                    console.log('dot number ' + that.slideNumber);
+                    if (that.slideNumber === 1) {
+                        that.dot1.addClass('is-white');
+                        that.dot2.removeClass('is-white');
+                        that.dot3.removeClass('is-white');
+                        that.dot4.removeClass('is-white');
+                        //increaseSlideNumber();
+                    } else if (that.slideNumber === 2) {
+                        that.dot2.addClass('is-white');
+                        that.dot1.removeClass('is-white');
+                        that.dot3.removeClass('is-white');
+                        that.dot4.removeClass('is-white');
+                        //increaseSlideNumber();
+                    } else if (that.slideNumber === 3) {
+                        that.dot3.addClass('is-white');
+                        that.dot1.removeClass('is-white');
+                        that.dot2.removeClass('is-white');
+                        that.dot4.removeClass('is-white');
+                        //increaseSlideNumber();
+                    } else if (that.slideNumber === 4) {
+                        that.dot4.addClass('is-white');
+                        that.dot1.removeClass('is-white');
+                        that.dot2.removeClass('is-white');
+                        that.dot3.removeClass('is-white');
+                        //resetSlideNumber()
+                    }
+                }, 3000);
+            }
+
+            startSlider();
+
+            function stopSlider() {
+                clearInterval(interval);
+            }
+
+            function mouseStuff() {
+                that.slider.mouseenter(function () {
+                    console.log('mouse in');
+                    stopSlider();
+                });
+                that.slider.mouseleave(function () {
+                    console.log('mouse out');
+                    startSlider();
+                });
+            }
+
+            mouseStuff();
+        }
+    }]);
+
+    return ImageCarousel;
+}();
+
+exports.default = ImageCarousel;
 
 /***/ })
 /******/ ]);

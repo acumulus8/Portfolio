@@ -1,10 +1,36 @@
-footer {
-    position: relative;
-    height: 8rem;
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 4rem 0;
     color: white;
     background-color: $mainGray;
-    display: flex;
-    align-items: center;
-    padding-left: 2rem;
+
+    &__text-container {
+        padding: 2rem 0 2rem 0;
+    }
+
+    &__icon-container {
+
+        &__icon {
+            color: #fff;
+            transition: all .2s ease-out;
+
+            &:hover {
+                transform: scale(1.1);
+                filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
+            }
+
+            &:active {
+                transform: scale(1);
+                filter: none;
+            }
+        }
+        
+
+        .center-icon {
+            margin: 0 2rem;
+        }
+    }
 }

@@ -60,7 +60,7 @@
                 <h1 id="large-hero__title">Web Design and Development</h1>
                 <p>I love designing, problem solving, and creating things with code. </p>
                 <br />
-                <button class="button button--large-hero" id="large-hero__button">
+                <button class="button button--for-hire" id="large-hero__button">
                     <a href="./contact.html" role="button">
                         I am available for hire!
                     </a>
@@ -124,20 +124,20 @@
                 <h2>Start Exploring!</h2>
                 <div class="my-work__container">
                     <figure class="my-work__img">
-                        <a href="./portfolio.html#clear-view">
-                            <img src="assets/images/clear-view.png">
-                            <figcaption class="my-work__img--modal">
-                                <h3>Clear View Escapes</h3>
-                                <p>Website - View more about this!</p>
-                            </figcaption>
-                        </a>
-                    </figure>
-                    <figure class="my-work__img">
                         <a href="./portfolio.html#jammming">
                             <img src="assets/images/jammming.png">
                             <figcaption class="my-work__img--modal">
                                 <h3>Jammming</h3>
                                 <p>Web Application - View more about this!</p>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure class="my-work__img">
+                        <a href="./portfolio.html#clear-view">
+                            <img src="assets/images/clear-view.png">
+                            <figcaption class="my-work__img--modal">
+                                <h3>Clear View Escapes</h3>
+                                <p>Website - View more about this!</p>
                             </figcaption>
                         </a>
                     </figure>
@@ -168,50 +168,43 @@
                             </figcaption>
                         </a>
                     </figure>
-                    <div class="button-container">
-                        <button class="button button--large-hero button button--large-hero--my-work" id="large-hero__button">
-                            <a href="./contact.html" role="button">
-                                I am available for hire!
-                            </a>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container-fluid">
-                <h1 class="text-center sect-title">Contact</h1>
-                <div id="icons" class="row">
-                    <div class="col-md-4">
-                        <div class="contact text-center">
-                            <a href="https://github.com/acumulus8" target="_blank">
-                                <span aria-hidden="true" class="fab fa-github fa-5x text-center"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact text-center">
-                            <a href="mailto:timwilburn8@gmail.com" target="_blank">
-                                <span aria-hidden="true" class="fa fa-envelope fa-5x"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact text-center">
-                            <a href="https://linkedin.com/in/timothy-wilburn-29857074" target="_blank">
-                                <span aria-hidden="true" class="fab fa-linkedin fa-5x"></span>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
+
+        <section class="work-together">
+            <div class="wrapper">
+                <div class="work-together__button-container">
+                    <button class="button button--for-hire">
+                        <a href="./contact.html" role="button">
+                            I am available for hire!
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
-    <footer>
-        Copyright &copy; 2018 Tim Wilburn. All rights reserved.
+    <footer class="footer">
+        <div class="site-header__logo">
+            <a href="./index.html">
+                <img src="assets/images/new-logo.svg" alt="logo">
+            </a>
+        </div>
+        <div class="footer__text-container">Made from scratch, by yours truly :)</div>
+        <div class="footer__icon-container">
+            <a href="https://github.com/acumulus8" target="_blank">
+                <i aria-hidden="true" class="fab fa-github fa-2x footer__icon-container__icon" title="github"></i>
+            </a>
+            <a href="contact.html">
+                <i aria-hidden="true" class="fa fa-envelope fa-2x center-icon footer__icon-container__icon" title="email me!"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/timothy-wilburn" target="_blank">
+                <i aria-hidden="true" class="fab fa-linkedin fa-2x footer__icon-container__icon" title="linkedin"></i>
+            </a>
+        </div>
     </footer>
 
     <script src="temp/scripts/App-bundled.js"></script>

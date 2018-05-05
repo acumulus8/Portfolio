@@ -10,6 +10,10 @@
         //grid-template-rows: repeat(3, 1fr);
         //grid-gap: 1rem;
         padding: 0 5rem 5rem 5rem;
+
+        figure:first-child {
+            grid-area: 1 / 1 / 2 / 3;
+        }
     }
 
     &__img {
@@ -49,8 +53,4 @@
             transition: all .4s ease-in-out;
         }
     }
-}
-
-.button-container {
-    position: relative;
 }

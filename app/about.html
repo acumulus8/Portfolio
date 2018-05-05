@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width" name="viewport">
     <title>Tim Wilburn: About Me!</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="temp/styles/styles.css" />
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
@@ -58,12 +60,60 @@
         </div>
     </div>
 
-
     <main>
+
+        <div class="slider wrapper" id="wrapper" title="pause slideshow">
+            <ul class="slider__slideContainer" id="slideContainer">
+                <li class="slider__img img">
+                    <img src="assets/images/carouselImages/workspace.jpg" alt="">
+                </li>
+                <li class="slider__img img">
+                    <img src="assets/images/carouselImages/notebook.jpg" alt="">
+                </li>
+                <li class="slider__img img">
+                    <img src="assets/images/carouselImages/sarah-tim.jpg" alt="">
+                </li>
+                <li class="slider__img img">
+                    <img src="assets/images/carouselImages/tim-hunter.jpg" alt="">
+                </li>
+                <li class="slider__img img">
+                    <img src="assets/images/carouselImages/workspace.jpg" alt="">
+                </li>
+                <li class="slider__img img">
+                    <img src="assets/images/carouselImages/notebook.jpg" alt="">
+                </li>
+            </ul>
+            <div class="slider__prev" id="prev" title="previous slide"></div>
+            <div class="slider__next" id="next" title="next slide"></div>
+            <div class="slider__dot-container">
+                <div class="slider__dot-container__dot is-white" id="dot1"></div>
+                <div class="slider__dot-container__dot" id="dot2"></div>
+                <div class="slider__dot-container__dot" id="dot3"></div>
+                <div class="slider__dot-container__dot" id="dot4"></div>
+            </div>
+
+        </div>
+
     </main>
 
-    <footer>
-        Copyright &copy; 2018 Tim Wilburn. All rights reserved.
+    <footer class="footer">
+        <div class="site-header__logo">
+            <a href="./index.html">
+                <img src="assets/images/new-logo.svg" alt="logo">
+            </a>
+        </div>
+        <div class="footer__text-container">Made from scratch, by yours truly :)</div>
+        <div class="footer__icon-container">
+            <a href="https://github.com/acumulus8" target="_blank">
+                <i aria-hidden="true" class="fab fa-github fa-2x footer__icon-container__icon" title="github"></i>
+            </a>
+            <a href="contact.html">
+                <i aria-hidden="true" class="fa fa-envelope fa-2x center-icon footer__icon-container__icon" title="email me!"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/timothy-wilburn" target="_blank">
+                <i aria-hidden="true" class="fab fa-linkedin fa-2x footer__icon-container__icon" title="linkedin"></i>
+            </a>
+        </div>
     </footer>
 
     <script src="temp/scripts/App-bundled.js"></script>

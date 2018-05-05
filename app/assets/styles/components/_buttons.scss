@@ -1,6 +1,6 @@
 .button {
     border: none;
-    border-radius: 2rem;
+    border-radius: .5rem;
     padding: 1rem 1.8rem;
     margin-bottom: 10px;
     background-color: $secondaryBlue;
@@ -15,10 +15,13 @@
         transform: scale(1);
     }
 
-    &--large-hero {
+    &--for-hire {
         padding: 1rem 1rem;
         background-color: transparent;
         border: 4px solid $mainBlue;
+        border-radius: 2rem;
+        font-size: 1.5rem;
+        font-weight: $fontLight;
 
         a {
             color: #fff;
@@ -26,22 +29,6 @@
 
         &:hover {
             background-color: $mainBlue;
-        }
-
-        &--my-work {
-            position: absolute;
-            top: 50%;
-            right: 50%;
-            transform: translate(50%, -50%);
-            //transform: scale(1.4);
-
-            a {
-                color: $mainBlue;
-            }
-
-            &:hover {
-                background-color: #fff;
-            }
         }
     }
 
@@ -51,6 +38,10 @@
         a {
             color: #fff;
         }
+    }
+
+    &--my-work {
+        
     }
 
     &--contact-form {

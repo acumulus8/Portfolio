@@ -3,6 +3,7 @@ import $ from 'jquery';
 class HeroParallax {
     constructor() {
         this.background = $('.large-hero__image-container');
+        this.hero = $('.large-hero');
         this.content = $('.large-hero__content');
         this.window = $(window);
         this.scrollImage();
@@ -10,16 +11,21 @@ class HeroParallax {
 
     scrollImage() {
         const that = this;
-        this.window.scroll(function() {
+        let heroHeight = this.hero.height();
+
+        this.window.scroll(function () {
             let windowScroll = that.window.scrollTop();
 
-            that.background.css({
-                'transform' : 'translate(0px, -'+ windowScroll /16 +'%)'
-            });
+            if (windowScroll <= heroHeight) {
+                that.background.css({
+                    'transform': 'translate(0px, -' + windowScroll / 14.8 + '%)'
+                });
 
-            that.content.css({
-                'transform' : 'translate(0px, '+ windowScroll /8 +'%)'
-            });
+                that.content.css({
+                    'transform': 'translate(0px, ' + windowScroll / 8 + '%)'
+                });
+                console.log(windowScroll);
+            }
         });
     }
 }

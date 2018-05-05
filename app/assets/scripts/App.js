@@ -2,10 +2,12 @@ import StickyHeader from './modules/StickyHeader';
 import HeroParallax from './modules/HeroParllax';
 import FormValidate from './modules/FormValidate';
 import HideHeader from './modules/HideHeader';
+import ImageCarousel from './modules/ImageCarousel';
 
 let formValidate = new FormValidate();
 let stickyHeader = new StickyHeader();
 let heroParallax = new HeroParallax();
 let hideHeader = new HideHeader();
+let imageCarousel = new ImageCarousel();
 
 console.log('hey dawg');

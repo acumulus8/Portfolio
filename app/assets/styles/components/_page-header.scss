@@ -36,7 +36,7 @@
         color: #fff;
         text-shadow: 2px 2px $mainGray;
         z-index: 6;
-        animation: slideIn 2.4s ease-out .4s both;
+        animation: slideIn 2.8s ease-out both;
 
         &__h1 {
             font-size: 2rem;
@@ -117,10 +117,10 @@
                 opacity: 0;
             }
             60% {
-                opacity: .2;
+                opacity: .1;
             }
             70% {
-                opacity: .4;
+                opacity: .2;
             }
             80% {
                 opacity: .6;

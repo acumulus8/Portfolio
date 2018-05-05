@@ -6,6 +6,7 @@
     background-image: url(../../../../assets/images/intro-background.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+    border-bottom: 8px solid $mainGray;
 
     &__content {
         width: 70%;

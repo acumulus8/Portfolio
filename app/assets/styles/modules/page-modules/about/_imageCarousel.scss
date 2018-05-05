@@ -1,0 +1,81 @@
+.slider {
+    position: relative;
+    width: 65vw;
+    height: 70vh;
+    margin: 4rem auto;
+    overflow: hidden;
+    border-radius: 8px;
+
+    &__slideContainer {
+        display: block;
+        position: relative;
+        width: 999999px;
+        height: 70vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__img {
+        position: relative;
+        max-width: 65vw;
+        height: 70vh;
+        float: left;
+        left: -65vw;
+    }
+
+    &__prev, &__next {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        z-index: 5;
+        border-top: 5px solid #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            border-color: $mainYellow;
+        }
+    }
+
+    &__prev {
+        border-left: 5px solid #fff;
+        transform: rotate(-45deg);
+        left: 2%;
+    }
+
+    &__next {
+        border-right: 5px solid #fff;
+        right: 2%;
+        transform: rotate(45deg);
+    }
+
+    &__dot-container {
+        width: 10%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        bottom: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        &__dot {
+            height: 10px;
+            width: 10px;
+            background-color: $mainGray;
+            border: 2px solid $mainGray;
+            border-radius: 50%;
+        }
+    }
+
+    &::after {
+        @include clearFloats;
+    }
+}
+
+.is-white {
+    background-color: #fff;
+    border-color: #fff;
+}

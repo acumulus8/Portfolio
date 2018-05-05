@@ -4,24 +4,19 @@
 }
 
 html {
-    height: 100%;
+    //height: 100%;
 }
 
 body {
     font-family: $primaryFont;
     font-size: 18px;
     color: $mainGray;
-    height: 100%;
+    //height: 100%;
     overflow: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
-}
-
-main {
-    overflow: auto;
-    //margin-top: 94px;
 }
 
 img {
@@ -32,6 +27,7 @@ img {
 p {
     line-height: 1.4;
     font-family: $paragraphFont;
+    letter-spacing: .05rem;
 }
 
 a {
