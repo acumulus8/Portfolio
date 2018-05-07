@@ -1,34 +1,45 @@
 .intro {
-    //display: flex;
-    //align-items: center;
+  //display: flex;
+  //align-items: center;
+  height: 90vh;
+  //padding: 7rem 0;
+  background-image: url(../../../../assets/images/intro-background.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-bottom: 8px solid $mainGray;
+
+  &__content {
+    width: 70%;
     height: 90vh;
-    //padding: 7rem 0;
-    background-image: url(../../../../assets/images/intro-background.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-bottom: 8px solid $mainGray;
+    padding: 0 5% 0 15%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 30%,
+      rgba(255, 255, 255, 1) 60%
+    );
+    float: right;
+    //margin-left: 3rem;
 
     &__content {
-        width: 70%;
-        height: 90vh;
-        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%,rgba(255,255,255,1) 60%);
-        float: right;
+        height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0 5% 0 15%;
-        //margin-left: 3rem;
-
-
-        p {
-            margin-bottom: 3rem;
-            text-align: center;
-            line-height: 1.8;
-        }
+        overflow: hidden;
+        
     }
 
-    &:after {
-        @include clearFloats;
+    p {
+      margin-bottom: 3rem;
+      text-align: center;
+      line-height: 1.8;
     }
+  }
+
+  &:after {
+    @include clearFloats;
+  }
 }

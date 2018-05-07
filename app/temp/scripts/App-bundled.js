@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10436,103 +10436,6 @@ return jQuery;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _StickyHeader = __webpack_require__(2);
-
-var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
-
-var _HeroParllax = __webpack_require__(4);
-
-var _HeroParllax2 = _interopRequireDefault(_HeroParllax);
-
-var _FormValidate = __webpack_require__(5);
-
-var _FormValidate2 = _interopRequireDefault(_FormValidate);
-
-var _HideHeader = __webpack_require__(6);
-
-var _HideHeader2 = _interopRequireDefault(_HideHeader);
-
-var _ImageCarousel = __webpack_require__(7);
-
-var _ImageCarousel2 = _interopRequireDefault(_ImageCarousel);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var formValidate = new _FormValidate2.default();
-var stickyHeader = new _StickyHeader2.default();
-var heroParallax = new _HeroParllax2.default();
-var hideHeader = new _HideHeader2.default();
-var imageCarousel = new _ImageCarousel2.default();
-
-console.log('hey dawg');
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _noframework = __webpack_require__(3);
-
-var _noframework2 = _interopRequireDefault(_noframework);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var StickyHeader = function () {
-    function StickyHeader() {
-        _classCallCheck(this, StickyHeader);
-
-        this.siteHeader = (0, _jquery2.default)('.site-header');
-        this.headerTriggerElement = (0, _jquery2.default)('#large-hero__title');
-        this.arrowDown = (0, _jquery2.default)('.arrow-down');
-        this.createColorWaypoint();
-    }
-
-    _createClass(StickyHeader, [{
-        key: 'createColorWaypoint',
-        value: function createColorWaypoint() {
-            var that = this;
-            new Waypoint({
-                element: this.headerTriggerElement[0],
-                handler: function handler(direction) {
-                    if (direction == "down") {
-                        that.siteHeader.addClass('site-header--fill-in-color');
-                        that.arrowDown.addClass('arrow-down--fade');
-                    } else {
-                        that.siteHeader.removeClass('site-header--fill-in-color');
-                        that.arrowDown.removeClass('arrow-down--fade');
-                    }
-                },
-                offset: "18%"
-            });
-        }
-    }]);
-
-    return StickyHeader;
-}();
-
-exports.default = StickyHeader;
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports) {
 
 /*!
@@ -11295,6 +11198,112 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 ;
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _StickyHeader = __webpack_require__(3);
+
+var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
+
+var _HeroParllax = __webpack_require__(4);
+
+var _HeroParllax2 = _interopRequireDefault(_HeroParllax);
+
+var _FormValidate = __webpack_require__(5);
+
+var _FormValidate2 = _interopRequireDefault(_FormValidate);
+
+var _HideHeader = __webpack_require__(6);
+
+var _HideHeader2 = _interopRequireDefault(_HideHeader);
+
+var _ImageCarousel = __webpack_require__(7);
+
+var _ImageCarousel2 = _interopRequireDefault(_ImageCarousel);
+
+var _RevealOnScroll = __webpack_require__(8);
+
+var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var formValidate = new _FormValidate2.default();
+var stickyHeader = new _StickyHeader2.default();
+var heroParallax = new _HeroParllax2.default();
+var hideHeader = new _HideHeader2.default();
+var imageCarousel = new _ImageCarousel2.default();
+new _RevealOnScroll2.default((0, _jquery2.default)('.intro__content__content'), "40%", "slide-left", "slide-left--is-visible");
+
+console.log('hey dawg');
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var StickyHeader = function () {
+    function StickyHeader() {
+        _classCallCheck(this, StickyHeader);
+
+        this.siteHeader = (0, _jquery2.default)('.site-header');
+        this.headerTriggerElement = (0, _jquery2.default)('#large-hero__title');
+        this.arrowDown = (0, _jquery2.default)('.arrow-down');
+        this.createColorWaypoint();
+    }
+
+    _createClass(StickyHeader, [{
+        key: 'createColorWaypoint',
+        value: function createColorWaypoint() {
+            var that = this;
+            new Waypoint({
+                element: this.headerTriggerElement[0],
+                handler: function handler(direction) {
+                    if (direction == "down") {
+                        that.siteHeader.addClass('site-header--fill-in-color');
+                        that.arrowDown.addClass('arrow-down--fade');
+                    } else {
+                        that.siteHeader.removeClass('site-header--fill-in-color');
+                        that.arrowDown.removeClass('arrow-down--fade');
+                    }
+                },
+                offset: "18%"
+            });
+        }
+    }]);
+
+    return StickyHeader;
+}();
+
+exports.default = StickyHeader;
+
+/***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11729,6 +11738,70 @@ var ImageCarousel = function () {
 }();
 
 exports.default = ImageCarousel;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(1);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealOnScroll = function () {
+    function RevealOnScroll(element, offset, hiddenClass, visibleClass) {
+        _classCallCheck(this, RevealOnScroll);
+
+        this.elementToReveal = element;
+        this.offsetPercentage = offset;
+        this.hiddenClass = hiddenClass;
+        this.visibleClass = visibleClass;
+        this.hideInitially();
+        this.createWaypoint();
+    }
+
+    _createClass(RevealOnScroll, [{
+        key: 'hideInitially',
+        value: function hideInitially() {
+            this.elementToReveal.addClass(this.hiddenClass);
+        }
+    }, {
+        key: 'createWaypoint',
+        value: function createWaypoint() {
+            var that = this;
+            this.elementToReveal.each(function () {
+                var currentItem = this;
+                new Waypoint({
+                    element: currentItem,
+                    handler: function handler() {
+                        (0, _jquery2.default)(currentItem).addClass(that.visibleClass);
+                    },
+                    offset: that.offsetPercentage
+                });
+            });
+        }
+    }]);
+
+    return RevealOnScroll;
+}();
+
+exports.default = RevealOnScroll;
 
 /***/ })
 /******/ ]);

@@ -829,6 +829,24 @@ figure {
   font-weight: bold;
   letter-spacing: 3; }
 
+.slide-left {
+  display: none;
+  opacity: 0;
+  margin-left: 100%;
+  -webkit-transform: translateX(100%) scale(1.5);
+  -ms-transform: translateX(100%) scale(1.5);
+  transform: translateX(100%) scale(1.5);
+  -webkit-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  overflow: hidden; }
+  .slide-left--is-visible {
+    opacity: 1;
+    margin-left: 0;
+    -webkit-transform: translateX(0%) scale(1);
+    -ms-transform: translateX(0%) scale(1);
+    transform: translateX(0%) scale(1); }
+
 .project {
   width: 100%;
   display: -webkit-box;
@@ -1016,24 +1034,28 @@ figure {
   .intro__content {
     width: 70%;
     height: 90vh;
+    padding: 0 5% 0 15%;
     background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(30%, white), color-stop(60%, white));
     background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%, white 60%);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 30%, white 60%);
-    float: right;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding: 0 5% 0 15%; }
+    float: right; }
+    .intro__content__content {
+      height: 100%;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      overflow: hidden; }
     .intro__content p {
       margin-bottom: 3rem;
       text-align: center;
