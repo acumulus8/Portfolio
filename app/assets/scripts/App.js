@@ -11,6 +11,7 @@ let stickyHeader = new StickyHeader();
 let heroParallax = new HeroParallax();
 let hideHeader = new HideHeader();
 let imageCarousel = new ImageCarousel();
-new RevealOnScroll($('.intro__content__content'), "40%", "slide-left", "slide-left--is-visible" );
+new RevealOnScroll($('.intro__content__content'), "60%", "slide-left", "slide-left--is-visible" );
+new RevealOnScroll($('.skills__figure'), "80%", "float-in", "float-in--is-visible" );
 
 console.log('hey dawg');

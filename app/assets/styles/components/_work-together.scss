@@ -1,0 +1,18 @@
+.work-together {
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: $mainYellow;
+    
+
+    h1 {
+        margin-top: 0;
+        color: #fff;
+    }
+
+    &__button-container {
+        text-align: center;
+        margin-top: 3rem;
+    }
+}

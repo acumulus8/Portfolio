@@ -11239,7 +11239,8 @@ var stickyHeader = new _StickyHeader2.default();
 var heroParallax = new _HeroParllax2.default();
 var hideHeader = new _HideHeader2.default();
 var imageCarousel = new _ImageCarousel2.default();
-new _RevealOnScroll2.default((0, _jquery2.default)('.intro__content__content'), "40%", "slide-left", "slide-left--is-visible");
+new _RevealOnScroll2.default((0, _jquery2.default)('.intro__content__content'), "60%", "slide-left", "slide-left--is-visible");
+new _RevealOnScroll2.default((0, _jquery2.default)('.skills__figure'), "80%", "float-in", "float-in--is-visible");
 
 console.log('hey dawg');
 
