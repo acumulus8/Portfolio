@@ -1,0 +1,33 @@
+.my-story {
+    display: grid;
+    grid-template-areas: 'title title'
+                         'p1 picture'
+                         'p2 picture'
+                         'p3 p3'
+                         'p4 p4';
+    grid-column-gap: 2em;
+    margin-bottom: 4.5rem;
+
+    h2 {
+        grid-area: title;
+    }
+
+    .p1 {
+        grid-area: p1;
+    }
+
+    .p2 {
+        grid-area: p2;
+    }
+    .p3 {
+        grid-area: p3;
+    }
+    .p4 {
+        grid-area: p4;
+    }
+
+    &__img-container {
+        grid-area: picture;
+        padding: 1em;
+    }
+}
