@@ -1,7 +1,7 @@
 .slider {
     position: relative;
-    width: 65vw;
-    height: 70vh;
+    width: 70vw;
+    height: 80vh;
     margin: 4rem auto;
     overflow: hidden;
     border-radius: 8px;
@@ -10,17 +10,17 @@
         display: block;
         position: relative;
         width: 999999px;
-        height: 70vh;
+        height: 80vh;
         margin: 0;
         padding: 0;
     }
 
     &__img {
         position: relative;
-        max-width: 65vw;
-        height: 70vh;
+        width: 70vw;
+        height: 80vh;
         float: left;
-        left: -65vw;
+        left: -70vw;
     }
 
     &__prev, &__next {
@@ -51,31 +51,7 @@
         transform: rotate(45deg);
     }
 
-    &__dot-container {
-        width: 10%;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        bottom: 2%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-
-        &__dot {
-            height: 10px;
-            width: 10px;
-            background-color: $mainGray;
-            border: 2px solid $mainGray;
-            border-radius: 50%;
-        }
-    }
-
     &::after {
         @include clearFloats;
     }
-}
-
-.is-white {
-    background-color: #fff;
-    border-color: #fff;
 }

@@ -1,13 +1,13 @@
 .slide-left {
     opacity: 0;
     margin-left: 100%;
-    transform: translateX(100%) scale(1.5);
+    transform: translateX(100%);
     transition: all 2s ease-in-out;
     overflow: hidden;
 
     &--is-visible {
         opacity: 1;
         margin-left: 0;
-        transform: translateX(0%) scale(1);
+        transform: translateX(0%);
     }
 }

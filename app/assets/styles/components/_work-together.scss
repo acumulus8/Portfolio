@@ -4,7 +4,11 @@
     align-items: center;
     text-align: center;
     background-color: $mainYellow;
-    
+
+    h2 {
+        color: $mainBlue;
+        font-size: 2rem;
+    }
 
     h1 {
         margin-top: 0;

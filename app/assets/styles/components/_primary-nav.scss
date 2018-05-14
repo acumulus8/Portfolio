@@ -13,10 +13,24 @@
                 color: #fff;
                 font-weight: $fontLight;
                 letter-spacing: .09rem;
-                transition: all .4s ease-out;
+
+                &::before {
+                    content: '';
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    border-bottom: 1.5px solid #fff;
+                    visibility: hidden;
+                    transform: scaleX(0);
+                    transition: all .3s ease-out;
+                }
 
                 &:hover {
-                    text-decoration: underline;
+
+                    &::before {
+                        visibility: visible;
+                        transform: scaleX(1);
+                    }
                 }
             }
         }

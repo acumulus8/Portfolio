@@ -33,20 +33,21 @@
     }
 
     &--about {
-        background-color: $accentRed;
+        background-color: $mainGreen;
         
         a {
             color: #fff;
         }
-    }
 
-    &--my-work {
-        
+        &:hover {
+            opacity: .7;
+        }
     }
 
     &--contact-form {
-        width: 200px;
         align-self: flex-start;
+        width: 200px;
+        margin-left: 1rem;
         text-align: center;
         background-color: $mainGray;
         opacity: 0.5;
