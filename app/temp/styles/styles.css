@@ -1176,26 +1176,27 @@ figure {
     height: 30px;
     top: 50%;
     z-index: 5;
-    border-top: 5px solid #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out; }
-    .slider__prev:hover, .slider__next:hover {
-      border-color: #ffaf02; }
-  .slider__prev {
-    border-left: 5px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    left: 2%; }
-  .slider__next {
-    border-right: 5px solid #fff;
-    right: 2%;
+    border: 5px solid #fff;
+    border-radius: 5px;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
+    transform: rotate(45deg);
+    cursor: pointer;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+    .slider__prev:hover, .slider__next:hover {
+      -webkit-transform: rotate(45deg) scale(1.3);
+      -ms-transform: rotate(45deg) scale(1.3);
+      transform: rotate(45deg) scale(1.3); }
+  .slider__prev {
+    border-top: none;
+    border-right: none;
+    left: 2%; }
+  .slider__next {
+    border-bottom: none;
+    border-left: none;
+    right: 2%; }
   .slider::after {
     content: "";
     clear: both;
@@ -1260,6 +1261,94 @@ figure {
         -webkit-transform: scaleX(1);
         -ms-transform: scaleX(1);
         transform: scaleX(1); }
+
+.lightbox {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .6s ease-out;
+  -o-transition: all .6s ease-out;
+  transition: all .6s ease-out; }
+  .lightbox--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .lightbox__left-x, .lightbox__right-x {
+    position: absolute;
+    top: 6%;
+    right: 4%;
+    height: 4px;
+    width: 3%;
+    background-color: #fff; }
+    .lightbox__left-x:hover, .lightbox__right-x:hover {
+      cursor: pointer; }
+  .lightbox__left-x {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .lightbox__right-x {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .lightbox__img-container {
+    width: 65%;
+    height: 75%;
+    position: relative; }
+    .lightbox__img-container__prev, .lightbox__img-container__next {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      width: 30px;
+      height: 30px;
+      border: 4px solid #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      -webkit-transition: all .4s ease-out;
+      -o-transition: all .4s ease-out;
+      transition: all .4s ease-out; }
+      .lightbox__img-container__prev:hover, .lightbox__img-container__next:hover {
+        -webkit-transform: rotate(45deg) scale(1.3);
+        -ms-transform: rotate(45deg) scale(1.3);
+        transform: rotate(45deg) scale(1.3); }
+    .lightbox__img-container__prev {
+      left: -40px;
+      border-top: none;
+      border-right: none; }
+    .lightbox__img-container__next {
+      right: -40px;
+      border-bottom: none;
+      border-left: none; }
 
 .arrow-down {
   width: 100%;

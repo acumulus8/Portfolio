@@ -11232,6 +11232,10 @@ var _RevealOnScroll = __webpack_require__(8);
 
 var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
+var _Lightbox = __webpack_require__(9);
+
+var _Lightbox2 = _interopRequireDefault(_Lightbox);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var formValidate = new _FormValidate2.default();
@@ -11239,6 +11243,8 @@ var stickyHeader = new _StickyHeader2.default();
 var heroParallax = new _HeroParllax2.default();
 var hideHeader = new _HideHeader2.default();
 var imageCarousel = new _ImageCarousel2.default();
+var lightbox = new _Lightbox2.default();
+
 new _RevealOnScroll2.default((0, _jquery2.default)('.intro__content__content'), "80%", "slide-left", "slide-left--is-visible");
 new _RevealOnScroll2.default((0, _jquery2.default)('.skills__figure'), "80%", "float-in", "float-in--is-visible");
 new _RevealOnScroll2.default((0, _jquery2.default)('.icon-container'), "70%", "grow", "grow--is-visible");
@@ -11730,6 +11736,62 @@ var RevealOnScroll = function () {
 }();
 
 exports.default = RevealOnScroll;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Lightbox = function () {
+    function Lightbox() {
+        _classCallCheck(this, Lightbox);
+
+        this.lightbox = (0, _jquery2.default)('.js-lightbox');
+        this.certBtn = (0, _jquery2.default)('.js-certs-btn');
+        this.xBtn = (0, _jquery2.default)('.js-x');
+        this.openLightbox();
+        this.closeLightbox();
+    }
+
+    _createClass(Lightbox, [{
+        key: 'openLightbox',
+        value: function openLightbox() {
+            var that = this;
+            this.certBtn.on('click', function (e) {
+                that.lightbox.addClass('lightbox--is-visible');
+                e.preventDefault();
+            });
+        }
+    }, {
+        key: 'closeLightbox',
+        value: function closeLightbox() {
+            var that = this;
+            this.xBtn.on('click', function () {
+                that.lightbox.removeClass('lightbox--is-visible');
+            });
+        }
+    }]);
+
+    return Lightbox;
+}();
+
+exports.default = Lightbox;
 
 /***/ })
 /******/ ]);
