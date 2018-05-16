@@ -23,7 +23,6 @@ class ImageCarousel {
 
         function startSlider() {
             interval = setInterval(function() {
-                console.log('fire slide move');
                 that.slideContainer.animate({'margin-left': '-=' + that.imgWidth}, that.animateTime, function() {
                     that.currentSlide++;
                     that.slideNumber++;

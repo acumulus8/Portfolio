@@ -835,7 +835,7 @@ figure {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   padding: 3em 0;
-  background-color: #69a13b;
+  background-color: #da413e;
   width: 65%;
   border-radius: 2rem;
   -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
@@ -885,22 +885,6 @@ figure {
         color: #da413e; }
       .project__link a:active {
         color: #0A2463; }
-  .project__divider {
-    width: 95%;
-    position: relative; }
-    .project__divider::before, .project__divider::after {
-      content: '';
-      position: absolute;
-      height: 4px;
-      width: 4px;
-      background-color: #da413e;
-      border-radius: 50%; }
-    .project__divider::before {
-      top: -2px;
-      left: -20px; }
-    .project__divider::after {
-      top: -2px;
-      right: -20px; }
 
 .contact-form {
   width: 100%;
@@ -1297,9 +1281,10 @@ figure {
     position: absolute;
     top: 6%;
     right: 4%;
-    height: 4px;
+    height: .8%;
     width: 3%;
-    background-color: #fff; }
+    background-color: #fff;
+    border: 4px solid #fff; }
     .lightbox__left-x:hover, .lightbox__right-x:hover {
       cursor: pointer; }
   .lightbox__left-x {
@@ -1341,6 +1326,10 @@ figure {
         -webkit-transform: rotate(45deg) scale(1.3);
         -ms-transform: rotate(45deg) scale(1.3);
         transform: rotate(45deg) scale(1.3); }
+      .lightbox__img-container__prev:active, .lightbox__img-container__next:active {
+        -webkit-transform: rotate(45deg) scale(1);
+        -ms-transform: rotate(45deg) scale(1);
+        transform: rotate(45deg) scale(1); }
     .lightbox__img-container__prev {
       left: -40px;
       border-top: none;

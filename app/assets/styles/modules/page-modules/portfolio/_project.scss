@@ -52,29 +52,4 @@
             }
         }
     }
-
-    &__divider {
-        width: 95%;
-        position: relative;
-
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            height: 4px;
-            width: 4px;
-            background-color: $accentRed;
-            border-radius: 50%;
-        }
-
-        &::before {
-            top: -2px;
-            left: -20px;
-        }
-
-        &::after {
-            top: -2px;
-            right: -20px;
-        }
-    }
 }

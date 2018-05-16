@@ -11606,7 +11606,6 @@ var ImageCarousel = function () {
 
             function startSlider() {
                 interval = setInterval(function () {
-                    console.log('fire slide move');
                     that.slideContainer.animate({ 'margin-left': '-=' + that.imgWidth }, that.animateTime, function () {
                         that.currentSlide++;
                         that.slideNumber++;
@@ -11763,10 +11762,15 @@ var Lightbox = function () {
         _classCallCheck(this, Lightbox);
 
         this.lightbox = (0, _jquery2.default)('.js-lightbox');
+        this.image = (0, _jquery2.default)('.lightbox__img-container__image');
         this.certBtn = (0, _jquery2.default)('.js-certs-btn');
         this.xBtn = (0, _jquery2.default)('.js-x');
+        this.prev = (0, _jquery2.default)('.js-prev');
+        this.next = (0, _jquery2.default)('.js-next');
+        this.imageSrc = ['./assets/images/lightboxImages/build-web-apps-cert.jpg', './assets/images/lightboxImages/build-website-ui-cert.jpg', './assets/images/lightboxImages/git-web-dev-job-cert.jpg', './assets/images/lightboxImages/websites-from-scratch-cert.jpg', './assets/images/lightboxImages/wp-for-beginners-cert.jpg'];
         this.openLightbox();
         this.closeLightbox();
+        this.changeImage();
     }
 
     _createClass(Lightbox, [{
@@ -11784,6 +11788,47 @@ var Lightbox = function () {
             var that = this;
             this.xBtn.on('click', function () {
                 that.lightbox.removeClass('lightbox--is-visible');
+            });
+        }
+    }, {
+        key: 'changeImage',
+        value: function changeImage() {
+            var i = 0;
+            this.image.attr("src", this.imageSrc[0]);
+            var that = this;
+
+            this.next.on('click', function () {
+                if (i < that.imageSrc.length - 1) {
+                    i++;
+                    that.image.fadeOut('medium', function () {
+                        that.image.attr("src", that.imageSrc[i]);
+                        that.image.fadeIn('fast');
+                    });
+                } else {
+                    i = 0;
+                    that.image.fadeOut('medium', function () {
+                        that.image.attr("src", that.imageSrc[i]);
+                        that.image.fadeIn('fast');
+                    });
+                }
+                console.log(i);
+            });
+
+            this.prev.on('click', function () {
+                if (i > 0) {
+                    i--;
+                    that.image.fadeOut('medium', function () {
+                        that.image.attr("src", that.imageSrc[i]);
+                        that.image.fadeIn('fast');
+                    });
+                } else if (i == 0) {
+                    i = that.imageSrc.length - 1;
+                    that.image.fadeOut('medium', function () {
+                        that.image.attr("src", that.imageSrc[i]);
+                        that.image.fadeIn('fast');
+                    });
+                }
+                console.log(i);
             });
         }
     }]);
