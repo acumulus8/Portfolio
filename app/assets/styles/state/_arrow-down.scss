@@ -3,6 +3,10 @@
     margin: 0 auto;
     text-align: center;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &::after {
         content: "";
         width: 40px;

@@ -64,10 +64,10 @@
         <div class="secondary-nav">
             <ul>
                 <li>
-                    <a href="">My Story</a>
+                    <a href="#my-story">My Story</a>
                 </li>
                 <li>
-                    <a href="">My Resume</a>
+                    <a class="js-resume-btn" href="">My Resume</a>
                 </li>
                 <li>
                     <a class="js-certs-btn" href="">My Certificates</a>
@@ -76,13 +76,25 @@
         </div>
 
         <div class="lightbox js-lightbox">
-            <div class="lightbox__left-x js-x"></div>
-            <div class="lightbox__right-x js-x"></div>
+            <div class="js-x-cert">
+                <i class="far fa-3x fa-times-circle x"></i>
+            </div>
+            <!-- <div class="lightbox__left-x x js-x-cert"></div>
+            <div class="lightbox__right-x x js-x-cert"></div> -->
             <div class="lightbox__img-container">
-                <img class="lightbox__img-container__image"  alt="Image of a certificate issued by a course">
+                <img class="lightbox__img-container__image" alt="Image of a certificate issued by a course">
                 <div class="lightbox__img-container__prev js-prev"></div>
                 <div class="lightbox__img-container__next js-next"></div>
             </div>
+        </div>
+
+        <div class="resume js-resume">
+            <div class="js-x-resume">
+                <i class="far fa-3x fa-times-circle x"></i>
+            </div>
+            <!-- <div class="lightbox__left-x x js-x-resume"></div>
+            <div class="lightbox__right-x x js-x-resume"></div> -->
+            <embed src="assets/files/Webdev-resume.pdf" type="application/pdf">
         </div>
 
         <h1 class="section-header">I'm Tim!</h1>
@@ -146,7 +158,7 @@
             </div>
         </section>
 
-        <section class="wrapper">
+        <section class="wrapper" id="my-story">
             <div class="my-story" id="my-story">
                 <h2>My Story...</h2>
                 <p class="p1">

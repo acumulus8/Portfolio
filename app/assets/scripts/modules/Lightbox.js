@@ -1,11 +1,12 @@
 import $ from 'jquery';
 
 class Lightbox {
-    constructor() {
-        this.lightbox = $('.js-lightbox');
+    constructor(boxToOpen, openBtn, closeBtn, classToToggle) {
+        this.lightbox = boxToOpen;
+        this.classToToggle = classToToggle;
         this.image = $('.lightbox__img-container__image');
-        this.certBtn = $('.js-certs-btn');
-        this.xBtn = $('.js-x');
+        this.openBtn = openBtn;
+        this.xBtn = closeBtn;
         this.prev = $('.js-prev');
         this.next = $('.js-next');
         this.imageSrc = [
@@ -22,8 +23,8 @@ class Lightbox {
 
     openLightbox() {
         const that = this;
-        this.certBtn.on('click', (e) => {
-            that.lightbox.addClass('lightbox--is-visible');
+        this.openBtn.on('click', (e) => {
+            that.lightbox.addClass(that.classToToggle);
             e.preventDefault();
         })
     }
@@ -31,7 +32,7 @@ class Lightbox {
     closeLightbox() {
         const that = this;
         this.xBtn.on('click', () => {
-            that.lightbox.removeClass('lightbox--is-visible');
+            that.lightbox.removeClass(that.classToToggle);
         })
     }
 

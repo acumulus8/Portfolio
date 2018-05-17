@@ -1,7 +1,7 @@
 .intro {
   //display: flex;
   //align-items: center;
-  height: 90vh;
+  height: 100vh;
   //padding: 7rem 0;
   background-image: url(../../../../assets/images/intro-background.jpg);
   background-size: contain;
@@ -10,7 +10,7 @@
 
   &__content {
     width: 70%;
-    height: 90vh;
+    height: 100vh;
     padding: 0 5% 0 15%;
     background: linear-gradient(
       to right,

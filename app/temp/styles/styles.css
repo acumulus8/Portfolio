@@ -1021,14 +1021,14 @@ figure {
       letter-spacing: .08rem; }
 
 .intro {
-  height: 90vh;
+  height: 100vh;
   background-image: url(../../../../assets/images/intro-background.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   border-bottom: 8px solid #333; }
   .intro__content {
     width: 70%;
-    height: 90vh;
+    height: 100vh;
     padding: 0 5% 0 15%;
     background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(30%, white), color-stop(60%, white));
     background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%, white 60%);
@@ -1277,30 +1277,25 @@ figure {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
-  .lightbox__left-x, .lightbox__right-x {
+  .lightbox .x {
     position: absolute;
     top: 6%;
     right: 4%;
-    height: .8%;
-    width: 3%;
-    background-color: #fff;
-    border: 4px solid #fff; }
-    .lightbox__left-x:hover, .lightbox__right-x:hover {
-      cursor: pointer; }
-  .lightbox__left-x {
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
-  .lightbox__right-x {
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
+    color: #c2c2c2;
+    -webkit-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out; }
+    .lightbox .x:hover {
+      cursor: pointer;
+      color: #fff;
+      -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      transform: scale(1.3); }
+    .lightbox .x:active {
+      color: #c2c2c2;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
   .lightbox__img-container {
     width: 65%;
     height: 75%;
@@ -1339,6 +1334,58 @@ figure {
       border-bottom: none;
       border-left: none; }
 
+.resume {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 101;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+  background-color: rgba(0, 0, 0, 0.85);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .6s ease-out;
+  -o-transition: all .6s ease-out;
+  transition: all .6s ease-out; }
+  .resume--is-visible {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .resume .x {
+    position: absolute;
+    top: 6%;
+    right: 4%;
+    color: #c2c2c2;
+    -webkit-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out; }
+    .resume .x:hover {
+      cursor: pointer;
+      color: #fff;
+      -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      transform: scale(1.3); }
+    .resume .x:active {
+      color: #c2c2c2;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+  .resume embed {
+    display: block;
+    width: 75%;
+    height: 100%; }
+
 .arrow-down {
   width: 100%;
   margin: 0 auto;
@@ -1346,6 +1393,8 @@ figure {
   -webkit-transition: opacity .8s ease-out;
   -o-transition: opacity .8s ease-out;
   transition: opacity .8s ease-out; }
+  .arrow-down:hover {
+    cursor: pointer; }
   .arrow-down::after {
     content: "";
     width: 40px;
@@ -1391,9 +1440,9 @@ figure {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
-  -webkit-transition: all 2s ease-in-out;
-  -o-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 1.4s ease-in-out;
+  -o-transition: all 1.4s ease-in-out;
+  transition: all 1.4s ease-in-out;
   overflow: hidden; }
   .slide-left--is-visible {
     opacity: 1;
