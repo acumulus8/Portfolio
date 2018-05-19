@@ -809,6 +809,7 @@ figure {
 
 .work-together {
   height: 45vh;
+  margin: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1021,14 +1022,14 @@ figure {
       letter-spacing: .08rem; }
 
 .intro {
-  height: 100vh;
+  height: 90vh;
   background-image: url(../../../../assets/images/intro-background.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   border-bottom: 8px solid #333; }
   .intro__content {
     width: 70%;
-    height: 100vh;
+    height: 90vh;
     padding: 0 5% 0 15%;
     background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(30%, white), color-stop(60%, white));
     background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%, white 60%);
@@ -1095,6 +1096,10 @@ figure {
   position: relative;
   text-align: center;
   padding: 10rem 0 4rem 0; }
+  .my-work h1 {
+    margin-bottom: 0; }
+  .my-work p {
+    margin-bottom: 3rem; }
   .my-work__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1124,19 +1129,22 @@ figure {
     .my-work__img--modal {
       position: absolute;
       bottom: 0px;
+      width: 100%;
+      height: 100%;
       left: -100%;
       right: 0px;
       top: 0px;
       padding: 4rem 0 2rem 1rem;
       text-align: left;
       background: transparent;
+      overflow: hidden;
       -webkit-transition: all .4s ease-in-out;
       -o-transition: all .4s ease-in-out;
       transition: all .4s ease-in-out; }
 
 .slider {
   position: relative;
-  width: 70vw;
+  width: 60vw;
   height: 80vh;
   margin: 4rem auto;
   overflow: hidden;
@@ -1150,10 +1158,10 @@ figure {
     padding: 0; }
   .slider__img {
     position: relative;
-    width: 70vw;
+    width: 60vw;
     height: 80vh;
     float: left;
-    left: -70vw; }
+    left: -60vw; }
   .slider__prev, .slider__next {
     position: absolute;
     width: 30px;
@@ -1385,6 +1393,41 @@ figure {
     display: block;
     width: 75%;
     height: 100%; }
+
+.about-me {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-areas: 'h1 h1' 'img do' 'tech do' 'tech work';
+  grid-column-gap: 2em; }
+  .about-me h1 {
+    grid-area: h1;
+    padding: 2.5rem 0; }
+  .about-me__img-container {
+    grid-area: img; }
+  .about-me__what-i-do {
+    grid-area: do; }
+    .about-me__what-i-do h2 {
+      margin-top: 0; }
+  .about-me__working-with-me {
+    grid-area: work; }
+  .about-me__my-background {
+    grid-area: background; }
+  .about-me__technology-i-use {
+    grid-area: tech;
+    display: grid;
+    grid-template-areas: 'h2 h2' 'p p' 'list-one list-two'; }
+    .about-me__technology-i-use h2 {
+      grid-area: h2; }
+    .about-me__technology-i-use p {
+      grid-area: p; }
+    .about-me__technology-i-use__list-one {
+      grid-area: list-one;
+      list-style-type: circle;
+      line-height: 1.6; }
+    .about-me__technology-i-use__list-two {
+      grid-area: list-two;
+      list-style-type: circle;
+      line-height: 1.6; }
 
 .arrow-down {
   width: 100%;

@@ -1,6 +1,6 @@
 .slider {
     position: relative;
-    width: 70vw;
+    width: 60vw;
     height: 80vh;
     margin: 4rem auto;
     overflow: hidden;
@@ -17,10 +17,10 @@
 
     &__img {
         position: relative;
-        width: 70vw;
+        width: 60vw;
         height: 80vh;
         float: left;
-        left: -70vw;
+        left: -60vw;
     }
 
     &__prev, &__next {

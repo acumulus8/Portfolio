@@ -1,0 +1,64 @@
+.about-me {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-areas: 'h1 h1'
+                         'img do'
+                         'tech do'
+                         'tech work';
+    grid-column-gap: 2em;
+
+    h1 {
+        grid-area: h1;
+        padding: 2.5rem 0;
+    }
+
+    &__img-container {
+        grid-area: img;
+        //padding: 1em 1em 0 0;
+    }
+
+    &__what-i-do {
+        grid-area: do;
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+
+    &__working-with-me {
+        grid-area: work;
+        //align-self: center;
+    }
+
+    &__my-background {
+        grid-area: background;
+    }
+
+    &__technology-i-use {
+        grid-area: tech;
+        display: grid;
+        grid-template-areas: 'h2 h2'
+                             'p p'
+                             'list-one list-two';
+
+        h2 {
+            grid-area: h2;
+        }
+
+        p {
+            grid-area: p;
+        }
+
+        &__list-one {
+            grid-area: list-one;
+            list-style-type: circle;
+            line-height: 1.6;
+        }
+
+        &__list-two {
+            grid-area: list-two;
+            list-style-type: circle;
+            line-height: 1.6;
+        }
+    }
+}
