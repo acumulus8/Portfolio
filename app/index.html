@@ -29,6 +29,12 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- menu icon, small screens only-->
+                <div class="site-header__menu-icon">
+                    <div class="site-header__menu-icon__middle"></div>
+                </div>
+
                 <div class="primary-nav">
                     <ul>
                         <li>
@@ -45,6 +51,22 @@
             </div>
         </nav>
     </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <h2 class="mobile-menu__heading">Take a look around</h2>
+        <ul class="mobile-menu__links">
+            <li>
+                <a href="./about.html">About</a>
+            </li>
+            <li>
+                <a href="./portfolio.html">Portfolio</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
 
     <div class="large-hero">
         <div class="large-hero__filter">
@@ -73,8 +95,8 @@
             <div class="intro__content">
                 <div class="intro__content__content">
                     <h1 class="section-header" id="greeting">Hi, I'm Tim!</h1>
-                    <p>I'm a web designer and developer currently based in Lexington Kentucky. I am available for freelance,
-                        office, or remote work. I specialize in front end work, as well as UI design. I can assist you in
+                    <p>I am a web designer and developer currently based in Lexington Kentucky. I am available for freelance,
+                        office, or remote work. I specialize in front end work as well as UI design. I can assist you in
                         any stage of the project, and make your ideas a reality!
                     </p>
                     <p>
@@ -98,41 +120,42 @@
                         <i class="far fa-map fa-4x skills__icon"></i>
                         <h2 class="skills__figure-title">Planning</h2>
                         <figcaption>
-                            I can help you plan out your ideas into concise, user centered design: from the visual presentation, to the functionality
-                            that will best serve your targeted customers.
+                            I can help you plan out your ideas into concise, user centered design: from the visual presentation to the functionality
+                            which will best serve your targeted audience.
                         </figcaption>
                     </figure>
                     <figure class="skills__figure">
                         <i class="fas fa-pencil-alt fa-4x skills__icon"></i>
                         <h2 class="skills__figure-title">Design</h2>
                         <figcaption>
-                            I like clean, thoughtful design where the focus is the content and the user has space to take it all in. With chops in Adobe
-                            XD and Illustrator, I can workout mockups and prototypes until you're satisfied.
+                            I like clean, thoughtful design that provides an organized aesthetic married with high accessibility and usability. I can
+                            work out all designs ahead of time and will not proceed to the coding phase until you are happy
+                            with the look and feel of your project.
                         </figcaption>
                     </figure>
                     <figure class="skills__figure">
                         <i class="fas fa-code fa-4x skills__icon"></i>
                         <h2 class="skills__figure-title">Coding</h2>
                         <figcaption>
-                            I have high proficiency in Html5, CSS3, JavaScript, Jquery, React, Bootstrap, and Wordpress. I can code your site and make
-                            it responsive, and bautiful on all screens.
+                            I am skilled in working with multiple front end languages and libraries. I have the chops to build your project from scratch
+                            and get it to you, production ready and looking good on all screens in a timely manner.
                         </figcaption>
                     </figure>
                 </div>
                 <div class="icon-container">
                     <h2 class="icon-container__title">Some languages I speak</h2>
-                    <i class="fab fa-2x fa-html5  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-css3-alt  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-sass  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-js  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-react  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-node-js  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-npm  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-gulp  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-git-square  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-github  icon-container__icon"></i>
-                    <i class="fas fa-2x fa-terminal  icon-container__icon"></i>
-                    <i class="fab fa-2x fa-wordpress  icon-container__icon"></i>
+                    <i class="fab fa-2x fa-html5  icon-container__icon" title="html5"></i>
+                    <i class="fab fa-2x fa-css3-alt  icon-container__icon" title="CSS3"></i>
+                    <i class="fab fa-2x fa-sass  icon-container__icon" title="SASS"></i>
+                    <i class="fab fa-2x fa-js  icon-container__icon" title="JavaScript"></i>
+                    <i class="fab fa-2x fa-react  icon-container__icon" title="React"></i>
+                    <i class="fab fa-2x fa-node-js  icon-container__icon" title="NodeJS"></i>
+                    <i class="fab fa-2x fa-npm  icon-container__icon" title="Node Project Manager"></i>
+                    <i class="fab fa-2x fa-gulp  icon-container__icon" title="GulpJS"></i>
+                    <i class="fab fa-2x fa-git-square  icon-container__icon" title="Git version control"></i>
+                    <i class="fab fa-2x fa-github  icon-container__icon" title="Github"></i>
+                    <i class="fas fa-2x fa-terminal  icon-container__icon" title="The command line"></i>
+                    <i class="fab fa-2x fa-wordpress  icon-container__icon" title="WordPress"></i>
                 </div>
             </div>
         </section>
@@ -145,16 +168,18 @@
                 <div class="my-work__container">
                     <figure class="my-work__img">
                         <a href="./portfolio.html#jammming">
-                            <img src="assets/images/jammming.png">
+                            <img src="assets/images/jammming.png" alt="Image of the Jammming project.">
                             <figcaption class="my-work__img--modal">
-                                <h3>Ja<strong>mmm</strong>ing</h3>
-                                <p>Web Application - A spotify clone that allows you to login to <br> your account, search songs, and create playlists.</p>
+                                <h3>Ja
+                                    <b>mmm</b>ing</h3>
+                                <p>Web Application - A spotify clone that allows you to login to
+                                    <br> your account, search songs, and create playlists.</p>
                             </figcaption>
                         </a>
                     </figure>
                     <figure class="my-work__img">
                         <a href="./portfolio.html#clear-view">
-                            <img src="assets/images/clear-view.png">
+                            <img src="assets/images/clear-view.png" alt="Above the fold image of the clear-view website.">
                             <figcaption class="my-work__img--modal">
                                 <h3>Clear View Escapes</h3>
                                 <p>Website - Interactive and completely responsive website built with modern workflow principles.</p>
@@ -163,7 +188,7 @@
                     </figure>
                     <figure class="my-work__img">
                         <a href="./portfolio.html#colmar">
-                            <img src="assets/images/Colmar.png">
+                            <img src="assets/images/Colmar.png" alt="Above the fold image of the Colmar Academy website.">
                             <figcaption class="my-work__img--modal">
                                 <h3>Colmar Academy</h3>
                                 <p>Website - A website built for screen responsiveness and accessibility.</p>
@@ -172,7 +197,7 @@
                     </figure>
                     <figure class="my-work__img">
                         <a href="./portfolio.html#ravenous">
-                            <img src="assets/images/ravenous.png">
+                            <img src="assets/images/ravenous.png" alt="Above the fold image of the Ravenous project.">
                             <figcaption class="my-work__img--modal">
                                 <h3>Ravenous</h3>
                                 <p>Web Application - A Yelp clone built with React.</p>
@@ -181,7 +206,7 @@
                     </figure>
                     <figure class="my-work__img">
                         <a href="portfolio.html#game">
-                            <img src="assets/images/game-of-life.png">
+                            <img src="assets/images/game-of-life.png" alt="Image of the Game Of Life project.">
                             <figcaption class="my-work__img--modal">
                                 <h3>Game of Life</h3>
                                 <p>Web Application - A web "game" built with React.</p>

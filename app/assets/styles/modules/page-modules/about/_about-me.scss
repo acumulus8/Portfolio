@@ -3,13 +3,16 @@
     display: grid;
     grid-template-areas: 'h1 h1'
                          'img do'
-                         'tech do'
+                         'tech work'
                          'tech work';
     grid-column-gap: 2em;
 
     h1 {
         grid-area: h1;
-        padding: 2.5rem 0;
+
+        @include screenSize(atSmall) {
+            padding: 2.5rem 0;
+        }
     }
 
     &__img-container {
@@ -28,10 +31,6 @@
     &__working-with-me {
         grid-area: work;
         //align-self: center;
-    }
-
-    &__my-background {
-        grid-area: background;
     }
 
     &__technology-i-use {

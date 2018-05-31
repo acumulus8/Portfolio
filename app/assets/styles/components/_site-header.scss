@@ -4,10 +4,14 @@
     width: 100%;
     top: 0;
     z-index: 10;
-    transform: scale(1.12);
+    //transform: scale(1.12);
     padding-top: 1.75rem;
     box-shadow: 6px 0 10px transparent;
     transition: all .5s ease-out;
+
+    @include screenSize(atSmall) {
+        transform: scale(1.12);
+    }
 
 
     &__container {
@@ -25,12 +29,22 @@
     }
 
     &__logo {
-        max-width: 80px;
-        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.35));
+        max-width: 60px;
         margin: .5rem .75em .5rem 0;
+        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.35));
+
+        @include screenSize(atSmall) {
+            max-width: 100px;
+            margin: .5rem .75em .5rem 0;
+        }
     }
 
     &__text {
+        width: 60%;
+
+        @include screenSize(atSmall) {
+            width: 100%;
+        }
 
         &-name {
             font-weight: $fontBold;
@@ -43,6 +57,76 @@
             color: #fff;
             font-size: .8rem;
             text-shadow: 1px 1px $mainGray;
+            display: none;
+
+            @include screenSize(atSmall) {
+                display: block;
+            }
+        }
+    }
+
+    &__menu-icon {
+        width: 20px;
+        height: 19px;
+        position: absolute;
+        z-index: 20;
+        top: 50%;
+        margin-top: -9px;
+        right: 18px;
+
+        @include screenSize(atSmall) {
+            display: none;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            transform-origin: 0 0;
+            transition: transform .3s ease-out;
+        }
+
+        &__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            transition: all .3s ease-out;
+            transform-origin: 0 50%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+        }
+    }
+
+    &__menu-icon--close-x {
+
+        &::before {
+            transform: rotate(45deg) scaleX(1.25);
+        }
+
+        .site-header__menu-icon__middle {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        &::after {
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px);
         }
     }
 
@@ -62,6 +146,9 @@
     }
 
     &--hide {
-        transform: translateY(-100%);
+
+        @include screenSize(atSmall) {
+            transform: translateY(-100%);
+        }
     }
 }

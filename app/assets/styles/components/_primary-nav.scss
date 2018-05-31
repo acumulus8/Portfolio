@@ -2,8 +2,12 @@
     display: flex;
 
     ul {
-        display: flex;
-        align-items: center;
+        display: none;
+
+        @include screenSize(atSmall) {
+            display: flex;
+            align-items: center;
+        }
 
         li {
             margin-left: 2rem;
@@ -35,4 +39,5 @@
             }
         }
     }
+    
 }

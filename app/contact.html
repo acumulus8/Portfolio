@@ -30,6 +30,12 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- menu icon, small screens only-->
+                <div class="site-header__menu-icon">
+                    <div class="site-header__menu-icon__middle"></div>
+                </div>
+
                 <div class="primary-nav">
                     <ul>
                         <li>
@@ -46,6 +52,22 @@
             </div>
         </nav>
     </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <h2 class="mobile-menu__heading">Take a look around</h2>
+        <ul class="mobile-menu__links">
+            <li>
+                <a href="./about.html">About</a>
+            </li>
+            <li>
+                <a href="./portfolio.html">Portfolio</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
 
     <div class="page-header page-header--about">
         <div class="page-header__filter">
@@ -76,7 +98,7 @@
                     </p>
                     <p>
                         <div class="contact-form__alert">
-                            Input all the fields below, submit, and I will respond to you as soon as I am able.
+                            Fill in all the fields below, submit, and I will respond to you as soon as I am able.
                             <br>
                             <em>Your information will not be used for any other purposes than direct communication between you
                                 and myself.
@@ -99,7 +121,7 @@
                 </div>
                 <div class="contact-form__group contact-form__group--textarea">
                     <label class="contact-form__label">*Message</label>
-                    <textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
+                    <textarea name="message" required class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
                 </div>
                 <br>
                 <div class="contact-form__button-group">

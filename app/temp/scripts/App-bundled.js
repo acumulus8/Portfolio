@@ -11240,6 +11240,10 @@ var _SmoothScroll = __webpack_require__(10);
 
 var _SmoothScroll2 = _interopRequireDefault(_SmoothScroll);
 
+var _MobileMenu = __webpack_require__(12);
+
+var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var formValidate = new _FormValidate2.default();
@@ -11247,6 +11251,7 @@ var stickyHeader = new _StickyHeader2.default();
 var heroParallax = new _HeroParllax2.default();
 var hideHeader = new _HideHeader2.default();
 var imageCarousel = new _ImageCarousel2.default();
+var mobileMenu = new _MobileMenu2.default();
 
 new _Lightbox2.default((0, _jquery2.default)('.js-lightbox'), (0, _jquery2.default)('.js-certs-btn'), (0, _jquery2.default)('.js-x-cert'), 'lightbox--is-visible');
 new _Lightbox2.default((0, _jquery2.default)('.js-resume'), (0, _jquery2.default)('.js-resume-btn'), (0, _jquery2.default)('.js-x-resume'), 'resume--is-visible');
@@ -11256,7 +11261,8 @@ new _SmoothScroll2.default((0, _jquery2.default)('.secondary-nav a'));
 
 new _RevealOnScroll2.default((0, _jquery2.default)('.intro__content__content'), "80%", "slide-left", "slide-left--is-visible");
 new _RevealOnScroll2.default((0, _jquery2.default)('.skills__figure'), "80%", "float-in", "float-in--is-visible");
-new _RevealOnScroll2.default((0, _jquery2.default)('.icon-container'), "70%", "grow", "grow--is-visible");
+//new RevealOnScroll($('.icon-container'), "70%", "grow", "grow--is-visible");
+
 
 console.log('hey dawg');
 
@@ -12259,6 +12265,54 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+  function MobileMenu() {
+    _classCallCheck(this, MobileMenu);
+
+    this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
+    this.mobileMenu = (0, _jquery2.default)(".mobile-menu");
+    this.events();
+  }
+
+  _createClass(MobileMenu, [{
+    key: "events",
+    value: function events() {
+      this.menuIcon.click(this.toggleMenu.bind(this));
+    }
+  }, {
+    key: "toggleMenu",
+    value: function toggleMenu() {
+      this.mobileMenu.toggleClass('mobile-menu--is-visible');
+      this.menuIcon.toggleClass('site-header__menu-icon--close-x');
+    }
+  }]);
+
+  return MobileMenu;
+}();
+
+exports.default = MobileMenu;
 
 /***/ })
 /******/ ]);
