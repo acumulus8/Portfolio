@@ -1,11 +1,28 @@
 .project {
     width: 100%;
     display: flex;
-    margin-top: 5rem;
+    flex-direction: column;
+    margin-top: 2rem;
+    
+
+    &:first-child {
+        margin-top: 1rem;
+    }
+
+    @include screenSize(atMedium) {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5rem;
+    }
 
     &__image-container {
-        width: 50%;
-        margin: 0 5% 8% 0;
+        width: 100%;
+        //margin: 0 5% 8% 0;
+
+        @include screenSize(atMedium) {
+            margin: 0 5% 8% 0;
+            width: 50%;
+        }
     }
 
     &:last-child {
@@ -13,28 +30,50 @@
     }
 
     &__text {
-        width: 50%;
+        width: 100%;
         font-weight: $fontLight;
         position: relative;
+        padding-bottom: 4rem;
+
+        @include screenSize(atMedium) {
+            width: 50%;
+        }
     }
 
     &__heading {
         margin: 0;
+        margin-top: 1rem;
+
+        @include screenSize(atMedium) {
+            margin: 0;
+        }
     }
 
     h4 {
-        margin-top: .5rem;
+        margin-top: .2rem;
         font-weight: $fontLight;
+
+        @include screenSize(atMedium) {
+            margin-top: .5rem;
+        }
     }
 
     &__link {
         margin-right: 30px;
         position: absolute;
         width: 140px;
-        text-align: center;
+        text-align: left;
+
+        /* @include screenSize(atMedium) {
+            text-align: center;
+        } */
 
         &--move-right {
-            left: 30%;
+            left: 40%;
+
+            @include screenSize(atSmall) {
+                left: 30%;
+            }
         }
 
         a {
@@ -50,6 +89,16 @@
             &:active {
                 color: $mainBlue;
             }
+        }
+    }
+
+    &__divider {
+        visibility: none;
+        display: none;
+
+        @include screenSize(atSmall) {
+            visibility: visible;
+            display: block;
         }
     }
 }

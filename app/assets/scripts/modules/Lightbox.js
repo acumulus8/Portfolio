@@ -16,9 +16,23 @@ class Lightbox {
             './assets/images/lightboxImages/websites-from-scratch-cert.jpg',
             './assets/images/lightboxImages/wp-for-beginners-cert.jpg'
         ]
+        /* this.openLightbox();
+        this.closeLightbox();
+        this.changeImage(); */
+        this.events();
+    }
+
+    events() {
         this.openLightbox();
         this.closeLightbox();
         this.changeImage();
+        $(document).keyup(this.keyPressHandler.bind(this));
+    }
+
+    keyPressHandler(e) {
+        if (e.keyCode == 27) {
+            this.closeLightbox();
+        }
     }
 
     openLightbox() {
@@ -34,6 +48,7 @@ class Lightbox {
         this.xBtn.on('click', () => {
             that.lightbox.removeClass(that.classToToggle);
         })
+        this.lightbox.removeClass(this.classToToggle);
     }
 
     changeImage() {

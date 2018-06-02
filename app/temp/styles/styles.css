@@ -407,10 +407,16 @@ figure {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
 
-.page-section {
-  padding: 2rem 0; }
-  .page-section--contact {
-    padding-top: 0; }
+@media (min-width: 570px) {
+  .page-section {
+    padding: 2rem 2rem; } }
+
+@media (min-width: 1010px) {
+  .page-section {
+    padding: 2rem 0; } }
+
+.page-section--contact {
+  padding-top: 0; }
 
 .page-header {
   position: relative;
@@ -895,24 +901,33 @@ figure {
   background-color: #fff; }
 
 .section-header {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 3;
   text-align: center; }
+  @media (min-width: 1010px) {
+    .section-header {
+      font-size: 3.5rem; } }
 
 .work-together {
-  height: 45vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 2rem 0;
   text-align: center;
   background-color: #ffaf02; }
+  @media (min-width: 1010px) {
+    .work-together {
+      padding: 4rem 0; } }
   .work-together h2 {
     color: #0A2463;
-    font-size: 2rem; }
+    font-size: 1.7rem; }
+    @media (min-width: 1010px) {
+      .work-together h2 {
+        font-size: 2rem; } }
   .work-together h1 {
     margin-top: 0;
     color: #fff; }
@@ -960,7 +975,7 @@ figure {
   top: 0;
   bottom: 0;
   right: -1px;
-  height: 100vh;
+  min-height: 100vh;
   width: 80vw;
   background-color: rgba(0, 0, 0, 0.85);
   -webkit-transition: all .6s ease-in-out;
@@ -975,6 +990,7 @@ figure {
     -ms-transform: translateX(0%);
     transform: translateX(0%); }
   .mobile-menu__heading {
+    margin: 0;
     color: #fff;
     font-style: italic;
     font-weight: 200;
@@ -996,9 +1012,9 @@ figure {
     -webkit-padding-start: 0; }
     .mobile-menu__links li {
       margin: 0;
-      padding: 2rem 0;
+      padding: 1.5rem 0;
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.75rem;
       line-height: 1.5; }
       .mobile-menu__links li a {
         color: #fff;
@@ -1010,28 +1026,64 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 5rem; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 2rem; }
+  .project:first-child {
+    margin-top: 1rem; }
+  @media (min-width: 1010px) {
+    .project {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      margin-top: 5rem; } }
   .project__image-container {
-    width: 50%;
-    margin: 0 5% 8% 0; }
+    width: 100%; }
+    @media (min-width: 1010px) {
+      .project__image-container {
+        margin: 0 5% 8% 0;
+        width: 50%; } }
   .project:last-child {
     border-bottom: none; }
   .project__text {
-    width: 50%;
+    width: 100%;
     font-weight: 300;
-    position: relative; }
+    position: relative;
+    padding-bottom: 4rem; }
+    @media (min-width: 1010px) {
+      .project__text {
+        width: 50%; } }
   .project__heading {
-    margin: 0; }
+    margin: 0;
+    margin-top: 1rem; }
+    @media (min-width: 1010px) {
+      .project__heading {
+        margin: 0; } }
   .project h4 {
-    margin-top: .5rem;
+    margin-top: .2rem;
     font-weight: 300; }
+    @media (min-width: 1010px) {
+      .project h4 {
+        margin-top: .5rem; } }
   .project__link {
     margin-right: 30px;
     position: absolute;
     width: 140px;
-    text-align: center; }
+    text-align: left;
+    /* @include screenSize(atMedium) {
+            text-align: center;
+        } */ }
     .project__link--move-right {
-      left: 30%; }
+      left: 40%; }
+      @media (min-width: 570px) {
+        .project__link--move-right {
+          left: 30%; } }
     .project__link a {
       text-decoration: none;
       font-weight: 700;
@@ -1043,6 +1095,13 @@ figure {
         color: #da413e; }
       .project__link a:active {
         color: #0A2463; }
+  .project__divider {
+    visibility: none;
+    display: none; }
+    @media (min-width: 570px) {
+      .project__divider {
+        visibility: visible;
+        display: block; } }
 
 .contact-form {
   width: 100%;

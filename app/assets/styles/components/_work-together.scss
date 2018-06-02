@@ -1,19 +1,27 @@
 .work-together {
-    height: 45vh;
-    //margin: 3rem 0;
     display: flex;
     align-items: center;
+    padding: 2rem 0;
     text-align: center;
     background-color: $mainYellow;
 
+    @include screenSize(atMedium) {
+        padding: 4rem 0;
+    }
+
     h2 {
         color: $mainBlue;
-        font-size: 2rem;
+        font-size: 1.7rem;
+
+        @include screenSize(atMedium) {
+            font-size: 2rem;
+        }
     }
 
     h1 {
         margin-top: 0;
         color: #fff;
+        
     }
 
     &__button-container {

@@ -1,5 +1,13 @@
 .page-section {
-    padding: 2rem 0;
+    //padding: .6rem 0;
+
+    @include screenSize(atSmall) {
+        padding: 2rem 2rem;
+    }
+
+    @include screenSize(atMedium) {
+        padding: 2rem 0;
+    }
 
     &--contact {
         padding-top: 0;

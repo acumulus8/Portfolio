@@ -11784,12 +11784,28 @@ var Lightbox = function () {
         this.prev = (0, _jquery2.default)('.js-prev');
         this.next = (0, _jquery2.default)('.js-next');
         this.imageSrc = ['./assets/images/lightboxImages/build-web-apps-cert.jpg', './assets/images/lightboxImages/build-website-ui-cert.jpg', './assets/images/lightboxImages/git-web-dev-job-cert.jpg', './assets/images/lightboxImages/websites-from-scratch-cert.jpg', './assets/images/lightboxImages/wp-for-beginners-cert.jpg'];
-        this.openLightbox();
+        /* this.openLightbox();
         this.closeLightbox();
-        this.changeImage();
+        this.changeImage(); */
+        this.events();
     }
 
     _createClass(Lightbox, [{
+        key: 'events',
+        value: function events() {
+            this.openLightbox();
+            this.closeLightbox();
+            this.changeImage();
+            (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
+        }
+    }, {
+        key: 'keyPressHandler',
+        value: function keyPressHandler(e) {
+            if (e.keyCode == 27) {
+                this.closeLightbox();
+            }
+        }
+    }, {
         key: 'openLightbox',
         value: function openLightbox() {
             var that = this;
@@ -11805,6 +11821,7 @@ var Lightbox = function () {
             this.xBtn.on('click', function () {
                 that.lightbox.removeClass(that.classToToggle);
             });
+            this.lightbox.removeClass(this.classToToggle);
         }
     }, {
         key: 'changeImage',
