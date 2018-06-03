@@ -1,12 +1,25 @@
 .my-story {
     display: grid;
-    grid-template-areas: 'title title'
+    grid-template-areas: 'title'
+                         'p1'
+                         'picture'
+                         'p2'
+                         'p3'
+                         'p4';
+    grid-column-gap: 2em;
+    margin-bottom: 4.5rem;
+    text-align: center;
+
+    @include screenSize(atMedium) {
+        grid-template-areas: 'title title'
                          'p1 picture'
                          'p2 picture'
                          'p3 p3'
                          'p4 p4';
-    grid-column-gap: 2em;
-    margin-bottom: 4.5rem;
+        grid-column-gap: 2em;
+        margin-bottom: 4.5rem;
+        text-align: left;
+    }
 
     h2 {
         grid-area: title;

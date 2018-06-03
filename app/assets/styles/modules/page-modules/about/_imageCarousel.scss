@@ -1,59 +1,116 @@
 .slider {
+  position: relative;
+  /* width: 60vw;
+    height: 80vh; */
+  width: 370px;
+  height: 210px;
+  margin: 4rem auto;
+  overflow: hidden;
+  border-radius: 8px;
+
+  @include screenSize(atSmall) {
+    width: 480px;
+    height: 320px;
+  }
+
+  @include screenSize(atMedium) {
+    width: 720px;
+    height: 480px;
+  }
+
+  @include screenSize(atLarge) {
+    width: 1080px;
+    height: 720px;
+  }
+
+  &__slideContainer {
+    display: block;
     position: relative;
-    width: 60vw;
-    height: 80vh;
-    margin: 4rem auto;
-    overflow: hidden;
-    border-radius: 8px;
+    width: 999999px;
+    /* height: 80vh; */
+    height: 210px;
+    margin: 0;
+    padding: 0;
 
-    &__slideContainer {
-        display: block;
-        position: relative;
-        width: 999999px;
-        height: 80vh;
-        margin: 0;
-        padding: 0;
+    @include screenSize(atSmall) {
+      height: 320px;
     }
 
-    &__img {
-        position: relative;
-        width: 60vw;
-        height: 80vh;
-        float: left;
-        left: -60vw;
+    @include screenSize(atMedium) {
+      height: 480px;
     }
 
-    &__prev, &__next {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        top: 50%;
-        z-index: 5;
-        border: 5px solid #fff;
-        border-radius: 5px;
-        transform: rotate(45deg);
-        cursor: pointer;
-        transition: all .4s ease-in-out;
+    @include screenSize(atLarge) {
+      height: 720px;
+    }
+  }
 
-        &:hover {
-            transform: rotate(45deg) scale(1.3);
-            //border-color: $mainYellow;
-        }
+  &__img {
+    position: relative;
+    /* width: 60vw;
+        height: 80vh; */
+    width: 370px;
+    height: 210px;
+    float: left;
+    /* left: -60vw; */
+    left: -370px;
+
+    @include screenSize(atSmall) {
+      width: 480px;
+      height: 320px;
+      left: -480px;
     }
 
-    &__prev {
-        border-top: none;
-        border-right: none;
-        left: 2%;
+    @include screenSize(atMedium) {
+      width: 720px;
+      height: 480px;
+      left: -720px;
     }
 
-    &__next {
-        border-bottom: none;
-        border-left: none;
-        right: 2%;
+    @include screenSize(atLarge) {
+      width: 1080px;
+      height: 720px;
+      left: -1080px;
+    }
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    z-index: 5;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    @include screenSize(atSmall) {
+      width: 30px;
+      height: 30px;
     }
 
-    &::after {
-        @include clearFloats;
+    &:hover {
+      transform: rotate(45deg) scale(1.3);
+      //border-color: $mainYellow;
     }
+  }
+
+  &__prev {
+    border-top: none;
+    border-right: none;
+    left: 2%;
+  }
+
+  &__next {
+    border-bottom: none;
+    border-left: none;
+    right: 2%;
+  }
+
+  &::after {
+    @include clearFloats;
+  }
 }

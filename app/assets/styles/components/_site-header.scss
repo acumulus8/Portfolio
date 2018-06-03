@@ -9,7 +9,7 @@
     box-shadow: 6px 0 10px transparent;
     transition: all .5s ease-out;
 
-    @include screenSize(atSmall) {
+    @include screenSize(atMedium) {
         transform: scale(1.12);
     }
 

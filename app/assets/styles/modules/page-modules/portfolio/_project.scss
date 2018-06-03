@@ -9,10 +9,14 @@
         margin-top: 1rem;
     }
 
+    @include screenSize(atSmall) {
+        padding: 2.5rem 0;
+    }
+
     @include screenSize(atMedium) {
         display: flex;
         flex-direction: row;
-        margin-top: 5rem;
+        padding: 5rem 0;
     }
 
     &__image-container {

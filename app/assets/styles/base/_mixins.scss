@@ -22,8 +22,8 @@
 }
 
 @mixin heading-border($color) {
-    border-left: .4rem solid $color;
-    border-bottom: .4rem solid $color;
+    border-left: .6rem solid $color;
+    border-bottom: .6rem solid $color;
 
     @include screenSize(atSmall) {
         border-left: 1rem solid $color;

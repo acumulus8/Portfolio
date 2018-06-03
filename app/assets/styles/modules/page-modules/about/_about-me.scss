@@ -1,14 +1,24 @@
 .about-me {
     margin-bottom: 3rem;
     display: grid;
-    grid-template-areas: 'h1 h1'
+    grid-template-areas: 'h1'
+                         'do'
+                         'img'
+                         'work'
+                         'tech';
+    grid-column-gap: 2em;
+
+    @include screenSize(atMedium) {
+        grid-template-areas: 'h1 h1'
                          'img do'
                          'tech work'
                          'tech work';
-    grid-column-gap: 2em;
+        grid-column-gap: 2em;
+    }
 
     h1 {
         grid-area: h1;
+        padding: 2rem 0;
 
         @include screenSize(atSmall) {
             padding: 2.5rem 0;
@@ -42,6 +52,7 @@
 
         h2 {
             grid-area: h2;
+            margin-bottom: 0;
         }
 
         p {
