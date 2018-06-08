@@ -1,46 +1,123 @@
 .intro {
-  //display: flex;
-  //align-items: center;
-  height: 90vh;
+  position: relative;
+  //height: 90vh;
   overflow: hidden;
-  //padding: 7rem 0;
-  background-image: url(../../../../assets/images/intro-background.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-bottom: 8px solid $mainGray;
 
-  &__content {
-    width: 70%;
+  @include screenSize(atMedium) {
     height: 90vh;
-    padding: 0 5% 0 15%;
+  }
+
+  @include screenSize(atLarge) {
+      height: auto;
+  }
+
+  @include screenSize(ipadPro) {
+    height: 55vh;
+  }
+
+  &__image-container {
+    position: relative;
+
+    &__image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+  
+      @include screenSize(atMedium) {
+        width: 60%;
+        height: 100%;
+      }
+
+      @include screenSize(ipadPro) {
+        width: 100%;
+      }
+    }
+  
+    &__mobile-greeting {
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-100%);
+      z-index: 5;
+      color: #fff;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+
+      @include screenSize(atSmall) {
+        right: 6%;
+        font-size: 4rem;
+      }
+  
+      @include screenSize(atMedium) {
+        display: none;
+      }
+    }
+  }
+
+  &__content-container {
+    width: 100%;
+    padding: 3rem 10% 3rem 10%;
     background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 1) 30%,
       rgba(255, 255, 255, 1) 60%
     );
-    float: right;
-    //margin-left: 3rem;
+
+    @include screenSize(atMedium) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 70%;
+      padding: 0 10% 0 10%;
+    }
+
+    @include screenSize(ipadPro) {
+      padding: 0 5% 0 15%;
+    }
 
     &__content {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 2rem;
+
+      @include screenSize(atSmall) {
+        padding: 0 0 2rem 0;
+      }
+
+      @include screenSize(atMedium) {
+        padding: 0;
+      }
+
+      &__greeting {
+        display: none;
+        margin-bottom: 2rem;
+
+        @include screenSize(atSmall) {
+          display: block;
+        }
+      }
     }
 
     p {
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
+      margin-top: 0;
       text-align: center;
-      line-height: 1.8;
+      line-height: 1.5;
+
+      @include screenSize(atMedium) {
+        margin-bottom: 3rem;
+        line-height: 1.8;
+      }
     }
   }
-
+/* 
   &:after {
     @include clearFloats;
-  }
+  } */
 }

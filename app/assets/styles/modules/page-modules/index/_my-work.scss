@@ -1,7 +1,11 @@
 .my-work {
   position: relative;
   text-align: center;
-  padding: 10rem 0 4rem 0;
+  padding: 13rem 0 4rem 0;
+  
+  @include screenSize(atSmall) {
+    padding: 12rem 0 4rem 0;
+  }
 
   h1 {
     margin-bottom: 0;
@@ -14,20 +18,24 @@
         display: block;
         margin-bottom: 3rem;
     }
+
+    @include screenSize(ipadPro) {
+      display: none;
+    }
   }
 
   &__container {
     display: grid;
     grid-row-gap: 1.6rem;
 
-    @include screenSize(atSmall) {
+    @include screenSize(atMedium) {
       grid-template-columns: repeat(2, 1fr);
       padding: 0 5rem 5rem 5rem;
       grid-row-gap: 0;
 
-      figure:first-child {
+      /* figure:first-child {
         grid-column: span 2;
-      }
+      } */
     }
   }
 

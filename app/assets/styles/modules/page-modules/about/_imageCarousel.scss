@@ -8,6 +8,11 @@
   overflow: hidden;
   border-radius: 8px;
 
+  @include screenSize(atTiny) {
+    width: 320px;
+    height: 180px;
+  }
+
   @include screenSize(atSmall) {
     width: 480px;
     height: 320px;
@@ -32,6 +37,10 @@
     margin: 0;
     padding: 0;
 
+    @include screenSize(atTiny) {
+      height: 180px;
+    }
+
     @include screenSize(atSmall) {
       height: 320px;
     }
@@ -54,6 +63,12 @@
     float: left;
     /* left: -60vw; */
     left: -370px;
+
+    @include screenSize(atTiny) {
+      width: 320px;
+      height: 180px;
+      left: -320px;
+    }
 
     @include screenSize(atSmall) {
       width: 480px;

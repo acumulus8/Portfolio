@@ -15,8 +15,12 @@
         background-image: url('../../../../assets/images/hero.jpeg');
         background-position: center;
         background-size: cover;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-attachment: fixed;
+
+        @include screenSize(ipadPro) {
+            backgroun-attachment: static;
+        }
     }
 
     &__filter {
@@ -32,16 +36,24 @@
         display: flex;
         position: absolute;
         top: 50%;
-        margin-top: -145px;
+        margin-top: -180px;
         color: #fff;
         text-align: center;
         text-shadow: 2px 2px $mainGray;
         z-index: 6;
+
+        @include screenSize(atSmall) {
+            margin-top: -145px;
+        }
         
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: $fontBold;
             text-align: center;
+
+            @include screenSize(atSmall) {
+                font-size: 3rem;
+            }
         }
 
         p {

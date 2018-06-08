@@ -1,7 +1,9 @@
 @mixin screenSize($size) {
+    $atTiny: "max-width: 340px";
     $atSmall: "min-width: 570px";
     $atMedium: "min-width: 1010px";
     $atLarge: "min-width: 1600px";
+    $ipadPro: "min-height: 1366px";
 
     @if $size == atSmall {
         @media ($atSmall) {@content;}
@@ -11,6 +13,12 @@
     }
     @else if $size == atLarge {
         @media ($atLarge) {@content;}
+    }
+    @else if $size == atTiny {
+        @media ($atTiny) {@content;}
+    }
+    @else if $size == ipadPro {
+        @media ($ipadPro) {@content;}
     }
 }
 

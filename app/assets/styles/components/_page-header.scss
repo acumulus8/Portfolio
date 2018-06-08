@@ -101,6 +101,14 @@
             color: #fff;
             margin: 1.2rem 0 0 20%;
             font-weight: $fontLight;
+
+            &--about {
+                display: none;
+
+                @include screenSize(atSmall) {
+                    display: block;
+                }
+            }
     
             @include screenSize(atSmall) {
                 font-size: 1.5rem;

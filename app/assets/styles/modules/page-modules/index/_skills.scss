@@ -2,13 +2,22 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 2.5rem 0 12rem 0;
+  padding: 2.5rem 0 16rem 0;
   text-align: center;
   background-color: $lightGray;
   color: #fff;
 
+  @include screenSize(atTiny) {
+    padding: 2.5rem 0 20rem 0;
+  }
+  
   @include screenSize(atSmall) {
-      background-color: $mainGray;
+    background-color: $mainGray;
+    padding: 2.5rem 0 14rem 0;
+  }
+
+  @include screenSize(ipadPro) {
+    padding: 2.5rem 0 18rem 0;
   }
 
   &__title {
@@ -20,7 +29,7 @@
     margin-bottom: 1.2rem;
 
     &--pull-right {
-        margin-left: 60px;
+        margin-left: 40px;
     }
   }
 
@@ -51,8 +60,8 @@
     figcaption {
       padding: 1rem;
       font-family: $paragraphFont;
-      font-size: 1.5rem;
-      line-height: 1.65;
+      font-size: 1.3rem;
+      line-height: 1.5;
     }
   }
 }
