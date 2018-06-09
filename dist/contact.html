@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles/styles-b8bc4697ab.css"/>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <nav class="site-header site-header--not-index">
+            <div class="site-header__container wrapper">
+                <div class="site-header__brand">
+                    <div class="site-header__logo">
+                        <a href="./index.html">
+                            <img src="assets/images/new-logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="site-header__text">
+                        <a class="site-header__text-name" href="./index.html">TIM WILBURN</a>
+                        <a href="./index.html">
+                            <p class="site-header_text-quote">Clean code, responsive design.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- menu icon, small screens only-->
+                <div class="site-header__menu-icon">
+                    <div class="site-header__menu-icon__middle"></div>
+                </div>
+
+                <!-- Mobile menu -->
+                <div class="mobile-menu">
+                    <ul class="mobile-menu__links">
+                        <li>
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="./portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="primary-nav">
+                    <ul>
+                        <li>
+                            <a href="./about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="./portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-header page-header--about">
+        <div class="page-header__filter">
+        </div>
+        <div class="page-header__image-container">
+        </div>
+        <div class="page-header__content">
+            <h1 class="page-header__content__h1 page-header__content__h1--contact" id="large-hero__title">Contact Me...</h1>
+            <h2 class="page-header__content__h2 page-header__content__h2--contact" id="trigger">Lets work together!</h2>
+        </div>
+    </div>
+
+    <main>
+        <div class="wrapper">
+            <form action="https://formspree.io/timwilburninfo@gmail.com" method="POST" class="contact-form page-section--contact" id="contact-form">
+                <article>
+                    <h2 class="section-header">
+                        Tell me about your project!
+                    </h2>
+                    <p>
+                        I am available to work for almost any small to medium size project
+                        <strong>:</strong> designing, prototyping, and coding. Let me know about your project and we can begin a conversation
+                        about the details and nuances to fit your project needs.
+                    </p>
+                    <p>Use the form below to send me some basic personal information, project information, or any specific services
+                        your project may require.
+                    </p>
+                    <p>
+                        <div class="contact-form__alert">
+                            Fill in all the fields below, submit, and I will respond to you as soon as I am able.
+                            <br>
+                            <em>Your information will not be used for any other purposes than direct communication between you
+                                and myself.
+                            </em>
+                        </div>
+                        <br>
+                        <br> * = required field
+                    </p>
+                </article>
+
+                <div class="contact-form__info-group">
+                    <div class="contact-form__group">
+                        <label class="contact-form__label">*Name</label>
+                        <input type="text" name="name" class="contact-form__input" id="name" placeholder="Name">
+                    </div>
+                    <div class="contact-form__group">
+                        <label class="contact-form__label">*Email</label>
+                        <input type="email" name="_replyto" class="contact-form__input" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="contact-form__group contact-form__group--textarea">
+                    <label class="contact-form__label">*Message</label>
+                    <textarea name="message" required class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
+                </div>
+                <br>
+                <div class="contact-form__button-group">
+                    <input class="button button--contact-form" id="button" readonly="readonly" value="submit">
+                    <div class="contact-form__checkmark-container">
+                        <div class="contact-form__checkmark" id="checkmark">&#10004;</div>
+                    </div>
+                    <div class="contact-form__error contact-form__error--is-hidden" id="error">
+                        <img src="assets/images/exclamation-circle.svg">
+                        <p>Don't forget to fill in all fields!</p>
+                    </div>
+                </div>
+                <input type="hidden" name="_next" value="thankyou.html" />
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="site-header__logo">
+            <a href="./index.html">
+                <img src="assets/images/new-logo.svg" alt="logo">
+            </a>
+        </div>
+        <div class="footer__text-container">Made from scratch, by yours truly :)</div>
+        <div class="footer__icon-container">
+            <a href="https://github.com/acumulus8" target="_blank">
+                <i aria-hidden="true" class="fab fa-github fa-2x footer__icon-container__icon" title="github"></i>
+            </a>
+            <a href="contact.html" target="_blank">
+                <i aria-hidden="true" class="fa fa-envelope fa-2x center-icon footer__icon-container__icon" title="email me!"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/timothy-wilburn" target="_blank">
+                <i aria-hidden="true" class="fab fa-linkedin fa-2x footer__icon-container__icon" title="linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="assets/scripts/App-bundled-67d44d1d91.js"></script>
+</body>
+
+</html>
