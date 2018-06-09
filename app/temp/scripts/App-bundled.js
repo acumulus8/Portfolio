@@ -11259,8 +11259,9 @@ new _Lightbox2.default((0, _jquery2.default)('.js-resume'), (0, _jquery2.default
 new _SmoothScroll2.default((0, _jquery2.default)('.arrow-down-link'));
 new _SmoothScroll2.default((0, _jquery2.default)('.secondary-nav a'));
 
-new _RevealOnScroll2.default((0, _jquery2.default)('.intro__content__content'), "80%", "slide-left", "slide-left--is-visible");
+new _RevealOnScroll2.default((0, _jquery2.default)('.intro__content-container__content'), "80%", "slide-left", "slide-left--is-visible");
 new _RevealOnScroll2.default((0, _jquery2.default)('.skills__figure'), "80%", "float-in", "float-in--is-visible");
+new _RevealOnScroll2.default((0, _jquery2.default)('.thank-you'), "80%", "float-in", "float-in--is-visible");
 //new RevealOnScroll($('.icon-container'), "70%", "grow", "grow--is-visible");
 
 

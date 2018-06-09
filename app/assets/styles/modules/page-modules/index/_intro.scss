@@ -4,7 +4,7 @@
   overflow: hidden;
 
   @include screenSize(atMedium) {
-    height: 90vh;
+    height: 100vh;
   }
 
   @include screenSize(atLarge) {
@@ -18,15 +18,20 @@
   &__image-container {
     position: relative;
 
+    @include screenSize(atMedium) {
+      width: 60%;
+      height: 100%;
+    }
+
     &__image {
       position: relative;
       width: 100%;
       height: 100%;
   
-      @include screenSize(atMedium) {
+      /* @include screenSize(atMedium) {
         width: 60%;
         height: 100%;
-      }
+      } */
 
       @include screenSize(ipadPro) {
         width: 100%;
@@ -37,7 +42,7 @@
       position: absolute;
       top: 50%;
       right: 18px;
-      transform: translateY(-100%);
+      transform: translateY(-100%) rotate(-15deg);
       z-index: 5;
       color: #fff;
       text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
@@ -55,7 +60,7 @@
 
   &__content-container {
     width: 100%;
-    padding: 3rem 10% 3rem 10%;
+    padding: 1.5rem 10% 1.5rem 10%;
     background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0) 0%,
@@ -84,7 +89,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      padding: 2rem;
+      //padding: 2rem;
 
       @include screenSize(atSmall) {
         padding: 0 0 2rem 0;

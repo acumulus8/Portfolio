@@ -20,8 +20,12 @@
         background-color: transparent;
         border: 4px solid $mainBlue;
         border-radius: 2rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: $fontLight;
+        
+        @include screenSize(atSmall) {
+            font-size: 1.2rem;
+        }
 
         a {
             color: #fff;

@@ -47,7 +47,7 @@
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: $fontBold;
             text-align: center;
 
@@ -60,6 +60,15 @@
             text-shadow: 1px 1px $mainGray;
             font-size: 1.2rem;
             letter-spacing: .08rem;
+            padding: 1.4rem 0;
+            
+            @include screenSize(atSmall) {
+                padding: 0;
+            }
+            
+            @include screenSize(atMedium) {
+                padding: 1.4rem 0;
+            }
         }
     }
 }

@@ -74,13 +74,6 @@
                 @include heading-padding(0);
             }
         
-            &--thanks {
-                @include heading-border($mainGreen);
-                @include heading-padding(0);
-                margin-bottom: 0;
-                margin-top: 3rem;
-            }
-    
             @include screenSize(atSmall) {
                 font-size: 3rem;
                 margin-left: 18%;
@@ -152,10 +145,5 @@
                 opacity: 1;
             }
         }
-    }
-    
-
-    &--thanks {
-        margin-bottom: 0;
     }
 }
