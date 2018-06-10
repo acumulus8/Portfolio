@@ -19,6 +19,7 @@
     h1 {
         grid-area: h1;
         padding: 2rem 0;
+        text-align: center;
 
         @include screenSize(atSmall) {
             padding: 2.5rem 0;
@@ -32,15 +33,20 @@
 
     &__what-i-do {
         grid-area: do;
-
+        
         h2 {
             margin-top: 0;
+            text-align: center;
         }
     }
 
     &__working-with-me {
         grid-area: work;
         //align-self: center;
+
+        h2 {
+            text-align: center;
+        }
     }
 
     &__technology-i-use {
@@ -53,6 +59,7 @@
         h2 {
             grid-area: h2;
             margin-bottom: 0;
+            text-align: center;
         }
 
         p {

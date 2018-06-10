@@ -6,7 +6,7 @@
     
 
     &:first-child {
-        margin-top: 1rem;
+        margin-top: 3.4rem;
     }
 
     @include screenSize(atSmall) {
@@ -65,7 +65,7 @@
     &__link {
         margin-right: 30px;
         position: absolute;
-        width: 140px;
+        width: 180px;
         text-align: left;
 
         /* @include screenSize(atMedium) {
@@ -73,10 +73,10 @@
         } */
 
         &--move-right {
-            left: 40%;
+            left: 50%;
 
             @include screenSize(atSmall) {
-                left: 30%;
+                left: 40%;
             }
         }
 
@@ -85,8 +85,12 @@
             font-weight: 700;
             transition: all .22s ease-out;
 
+            &:visited {
+                color: $mainBlue;
+            }
+
             &:hover {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 color: $accentRed;
             }
         

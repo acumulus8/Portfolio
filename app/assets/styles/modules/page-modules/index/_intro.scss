@@ -4,7 +4,7 @@
   overflow: hidden;
 
   @include screenSize(atMedium) {
-    height: 100vh;
+    height: 90vh;
   }
 
   @include screenSize(atLarge) {

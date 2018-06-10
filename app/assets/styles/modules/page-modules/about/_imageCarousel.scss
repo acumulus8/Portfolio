@@ -3,14 +3,14 @@
   /* width: 60vw;
     height: 80vh; */
   width: 370px;
-  height: 210px;
+  height: 250px;
   margin: 4rem auto;
   overflow: hidden;
   border-radius: 8px;
 
   @include screenSize(atTiny) {
     width: 320px;
-    height: 180px;
+    height: 200px;
   }
 
   @include screenSize(atSmall) {
@@ -33,12 +33,12 @@
     position: relative;
     width: 999999px;
     /* height: 80vh; */
-    height: 210px;
+    height: 250px;
     margin: 0;
     padding: 0;
 
     @include screenSize(atTiny) {
-      height: 180px;
+      height: 200px;
     }
 
     @include screenSize(atSmall) {
@@ -59,14 +59,14 @@
     /* width: 60vw;
         height: 80vh; */
     width: 370px;
-    height: 210px;
+    height: 250px;
     float: left;
     /* left: -60vw; */
     left: -370px;
 
     @include screenSize(atTiny) {
       width: 320px;
-      height: 180px;
+      height: 200px;
       left: -320px;
     }
 

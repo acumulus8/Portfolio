@@ -1,21 +1,33 @@
 @mixin screenSize($size) {
     $atTiny: "max-width: 340px";
     $atSmall: "min-width: 570px";
+    $atSmallMid: "min-width: 960px";
     $atMedium: "min-width: 1010px";
+    $atMediumMid: "min-width: 1150px";
     $atLarge: "min-width: 1600px";
+    $ipad: "min-height: 1100";
     $ipadPro: "min-height: 1366px";
 
     @if $size == atSmall {
         @media ($atSmall) {@content;}
     } 
+    @else if $size == atSmallMid {
+        @media ($atSmallMid) {@content;}
+    }
     @else if $size == atMedium {
         @media ($atMedium) {@content;}
+    }
+    @else if $size == atMediumMid {
+        @media ($atMediumMid) {@content;}
     }
     @else if $size == atLarge {
         @media ($atLarge) {@content;}
     }
     @else if $size == atTiny {
         @media ($atTiny) {@content;}
+    }
+    @else if $size == ipad {
+        @media ($ipad) {@content;}
     }
     @else if $size == ipadPro {
         @media ($ipadPro) {@content;}

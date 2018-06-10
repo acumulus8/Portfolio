@@ -1,158 +1,165 @@
 .site-header {
+  position: absolute;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  //transform: scale(1.12);
+  padding-top: 1.75rem;
+  box-shadow: 6px 0 10px transparent;
+  transition: all 0.5s ease-out;
+
+  @include screenSize(atMedium) {
+    transform: scale(1.05);
+  }
+
+  @include screenSize(atMediumMid) {
+    transform: scale(1.12);
+  }
+
+  @include screenSize(ipadPro) {
+    transform: scale(1);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &__logo {
+    max-width: 60px;
+    margin: 0.5rem 0.75em 0.5rem 0;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.35));
+
+    @include screenSize(atSmall) {
+      max-width: 100px;
+      margin: 0.5rem 0.75em 0.5rem 0;
+    }
+  }
+
+  &__text {
+    width: 60%;
+
+    @include screenSize(atSmall) {
+      width: 100%;
+    }
+
+    &-name {
+      font-weight: $fontBold;
+      letter-spacing: 0.2rem;
+      text-shadow: 1px 1px $mainGray;
+    }
+
+    p {
+      margin: 0;
+      color: #fff;
+      font-size: 0.8rem;
+      text-shadow: 1px 1px $mainGray;
+      display: none;
+
+      @include screenSize(atSmall) {
+        display: block;
+      }
+    }
+  }
+
+  &__menu-icon {
+    width: 20px;
+    height: 19px;
     position: absolute;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    //transform: scale(1.12);
-    padding-top: 1.75rem;
-    box-shadow: 6px 0 10px transparent;
-    transition: all .5s ease-out;
+    z-index: 20;
+    top: 50%;
+    margin-top: -9px;
+    right: 18px;
 
-    @include screenSize(atMedium) {
-        transform: scale(1.12);
+    @include screenSize(atSmall) {
+      right: 6%;
+      transform: scale(1.5);
     }
 
-    @include screenSize(ipadPro) {
-        transform: scale(1);
+    @include screenSize(atSmallMid) {
+      display: none;
     }
 
-
-    &__container {
-        display: flex;
-        justify-content: space-between;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      transform-origin: 0 0;
+      transition: transform 0.3s ease-out;
     }
 
-    &__brand {
-        display: flex;
-        align-items: center;
-
-        a {
-            color: #fff;
-        }
+    &__middle {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease-out;
+      transform-origin: 0 50%;
     }
 
-    &__logo {
-        max-width: 60px;
-        margin: .5rem .75em .5rem 0;
-        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.35));
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      transform-origin: 0 100%;
+      transition: transform 0.3s ease-out;
+    }
+  }
 
-        @include screenSize(atSmall) {
-            max-width: 100px;
-            margin: .5rem .75em .5rem 0;
-        }
+  &__menu-icon--close-x {
+    &::before {
+      transform: rotate(45deg) scaleX(1.25);
     }
 
-    &__text {
-        width: 60%;
-
-        @include screenSize(atSmall) {
-            width: 100%;
-        }
-
-        &-name {
-            font-weight: $fontBold;
-            letter-spacing: .2rem;
-            text-shadow: 1px 1px $mainGray;
-        }
-
-        p {
-            margin: 0;
-            color: #fff;
-            font-size: .8rem;
-            text-shadow: 1px 1px $mainGray;
-            display: none;
-
-            @include screenSize(atSmall) {
-                display: block;
-            }
-        }
+    .site-header__menu-icon__middle {
+      opacity: 0;
+      transform: scaleX(0);
     }
 
-    &__menu-icon {
-        width: 20px;
-        height: 19px;
-        position: absolute;
-        z-index: 20;
-        top: 50%;
-        margin-top: -9px;
-        right: 18px;
-
-        @include screenSize(atSmall) {
-            display: none;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 3px;
-            background-color: white;
-            transform-origin: 0 0;
-            transition: transform .3s ease-out;
-        }
-
-        &__middle {
-            position: absolute;
-            top: 8px;
-            left: 0;
-            width: 20px;
-            height: 3px;
-            background-color: white;
-            transition: all .3s ease-out;
-            transform-origin: 0 50%;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 20px;
-            height: 3px;
-            background-color: white;
-            transform-origin: 0 100%;
-            transition: transform .3s ease-out;
-        }
+    &::after {
+      transform: rotate(-45deg) scaleX(1.25) translateY(1px);
     }
+  }
 
-    &__menu-icon--close-x {
+  &--fill-in-color {
+    background-color: $transBlue;
+    box-shadow: 6px 0 10px $mainGray;
+    transform: scale(1);
+    padding-top: 0;
+    transition: all 0.6s ease-out;
+  }
 
-        &::before {
-            transform: rotate(45deg) scaleX(1.25);
-        }
+  &--not-index {
+    background-color: $transBlue;
+    transform: scale(1);
+    padding-top: 0;
+    box-shadow: 6px 0 10px $mainGray;
+  }
 
-        .site-header__menu-icon__middle {
-            opacity: 0;
-            transform: scaleX(0);
-        }
-
-        &::after {
-            transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-        }
+  &--hide {
+    @include screenSize(atSmall) {
+      transform: translateY(-100%);
     }
-
-    &--fill-in-color {
-        background-color: $transBlue;
-        box-shadow: 6px 0 10px $mainGray;
-        transform: scale(1);
-        padding-top: 0;
-        transition: all .6s ease-out;
-    }
-
-    &--not-index {
-        background-color: $transBlue;
-        transform: scale(1);
-        padding-top: 0;
-        box-shadow: 6px 0 10px $mainGray;
-    }
-
-    &--hide {
-
-        @include screenSize(atSmall) {
-            transform: translateY(-100%);
-        }
-    }
+  }
 }

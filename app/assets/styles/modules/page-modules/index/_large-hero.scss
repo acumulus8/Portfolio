@@ -15,11 +15,15 @@
         background-image: url('../../../../assets/images/hero.jpeg');
         background-position: center;
         background-size: cover;
-        background-repeat: repeat;
+        //background-repeat: repeat;
         background-attachment: fixed;
 
-        @include screenSize(ipadPro) {
-            backgroun-attachment: static;
+        @include screenSize(atLarge) {
+            background-attachment: scroll;
+        }
+
+        @include screenSize(ipad) {
+            background-attachment: scroll;
         }
     }
 

@@ -5,18 +5,26 @@
 
 body {
   font-family: $primaryFont;
-  font-size: 18px;
+  font-size: 16px;
   color: $mainGray;
   //height: 100%;
   overflow: auto;
   overflow-x: hidden;
+
+  @include screenSize(atSmall) {
+    font-size: 18px;
+  }
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   color: $mainGray;
   overflow: auto;
   overflow-x: hidden;
+
+  @include screenSize(atSmall) {
+    font-size: 18px;
+  }
 }
 
 /* h1,

@@ -15,8 +15,13 @@
         -webkit-margin-after: 0;
 
         li {
-            text-align: center;
             padding: .8rem 0;
+            font-size: 1rem;
+            text-align: center;
+
+            @include screenSize(atSmall) {
+                font-size: 1rem;
+            }
             
             &:nth-child(2) {
                 margin: 0 3em;

@@ -10,6 +10,10 @@
     margin-bottom: 4.5rem;
     text-align: center;
 
+    @include screenSize(atSmall) {
+        margin-bottom: 3rem;
+    }
+    
     @include screenSize(atMedium) {
         grid-template-areas: 'title title'
                          'p1 picture'

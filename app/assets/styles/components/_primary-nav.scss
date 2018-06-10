@@ -4,7 +4,7 @@
     ul {
         display: none;
 
-        @include screenSize(atSmall) {
+        @include screenSize(atSmallMid) {
             display: flex;
             align-items: center;
         }
@@ -15,7 +15,7 @@
             a {
                 position: relative;
                 color: #fff;
-                font-weight: $fontLight;
+                //font-weight: $fontLight;
                 letter-spacing: .09rem;
 
                 &::before {

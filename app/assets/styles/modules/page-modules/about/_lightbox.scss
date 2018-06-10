@@ -1,82 +1,99 @@
 .lightbox {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, .85);
-    transform: scale(1.4);
-    opacity: 0;
-    visibility: hidden;
-    transition: all .6s ease-out;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  transform: scale(1.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s ease-out;
 
-    &--is-visible {
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1)
+  &--is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  .x {
+    position: absolute;
+    top: 6%;
+    right: 4%;
+    color: rgb(194, 194, 194);
+    transition: all 0.4s ease-out;
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      transform: scale(1.3);
     }
 
-    .x {
-        position: absolute;
-        top: 6%;
-        right: 4%;
-        color: rgb(194, 194, 194);
-        transition: all .4s ease-out;
+    &:active {
+      color: rgb(194, 194, 194);
+      transform: scale(1);
+    }
+  }
 
-        &:hover {
-            cursor: pointer;
-            color: #fff;
-            transform: scale(1.3)
-        }
+  &__img-container {
+    width: 86%;
+    height: 54%;
+    position: relative;
 
-        &:active {
-            color: rgb(194, 194, 194);
-            transform: scale(1);
-        }
+    @include screenSize(atSmallMid) {
+      width: 65%;
+      height: 85%;
     }
 
-    &__img-container {
-        width: 65%;
-        height: 85%;
-        position: relative;
+    &__prev,
+    &__next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transform: rotate(45deg);
+      width: 20px;
+      height: 20px;
+      border: 4px solid #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.4s ease-out;
 
-        &__prev,
-        &__next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            transform: rotate(45deg);
-            width: 30px;
-            height: 30px;
-            border: 4px solid #fff;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all .4s ease-out;
+      @include screenSize(atSmallMid) {
+        width: 30px;
+        height: 30px;
+      }
 
-            &:hover {
-                transform: rotate(45deg) scale(1.3);
-            }
+      &:hover {
+        transform: rotate(45deg) scale(1.3);
+      }
 
-            &:active {
-                transform: rotate(45deg) scale(1);
-            }
-        }
+      &:active {
+        transform: rotate(45deg) scale(1);
+      }
+    }
 
-        &__prev {
-            left: -40px;
-            border-top: none;
-            border-right: none;
-            ;
-        }
+    &__prev {
+      left: -18px;
+      border-top: none;
+      border-right: none;
 
-        &__next {
-            right: -40px;
-            border-bottom: none;
-            border-left: none;
-        }
-    }    
+      @include screenSize(atSmallMid) {
+        left: -40px;
+      }
+    }
+
+    &__next {
+      right: -18px;
+      border-bottom: none;
+      border-left: none;
+
+      @include screenSize(atSmallMid) {
+        right: -40px;
+      }
+    }
+  }
 }
