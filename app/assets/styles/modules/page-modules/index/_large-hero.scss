@@ -15,6 +15,9 @@
         background-image: url('../../../../assets/images/hero.jpeg');
         background-position: center;
         background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
         //background-repeat: repeat;
         background-attachment: fixed;
 

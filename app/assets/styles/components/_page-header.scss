@@ -32,6 +32,9 @@
         background-image: url('../../../../assets/images/code.jpg');
         background-position: center;
         background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
