@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="temp/styles/styles.css" />
     <!-- endbuild -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <script src="/temp/scripts/Vendor.js"></script>
 </head>
 
 <body>
@@ -125,7 +126,7 @@
             <div class="about-me">
                 <h1 class="section-header">Working Together</h1>
                 <div class="about-me__img-container">
-                    <img src="./assets/images/bench.jpg" alt="">
+                    <img class="lazyload" data-src="./assets/images/bench.jpg" alt="Tim, sitting on a bench with a scarecrow.">
                 </div>
                 <div class="about-me__what-i-do">
                     <h2>What I can do for you</h2>
@@ -196,22 +197,22 @@
             <div class="slider" id="wrapper" title="pause slideshow">
                 <ul class="slider__slideContainer" id="slideContainer">
                     <li class="slider__img img">
-                        <img src="assets/images/carouselImages/workspace.jpg" alt="">
+                        <img class="lazyload" data-src="assets/images/carouselImages/workspace.jpg" alt="">
                     </li>
                     <li class="slider__img img">
-                        <img src="assets/images/carouselImages/notebook.jpg" alt="">
+                        <img class="lazyload" data-src="assets/images/carouselImages/notebook.jpg" alt="">
                     </li>
                     <li class="slider__img img">
-                        <img src="assets/images/carouselImages/sarah-tim.jpeg" alt="">
+                        <img class="lazyload" data-src="assets/images/carouselImages/sarah-tim.jpeg" alt="">
                     </li>
                     <li class="slider__img img">
-                        <img src="assets/images/carouselImages/tim-hunter.jpg" alt="">
+                        <img class="lazyload" data-src="assets/images/carouselImages/tim-hunter.jpg" alt="">
                     </li>
                     <li class="slider__img img">
-                        <img src="assets/images/carouselImages/workspace.jpg" alt="">
+                        <img class="lazyload" data-src="assets/images/carouselImages/workspace.jpg" alt="">
                     </li>
                     <li class="slider__img img">
-                        <img src="assets/images/carouselImages/notebook.jpg" alt="">
+                        <img class="lazyload" data-src="assets/images/carouselImages/notebook.jpg" alt="">
                     </li>
                 </ul>
                 <div class="slider__prev" id="prev" title="previous slide"></div>
@@ -247,7 +248,7 @@
                     everyday working in this field has brought something new, exciting, and fulfilling.
                 </p>
                 <div class="my-story__img-container">
-                    <img src="assets/images/carouselImages/tim-hunter.jpg" alt="A picture of myself and Hunter the cat!">
+                    <img class="lazyload" data-src="assets/images/carouselImages/tim-hunter.jpg" alt="A picture of myself and Hunter the cat!">
                 </div>
             </div>
         </section>
@@ -275,8 +276,8 @@
         </div>
     </footer>
 
-    <!-- build:js assets/scripts/App-bundled.js-->
-    <script src="temp/scripts/App-bundled.js"></script>
+    <!-- build:js assets/scripts/App.js-->
+    <script src="temp/scripts/App.js"></script>
     <!-- endbuild -->
 </body>
 
