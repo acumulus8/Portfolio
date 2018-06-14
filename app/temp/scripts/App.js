@@ -11375,7 +11375,6 @@ var HeroParallax = function () {
                     that.content.css({
                         'transform': 'translate(0px, ' + windowScroll / 8 + '%)'
                     });
-                    console.log(windowScroll);
                 }
             });
         }
