@@ -460,7 +460,7 @@ figure {
     height: 200%;
     -webkit-filter: blur(4px);
     filter: blur(4px);
-    background-image: url("../../../../assets/images/code.jpg");
+    background-image: url("../../../../assets/images/code-tablet.jpg");
     background-position: center;
     background-size: cover;
     -o-background-size: cover;
@@ -1536,15 +1536,15 @@ figure {
   @media (min-width: 570px) {
     .slider {
       width: 480px;
-      height: 320px; } }
+      height: 360px; } }
   @media (min-width: 1010px) {
     .slider {
       width: 720px;
-      height: 480px; } }
+      height: 540px; } }
   @media (min-width: 1600px) {
     .slider {
       width: 1080px;
-      height: 720px; } }
+      height: 810px; } }
   .slider__slideContainer {
     display: block;
     position: relative;
@@ -1558,13 +1558,13 @@ figure {
         height: 200px; } }
     @media (min-width: 570px) {
       .slider__slideContainer {
-        height: 320px; } }
+        height: 360px; } }
     @media (min-width: 1010px) {
       .slider__slideContainer {
-        height: 480px; } }
+        height: 540px; } }
     @media (min-width: 1600px) {
       .slider__slideContainer {
-        height: 720px; } }
+        height: 810px; } }
   .slider__img {
     position: relative;
     /* width: 60vw;
@@ -1582,17 +1582,17 @@ figure {
     @media (min-width: 570px) {
       .slider__img {
         width: 480px;
-        height: 320px;
+        height: 360px;
         left: -480px; } }
     @media (min-width: 1010px) {
       .slider__img {
         width: 720px;
-        height: 480px;
+        height: 540px;
         left: -720px; } }
     @media (min-width: 1600px) {
       .slider__img {
         width: 1080px;
-        height: 720px;
+        height: 810px;
         left: -1080px; } }
   .slider__prev, .slider__next {
     position: absolute;
@@ -1641,7 +1641,7 @@ figure {
       margin-bottom: 3rem; } }
   @media (min-width: 1010px) {
     .my-story {
-      grid-template-areas: 'title title' 'p1 picture' 'p2 picture' 'p3 p3' 'p4 p4';
+      grid-template-areas: 'title title title' 'p1 picture picture' 'p2 picture picture' 'p3 p3 p3' 'p4 p4 p4';
       grid-column-gap: 2em;
       margin-bottom: 4.5rem;
       text-align: left; } }

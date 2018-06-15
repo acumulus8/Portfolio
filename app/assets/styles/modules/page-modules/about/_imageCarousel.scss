@@ -15,17 +15,20 @@
 
   @include screenSize(atSmall) {
     width: 480px;
-    height: 320px;
+    //height: 320px;
+    height: 360px;
   }
 
   @include screenSize(atMedium) {
     width: 720px;
-    height: 480px;
+    //height: 480px;
+    height: 540px;
   }
 
   @include screenSize(atLarge) {
     width: 1080px;
-    height: 720px;
+    //height: 720px;
+    height: 810px;
   }
 
   &__slideContainer {
@@ -42,15 +45,18 @@
     }
 
     @include screenSize(atSmall) {
-      height: 320px;
+      //height: 320px;
+      height: 360px;
     }
 
     @include screenSize(atMedium) {
-      height: 480px;
+      //height: 480px;
+      height: 540px;
     }
 
     @include screenSize(atLarge) {
-      height: 720px;
+      //height: 720px;
+      height: 810px;
     }
   }
 
@@ -72,19 +78,22 @@
 
     @include screenSize(atSmall) {
       width: 480px;
-      height: 320px;
+      //height: 320px;
+      height: 360px;
       left: -480px;
     }
 
     @include screenSize(atMedium) {
       width: 720px;
-      height: 480px;
+      //height: 480px;
+      height: 540px;
       left: -720px;
     }
 
     @include screenSize(atLarge) {
       width: 1080px;
-      height: 720px;
+      //height: 720px;
+      height: 810px;
       left: -1080px;
     }
   }

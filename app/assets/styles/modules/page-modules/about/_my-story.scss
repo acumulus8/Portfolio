@@ -15,11 +15,11 @@
     }
     
     @include screenSize(atMedium) {
-        grid-template-areas: 'title title'
-                         'p1 picture'
-                         'p2 picture'
-                         'p3 p3'
-                         'p4 p4';
+        grid-template-areas: 'title title title'
+                         'p1 picture picture'
+                         'p2 picture picture'
+                         'p3 p3 p3'
+                         'p4 p4 p4';
         grid-column-gap: 2em;
         margin-bottom: 4.5rem;
         text-align: left;
