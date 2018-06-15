@@ -1517,6 +1517,8 @@ figure {
       -webkit-transition: all 0.4s ease-in-out;
       -o-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out; }
+      .my-work__img--modal strong {
+        color: purple; }
 
 .slider {
   position: relative;
@@ -1679,15 +1681,24 @@ figure {
     -webkit-margin-after: 0; }
     .secondary-nav ul li {
       padding: .8rem 0;
+      margin: 0 2.5em;
       font-size: 1rem;
       text-align: center; }
       @media (min-width: 570px) {
         .secondary-nav ul li {
           font-size: 1rem; } }
+      @media (min-width: 1010px) {
+        .secondary-nav ul li {
+          margin: 0; } }
       .secondary-nav ul li:nth-child(2) {
-        margin: 0 3em; }
-        @media (min-width: 570px) {
+        margin: 0 3em;
+        display: none;
+        /* @include screenSize(atSmall) {
+                    margin: 0 5em;
+                } */ }
+        @media (min-width: 1010px) {
           .secondary-nav ul li:nth-child(2) {
+            display: block;
             margin: 0 5em; } }
     .secondary-nav ul a {
       position: relative;

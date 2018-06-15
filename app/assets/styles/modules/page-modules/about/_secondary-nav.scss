@@ -16,17 +16,28 @@
 
         li {
             padding: .8rem 0;
+            margin: 0 2.5em;
             font-size: 1rem;
             text-align: center;
 
             @include screenSize(atSmall) {
                 font-size: 1rem;
             }
+
+            @include screenSize(atMedium) {
+                margin: 0;
+            }
             
             &:nth-child(2) {
                 margin: 0 3em;
+                display: none;
 
-                @include screenSize(atSmall) {
+                /* @include screenSize(atSmall) {
+                    margin: 0 5em;
+                } */
+
+                @include screenSize(atMedium) {
+                    display: block;
                     margin: 0 5em;
                 }
             }

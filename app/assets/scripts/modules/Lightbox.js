@@ -7,8 +7,8 @@ class Lightbox {
         this.image = $('.lightbox__img-container__image');
         this.openBtn = openBtn;
         this.xBtn = closeBtn;
-        this.prev = $('.js-prev');
-        this.next = $('.js-next');
+        this.prev = $('#js-prev');
+        this.next = $('#js-next');
         this.imageSrc = [
             './assets/images/lightboxImages/build-web-apps-cert.jpg',
             './assets/images/lightboxImages/build-website-ui-cert.jpg',

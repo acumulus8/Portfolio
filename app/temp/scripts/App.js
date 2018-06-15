@@ -11780,8 +11780,8 @@ var Lightbox = function () {
         this.image = (0, _jquery2.default)('.lightbox__img-container__image');
         this.openBtn = openBtn;
         this.xBtn = closeBtn;
-        this.prev = (0, _jquery2.default)('.js-prev');
-        this.next = (0, _jquery2.default)('.js-next');
+        this.prev = (0, _jquery2.default)('#js-prev');
+        this.next = (0, _jquery2.default)('#js-next');
         this.imageSrc = ['./assets/images/lightboxImages/build-web-apps-cert.jpg', './assets/images/lightboxImages/build-website-ui-cert.jpg', './assets/images/lightboxImages/git-web-dev-job-cert.jpg', './assets/images/lightboxImages/websites-from-scratch-cert.jpg', './assets/images/lightboxImages/wp-for-beginners-cert.jpg'];
         /* this.openLightbox();
         this.closeLightbox();
