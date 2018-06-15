@@ -11248,7 +11248,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var formValidate = new _FormValidate2.default();
 var stickyHeader = new _StickyHeader2.default();
-var heroParallax = new _HeroParllax2.default();
+//let heroParallax = new HeroParallax();
 var hideHeader = new _HideHeader2.default();
 var imageCarousel = new _ImageCarousel2.default();
 var mobileMenu = new _MobileMenu2.default();
@@ -11758,7 +11758,7 @@ exports.default = RevealOnScroll;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11772,100 +11772,100 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Lightbox = function () {
-    function Lightbox(boxToOpen, openBtn, closeBtn, classToToggle) {
-        _classCallCheck(this, Lightbox);
+  function Lightbox(boxToOpen, openBtn, closeBtn, classToToggle) {
+    _classCallCheck(this, Lightbox);
 
-        this.lightbox = boxToOpen;
-        this.classToToggle = classToToggle;
-        this.image = (0, _jquery2.default)('.lightbox__img-container__image');
-        this.openBtn = openBtn;
-        this.xBtn = closeBtn;
-        this.prev = (0, _jquery2.default)('#js-prev');
-        this.next = (0, _jquery2.default)('#js-next');
-        this.imageSrc = ['./assets/images/lightboxImages/build-web-apps-cert.jpg', './assets/images/lightboxImages/build-website-ui-cert.jpg', './assets/images/lightboxImages/git-web-dev-job-cert.jpg', './assets/images/lightboxImages/websites-from-scratch-cert.jpg', './assets/images/lightboxImages/wp-for-beginners-cert.jpg'];
-        /* this.openLightbox();
+    this.lightbox = boxToOpen;
+    this.classToToggle = classToToggle;
+    this.image = (0, _jquery2.default)(".lightbox__img-container__image");
+    this.openBtn = openBtn;
+    this.xBtn = closeBtn;
+    this.prev = (0, _jquery2.default)("#js-prev");
+    this.next = (0, _jquery2.default)("#js-next");
+    this.imageSrc = ["./assets/images/lightboxImages/build-web-apps-cert.jpg", "./assets/images/lightboxImages/build-website-ui-cert.jpg", "./assets/images/lightboxImages/git-web-dev-job-cert.jpg", "./assets/images/lightboxImages/websites-from-scratch-cert.jpg", "./assets/images/lightboxImages/wp-for-beginners-cert.jpg"];
+    /* this.openLightbox();
         this.closeLightbox();
         this.changeImage(); */
-        this.events();
+    this.events();
+  }
+
+  _createClass(Lightbox, [{
+    key: "events",
+    value: function events() {
+      this.openLightbox();
+      this.closeLightbox();
+      this.changeImage();
+      (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
     }
+  }, {
+    key: "keyPressHandler",
+    value: function keyPressHandler(e) {
+      if (e.keyCode == 27) {
+        this.closeLightbox();
+      }
+    }
+  }, {
+    key: "openLightbox",
+    value: function openLightbox() {
+      var that = this;
+      this.openBtn.on("click", function (e) {
+        that.lightbox.addClass(that.classToToggle);
+        e.preventDefault();
+      });
+    }
+  }, {
+    key: "closeLightbox",
+    value: function closeLightbox() {
+      var that = this;
+      this.xBtn.on("click", function () {
+        that.lightbox.removeClass(that.classToToggle);
+      });
+      this.lightbox.removeClass(this.classToToggle);
+    }
+  }, {
+    key: "changeImage",
+    value: function changeImage() {
+      var i = 0;
+      this.image.attr("src", this.imageSrc[0]);
+      var that = this;
 
-    _createClass(Lightbox, [{
-        key: 'events',
-        value: function events() {
-            this.openLightbox();
-            this.closeLightbox();
-            this.changeImage();
-            (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
+      this.next.on("click", function () {
+        if (i < that.imageSrc.length - 1) {
+          i++;
+          that.image.fadeOut("slow", function () {
+            that.image.attr("src", that.imageSrc[i]);
+            that.image.fadeIn("slow");
+          });
+        } else {
+          i = 0;
+          that.image.fadeOut("slow", function () {
+            that.image.attr("src", that.imageSrc[i]);
+            that.image.fadeIn("slow");
+          });
         }
-    }, {
-        key: 'keyPressHandler',
-        value: function keyPressHandler(e) {
-            if (e.keyCode == 27) {
-                this.closeLightbox();
-            }
-        }
-    }, {
-        key: 'openLightbox',
-        value: function openLightbox() {
-            var that = this;
-            this.openBtn.on('click', function (e) {
-                that.lightbox.addClass(that.classToToggle);
-                e.preventDefault();
-            });
-        }
-    }, {
-        key: 'closeLightbox',
-        value: function closeLightbox() {
-            var that = this;
-            this.xBtn.on('click', function () {
-                that.lightbox.removeClass(that.classToToggle);
-            });
-            this.lightbox.removeClass(this.classToToggle);
-        }
-    }, {
-        key: 'changeImage',
-        value: function changeImage() {
-            var i = 0;
-            this.image.attr("src", this.imageSrc[0]);
-            var that = this;
+        console.log(i);
+      });
 
-            this.next.on('click', function () {
-                if (i < that.imageSrc.length - 1) {
-                    i++;
-                    that.image.fadeOut('medium', function () {
-                        that.image.attr("src", that.imageSrc[i]);
-                        that.image.fadeIn('fast');
-                    });
-                } else {
-                    i = 0;
-                    that.image.fadeOut('medium', function () {
-                        that.image.attr("src", that.imageSrc[i]);
-                        that.image.fadeIn('fast');
-                    });
-                }
-                console.log(i);
-            });
-
-            this.prev.on('click', function () {
-                if (i > 0) {
-                    i--;
-                    that.image.fadeOut('medium', function () {
-                        that.image.attr("src", that.imageSrc[i]);
-                        that.image.fadeIn('fast');
-                    });
-                } else if (i == 0) {
-                    i = that.imageSrc.length - 1;
-                    that.image.fadeOut('medium', function () {
-                        that.image.attr("src", that.imageSrc[i]);
-                        that.image.fadeIn('fast');
-                    });
-                }
-                console.log(i);
-            });
+      this.prev.on("click", function () {
+        if (i > 0) {
+          i--;
+          that.image.fadeOut("medium", function () {
+            that.image.attr("src", that.imageSrc[i]);
+            that.image.fadeIn("fast");
+          });
+        } else if (i == 0) {
+          i = that.imageSrc.length - 1;
+          that.image.fadeOut("medium", function () {
+            that.image.attr("src", that.imageSrc[i]);
+            that.image.fadeIn("fast");
+          });
         }
-    }]);
+        console.log(i);
+      });
+    }
+  }]);
 
-    return Lightbox;
+  return Lightbox;
 }();
 
 exports.default = Lightbox;

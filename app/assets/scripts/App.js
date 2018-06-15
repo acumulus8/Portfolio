@@ -11,7 +11,7 @@ import MobileMenu from './modules/MobileMenu';
 
 let formValidate = new FormValidate();
 let stickyHeader = new StickyHeader();
-let heroParallax = new HeroParallax();
+//let heroParallax = new HeroParallax();
 let hideHeader = new HideHeader();
 let imageCarousel = new ImageCarousel();
 let mobileMenu = new MobileMenu();

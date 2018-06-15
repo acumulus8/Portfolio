@@ -1231,9 +1231,10 @@ figure {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  border-bottom: 8px solid #333; }
+  border-bottom: 4px solid #333; }
   .large-hero__image-container {
     position: absolute;
+    display: block;
     -webkit-transform: translateZ(-1px);
     transform: translateZ(-1px);
     -webkit-perspective: 1px;
@@ -1241,23 +1242,32 @@ figure {
     overflow-x: hidden;
     overflow-y: auto;
     top: 0;
-    width: 100%;
-    height: 200vh;
+    left: 0;
+    right: 0;
+    min-height: 200vh;
     -webkit-filter: blur(4px);
     filter: blur(4px);
-    background-image: url("../../../../assets/images/hero.jpeg");
+    background-image: url("../../../../assets/images/hero-phone.jpg");
     background-position: center;
     background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
-    background-attachment: fixed; }
-    @media (min-width: 1600px) {
+    background-attachment: fixed;
+    /* @include screenSize(atMedium) {
+            background-attachment: fixed;
+        }
+
+        @include screenSize(atLarge) {
+            background-attachment: scroll;
+        }
+
+        @include screenSize(ipad) {
+            background-attachment: scroll;
+        } */ }
+    @media (min-width: 570px) {
       .large-hero__image-container {
-        background-attachment: scroll; } }
-    @media (min-height: 1100) {
-      .large-hero__image-container {
-        background-attachment: scroll; } }
+        background-image: url("../../../../assets/images/hero.jpeg"); } }
   .large-hero__filter {
     position: relative;
     width: 100%;
