@@ -449,25 +449,23 @@ figure {
     background-color: rgba(34, 117, 165, 0.75); }
   .page-header__image-container {
     position: absolute;
-    -webkit-transform: translateZ(-1px);
-    transform: translateZ(-1px);
-    -webkit-perspective: 1px;
-    perspective: 1px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    z-index: -5;
     top: 0;
     width: 100%;
-    height: 200%;
-    -webkit-filter: blur(4px);
-    filter: blur(4px);
-    background-image: url("../../../../assets/images/code-tablet.jpg");
-    background-position: center;
-    background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; }
+    height: 50vh;
+    -webkit-filter: blur(3.5px);
+    filter: blur(3.5px);
+    /* background-image: url('../../../../assets/images/code-tablet.jpg');
+        background-position: center;
+        background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed; */ }
+    @media (min-width: 1010px) {
+      .page-header__image-container {
+        height: 70vh; } }
   .page-header__content {
     width: 100%;
     position: absolute;
@@ -948,6 +946,7 @@ figure {
 
 .icon-container {
   position: absolute;
+  z-index: 5;
   bottom: -150px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1228,46 +1227,25 @@ figure {
 
 .large-hero {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  border-bottom: 4px solid #333; }
+  overflow: hidden; }
   .large-hero__image-container {
-    position: absolute;
-    display: block;
-    -webkit-transform: translateZ(-1px);
-    transform: translateZ(-1px);
-    -webkit-perspective: 1px;
-    perspective: 1px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    position: fixed;
+    z-index: -5;
     top: 0;
     left: 0;
     right: 0;
-    min-height: 200vh;
-    -webkit-filter: blur(4px);
-    filter: blur(4px);
-    background-image: url("../../../../assets/images/hero-phone.jpg");
-    background-position: center;
-    background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-attachment: fixed;
-    /* @include screenSize(atMedium) {
-            background-attachment: fixed;
-        }
-
-        @include screenSize(atLarge) {
-            background-attachment: scroll;
-        }
-
-        @include screenSize(ipad) {
-            background-attachment: scroll;
-        } */ }
-    @media (min-width: 570px) {
-      .large-hero__image-container {
-        background-image: url("../../../../assets/images/hero.jpeg"); } }
+    bottom: 0;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    /* background-image: url("../../../../assets/images/hero-phone.jpg");
+        background-position: center;
+        background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-attachment: fixed; */ }
   .large-hero__filter {
     position: relative;
     width: 100%;
@@ -1334,10 +1312,7 @@ figure {
       position: relative;
       width: 100%;
       height: 100%;
-      /* @include screenSize(atMedium) {
-        width: 60%;
-        height: 100%;
-      } */ }
+      background: #fff; }
       @media (min-height: 1366px) {
         .intro__image-container__image {
           width: 100%; } }
@@ -1361,9 +1336,13 @@ figure {
   .intro__content-container {
     width: 100%;
     padding: 1.5rem 10% 1.5rem 10%;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(30%, white), color-stop(60%, white));
-    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%, white 60%);
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 30%, white 60%); }
+    background: #fff;
+    /* background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 30%,
+      rgba(255, 255, 255, 1) 60%
+    ); */ }
     @media (min-width: 1010px) {
       .intro__content-container {
         position: absolute;
@@ -1371,7 +1350,10 @@ figure {
         bottom: 0;
         right: 0;
         width: 70%;
-        padding: 0 10% 0 10%; } }
+        padding: 0 10% 0 10%;
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(30%, white), color-stop(60%, white));
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%, white 60%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 30%, white 60%); } }
     @media (min-height: 1366px) {
       .intro__content-container {
         padding: 0 5% 0 15%; } }
@@ -1468,6 +1450,7 @@ figure {
   position: relative;
   text-align: center;
   padding: 11rem 0 4rem 0;
+  background-color: #fff;
   /* @include screenSize(atSmall) {
     padding: 10rem 0 4rem 0;
   } */ }
@@ -1645,6 +1628,7 @@ figure {
   grid-template-areas: 'title' 'p1' 'picture' 'p2' 'p3' 'p4';
   grid-column-gap: 2em;
   margin-bottom: 4.5rem;
+  background: #fff;
   text-align: center; }
   @media (min-width: 570px) {
     .my-story {
