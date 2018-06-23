@@ -44,6 +44,39 @@
     height: 54%;
     position: relative;
 
+    &__image {
+      transition: all .4s ease-out;
+
+      .fade-out {
+        display: none;
+      }
+    }
+
+    &__dot-box {
+      position: absolute;
+      left: 50%;
+      bottom: -25px;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 120px;
+
+      &__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgb(175, 175, 175);
+        transition: all .1s ease-in-out;
+
+        &--active {
+          background: #fff;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+
     @include screenSize(atSmallMid) {
       width: 65%;
       height: 85%;

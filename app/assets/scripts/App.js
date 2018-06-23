@@ -1,23 +1,18 @@
 import $ from 'jquery';
 import StickyHeader from './modules/StickyHeader';
-import HeroParallax from './modules/HeroParllax';
 import FormValidate from './modules/FormValidate';
 import HideHeader from './modules/HideHeader';
 import ImageCarousel from './modules/ImageCarousel';
 import RevealOnScroll from './modules/RevealOnScroll';
-import Lightbox from './modules/Lightbox';
 import SmoothScroll from './modules/SmoothScroll';
 import MobileMenu from './modules/MobileMenu';
 
-let formValidate = new FormValidate();
-let stickyHeader = new StickyHeader();
-//let heroParallax = new HeroParallax();
-let hideHeader = new HideHeader();
-let imageCarousel = new ImageCarousel();
-let mobileMenu = new MobileMenu();
-
-new Lightbox($('.js-lightbox'), $('.js-certs-btn'), $('.js-x-cert'), 'lightbox--is-visible');
-new Lightbox($('.js-resume'), $('.js-resume-btn'), $('.js-x-resume'), 'resume--is-visible');
+//new HeroParallax();
+new FormValidate();
+new StickyHeader();
+new HideHeader();
+new ImageCarousel();
+new MobileMenu();
 
 new SmoothScroll($('.arrow-down-link'));
 new SmoothScroll($('.secondary-nav a'));

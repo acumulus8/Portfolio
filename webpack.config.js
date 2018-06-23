@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
     entry: {
         App: "./app/assets/scripts/App.js",
+        Lightbox: "./app/assets/scripts/Lightbox.js",
         Vendor: "./app/assets/scripts/Vendor.js"
     },
     output: {

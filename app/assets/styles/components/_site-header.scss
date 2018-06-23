@@ -33,44 +33,46 @@
     a {
       color: #fff;
     }
-  }
 
-  &__logo {
-    max-width: 60px;
-    margin: 0.5rem 0.75em 0.5rem 0;
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.35));
-
-    @include screenSize(atSmall) {
-      max-width: 100px;
+    &__logo {
+      max-width: 60px;
       margin: 0.5rem 0.75em 0.5rem 0;
-    }
-  }
-
-  &__text {
-    width: 60%;
-
-    @include screenSize(atSmall) {
-      width: 100%;
-    }
-
-    &-name {
-      font-weight: $fontBold;
-      letter-spacing: 0.2rem;
-      text-shadow: 1px 1px $mainGray;
-    }
-
-    p {
-      margin: 0;
-      color: #fff;
-      font-size: 0.8rem;
-      text-shadow: 1px 1px $mainGray;
-      display: none;
-
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.35));
+  
       @include screenSize(atSmall) {
-        display: block;
+        max-width: 100px;
+        margin: 0.5rem 0.75em 0.5rem 0;
+      }
+    }
+  
+    &__text {
+      width: 60%;
+  
+      @include screenSize(atSmall) {
+        width: 100%;
+      }
+  
+      &-name {
+        font-weight: $fontBold;
+        letter-spacing: 0.2rem;
+        text-shadow: 1px 1px $mainGray;
+      }
+  
+      p {
+        margin: 0;
+        color: #fff;
+        font-size: 0.8rem;
+        text-shadow: 1px 1px $mainGray;
+        display: none;
+  
+        @include screenSize(atSmall) {
+          display: block;
+        }
       }
     }
   }
+
+  
 
   &__menu-icon {
     width: 20px;

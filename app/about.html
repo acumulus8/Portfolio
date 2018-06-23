@@ -24,15 +24,15 @@
         <nav class="site-header site-header--not-index">
             <div class="site-header__container wrapper">
                 <div class="site-header__brand">
-                    <div class="site-header__logo">
+                    <div class="site-header__brand__logo">
                         <a href="./index.html">
-                            <img src="assets/images/new-logo.svg" alt="logo">
+                            <img src="assets/images/new-logo.png" alt="logo">
                         </a>
                     </div>
-                    <div class="site-header__text">
-                        <a class="site-header__text-name" href="./index.html">TIM WILBURN</a>
+                    <div class="site-header__brand__text">
+                        <a class="site-header__brand__text-name" href="./index.html">TIM WILBURN</a>
                         <a href="./index.html">
-                            <p class="site-header_text-quote">Clean code, responsive design.</p>
+                            <p class="site-header__brand__text-quote">Clean code, responsive design.</p>
                         </a>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
 
     <main>
         <!-- LIGHT BOX CONTENT INITIALLY HIDDEN-->
-        <div class="lightbox js-lightbox">
+        <!-- <div class="lightbox js-lightbox">
             <div class="js-x-cert">
                 <i class="far fa-3x fa-times-circle x"></i>
             </div>
@@ -116,6 +116,30 @@
                 <img class="lightbox__img-container__image" alt="Image of a certificate issued by a course">
                 <div class="lightbox__img-container__prev" id="js-prev"></div>
                 <div class="lightbox__img-container__next" id="js-next"></div>
+            </div>
+        </div> -->
+
+        <div class="lightbox js-lightbox">
+            <div class="js-x-cert">
+                <i class="far fa-3x fa-times-circle x"></i>
+            </div>
+            <div class="lightbox__img-container">
+                <img srcset="assets/images/lightboxImages/build-web-apps-cert-1200.jpg 1200w, assets/images/lightboxImages/build-web-apps-cert-760.jpg 760w, assets/images/lightboxImages/build-web-apps-cert-480.jpg 480w" class="lightbox__img-container__image" alt="Image of a certificate issued by a course I took.">
+                <img srcset="assets/images/lightboxImages/build-website-ui-cert-1200.jpg 1200w, assets/images/lightboxImages/build-website-ui-cert-760.jpg 760w, assets/images/lightboxImages/build-website-ui-cert-480.jpg 480w" class="lightbox__img-container__image" alt="Image of a certificate issued by a course I took.">
+                <img srcset="assets/images/lightboxImages/git-web-dev-job-cert-1200.jpg 1200w, assets/images/lightboxImages/git-web-dev-job-cert-760.jpg 760w, assets/images/lightboxImages/git-web-dev-job-cert-480.jpg 480w" class="lightbox__img-container__image" alt="Image of a certificate issued by a course I took.">
+                <img srcset="assets/images/lightboxImages/websites-from-scratch-cert-1200.jpg 1200w, assets/images/lightboxImages/websites-from-scratch-cert-760.jpg 760w, assets/images/lightboxImages/websites-from-scratch-cert-480.jpg 480w" class="lightbox__img-container__image" alt="Image of a certificate issued by a course I took.">
+                <img srcset="assets/images/lightboxImages/wp-for-beginners-cert-1200.jpg 1200w, assets/images/lightboxImages/wp-for-beginners-cert-760.jpg 760w, assets/images/lightboxImages/wp-for-beginners-cert-480.jpg 480w" class="lightbox__img-container__image" alt="Image of a certificate issued by a course I took.">
+                
+                <div class="lightbox__img-container__prev" id="js-prev"></div>
+                <div class="lightbox__img-container__next" id="js-next"></div>
+
+                <div class="lightbox__img-container__dot-box">
+                    <div class="lightbox__img-container__dot-box__dot"></div>
+                    <div class="lightbox__img-container__dot-box__dot"></div>
+                    <div class="lightbox__img-container__dot-box__dot"></div>
+                    <div class="lightbox__img-container__dot-box__dot"></div>
+                    <div class="lightbox__img-container__dot-box__dot"></div>
+                </div>
             </div>
         </div>
 
@@ -263,9 +287,9 @@
     </main>
 
     <footer class="footer">
-        <div class="site-header__logo">
+        <div class="site-header__brand__logo">
             <a href="./index.html">
-                <img src="assets/images/new-logo.svg" alt="logo">
+                <img src="assets/images/new-logo.png" alt="logo">
             </a>
         </div>
         <div class="footer__text-container">Made from scratch, by yours truly :)</div>
@@ -284,6 +308,10 @@
 
     <!-- build:js assets/scripts/App.js-->
     <script src="temp/scripts/App.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js assets/scripts/Lightbox.js-->
+    <script src="temp/scripts/Lightbox.js"></script>
     <!-- endbuild -->
 </body>
 
