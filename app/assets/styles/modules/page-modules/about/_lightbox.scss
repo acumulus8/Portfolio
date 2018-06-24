@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: -5;
   top: 0;
   left: 0;
   bottom: 0;
@@ -18,6 +18,7 @@
     opacity: 1;
     visibility: visible;
     transform: scale(1);
+    z-index: 100;
   }
 
   .x {
@@ -45,17 +46,33 @@
     position: relative;
 
     &__image {
-      transition: all .4s ease-out;
-
-      .fade-out {
-        display: none;
+      position: absolute;
+      transition: visibility 1s, opacity 2s ease-in-out;
+      
+      &--hide {
+        animation: hide 1.2s linear both;
       }
+      &--visible {
+        animation: show 0.7s linear both;
+       }
+
+       @keyframes hide {
+         0% { opacity: 1 }
+         50% { opacity: 0.3 }
+         100% { opacity: 0 }
+       }
+       
+       @keyframes show {
+         0% { opacity: 0 }
+         50% { opacity: 0 }
+         100% { opacity: 1 }
+       }
     }
 
     &__dot-box {
       position: absolute;
       left: 50%;
-      bottom: -25px;
+      bottom: -35px;
       transform: translateX(-50%);
       display: flex;
       justify-content: space-between;
@@ -67,7 +84,7 @@
         height: 10px;
         border-radius: 50%;
         background: rgb(175, 175, 175);
-        transition: all .1s ease-in-out;
+        transition: all 0.9s linear;
 
         &--active {
           background: #fff;

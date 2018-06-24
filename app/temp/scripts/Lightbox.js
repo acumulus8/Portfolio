@@ -10484,24 +10484,15 @@ var Lightbox = function () {
 
     this.lightbox = boxToOpen;
     this.classToToggle = classToToggle;
-    /* this.image = $(".lightbox__img-container__image"); */
     this.images = document.querySelectorAll(".lightbox__img-container__image");
     this.openBtn = openBtn;
     this.xBtn = closeBtn;
     this.prev = (0, _jquery2.default)("#js-prev");
     this.next = (0, _jquery2.default)("#js-next");
+    this.showClass = "lightbox__img-container__image--visible";
+    this.hideClass = "lightbox__img-container__image--hide";
     this.dots = document.querySelectorAll(".lightbox__img-container__dot-box__dot");
     this.i = 0;
-    /* this.imageSrc = [
-      "./assets/images/lightboxImages/build-web-apps-cert.jpg",
-      "./assets/images/lightboxImages/build-website-ui-cert.jpg",
-      "./assets/images/lightboxImages/git-web-dev-job-cert.jpg",
-      "./assets/images/lightboxImages/websites-from-scratch-cert.jpg",
-      "./assets/images/lightboxImages/wp-for-beginners-cert.jpg"
-    ]; */
-    /* this.openLightbox();
-        this.closeLightbox();
-        this.changeImage(); */
     this.events();
   }
 
@@ -10541,11 +10532,29 @@ var Lightbox = function () {
   }, {
     key: "defaultDisplay",
     value: function defaultDisplay() {
+      var _this = this;
+
       this.images.forEach(function (image) {
-        return image.style.display = "none";
+        return image.classList.add(_this.hideClass);
       });
-      this.images[0].style.display = "block";
+      this.images[0].classList.add(this.showClass);
       this.dots[0].classList.add("lightbox__img-container__dot-box__dot--active");
+    }
+  }, {
+    key: "showImage",
+    value: function showImage() {
+      if (this.images[this.i].classList.contains(this.hideClass)) {
+        this.images[this.i].classList.remove(this.hideClass);
+      }
+      this.images[this.i].classList.add(this.showClass);
+    }
+  }, {
+    key: "hideImage",
+    value: function hideImage() {
+      if (this.images[this.i].classList.contains(this.showClass)) {
+        this.images[this.i].classList.remove(this.showClass);
+      }
+      this.images[this.i].classList.add(this.hideClass);
     }
   }, {
     key: "activateDot",
@@ -10560,80 +10569,39 @@ var Lightbox = function () {
   }, {
     key: "changeImage",
     value: function changeImage() {
-      var _this = this;
+      var _this2 = this;
 
       this.defaultDisplay();
       var that = this;
 
       this.next.on("click", function () {
-        _this.images[_this.i].style.display = "none";
+        _this2.hideImage();
         that.deactivateDot();
-
-        if (_this.i < _this.images.length - 1) {
-          _this.i++;
-          _this.images[_this.i].style.display = "block";
+        if (_this2.i < _this2.images.length - 1) {
+          _this2.i++;
+          _this2.showImage();
           that.activateDot();
         } else {
-          _this.i = 0;
-          _this.images[_this.i].style.display = "block";
+          _this2.i = 0;
+          _this2.showImage();
           that.activateDot();
         }
       });
 
       this.prev.on("click", function () {
-        _this.images[_this.i].style.display = "none";
+        _this2.hideImage();
         that.deactivateDot();
-
-        if (_this.i > 0) {
-          _this.i--;
-          _this.images[_this.i].style.display = "block";
+        if (_this2.i > 0) {
+          _this2.i--;
+          _this2.showImage();
           that.activateDot();
-        } else if (_this.i == 0) {
-          _this.i = _this.images.length - 1;
-          _this.images[_this.i].style.display = "block";
+        } else if (_this2.i == 0) {
+          _this2.i = _this2.images.length - 1;
+          _this2.showImage();
           that.activateDot();
         }
       });
     }
-
-    /* changeImage() {
-      let i = 0;
-      this.image.attr("src", this.imageSrc[0]);
-      const that = this;
-        this.next.on("click", () => {
-        if (i < that.imageSrc.length - 1) {
-          i++;
-          that.image.fadeOut("slow", () => {
-            that.image.attr("src", that.imageSrc[i]);
-            that.image.fadeIn("slow");
-          });
-        } else {
-          i = 0;
-          that.image.fadeOut("slow", () => {
-            that.image.attr("src", that.imageSrc[i]);
-            that.image.fadeIn("slow");
-          });
-        }
-        console.log(i);
-      });
-        this.prev.on("click", () => {
-        if (i > 0) {
-          i--;
-          that.image.fadeOut("medium", () => {
-            that.image.attr("src", that.imageSrc[i]);
-            that.image.fadeIn("fast");
-          });
-        } else if (i == 0) {
-          i = that.imageSrc.length - 1;
-          that.image.fadeOut("medium", () => {
-            that.image.attr("src", that.imageSrc[i]);
-            that.image.fadeIn("fast");
-          });
-        }
-        console.log(i);
-      });
-    } */
-
   }]);
 
   return Lightbox;

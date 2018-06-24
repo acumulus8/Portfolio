@@ -4,26 +4,17 @@ class Lightbox {
   constructor(boxToOpen, openBtn, closeBtn, classToToggle) {
     this.lightbox = boxToOpen;
     this.classToToggle = classToToggle;
-    /* this.image = $(".lightbox__img-container__image"); */
     this.images = document.querySelectorAll(".lightbox__img-container__image");
     this.openBtn = openBtn;
     this.xBtn = closeBtn;
     this.prev = $("#js-prev");
     this.next = $("#js-next");
+    this.showClass = "lightbox__img-container__image--visible";
+    this.hideClass = "lightbox__img-container__image--hide";
     this.dots = document.querySelectorAll(
       ".lightbox__img-container__dot-box__dot"
     );
     this.i = 0;
-    /* this.imageSrc = [
-      "./assets/images/lightboxImages/build-web-apps-cert.jpg",
-      "./assets/images/lightboxImages/build-website-ui-cert.jpg",
-      "./assets/images/lightboxImages/git-web-dev-job-cert.jpg",
-      "./assets/images/lightboxImages/websites-from-scratch-cert.jpg",
-      "./assets/images/lightboxImages/wp-for-beginners-cert.jpg"
-    ]; */
-    /* this.openLightbox();
-        this.closeLightbox();
-        this.changeImage(); */
     this.events();
   }
 
@@ -55,9 +46,23 @@ class Lightbox {
   }
 
   defaultDisplay() {
-    this.images.forEach(image => (image.style.display = "none"));
-    this.images[0].style.display = "block";
+    this.images.forEach(image => image.classList.add(this.hideClass));
+    this.images[0].classList.add(this.showClass);
     this.dots[0].classList.add("lightbox__img-container__dot-box__dot--active");
+  }
+
+  showImage() {
+    if (this.images[this.i].classList.contains(this.hideClass)) {
+      this.images[this.i].classList.remove(this.hideClass);
+    }
+    this.images[this.i].classList.add(this.showClass);
+  }
+
+  hideImage() {
+    if (this.images[this.i].classList.contains(this.showClass)) {
+      this.images[this.i].classList.remove(this.showClass);
+    }
+    this.images[this.i].classList.add(this.hideClass);
   }
 
   activateDot() {
@@ -77,75 +82,33 @@ class Lightbox {
     const that = this;
 
     this.next.on("click", () => {
-      this.images[this.i].style.display = "none";
+      this.hideImage();
       that.deactivateDot();
-
       if (this.i < this.images.length - 1) {
         this.i++;
-        this.images[this.i].style.display = "block";
+        this.showImage();
         that.activateDot();
       } else {
         this.i = 0;
-        this.images[this.i].style.display = "block";
+        this.showImage();
         that.activateDot();
       }
     });
 
     this.prev.on("click", () => {
-      this.images[this.i].style.display = "none";
+      this.hideImage();
       that.deactivateDot();
-
       if (this.i > 0) {
         this.i--;
-        this.images[this.i].style.display = "block";
+        this.showImage();
         that.activateDot();
       } else if (this.i == 0) {
         this.i = this.images.length - 1;
-        this.images[this.i].style.display = "block";
+        this.showImage();
         that.activateDot();
       }
     });
   }
-
-  /* changeImage() {
-    let i = 0;
-    this.image.attr("src", this.imageSrc[0]);
-    const that = this;
-
-    this.next.on("click", () => {
-      if (i < that.imageSrc.length - 1) {
-        i++;
-        that.image.fadeOut("slow", () => {
-          that.image.attr("src", that.imageSrc[i]);
-          that.image.fadeIn("slow");
-        });
-      } else {
-        i = 0;
-        that.image.fadeOut("slow", () => {
-          that.image.attr("src", that.imageSrc[i]);
-          that.image.fadeIn("slow");
-        });
-      }
-      console.log(i);
-    });
-
-    this.prev.on("click", () => {
-      if (i > 0) {
-        i--;
-        that.image.fadeOut("medium", () => {
-          that.image.attr("src", that.imageSrc[i]);
-          that.image.fadeIn("fast");
-        });
-      } else if (i == 0) {
-        i = that.imageSrc.length - 1;
-        that.image.fadeOut("medium", () => {
-          that.image.attr("src", that.imageSrc[i]);
-          that.image.fadeIn("fast");
-        });
-      }
-      console.log(i);
-    });
-  } */
 }
 
 export default Lightbox;
