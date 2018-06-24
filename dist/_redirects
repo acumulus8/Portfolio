@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
+https://timwilburn.netlify.com/* https://www.timwilburn.com/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://timwilburn.netlify.com/* https://www.timwilburn.com/:splat 301!
