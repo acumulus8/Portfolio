@@ -1289,6 +1289,7 @@ figure {
 .intro {
   position: relative;
   overflow: hidden;
+  border-top: 12px solid #555555;
   /* 
   &:after {
     @include clearFloats;

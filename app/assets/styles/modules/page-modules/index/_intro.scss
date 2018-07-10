@@ -2,6 +2,7 @@
   position: relative;
   //height: 90vh;
   overflow: hidden;
+  border-top: 12px solid $lightGray;
 
   @include screenSize(atMedium) {
     height: 90vh;
