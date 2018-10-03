@@ -2128,13 +2128,15 @@ figure {
     transform: scale(1); }
 
 .grow {
-  -webkit-transform: translateX(-50%) scale(0);
-  -ms-transform: translateX(-50%) scale(0);
-  transform: translateX(-50%) scale(0);
+  -webkit-transform: translateX(-50%) scale(0.75);
+  -ms-transform: translateX(-50%) scale(0.75);
+  transform: translateX(-50%) scale(0.75);
+  opacity: 0;
   -webkit-transition: all 1s ease-out;
   -o-transition: all 1s ease-out;
   transition: all 1s ease-out; }
   .grow--is-visible {
     -webkit-transform: translateX(-50%) scale(1);
     -ms-transform: translateX(-50%) scale(1);
-    transform: translateX(-50%) scale(1); }
+    transform: translateX(-50%) scale(1);
+    opacity: 1; }
