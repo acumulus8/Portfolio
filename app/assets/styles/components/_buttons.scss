@@ -1,87 +1,94 @@
 .button {
-    border: none;
-    border-radius: .5rem;
-    padding: 1rem 1.8rem;
-    margin-bottom: 10px;
-    background-color: $secondaryBlue;
-    color: #fff;
-    cursor: pointer;
-    letter-spacing: .1rem;
-    font-weight: $fontBold;
-    transition: all .6s ease-out;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 1.8rem;
+  margin-bottom: 10px;
+  background-color: $secondaryBlue;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-weight: $fontBold;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    box-shadow: none;
+    transform: scale(1);
+  }
+
+  &--for-hire {
+    padding: 1rem 1rem;
+    background-color: $mainBlue;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: $fontLight;
+
+    @include screenSize(atSmall) {
+      font-size: 1.2rem;
+    }
+
+    a {
+      color: #fff;
+    }
 
     &:hover {
-        box-shadow: none;
-        transform: scale(1);
+      transform: scale(1.02);
+      background-color: $mainBlueLight;
+      box-shadow: 1px 1px 8px $lightGray;
     }
 
-    &--for-hire {
-        padding: 1rem 1rem;
-        background-color: transparent;
-        border: 4px solid $mainBlue;
-        border-radius: 2rem;
-        font-size: 1rem;
-        font-weight: $fontLight;
-        
-        @include screenSize(atSmall) {
-            font-size: 1.2rem;
-        }
+    &:active {
+      box-shadow: none;
+      transform: scale(1);
+      background-color: $mainBlue;
+    }
+  }
 
-        a {
-            color: #fff;
-        }
+  &--about {
+    background-color: $mainGreen;
 
-        &:hover {
-            background-color: $mainBlue;
-        }
+    a {
+      color: #fff;
     }
 
-    &--about {
-        background-color: $mainGreen;
-        
-        a {
-            color: #fff;
-        }
+    &:hover {
+      transform: scale(1.08);
+      opacity: 0.8;
+    }
+  }
 
-        &:hover {
-            transform: scale(1.08);
-            opacity: .8;
-        }
+  &--contact-form {
+    align-self: flex-start;
+    width: 200px;
+    margin-left: 1rem;
+    text-align: center;
+    background-color: $mainGray;
+    opacity: 0.5;
+    transition: all 0.6s ease-out;
+
+    &--is-validated {
+      background-color: $mainGreen;
+      opacity: 1;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        transform: scale(1.04);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &--thank-you {
+    display: block;
+    margin: 3rem auto 3rem auto;
+    transition: opacity 0.4s ease-out;
+
+    a {
+      color: #fff;
     }
 
-    &--contact-form {
-        align-self: flex-start;
-        width: 200px;
-        margin-left: 1rem;
-        text-align: center;
-        background-color: $mainGray;
-        opacity: 0.5;
-        transition: all .6s ease-out;
-
-        &--is-validated {
-            background-color: $mainGreen;
-            opacity: 1;
-            cursor: pointer;
-            transition: all .3s ease-out;
-
-            &:hover {
-                transform: scale(1.04);
-                opacity: .8;
-            }
-        }
+    &:hover {
+      opacity: 0.75;
     }
-
-    &--thank-you {
-        display: block;
-        margin: 3rem auto 3rem auto;
-        transition: opacity .4s ease-out;
-
-        a {
-            color: #fff;
-        }
-
-        &:hover {
-            opacity: .75; 
-        }
-    }
+  }
 }
