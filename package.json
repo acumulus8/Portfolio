@@ -9,7 +9,7 @@
   "dependencies": {
     "jquery": "^3.6.0",
     "jquery-smooth-scroll": "^2.2.0",
-    "lazysizes": "^4.0.4",
+    "lazysizes": "^5.2.1",
     "natives": "^1.1.6",
     "node": "^9.11.0",
     "v6": "0.0.0",
