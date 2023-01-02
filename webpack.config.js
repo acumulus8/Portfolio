@@ -1,105 +1,66 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const htmlWebpackPlugins = require("./configs/html-webpack-plugins");
+const imageMinimizer = require("./configs/image-minimizer");
+const getLoaders = require("./configs/loaders");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const path = require("path");
 const webpack = require("webpack");
 
-const postCSSPlugins = [require.resolve("postcss-simple-vars"), require.resolve("postcss-nested"), require.resolve("autoprefixer")];
+const postCSSLoaders = [require.resolve("postcss-simple-vars"), require.resolve("postcss-nested"), require.resolve("autoprefixer")];
+
+const loaders = getLoaders(postCSSLoaders);
+
 const sourceMapDevToolOptions = {
 	filename: "[file].js.map",
 	exclude: ["Vendor.js"],
 };
 
 module.exports = (env) => {
-	const mode = env.mode; // 'development' or 'production' from script
+	const mode = env.mode;
+
 	let config = {
 		entry: {
 			App: "./app/assets/scripts/App.js",
 			Lightbox: "./app/assets/scripts/Lightbox.js",
 			Vendor: "./app/assets/scripts/Vendor.js",
 		},
-		devtool: false,
+		// devtool: false,
 		module: {
-			rules: [
-				{
-					test: /\.s[ca]ss$/i,
-					use: ["style-loader", "css-loader?url=false", "sass-loader"],
-				},
-				{
-					test: /\.sss@/i,
-					loader: "postcss-loader",
-					options: {
-						postcssOptions: { plugins: postCSSPlugins },
-					},
-				},
-				{
-					test: /\.(jpe?g|png|gif|svg)$/,
-					use: [
-						{
-							loader: "file-loader",
-							options: {
-								name: "[name].[ext]",
-								path: path.resolve(__dirname, "./app/assets/images"),
-								outputPath: "./assets/images/",
-							},
-						},
-					],
-				},
-			],
+			rules: [...loaders],
 		},
-		plugins: [
-			new webpack.SourceMapDevToolPlugin(sourceMapDevToolOptions),
-			new HtmlWebpackPlugin({
-				title: "Tim Wilburn: Developer",
-				path: path.resolve(__dirname, "app"),
-				filename: "index.html",
-				template: "./app/index.html",
-			}),
-			new HtmlWebpackPlugin({
-				title: "Tim Wilburn: Developer",
-				path: path.resolve(__dirname, "app"),
-				filename: "about.html",
-				template: "./app/about.html",
-			}),
-			new HtmlWebpackPlugin({
-				title: "Tim Wilburn: Developer",
-				path: path.resolve(__dirname, "app"),
-				filename: "contact.html",
-				template: "./app/contact.html",
-			}),
-			new HtmlWebpackPlugin({
-				title: "Tim Wilburn: Developer",
-				path: path.resolve(__dirname, "app"),
-				filename: "portfolio.html",
-				template: "./app/portfolio.html",
-			}),
-		],
+		plugins: [...htmlWebpackPlugins],
+		// plugins: [new webpack.SourceMapDevToolPlugin(sourceMapDevToolOptions), ...htmlWebpackPlugins],
+		optimization: {
+			minimize: true,
+			minimizer: [...imageMinimizer],
+		},
 	};
+
 	if (mode === "development") {
 		console.log("!@#!@!@!@!@! DEV MODE !@!@!@!@");
 		config.output = {
 			filename: "[name].js",
-			path: path.resolve(__dirname, "app"),
+			path: path.resolve(__dirname, "dist"),
 		};
 		config.devServer = {
 			before: function (_, server) {
-				server._watch("./app/*.html");
+				server._watch("./dist/*.html");
 			},
-			contentBase: path.join(__dirname, "app/"),
+			contentBase: path.join(__dirname, "dist/"),
+			compress: true,
 			hot: true,
 			port: 3000,
 		};
 		config.mode = mode;
 	}
+
 	if (mode === "production") {
 		console.log("!@#!@!@!@!@! PRODUCTION MODE !@!@!@!@");
-		config.plugins.push(new CleanWebpackPlugin({ path: path.resolve(__dirname, "dist") }));
+		config.plugins.push(new CleanWebpackPlugin({ path: path.resolve(__dirname, "./dist") }));
 		config.output = {
 			filename: "[name].js",
-			path: path.resolve(__dirname, "dist/"),
+			path: path.resolve(__dirname, "./dist"),
 		};
 		config.mode = mode;
 	}
 	return config;
 };
-
-// module.exports = (env) => getConfig(env)

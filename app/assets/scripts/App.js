@@ -1,4 +1,4 @@
-import "../styles/styles.scss";
+import "./../styles/styles.scss";
 
 import $ from "jquery";
 import StickyHeader from "./modules/StickyHeader";
