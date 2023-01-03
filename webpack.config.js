@@ -23,12 +23,16 @@ module.exports = (env) => {
 			Lightbox: "./app/assets/scripts/Lightbox.js",
 			Vendor: "./app/assets/scripts/Vendor.js",
 		},
-		// devtool: false,
+		output: {
+			filename: "[name].js",
+			path: path.resolve(__dirname, "dist"),
+			assetModuleFilename: "assets/images/[name][ext]",
+		},
 		module: {
 			rules: [...loaders],
 		},
-		plugins: [...htmlWebpackPlugins],
-		// plugins: [new webpack.SourceMapDevToolPlugin(sourceMapDevToolOptions), ...htmlWebpackPlugins],
+		// plugins: [...htmlWebpackPlugins],
+		plugins: [new webpack.SourceMapDevToolPlugin(sourceMapDevToolOptions), ...htmlWebpackPlugins],
 		optimization: {
 			minimize: true,
 			minimizer: [...imageMinimizer],
@@ -37,29 +41,16 @@ module.exports = (env) => {
 
 	if (mode === "development") {
 		console.log("!@#!@!@!@!@! DEV MODE !@!@!@!@");
-		config.output = {
-			filename: "[name].js",
-			path: path.resolve(__dirname, "dist"),
-		};
 		config.devServer = {
-			before: function (_, server) {
-				server._watch("./dist/*.html");
-			},
-			contentBase: path.join(__dirname, "dist/"),
 			compress: true,
 			hot: true,
 			port: 3000,
 		};
 		config.mode = mode;
 	}
-
 	if (mode === "production") {
 		console.log("!@#!@!@!@!@! PRODUCTION MODE !@!@!@!@");
 		config.plugins.push(new CleanWebpackPlugin({ path: path.resolve(__dirname, "./dist") }));
-		config.output = {
-			filename: "[name].js",
-			path: path.resolve(__dirname, "./dist"),
-		};
 		config.mode = mode;
 	}
 	return config;
