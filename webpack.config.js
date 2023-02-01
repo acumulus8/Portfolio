@@ -31,8 +31,8 @@ module.exports = (env) => {
 		module: {
 			rules: [...loaders],
 		},
-		// plugins: [...htmlWebpackPlugins],
-		plugins: [new webpack.SourceMapDevToolPlugin(sourceMapDevToolOptions), ...htmlWebpackPlugins],
+		plugins: [...htmlWebpackPlugins],
+		// plugins: [new webpack.SourceMapDevToolPlugin(sourceMapDevToolOptions), ...htmlWebpackPlugins],
 		optimization: {
 			minimize: true,
 			minimizer: [...imageMinimizer],
