@@ -1,45 +1,57 @@
+const htmlWebpackPlugins = require("./configs/html-webpack-plugins");
+const imageMinimizer = require("./configs/image-minimizer");
+const getLoaders = require("./configs/loaders");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
+const webpack = require("webpack");
 
-const postCSSPlugins = [require("postcss-simple-vars"), require("postcss-nested"), require("autoprefixer")];
+const postCSSLoaders = [require.resolve("postcss-simple-vars"), require.resolve("postcss-nested"), require.resolve("autoprefixer")];
 
-module.exports = {
-	entry: {
-		App: "./app/assets/scripts/App.js",
-		Lightbox: "./app/assets/scripts/Lightbox.js",
-		Vendor: "./app/assets/scripts/Vendor.js",
-	},
-	output: {
-		// path: path.resolve(__dirname, "./app/temp/scripts"),
-		path: path.resolve(__dirname, "./app"),
-		filename: "[name].js",
-		// filename: "bundled.js"
-	},
-	devServer: {
-		contentBase: path.join(__dirname, "app"),
-		hot: true,
-		port: 3000,
-		host: "0.0.0.0",
-	},
-	mode: "development",
-	module: {
-		rules: [
-			{
-				test: /\.s[ca]ss$/i,
-				use: [
-					"style-loader",
-					"css-loader?url=false",
-					"sass-loader",
-					// line was original from course.
-					// { loader: "postcss-loader", options: { plugins: postCSSPlugins } }
-					{ loader: "postcss-loader", options: { postcssOptions: { plugins: postCSSPlugins } } },
-				],
-				// loader: "babel-loader",
-				// query: {
-				//   presets: ["es2015"]
-				// },
-				// test: /\.js$/,
-				// exclude: /node_modules/
-			},
-		],
-	},
+const loaders = getLoaders(postCSSLoaders);
+
+const sourceMapDevToolOptions = {
+	filename: "[file].js.map",
+	exclude: ["Vendor.js"],
+};
+
+module.exports = (env) => {
+	const mode = env.mode;
+
+	let config = {
+		entry: {
+			App: "./app/assets/scripts/App.js",
+			Lightbox: "./app/assets/scripts/Lightbox.js",
+			Vendor: "./app/assets/scripts/Vendor.js",
+		},
+		output: {
+			filename: "[name].js",
+			path: path.resolve(__dirname, "dist"),
+			assetModuleFilename: "assets/images/[name][ext]",
+		},
+		module: {
+			rules: [...loaders],
+		},
+		plugins: [...htmlWebpackPlugins],
+		// plugins: [new webpack.SourceMapDevToolPlugin(sourceMapDevToolOptions), ...htmlWebpackPlugins],
+		optimization: {
+			minimize: true,
+			minimizer: [...imageMinimizer],
+		},
+	};
+
+	if (mode === "development") {
+		console.log("!@#!@!@!@!@! DEV MODE !@!@!@!@");
+		config.devServer = {
+			compress: true,
+			hot: true,
+			port: 3000,
+		};
+		config.mode = mode;
+	}
+	if (mode === "production") {
+		console.log("!@#!@!@!@!@! PRODUCTION MODE !@!@!@!@");
+		config.plugins.push(new CleanWebpackPlugin({ path: path.resolve(__dirname, "./dist") }));
+		config.mode = mode;
+	}
+	return config;
 };

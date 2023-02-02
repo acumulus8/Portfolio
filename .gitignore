@@ -8,6 +8,9 @@
 *.swp
 *.vi
 *.vscode
+*.env
+*.env.development
+*.env.production
 *~
 *.sass-cache
 node_modules/
