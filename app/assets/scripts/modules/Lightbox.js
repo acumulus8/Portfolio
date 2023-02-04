@@ -5,8 +5,8 @@ class Lightbox {
 		this.images = document.querySelectorAll(".lightbox__img-container__image");
 		this.openBtn = openBtn;
 		this.xBtn = closeBtn;
-		this.prev = document.getElementById("#js-prev");
-		this.next = document.getElementById("#js-next");
+		this.prev = document.getElementById("js-prev");
+		this.next = document.getElementById("js-next");
 		this.showClass = "lightbox__img-container__image--visible";
 		this.hideClass = "lightbox__img-container__image--hide";
 		this.dots = document.querySelectorAll(".lightbox__img-container__dot-box__dot");
@@ -15,10 +15,11 @@ class Lightbox {
 	}
 
 	events() {
-		this.openLightbox();
-		this.closeLightbox();
-		this.changeImage();
-		// $(document).keyup(this.keyPressHandler.bind(this));
+		this.openBtn.addEventListener("click", this.openLightbox.bind(this));
+		this.xBtn.addEventListener("click", this.closeLightbox.bind(this));
+		this.prev.addEventListener("click", this.prevImage.bind(this));
+		this.next.addEventListener("click", this.nextImage.bind(this));
+		this.defaultDisplay();
 	}
 
 	keyPressHandler(e) {
@@ -27,18 +28,14 @@ class Lightbox {
 		}
 	}
 
-	openLightbox() {
-		const that = this;
-		this.openBtn.on("click", (e) => {
-			that.lightbox.addClass(that.classToToggle);
-			e.preventDefault();
-		});
+	openLightbox(e) {
+		e.preventDefault();
+		this.lightbox.classList.add(this.classToToggle);
 	}
 
 	closeLightbox() {
-		const that = this;
-		this.xBtn.on("click", () => that.lightbox.removeClass(that.classToToggle));
-		this.lightbox.removeClass(this.classToToggle);
+		this.lightbox.classList.remove(this.classToToggle);
+		this.lightbox.classList.remove(this.classToToggle);
 	}
 
 	defaultDisplay() {
@@ -69,37 +66,32 @@ class Lightbox {
 		this.dots[this.i].classList.remove("lightbox__img-container__dot-box__dot--active");
 	}
 
-	changeImage() {
-		this.defaultDisplay();
-		const that = this;
+	nextImage() {
+		this.hideImage();
+		this.deactivateDot();
+		if (this.i < this.images.length - 1) {
+			this.i++;
+			this.showImage();
+			this.activateDot();
+		} else {
+			this.i = 0;
+			this.showImage();
+			this.activateDot();
+		}
+	}
 
-		this.next.on("click", () => {
-			this.hideImage();
-			that.deactivateDot();
-			if (this.i < this.images.length - 1) {
-				this.i++;
-				this.showImage();
-				that.activateDot();
-			} else {
-				this.i = 0;
-				this.showImage();
-				that.activateDot();
-			}
-		});
-
-		this.prev.on("click", () => {
-			this.hideImage();
-			that.deactivateDot();
-			if (this.i > 0) {
-				this.i--;
-				this.showImage();
-				that.activateDot();
-			} else if (this.i == 0) {
-				this.i = this.images.length - 1;
-				this.showImage();
-				that.activateDot();
-			}
-		});
+	prevImage() {
+		this.hideImage();
+		this.deactivateDot();
+		if (this.i > 0) {
+			this.i--;
+			this.showImage();
+			this.activateDot();
+		} else if (this.i == 0) {
+			this.i = this.images.length - 1;
+			this.showImage();
+			this.activateDot();
+		}
 	}
 }
 

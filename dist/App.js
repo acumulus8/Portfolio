@@ -1,134 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 856:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600);"]);
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}@font-face{font-family:\"Raleway\";font-style:normal;font-weight:400;src:local(\"Raleway\"),local(\"Raleway-Regular\"),url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyC0ITw.woff2) format(\"woff2\");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}*{box-sizing:border-box}body{font-family:Montserrat,sans-serif;font-size:16px;color:#333;overflow:auto;overflow-x:hidden}@media(min-width: 570px){body{font-size:18px}}html{font-size:16px;color:#333;overflow:auto;overflow-x:hidden}@media(min-width: 570px){html{font-size:18px}}img{width:100%;height:100%}p{line-height:1.4;font-family:Raleway,sans-serif;letter-spacing:.05rem}a{text-decoration:none;font-family:Montserrat,sans-serif}ul{list-style-type:none}figure{margin:0}.footer{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:4rem 0;color:#fff;background-color:#333}.footer__text-container{padding:2rem 0 2rem 0}.footer__icon-container__icon{color:#fff;transition:all .2s ease-out}.footer__icon-container__icon:hover{transform:scale(1.1);filter:drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7))}.footer__icon-container__icon:active{transform:scale(1);filter:none}.footer__icon-container .center-icon{margin:0 2rem}.wrapper{padding-left:18px;padding-right:18px;max-width:1100px;margin-left:auto;margin-right:auto;overflow:hidden}@media(min-width: 570px){.wrapper{padding-left:30px;padding-right:30px}}.wrapper--thanks{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%)}@media(min-width: 570px){.page-section{padding:2rem 2rem}}@media(min-width: 1010px){.page-section{padding:2rem 2rem}}.page-section--contact{padding-top:0}.page-header{position:relative;width:100%;height:50vh;overflow:hidden;border-bottom:6px solid #333}.page-header--about{border-bottom:none}@media(min-width: 1010px){.page-header{height:70vh}}.page-header__filter{position:relative;width:100%;height:70vh;z-index:5;background-color:rgba(34,117,165,.75)}.page-header__image-container{position:absolute;z-index:-5;top:0;width:100%;height:50vh;filter:blur(3.5px)}@media(min-width: 1010px){.page-header__image-container{height:70vh}}.page-header__content{width:100%;position:absolute;top:50%;transform:translateY(-60%);color:#fff;text-shadow:2px 2px #333;z-index:6;animation:slideIn 2.2s ease-out both}.page-header__content__h1{font-size:2.6rem;text-shadow:1px 1px #333;margin-left:10%;margin-bottom:0;margin-top:4rem;border-radius:12px}.page-header__content__h1--portfolio{border-left:.6rem solid #da413e;border-bottom:.6rem solid #da413e;padding-left:10px;padding-bottom:10px}@media(min-width: 570px){.page-header__content__h1--portfolio{border-left:1rem solid #da413e;border-bottom:1rem solid #da413e}}@media(min-width: 1010px){.page-header__content__h1--portfolio{border-left:1rem solid #da413e;border-bottom:1rem solid #da413e}}@media(min-width: 570px){.page-header__content__h1--portfolio{padding-left:20px}}.page-header__content__h1--skills{border-left:.6rem solid #2274a5;border-bottom:.6rem solid #2274a5;padding-left:10px;padding-bottom:10px}@media(min-width: 570px){.page-header__content__h1--skills{border-left:1rem solid #2274a5;border-bottom:1rem solid #2274a5}}@media(min-width: 1010px){.page-header__content__h1--skills{border-left:1rem solid #2274a5;border-bottom:1rem solid #2274a5}}@media(min-width: 570px){.page-header__content__h1--skills{padding-left:20px}}.page-header__content__h1--about{border-left:.6rem solid #69a13b;border-bottom:.6rem solid #69a13b;padding-left:10px;padding-bottom:0}@media(min-width: 570px){.page-header__content__h1--about{border-left:1rem solid #69a13b;border-bottom:1rem solid #69a13b}}@media(min-width: 1010px){.page-header__content__h1--about{border-left:1rem solid #69a13b;border-bottom:1rem solid #69a13b}}@media(min-width: 570px){.page-header__content__h1--about{padding-left:20px}}.page-header__content__h1--contact{border-left:.6rem solid #0a2463;border-bottom:.6rem solid #0a2463;padding-left:10px;padding-bottom:0}@media(min-width: 570px){.page-header__content__h1--contact{border-left:1rem solid #0a2463;border-bottom:1rem solid #0a2463}}@media(min-width: 1010px){.page-header__content__h1--contact{border-left:1rem solid #0a2463;border-bottom:1rem solid #0a2463}}@media(min-width: 570px){.page-header__content__h1--contact{padding-left:20px}}@media(min-width: 570px){.page-header__content__h1{font-size:3rem;margin-left:18%}}@media(min-width: 1010px){.page-header__content__h1{font-size:4rem;margin-left:24%}}@media(min-width: 1600px){.page-header__content__h1{font-size:5rem;margin-left:29%}}.page-header__content__h2{color:#fff;margin:1.2rem 0 0 20%;font-weight:300}.page-header__content__h2--about{display:none}@media(min-width: 570px){.page-header__content__h2--about{display:block}}@media(min-width: 570px){.page-header__content__h2{font-size:1.5rem;font-weight:normal;margin-left:24%}}@media(min-width: 1010px){.page-header__content__h2{font-size:2rem;margin-left:30%}}@media(min-width: 1600px){.page-header__content__h2{font-size:2.5rem;margin-left:40%}}@keyframes slideIn{0%{transform:translate(100%, -60%);opacity:0}50%{opacity:0}60%{opacity:.1}70%{opacity:.2}80%{opacity:.6}90%{opacity:.8}100%{transform:translate(0%, -60%);opacity:1}}.button{border:none;border-radius:.5rem;padding:1rem 1.8rem;margin-bottom:10px;background-color:#2274a5;color:#fff;cursor:pointer;letter-spacing:.1rem;font-weight:700;transition:all .3s ease-out}.button:hover{box-shadow:none;transform:scale(1)}.button--for-hire{padding:1rem 1rem;background-color:#0a2463;border-radius:2rem;font-size:1rem;font-weight:300}@media(min-width: 570px){.button--for-hire{font-size:1.2rem}}.button--for-hire a{color:#fff}.button--for-hire:hover{transform:scale(1.02);background-color:#10358b;box-shadow:1px 1px 8px #555}.button--for-hire:active{box-shadow:none;transform:scale(1);background-color:#0a2463}.button--about{background-color:#69a13b}.button--about a{color:#fff}.button--about:hover{transform:scale(1.08);opacity:.8}.button--contact-form{align-self:flex-start;width:200px;margin-left:1rem;text-align:center;background-color:#333;opacity:.5;transition:all .6s ease-out}.button--contact-form--is-validated{background-color:#69a13b;opacity:1;cursor:pointer;transition:all .3s ease-out}.button--contact-form--is-validated:hover{transform:scale(1.04);opacity:.8}.button--thank-you{display:block;margin:3rem auto 3rem auto;transition:opacity .4s ease-out}.button--thank-you a{color:#fff}.button--thank-you:hover{opacity:.75}.primary-nav{display:flex}.primary-nav ul{display:none}@media(min-width: 960px){.primary-nav ul{display:flex;align-items:center}}.primary-nav ul li{margin-left:2rem}.primary-nav ul li a{position:relative;color:#fff;letter-spacing:.09rem}.primary-nav ul li a::before{content:\"\";height:100%;width:100%;position:absolute;border-bottom:1.5px solid #fff;visibility:hidden;transform:scaleX(0);transition:all .3s ease-out}.primary-nav ul li a:hover::before{visibility:visible;transform:scaleX(1)}.site-header{position:absolute;position:fixed;width:100%;top:0;z-index:10;padding-top:1.75rem;box-shadow:6px 0 10px rgba(0,0,0,0);transition:all .5s ease-out}@media(min-width: 1010px){.site-header{transform:scale(1.05)}}@media(min-width: 1150px){.site-header{transform:scale(1.12)}}@media(min-height: 1366px){.site-header{transform:scale(1)}}.site-header__container{display:flex;justify-content:space-between}.site-header__brand{display:flex;align-items:center;cursor:pointer}.site-header__brand a{color:#fff}.site-header__brand__logo{max-width:60px;margin:.5rem .75em .5rem 0;filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.35))}@media(min-width: 570px){.site-header__brand__logo{max-width:100px;margin:.5rem .75em .5rem 0}}.site-header__brand__text{width:60%}@media(min-width: 570px){.site-header__brand__text{width:100%}}.site-header__brand__text-name{font-weight:700;letter-spacing:.2rem;text-shadow:1px 1px #333}.site-header__brand__text p{margin:0;color:#fff;font-size:.8rem;text-shadow:1px 1px #333;display:none}@media(min-width: 570px){.site-header__brand__text p{display:block}}.site-header__menu-icon{width:20px;height:19px;position:absolute;z-index:20;top:50%;margin-top:-9px;right:18px}@media(min-width: 570px){.site-header__menu-icon{right:6%;transform:scale(1.5)}}@media(min-width: 960px){.site-header__menu-icon{display:none}}.site-header__menu-icon::before{content:\"\";position:absolute;top:0;left:0;width:20px;height:3px;background-color:#fff;transform-origin:0 0;transition:transform .3s ease-out}.site-header__menu-icon__middle{position:absolute;top:8px;left:0;width:20px;height:3px;background-color:#fff;transition:all .3s ease-out;transform-origin:0 50%}.site-header__menu-icon::after{content:\"\";position:absolute;bottom:0;left:0;width:20px;height:3px;background-color:#fff;transform-origin:0 100%;transition:transform .3s ease-out}.site-header__menu-icon--close-x::before{transform:rotate(45deg) scaleX(1.25)}.site-header__menu-icon--close-x .site-header__menu-icon__middle{opacity:0;transform:scaleX(0)}.site-header__menu-icon--close-x::after{transform:rotate(-45deg) scaleX(1.25) translateY(1px)}.site-header--fill-in-color{background-color:rgba(34,117,165,.85);box-shadow:6px 0 10px #333;transform:scale(1);padding-top:0;transition:all .6s ease-out}.site-header--not-index{background-color:rgba(34,117,165,.85);transform:scale(1);padding-top:0;box-shadow:6px 0 10px #333}@media(min-width: 570px){.site-header--hide{transform:translateY(-100%)}}.section-header{font-size:2.5rem;letter-spacing:3;text-align:center}@media(min-width: 1010px){.section-header{font-size:3.5rem}}.work-together{display:flex;align-items:center;padding:2rem 0;text-align:center;background-color:#ffaf02}@media(min-width: 1010px){.work-together{padding:4rem 0}}.work-together h2{color:#0a2463;font-size:1.7rem}@media(min-width: 1010px){.work-together h2{font-size:2rem}}.work-together h1{margin-top:0;color:#fff}.work-together__button-container{text-align:center;margin-top:3rem}.icon-container{position:absolute;z-index:5;bottom:-150px;left:50%;transform:translateX(-50%);padding:1.8em .8em;background-color:#da413e;width:90%;border-radius:2rem;box-shadow:0 10px 40px rgba(0,0,0,.25)}@media(min-width: 570px){.icon-container{padding:3em 2em}}@media(min-width: 1010px){.icon-container{width:65%;padding:3em 1.5em;bottom:-111px}}.icon-container__title{margin:0 0 1em 0}.icon-container__icon{margin:2rem 0 0 2rem}.icon-container__icon:first-of-type{margin-left:0}.mobile-menu{transform:translateX(100%);position:absolute;position:fixed;display:flex;flex-direction:column;justify-content:center;z-index:10;top:0;bottom:0;right:-20px;min-height:100vh;width:80vw;background-color:rgba(0,0,0,.92);transition:transform .6s cubic-bezier(0, 0.01, 0.35, 1.27)}@media(min-width: 570px){.mobile-menu{width:50vw}}@media(min-width: 960px){.mobile-menu{display:none}}.mobile-menu--is-visible{visibility:visible;transform:translateX(0%)}.mobile-menu__links{display:flex;flex-direction:column;justify-content:space-between;transform:translateY(-2rem);width:100%;height:50vh;-webkit-padding-start:0}.mobile-menu__links li{margin:0;padding:1.2rem 0;text-align:center;font-size:1.75rem;line-height:1.5}.mobile-menu__links li a{color:#fff;font-weight:300;letter-spacing:.09rem}.project{width:100%;display:flex;flex-direction:column;margin-top:2rem}.project:first-child{margin-top:3.4rem}@media(min-width: 570px){.project{padding:2.5rem 0}}@media(min-width: 1010px){.project{display:flex;flex-direction:row;padding:5rem 0}}.project__image-container{width:100%}@media(min-width: 1010px){.project__image-container{margin:0 5% 8% 0;width:50%}}.project:last-child{border-bottom:none}.project__text{width:100%;font-weight:300;position:relative;padding-bottom:4rem}@media(min-width: 1010px){.project__text{width:50%}}.project__heading{margin:0;margin-top:1rem}@media(min-width: 1010px){.project__heading{margin:0}}.project h4{margin-top:.2rem;font-weight:300}@media(min-width: 1010px){.project h4{margin-top:.5rem}}.project__link{margin-right:30px;position:absolute;width:180px;text-align:left}.project__link--move-right{left:50%}@media(min-width: 570px){.project__link--move-right{left:40%}}.project__link a{text-decoration:none;font-weight:700;transition:all .22s ease-out}.project__link a:visited{color:#0a2463}.project__link a:hover{font-size:1.2rem;color:#da413e}.project__link a:active{color:#0a2463}.project__divider{visibility:none;display:none}@media(min-width: 570px){.project__divider{visibility:visible;display:block}}.contact-form{width:100%;display:flex;flex-direction:column;margin-bottom:2rem}.contact-form__alert{background-color:#ffaf02;color:#fff;padding:20px;border-radius:15px;text-align:center}.contact-form__group{width:100%;margin-top:1rem}.contact-form__group--textarea{margin-top:2rem}.contact-form__group textarea{height:8rem}@media(min-width: 570px){.contact-form__info-group{display:flex}}.contact-form__info-group .contact-form__group:first-child{margin-right:40px}.contact-form__button-group{display:flex;flex-wrap:wrap;align-items:top}@media(min-width: 570px){.contact-form__button-group{display:flex;flex-direction:row;align-items:top}}.contact-form__label{display:block;letter-spacing:.09rem;padding-bottom:.2rem}.contact-form__input{width:100%;border:4px solid #0a2463;padding:.65rem}.contact-form__input:focus{outline:none;border-color:#69a13b}.contact-form__checkmark-container{position:relative;height:70px}.contact-form__checkmark{padding:0 15px 0 15px;opacity:0;color:#69a13b;font-weight:700;font-size:2rem;transition:opacity .6s ease-out}.contact-form__checkmark--is-showing{opacity:1}.contact-form__error{width:15rem;border:4px solid #812222;text-align:center;margin-left:4rem;border-radius:4px;transition:opacity .6s ease-out}.contact-form__error img{transform:translateY(22%);width:2rem;height:2rem}.contact-form__error p{font-weight:700}.contact-form__error--is-hidden{opacity:0}.contact-form--error-highlight{border:4px solid #812222}.large-hero{position:relative;width:100vw;height:100vh;overflow:hidden}.large-hero__image-container{position:fixed;z-index:-5;top:0;left:0;right:0;bottom:0;filter:blur(5px)}.large-hero__filter{position:relative;width:100%;height:100vh;z-index:5;background-color:rgba(34,117,165,.75)}.large-hero__content{width:100%;display:flex;position:absolute;top:50%;margin-top:-180px;color:#fff;text-align:center;text-shadow:1px 1px 5px #333;z-index:6}@media(min-width: 570px){.large-hero__content{margin-top:-145px}}.large-hero__content h1{font-size:2rem;font-weight:700;text-align:center}@media(min-width: 570px){.large-hero__content h1{font-size:3rem}}.large-hero__content p{text-shadow:1px 1px 5px #333;font-size:1.2rem;letter-spacing:.08rem;padding:1.4rem 0}@media(min-width: 570px){.large-hero__content p{padding:0}}@media(min-width: 1010px){.large-hero__content p{padding:1.4rem 0}}.intro{position:relative;overflow:hidden;border-top:12px solid #555}@media(min-width: 1010px){.intro{height:90vh}}@media(min-width: 1600px){.intro{height:auto}}@media(min-height: 1366px){.intro{height:55vh}}.intro__image-container{position:relative}@media(min-width: 1010px){.intro__image-container{width:60%;height:100%}}.intro__image-container__image{position:relative;width:100%;height:100%;background:#fff}@media(min-height: 1366px){.intro__image-container__image{width:100%}}.intro__image-container__mobile-greeting{position:absolute;top:50%;right:18px;transform:translateY(-100%) rotate(-15deg);z-index:5;color:#fff;text-shadow:0 0 15px rgba(0,0,0,.8)}@media(min-width: 570px){.intro__image-container__mobile-greeting{right:6%;font-size:4rem}}@media(min-width: 1010px){.intro__image-container__mobile-greeting{display:none}}.intro__content-container{width:100%;padding:1.5rem 10% 1.5rem 10%;background:#fff}@media(min-width: 1010px){.intro__content-container{position:absolute;top:0;bottom:0;right:0;width:70%;padding:0 10% 0 10%;background:linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 60%)}}@media(min-height: 1366px){.intro__content-container{padding:0 5% 0 15%}}.intro__content-container__content{height:100%;width:100%;overflow:hidden;padding:2rem}@media(min-width: 570px){.intro__content-container__content{padding:0 0 2rem 0}}@media(min-width: 1010px){.intro__content-container__content{padding:0}}.intro__content-container__content__greeting{display:none;margin-bottom:2rem}@media(min-width: 570px){.intro__content-container__content__greeting{display:block}}.intro__content-container p{margin-bottom:1.5rem;margin-top:0;text-align:center;line-height:1.5}@media(min-width: 1010px){.intro__content-container p{margin-bottom:3rem;line-height:1.8}}.skills{position:relative;display:flex;align-items:center;padding:2.5rem 0 16rem 0;text-align:center;background-color:#555;color:#fff}@media(max-width: 340px){.skills{padding:2.5rem 0 20rem 0}}@media(min-width: 570px){.skills{background-color:#333;padding:2.5rem 0 14rem 0}}@media(min-height: 1366px){.skills{padding:2.5rem 0 18rem 0}}.skills__title{margin-bottom:5rem}.skills__icon{color:#ffaf02;margin-bottom:1.2rem}.skills__icon--pull-right{margin-left:40px}.skills__figure-container{display:grid}@media(min-width: 1010px){.skills__figure-container{grid-template-columns:repeat(3, 1fr);grid-column-gap:1em}}.skills__figure{margin-bottom:3rem}.skills__figure:last-child{margin-bottom:0}@media(min-width: 1010px){.skills__figure{margin:0}}.skills__figure h2{font-style:italic}.skills__figure figcaption{padding:1rem;font-family:Raleway,sans-serif;font-size:1.3rem;line-height:1.5}.my-work{position:relative;text-align:center;padding:11rem 0 4rem 0;background-color:#fff}.my-work h1{margin-bottom:0}.my-work p{display:none}@media(min-width: 570px){.my-work p{display:block}}@media(min-height: 1366px){.my-work p{display:none}}.my-work__container{display:grid;grid-row-gap:1.6rem}@media(min-width: 1010px){.my-work__container{grid-template-columns:repeat(2, 1fr);padding:0 5rem 5rem 5rem;grid-row-gap:0}}.my-work__img{position:relative;overflow:hidden}.my-work__img a{color:#fff}.my-work__img img{display:block;transform:scale(1);transition:all .4s ease-in-out}.my-work__img:hover img{transform:scale(1.12)}.my-work__img:hover .my-work__img--modal{left:0%;background:rgba(34,117,165,.85)}.my-work__img--modal{position:absolute;bottom:0px;width:100%;height:100%;left:-100%;right:0px;top:0px;padding:2rem 0 2rem 1rem;text-align:left;background:rgba(0,0,0,0);overflow:hidden;transition:all .4s ease-in-out}.my-work__img--modal strong{color:purple}.slider{position:relative;width:370px;height:250px;margin:4rem auto;overflow:hidden;border-radius:8px}@media(max-width: 340px){.slider{width:320px;height:200px}}@media(min-width: 570px){.slider{width:480px;height:360px}}@media(min-width: 1010px){.slider{width:720px;height:540px}}@media(min-width: 1600px){.slider{width:1080px;height:810px}}.slider__slideContainer{display:block;position:relative;width:999999px;height:250px;margin:0;padding:0}@media(max-width: 340px){.slider__slideContainer{height:200px}}@media(min-width: 570px){.slider__slideContainer{height:360px}}@media(min-width: 1010px){.slider__slideContainer{height:540px}}@media(min-width: 1600px){.slider__slideContainer{height:810px}}.slider__img{position:relative;width:370px;height:250px;float:left;left:-370px}@media(max-width: 340px){.slider__img{width:320px;height:200px;left:-320px}}@media(min-width: 570px){.slider__img{width:480px;height:360px;left:-480px}}@media(min-width: 1010px){.slider__img{width:720px;height:540px;left:-720px}}@media(min-width: 1600px){.slider__img{width:1080px;height:810px;left:-1080px}}.slider__prev,.slider__next{position:absolute;width:18px;height:18px;top:50%;z-index:5;border:5px solid #fff;border-radius:5px;transform:rotate(45deg);cursor:pointer;transition:all .4s ease-in-out}@media(min-width: 570px){.slider__prev,.slider__next{width:30px;height:30px}}.slider__prev:hover,.slider__next:hover{transform:rotate(45deg) scale(1.3)}.slider__prev{border-top:none;border-right:none;left:2%}.slider__next{border-bottom:none;border-left:none;right:2%}.slider::after{content:\"\";clear:both;display:table}.my-story{display:grid;grid-template-areas:\"title\" \"p1\" \"picture\" \"p2\" \"p3\" \"p4\";grid-column-gap:2em;margin-bottom:4.5rem;background:#fff;text-align:center}@media(min-width: 570px){.my-story{margin-bottom:3rem}}@media(min-width: 1010px){.my-story{grid-template-areas:\"title title title\" \"p1 picture picture\" \"p2 picture picture\" \"p3 p3 p3\" \"p4 p4 p4\";grid-column-gap:2em;margin-bottom:4.5rem;text-align:left}}.my-story h2{grid-area:title}.my-story .p1{grid-area:p1}.my-story .p2{grid-area:p2}.my-story .p3{grid-area:p3}.my-story .p4{grid-area:p4}.my-story__img-container{grid-area:picture;padding:1em 0}.secondary-nav{width:100%;height:70px;background-color:#333}.secondary-nav ul{height:100%;display:flex;justify-content:center;align-items:center;margin:0 auto;width:50%;-webkit-padding-start:0;-webkit-margin-before:0;-webkit-margin-after:0}.secondary-nav ul li{padding:.8rem 0;margin:0 2.5em;font-size:1rem;text-align:center}@media(min-width: 570px){.secondary-nav ul li{font-size:1rem}}@media(min-width: 1010px){.secondary-nav ul li{margin:0}}.secondary-nav ul li:nth-child(2){margin:0 3em;display:none}@media(min-width: 1010px){.secondary-nav ul li:nth-child(2){display:block;margin:0 5em}}.secondary-nav ul a{position:relative;color:#fff}.secondary-nav ul a::before{content:\"\";height:100%;width:100%;position:absolute;border-bottom:1.5px solid #fff;visibility:hidden;transform:scaleX(0);transition:all .3s ease-out}.secondary-nav ul a:hover::before{visibility:visible;transform:scaleX(1)}.lightbox{position:fixed;display:flex;justify-content:center;align-items:center;z-index:-5;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.85);transform:scale(1.4);opacity:0;visibility:hidden;transition:all .6s ease-out}.lightbox--is-visible{opacity:1;visibility:visible;transform:scale(1);z-index:100}.lightbox .x{position:absolute;top:6%;right:4%;color:#c2c2c2;transition:all .4s ease-out}.lightbox .x:hover{cursor:pointer;color:#fff;transform:scale(1.3)}.lightbox .x:active{color:#c2c2c2;transform:scale(1)}.lightbox__img-container{width:86%;height:54%;position:relative}.lightbox__img-container__image{position:absolute;transition:visibility 1s,opacity 2s ease-in-out}.lightbox__img-container__image--hide{animation:hide 1.2s linear both}.lightbox__img-container__image--visible{animation:show .7s linear both}@keyframes hide{0%{opacity:1}50%{opacity:.3}100%{opacity:0}}@keyframes show{0%{opacity:0}50%{opacity:0}100%{opacity:1}}.lightbox__img-container__dot-box{position:absolute;left:50%;bottom:-35px;transform:translateX(-50%);display:flex;justify-content:space-between;align-items:center;width:120px}.lightbox__img-container__dot-box__dot{width:10px;height:10px;border-radius:50%;background:#afafaf;transition:all .9s linear}.lightbox__img-container__dot-box__dot--active{background:#fff;width:15px;height:15px}@media(min-width: 960px){.lightbox__img-container{width:65%;height:85%}}.lightbox__img-container__prev,.lightbox__img-container__next{position:absolute;top:50%;transform:translateY(-50%);transform:rotate(45deg);width:20px;height:20px;border:4px solid #fff;border-radius:4px;cursor:pointer;transition:all .4s ease-out}@media(min-width: 960px){.lightbox__img-container__prev,.lightbox__img-container__next{width:30px;height:30px}}.lightbox__img-container__prev:hover,.lightbox__img-container__next:hover{transform:rotate(45deg) scale(1.3)}.lightbox__img-container__prev:active,.lightbox__img-container__next:active{transform:rotate(45deg) scale(1)}.lightbox__img-container__prev{left:-18px;border-top:none;border-right:none}@media(min-width: 960px){.lightbox__img-container__prev{left:-40px}}.lightbox__img-container__next{right:-18px;border-bottom:none;border-left:none}@media(min-width: 960px){.lightbox__img-container__next{right:-40px}}.resume{position:fixed;display:flex;justify-content:center;z-index:101;top:0;bottom:0;left:0;right:0;transform:scale(1.4);background-color:rgba(0,0,0,.85);visibility:hidden;opacity:0;transition:all .6s ease-out}.resume--is-visible{visibility:visible;opacity:1;transform:scale(1)}.resume .x{position:absolute;top:6%;right:4%;color:#c2c2c2;transition:all .4s ease-out}.resume .x:hover{cursor:pointer;color:#fff;transform:scale(1.3)}.resume .x:active{color:#c2c2c2;transform:scale(1)}.resume embed{display:block;width:75%;height:100%}.about-me{margin-bottom:3rem;display:grid;grid-template-areas:\"h1\" \"do\" \"img\" \"work\" \"tech\";grid-column-gap:2em}@media(min-width: 1010px){.about-me{grid-template-areas:\"h1 h1\" \"img do\" \"tech work\" \"tech work\";grid-column-gap:2em}}.about-me h1{grid-area:h1;padding:2rem 0;text-align:center}@media(min-width: 570px){.about-me h1{padding:2.5rem 0}}.about-me__img-container{grid-area:img}.about-me__what-i-do{grid-area:do}.about-me__what-i-do h2{margin-top:0;text-align:center}.about-me__working-with-me{grid-area:work}.about-me__working-with-me h2{text-align:center}.about-me__technology-i-use{grid-area:tech;display:grid;grid-template-areas:\"h2 h2\" \"p p\" \"list-one list-two\"}.about-me__technology-i-use h2{grid-area:h2;margin-bottom:0;text-align:center}.about-me__technology-i-use p{grid-area:p}.about-me__technology-i-use__list-one{grid-area:list-one;list-style-type:circle;line-height:1.6}.about-me__technology-i-use__list-two{grid-area:list-two;list-style-type:circle;line-height:1.6}.thank-you{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 1rem}.thank-you__h1{animation:2.5s fade-in ease}.thank-you__h2{animation:2.5s moo ease}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes moo{0%{opacity:0}50%{opacity:0}100%{opacity:1}}.arrow-down{width:100%;margin:0 auto;text-align:center;transition:opacity .8s ease-out}.arrow-down:hover{cursor:pointer}.arrow-down::after{content:\"\";width:40px;height:40px;position:absolute;margin:auto;top:88%;right:0;bottom:0;left:0;border-right:4px solid #fff;border-bottom:4px solid #fff;border-top:4px solid rgba(0,0,0,0);border-left:4px solid rgba(0,0,0,0);border-radius:6px;transform:rotate(45deg);animation:2.5s arrow infinite ease}@keyframes arrow{0%,100%{top:84%}50%{top:88%;border-right:6px solid #da413e;border-bottom:6px solid #da413e}}.arrow-down--fade{opacity:0}.slide-left{opacity:0;margin-left:100%;transform:translateX(100%);transition:all 1.4s ease-in-out;overflow:hidden}.slide-left--is-visible{opacity:1;margin-left:0;transform:translateX(0%)}.float-in{opacity:0;transform:scale(1.3);transition:all 1.8s ease-in-out}.float-in--is-visible{opacity:1;transform:scale(1)}.grow{transform:translateX(-50%) scale(0.75);opacity:0;transition:all 1s ease-out}.grow--is-visible{transform:translateX(-50%) scale(1);opacity:1}", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 645:
-/***/ ((module) => {
-
-"use strict";
-
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-module.exports = function (cssWithMappingToString) {
-  var list = [];
-
-  // return the list of modules as css string
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = "";
-      var needLayer = typeof item[5] !== "undefined";
-      if (item[4]) {
-        content += "@supports (".concat(item[4], ") {");
-      }
-      if (item[2]) {
-        content += "@media ".concat(item[2], " {");
-      }
-      if (needLayer) {
-        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
-      }
-      content += cssWithMappingToString(item);
-      if (needLayer) {
-        content += "}";
-      }
-      if (item[2]) {
-        content += "}";
-      }
-      if (item[4]) {
-        content += "}";
-      }
-      return content;
-    }).join("");
-  };
-
-  // import a list of modules into the list
-  list.i = function i(modules, media, dedupe, supports, layer) {
-    if (typeof modules === "string") {
-      modules = [[null, modules, undefined]];
-    }
-    var alreadyImportedModules = {};
-    if (dedupe) {
-      for (var k = 0; k < this.length; k++) {
-        var id = this[k][0];
-        if (id != null) {
-          alreadyImportedModules[id] = true;
-        }
-      }
-    }
-    for (var _k = 0; _k < modules.length; _k++) {
-      var item = [].concat(modules[_k]);
-      if (dedupe && alreadyImportedModules[item[0]]) {
-        continue;
-      }
-      if (typeof layer !== "undefined") {
-        if (typeof item[5] === "undefined") {
-          item[5] = layer;
-        } else {
-          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
-          item[5] = layer;
-        }
-      }
-      if (media) {
-        if (!item[2]) {
-          item[2] = media;
-        } else {
-          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
-          item[2] = media;
-        }
-      }
-      if (supports) {
-        if (!item[4]) {
-          item[4] = "".concat(supports);
-        } else {
-          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
-          item[4] = supports;
-        }
-      }
-      list.push(item);
-    }
-  };
-  return list;
-};
-
-/***/ }),
-
-/***/ 81:
-/***/ ((module) => {
-
-"use strict";
-
-
-module.exports = function (i) {
-  return i[1];
-};
-
-/***/ }),
-
 /***/ 763:
 /***/ ((module, exports, __webpack_require__) => {
 
@@ -11408,297 +11280,824 @@ return jQuery;
 
 /***/ }),
 
-/***/ 379:
+/***/ 90:
 /***/ ((module) => {
 
-"use strict";
+(function(window, factory) {
+	var lazySizes = factory(window, window.document, Date);
+	window.lazySizes = lazySizes;
+	if( true && module.exports){
+		module.exports = lazySizes;
+	}
+}(typeof window != 'undefined' ?
+      window : {}, 
+/**
+ * import("./types/global")
+ * @typedef { import("./types/lazysizes-config").LazySizesConfigPartial } LazySizesConfigPartial
+ */
+function l(window, document, Date) { // Pass in the window Date function also for SSR because the Date class can be lost
+	'use strict';
+	/*jshint eqnull:true */
+
+	var lazysizes,
+		/**
+		 * @type { LazySizesConfigPartial }
+		 */
+		lazySizesCfg;
+
+	(function(){
+		var prop;
+
+		var lazySizesDefaults = {
+			lazyClass: 'lazyload',
+			loadedClass: 'lazyloaded',
+			loadingClass: 'lazyloading',
+			preloadClass: 'lazypreload',
+			errorClass: 'lazyerror',
+			//strictClass: 'lazystrict',
+			autosizesClass: 'lazyautosizes',
+			fastLoadedClass: 'ls-is-cached',
+			iframeLoadMode: 0,
+			srcAttr: 'data-src',
+			srcsetAttr: 'data-srcset',
+			sizesAttr: 'data-sizes',
+			//preloadAfterLoad: false,
+			minSize: 40,
+			customMedia: {},
+			init: true,
+			expFactor: 1.5,
+			hFac: 0.8,
+			loadMode: 2,
+			loadHidden: true,
+			ricTimeout: 0,
+			throttleDelay: 125,
+		};
+
+		lazySizesCfg = window.lazySizesConfig || window.lazysizesConfig || {};
+
+		for(prop in lazySizesDefaults){
+			if(!(prop in lazySizesCfg)){
+				lazySizesCfg[prop] = lazySizesDefaults[prop];
+			}
+		}
+	})();
+
+	if (!document || !document.getElementsByClassName) {
+		return {
+			init: function () {},
+			/**
+			 * @type { LazySizesConfigPartial }
+			 */
+			cfg: lazySizesCfg,
+			/**
+			 * @type { true }
+			 */
+			noSupport: true,
+		};
+	}
+
+	var docElem = document.documentElement;
+
+	var supportPicture = window.HTMLPictureElement;
+
+	var _addEventListener = 'addEventListener';
+
+	var _getAttribute = 'getAttribute';
+
+	/**
+	 * Update to bind to window because 'this' becomes null during SSR
+	 * builds.
+	 */
+	var addEventListener = window[_addEventListener].bind(window);
+
+	var setTimeout = window.setTimeout;
+
+	var requestAnimationFrame = window.requestAnimationFrame || setTimeout;
+
+	var requestIdleCallback = window.requestIdleCallback;
+
+	var regPicture = /^picture$/i;
+
+	var loadEvents = ['load', 'error', 'lazyincluded', '_lazyloaded'];
+
+	var regClassCache = {};
+
+	var forEach = Array.prototype.forEach;
+
+	/**
+	 * @param ele {Element}
+	 * @param cls {string}
+	 */
+	var hasClass = function(ele, cls) {
+		if(!regClassCache[cls]){
+			regClassCache[cls] = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+		}
+		return regClassCache[cls].test(ele[_getAttribute]('class') || '') && regClassCache[cls];
+	};
+
+	/**
+	 * @param ele {Element}
+	 * @param cls {string}
+	 */
+	var addClass = function(ele, cls) {
+		if (!hasClass(ele, cls)){
+			ele.setAttribute('class', (ele[_getAttribute]('class') || '').trim() + ' ' + cls);
+		}
+	};
+
+	/**
+	 * @param ele {Element}
+	 * @param cls {string}
+	 */
+	var removeClass = function(ele, cls) {
+		var reg;
+		if ((reg = hasClass(ele,cls))) {
+			ele.setAttribute('class', (ele[_getAttribute]('class') || '').replace(reg, ' '));
+		}
+	};
+
+	var addRemoveLoadEvents = function(dom, fn, add){
+		var action = add ? _addEventListener : 'removeEventListener';
+		if(add){
+			addRemoveLoadEvents(dom, fn);
+		}
+		loadEvents.forEach(function(evt){
+			dom[action](evt, fn);
+		});
+	};
+
+	/**
+	 * @param elem { Element }
+	 * @param name { string }
+	 * @param detail { any }
+	 * @param noBubbles { boolean }
+	 * @param noCancelable { boolean }
+	 * @returns { CustomEvent }
+	 */
+	var triggerEvent = function(elem, name, detail, noBubbles, noCancelable){
+		var event = document.createEvent('Event');
+
+		if(!detail){
+			detail = {};
+		}
+
+		detail.instance = lazysizes;
+
+		event.initEvent(name, !noBubbles, !noCancelable);
+
+		event.detail = detail;
+
+		elem.dispatchEvent(event);
+		return event;
+	};
+
+	var updatePolyfill = function (el, full){
+		var polyfill;
+		if( !supportPicture && ( polyfill = (window.picturefill || lazySizesCfg.pf) ) ){
+			if(full && full.src && !el[_getAttribute]('srcset')){
+				el.setAttribute('srcset', full.src);
+			}
+			polyfill({reevaluate: true, elements: [el]});
+		} else if(full && full.src){
+			el.src = full.src;
+		}
+	};
+
+	var getCSS = function (elem, style){
+		return (getComputedStyle(elem, null) || {})[style];
+	};
+
+	/**
+	 *
+	 * @param elem { Element }
+	 * @param parent { Element }
+	 * @param [width] {number}
+	 * @returns {number}
+	 */
+	var getWidth = function(elem, parent, width){
+		width = width || elem.offsetWidth;
+
+		while(width < lazySizesCfg.minSize && parent && !elem._lazysizesWidth){
+			width =  parent.offsetWidth;
+			parent = parent.parentNode;
+		}
+
+		return width;
+	};
+
+	var rAF = (function(){
+		var running, waiting;
+		var firstFns = [];
+		var secondFns = [];
+		var fns = firstFns;
+
+		var run = function(){
+			var runFns = fns;
+
+			fns = firstFns.length ? secondFns : firstFns;
+
+			running = true;
+			waiting = false;
+
+			while(runFns.length){
+				runFns.shift()();
+			}
+
+			running = false;
+		};
+
+		var rafBatch = function(fn, queue){
+			if(running && !queue){
+				fn.apply(this, arguments);
+			} else {
+				fns.push(fn);
+
+				if(!waiting){
+					waiting = true;
+					(document.hidden ? setTimeout : requestAnimationFrame)(run);
+				}
+			}
+		};
+
+		rafBatch._lsFlush = run;
+
+		return rafBatch;
+	})();
+
+	var rAFIt = function(fn, simple){
+		return simple ?
+			function() {
+				rAF(fn);
+			} :
+			function(){
+				var that = this;
+				var args = arguments;
+				rAF(function(){
+					fn.apply(that, args);
+				});
+			}
+		;
+	};
+
+	var throttle = function(fn){
+		var running;
+		var lastTime = 0;
+		var gDelay = lazySizesCfg.throttleDelay;
+		var rICTimeout = lazySizesCfg.ricTimeout;
+		var run = function(){
+			running = false;
+			lastTime = Date.now();
+			fn();
+		};
+		var idleCallback = requestIdleCallback && rICTimeout > 49 ?
+			function(){
+				requestIdleCallback(run, {timeout: rICTimeout});
+
+				if(rICTimeout !== lazySizesCfg.ricTimeout){
+					rICTimeout = lazySizesCfg.ricTimeout;
+				}
+			} :
+			rAFIt(function(){
+				setTimeout(run);
+			}, true)
+		;
+
+		return function(isPriority){
+			var delay;
+
+			if((isPriority = isPriority === true)){
+				rICTimeout = 33;
+			}
+
+			if(running){
+				return;
+			}
+
+			running =  true;
+
+			delay = gDelay - (Date.now() - lastTime);
+
+			if(delay < 0){
+				delay = 0;
+			}
+
+			if(isPriority || delay < 9){
+				idleCallback();
+			} else {
+				setTimeout(idleCallback, delay);
+			}
+		};
+	};
+
+	//based on http://modernjavascript.blogspot.de/2013/08/building-better-debounce.html
+	var debounce = function(func) {
+		var timeout, timestamp;
+		var wait = 99;
+		var run = function(){
+			timeout = null;
+			func();
+		};
+		var later = function() {
+			var last = Date.now() - timestamp;
+
+			if (last < wait) {
+				setTimeout(later, wait - last);
+			} else {
+				(requestIdleCallback || run)(run);
+			}
+		};
+
+		return function() {
+			timestamp = Date.now();
+
+			if (!timeout) {
+				timeout = setTimeout(later, wait);
+			}
+		};
+	};
+
+	var loader = (function(){
+		var preloadElems, isCompleted, resetPreloadingTimer, loadMode, started;
+
+		var eLvW, elvH, eLtop, eLleft, eLright, eLbottom, isBodyHidden;
+
+		var regImg = /^img$/i;
+		var regIframe = /^iframe$/i;
+
+		var supportScroll = ('onscroll' in window) && !(/(gle|ing)bot/.test(navigator.userAgent));
+
+		var shrinkExpand = 0;
+		var currentExpand = 0;
+
+		var isLoading = 0;
+		var lowRuns = -1;
+
+		var resetPreloading = function(e){
+			isLoading--;
+			if(!e || isLoading < 0 || !e.target){
+				isLoading = 0;
+			}
+		};
+
+		var isVisible = function (elem) {
+			if (isBodyHidden == null) {
+				isBodyHidden = getCSS(document.body, 'visibility') == 'hidden';
+			}
+
+			return isBodyHidden || !(getCSS(elem.parentNode, 'visibility') == 'hidden' && getCSS(elem, 'visibility') == 'hidden');
+		};
+
+		var isNestedVisible = function(elem, elemExpand){
+			var outerRect;
+			var parent = elem;
+			var visible = isVisible(elem);
+
+			eLtop -= elemExpand;
+			eLbottom += elemExpand;
+			eLleft -= elemExpand;
+			eLright += elemExpand;
+
+			while(visible && (parent = parent.offsetParent) && parent != document.body && parent != docElem){
+				visible = ((getCSS(parent, 'opacity') || 1) > 0);
+
+				if(visible && getCSS(parent, 'overflow') != 'visible'){
+					outerRect = parent.getBoundingClientRect();
+					visible = eLright > outerRect.left &&
+						eLleft < outerRect.right &&
+						eLbottom > outerRect.top - 1 &&
+						eLtop < outerRect.bottom + 1
+					;
+				}
+			}
+
+			return visible;
+		};
+
+		var checkElements = function() {
+			var eLlen, i, rect, autoLoadElem, loadedSomething, elemExpand, elemNegativeExpand, elemExpandVal,
+				beforeExpandVal, defaultExpand, preloadExpand, hFac;
+			var lazyloadElems = lazysizes.elements;
+
+			if((loadMode = lazySizesCfg.loadMode) && isLoading < 8 && (eLlen = lazyloadElems.length)){
+
+				i = 0;
+
+				lowRuns++;
+
+				for(; i < eLlen; i++){
+
+					if(!lazyloadElems[i] || lazyloadElems[i]._lazyRace){continue;}
+
+					if(!supportScroll || (lazysizes.prematureUnveil && lazysizes.prematureUnveil(lazyloadElems[i]))){unveilElement(lazyloadElems[i]);continue;}
+
+					if(!(elemExpandVal = lazyloadElems[i][_getAttribute]('data-expand')) || !(elemExpand = elemExpandVal * 1)){
+						elemExpand = currentExpand;
+					}
+
+					if (!defaultExpand) {
+						defaultExpand = (!lazySizesCfg.expand || lazySizesCfg.expand < 1) ?
+							docElem.clientHeight > 500 && docElem.clientWidth > 500 ? 500 : 370 :
+							lazySizesCfg.expand;
+
+						lazysizes._defEx = defaultExpand;
+
+						preloadExpand = defaultExpand * lazySizesCfg.expFactor;
+						hFac = lazySizesCfg.hFac;
+						isBodyHidden = null;
+
+						if(currentExpand < preloadExpand && isLoading < 1 && lowRuns > 2 && loadMode > 2 && !document.hidden){
+							currentExpand = preloadExpand;
+							lowRuns = 0;
+						} else if(loadMode > 1 && lowRuns > 1 && isLoading < 6){
+							currentExpand = defaultExpand;
+						} else {
+							currentExpand = shrinkExpand;
+						}
+					}
+
+					if(beforeExpandVal !== elemExpand){
+						eLvW = innerWidth + (elemExpand * hFac);
+						elvH = innerHeight + elemExpand;
+						elemNegativeExpand = elemExpand * -1;
+						beforeExpandVal = elemExpand;
+					}
+
+					rect = lazyloadElems[i].getBoundingClientRect();
+
+					if ((eLbottom = rect.bottom) >= elemNegativeExpand &&
+						(eLtop = rect.top) <= elvH &&
+						(eLright = rect.right) >= elemNegativeExpand * hFac &&
+						(eLleft = rect.left) <= eLvW &&
+						(eLbottom || eLright || eLleft || eLtop) &&
+						(lazySizesCfg.loadHidden || isVisible(lazyloadElems[i])) &&
+						((isCompleted && isLoading < 3 && !elemExpandVal && (loadMode < 3 || lowRuns < 4)) || isNestedVisible(lazyloadElems[i], elemExpand))){
+						unveilElement(lazyloadElems[i]);
+						loadedSomething = true;
+						if(isLoading > 9){break;}
+					} else if(!loadedSomething && isCompleted && !autoLoadElem &&
+						isLoading < 4 && lowRuns < 4 && loadMode > 2 &&
+						(preloadElems[0] || lazySizesCfg.preloadAfterLoad) &&
+						(preloadElems[0] || (!elemExpandVal && ((eLbottom || eLright || eLleft || eLtop) || lazyloadElems[i][_getAttribute](lazySizesCfg.sizesAttr) != 'auto')))){
+						autoLoadElem = preloadElems[0] || lazyloadElems[i];
+					}
+				}
+
+				if(autoLoadElem && !loadedSomething){
+					unveilElement(autoLoadElem);
+				}
+			}
+		};
+
+		var throttledCheckElements = throttle(checkElements);
+
+		var switchLoadingClass = function(e){
+			var elem = e.target;
+
+			if (elem._lazyCache) {
+				delete elem._lazyCache;
+				return;
+			}
+
+			resetPreloading(e);
+			addClass(elem, lazySizesCfg.loadedClass);
+			removeClass(elem, lazySizesCfg.loadingClass);
+			addRemoveLoadEvents(elem, rafSwitchLoadingClass);
+			triggerEvent(elem, 'lazyloaded');
+		};
+		var rafedSwitchLoadingClass = rAFIt(switchLoadingClass);
+		var rafSwitchLoadingClass = function(e){
+			rafedSwitchLoadingClass({target: e.target});
+		};
+
+		var changeIframeSrc = function(elem, src){
+			var loadMode = elem.getAttribute('data-load-mode') || lazySizesCfg.iframeLoadMode;
+
+			// loadMode can be also a string!
+			if (loadMode == 0) {
+				elem.contentWindow.location.replace(src);
+			} else if (loadMode == 1) {
+				elem.src = src;
+			}
+		};
+
+		var handleSources = function(source){
+			var customMedia;
+
+			var sourceSrcset = source[_getAttribute](lazySizesCfg.srcsetAttr);
+
+			if( (customMedia = lazySizesCfg.customMedia[source[_getAttribute]('data-media') || source[_getAttribute]('media')]) ){
+				source.setAttribute('media', customMedia);
+			}
+
+			if(sourceSrcset){
+				source.setAttribute('srcset', sourceSrcset);
+			}
+		};
+
+		var lazyUnveil = rAFIt(function (elem, detail, isAuto, sizes, isImg){
+			var src, srcset, parent, isPicture, event, firesLoad;
+
+			if(!(event = triggerEvent(elem, 'lazybeforeunveil', detail)).defaultPrevented){
+
+				if(sizes){
+					if(isAuto){
+						addClass(elem, lazySizesCfg.autosizesClass);
+					} else {
+						elem.setAttribute('sizes', sizes);
+					}
+				}
+
+				srcset = elem[_getAttribute](lazySizesCfg.srcsetAttr);
+				src = elem[_getAttribute](lazySizesCfg.srcAttr);
+
+				if(isImg) {
+					parent = elem.parentNode;
+					isPicture = parent && regPicture.test(parent.nodeName || '');
+				}
+
+				firesLoad = detail.firesLoad || (('src' in elem) && (srcset || src || isPicture));
+
+				event = {target: elem};
+
+				addClass(elem, lazySizesCfg.loadingClass);
+
+				if(firesLoad){
+					clearTimeout(resetPreloadingTimer);
+					resetPreloadingTimer = setTimeout(resetPreloading, 2500);
+					addRemoveLoadEvents(elem, rafSwitchLoadingClass, true);
+				}
+
+				if(isPicture){
+					forEach.call(parent.getElementsByTagName('source'), handleSources);
+				}
+
+				if(srcset){
+					elem.setAttribute('srcset', srcset);
+				} else if(src && !isPicture){
+					if(regIframe.test(elem.nodeName)){
+						changeIframeSrc(elem, src);
+					} else {
+						elem.src = src;
+					}
+				}
+
+				if(isImg && (srcset || isPicture)){
+					updatePolyfill(elem, {src: src});
+				}
+			}
+
+			if(elem._lazyRace){
+				delete elem._lazyRace;
+			}
+			removeClass(elem, lazySizesCfg.lazyClass);
+
+			rAF(function(){
+				// Part of this can be removed as soon as this fix is older: https://bugs.chromium.org/p/chromium/issues/detail?id=7731 (2015)
+				var isLoaded = elem.complete && elem.naturalWidth > 1;
+
+				if( !firesLoad || isLoaded){
+					if (isLoaded) {
+						addClass(elem, lazySizesCfg.fastLoadedClass);
+					}
+					switchLoadingClass(event);
+					elem._lazyCache = true;
+					setTimeout(function(){
+						if ('_lazyCache' in elem) {
+							delete elem._lazyCache;
+						}
+					}, 9);
+				}
+				if (elem.loading == 'lazy') {
+					isLoading--;
+				}
+			}, true);
+		});
+
+		/**
+		 *
+		 * @param elem { Element }
+		 */
+		var unveilElement = function (elem){
+			if (elem._lazyRace) {return;}
+			var detail;
+
+			var isImg = regImg.test(elem.nodeName);
+
+			//allow using sizes="auto", but don't use. it's invalid. Use data-sizes="auto" or a valid value for sizes instead (i.e.: sizes="80vw")
+			var sizes = isImg && (elem[_getAttribute](lazySizesCfg.sizesAttr) || elem[_getAttribute]('sizes'));
+			var isAuto = sizes == 'auto';
+
+			if( (isAuto || !isCompleted) && isImg && (elem[_getAttribute]('src') || elem.srcset) && !elem.complete && !hasClass(elem, lazySizesCfg.errorClass) && hasClass(elem, lazySizesCfg.lazyClass)){return;}
+
+			detail = triggerEvent(elem, 'lazyunveilread').detail;
+
+			if(isAuto){
+				 autoSizer.updateElem(elem, true, elem.offsetWidth);
+			}
+
+			elem._lazyRace = true;
+			isLoading++;
+
+			lazyUnveil(elem, detail, isAuto, sizes, isImg);
+		};
+
+		var afterScroll = debounce(function(){
+			lazySizesCfg.loadMode = 3;
+			throttledCheckElements();
+		});
+
+		var altLoadmodeScrollListner = function(){
+			if(lazySizesCfg.loadMode == 3){
+				lazySizesCfg.loadMode = 2;
+			}
+			afterScroll();
+		};
+
+		var onload = function(){
+			if(isCompleted){return;}
+			if(Date.now() - started < 999){
+				setTimeout(onload, 999);
+				return;
+			}
 
 
-var stylesInDOM = [];
+			isCompleted = true;
 
-function getIndexByIdentifier(identifier) {
-  var result = -1;
+			lazySizesCfg.loadMode = 3;
 
-  for (var i = 0; i < stylesInDOM.length; i++) {
-    if (stylesInDOM[i].identifier === identifier) {
-      result = i;
-      break;
-    }
-  }
+			throttledCheckElements();
 
-  return result;
+			addEventListener('scroll', altLoadmodeScrollListner, true);
+		};
+
+		return {
+			_: function(){
+				started = Date.now();
+
+				lazysizes.elements = document.getElementsByClassName(lazySizesCfg.lazyClass);
+				preloadElems = document.getElementsByClassName(lazySizesCfg.lazyClass + ' ' + lazySizesCfg.preloadClass);
+
+				addEventListener('scroll', throttledCheckElements, true);
+
+				addEventListener('resize', throttledCheckElements, true);
+
+				addEventListener('pageshow', function (e) {
+					if (e.persisted) {
+						var loadingElements = document.querySelectorAll('.' + lazySizesCfg.loadingClass);
+
+						if (loadingElements.length && loadingElements.forEach) {
+							requestAnimationFrame(function () {
+								loadingElements.forEach( function (img) {
+									if (img.complete) {
+										unveilElement(img);
+									}
+								});
+							});
+						}
+					}
+				});
+
+				if(window.MutationObserver){
+					new MutationObserver( throttledCheckElements ).observe( docElem, {childList: true, subtree: true, attributes: true} );
+				} else {
+					docElem[_addEventListener]('DOMNodeInserted', throttledCheckElements, true);
+					docElem[_addEventListener]('DOMAttrModified', throttledCheckElements, true);
+					setInterval(throttledCheckElements, 999);
+				}
+
+				addEventListener('hashchange', throttledCheckElements, true);
+
+				//, 'fullscreenchange'
+				['focus', 'mouseover', 'click', 'load', 'transitionend', 'animationend'].forEach(function(name){
+					document[_addEventListener](name, throttledCheckElements, true);
+				});
+
+				if((/d$|^c/.test(document.readyState))){
+					onload();
+				} else {
+					addEventListener('load', onload);
+					document[_addEventListener]('DOMContentLoaded', throttledCheckElements);
+					setTimeout(onload, 20000);
+				}
+
+				if(lazysizes.elements.length){
+					checkElements();
+					rAF._lsFlush();
+				} else {
+					throttledCheckElements();
+				}
+			},
+			checkElems: throttledCheckElements,
+			unveil: unveilElement,
+			_aLSL: altLoadmodeScrollListner,
+		};
+	})();
+
+
+	var autoSizer = (function(){
+		var autosizesElems;
+
+		var sizeElement = rAFIt(function(elem, parent, event, width){
+			var sources, i, len;
+			elem._lazysizesWidth = width;
+			width += 'px';
+
+			elem.setAttribute('sizes', width);
+
+			if(regPicture.test(parent.nodeName || '')){
+				sources = parent.getElementsByTagName('source');
+				for(i = 0, len = sources.length; i < len; i++){
+					sources[i].setAttribute('sizes', width);
+				}
+			}
+
+			if(!event.detail.dataAttr){
+				updatePolyfill(elem, event.detail);
+			}
+		});
+		/**
+		 *
+		 * @param elem {Element}
+		 * @param dataAttr
+		 * @param [width] { number }
+		 */
+		var getSizeElement = function (elem, dataAttr, width){
+			var event;
+			var parent = elem.parentNode;
+
+			if(parent){
+				width = getWidth(elem, parent, width);
+				event = triggerEvent(elem, 'lazybeforesizes', {width: width, dataAttr: !!dataAttr});
+
+				if(!event.defaultPrevented){
+					width = event.detail.width;
+
+					if(width && width !== elem._lazysizesWidth){
+						sizeElement(elem, parent, event, width);
+					}
+				}
+			}
+		};
+
+		var updateElementsSizes = function(){
+			var i;
+			var len = autosizesElems.length;
+			if(len){
+				i = 0;
+
+				for(; i < len; i++){
+					getSizeElement(autosizesElems[i]);
+				}
+			}
+		};
+
+		var debouncedUpdateElementsSizes = debounce(updateElementsSizes);
+
+		return {
+			_: function(){
+				autosizesElems = document.getElementsByClassName(lazySizesCfg.autosizesClass);
+				addEventListener('resize', debouncedUpdateElementsSizes);
+			},
+			checkElems: debouncedUpdateElementsSizes,
+			updateElem: getSizeElement
+		};
+	})();
+
+	var init = function(){
+		if(!init.i && document.getElementsByClassName){
+			init.i = true;
+			autoSizer._();
+			loader._();
+		}
+	};
+
+	setTimeout(function(){
+		if(lazySizesCfg.init){
+			init();
+		}
+	});
+
+	lazysizes = {
+		/**
+		 * @type { LazySizesConfigPartial }
+		 */
+		cfg: lazySizesCfg,
+		autoSizer: autoSizer,
+		loader: loader,
+		init: init,
+		uP: updatePolyfill,
+		aC: addClass,
+		rC: removeClass,
+		hC: hasClass,
+		fire: triggerEvent,
+		gW: getWidth,
+		rAF: rAF,
+	};
+
+	return lazysizes;
 }
+));
 
-function modulesToDom(list, options) {
-  var idCountMap = {};
-  var identifiers = [];
-
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i];
-    var id = options.base ? item[0] + options.base : item[0];
-    var count = idCountMap[id] || 0;
-    var identifier = "".concat(id, " ").concat(count);
-    idCountMap[id] = count + 1;
-    var indexByIdentifier = getIndexByIdentifier(identifier);
-    var obj = {
-      css: item[1],
-      media: item[2],
-      sourceMap: item[3],
-      supports: item[4],
-      layer: item[5]
-    };
-
-    if (indexByIdentifier !== -1) {
-      stylesInDOM[indexByIdentifier].references++;
-      stylesInDOM[indexByIdentifier].updater(obj);
-    } else {
-      var updater = addElementStyle(obj, options);
-      options.byIndex = i;
-      stylesInDOM.splice(i, 0, {
-        identifier: identifier,
-        updater: updater,
-        references: 1
-      });
-    }
-
-    identifiers.push(identifier);
-  }
-
-  return identifiers;
-}
-
-function addElementStyle(obj, options) {
-  var api = options.domAPI(options);
-  api.update(obj);
-
-  var updater = function updater(newObj) {
-    if (newObj) {
-      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
-        return;
-      }
-
-      api.update(obj = newObj);
-    } else {
-      api.remove();
-    }
-  };
-
-  return updater;
-}
-
-module.exports = function (list, options) {
-  options = options || {};
-  list = list || [];
-  var lastIdentifiers = modulesToDom(list, options);
-  return function update(newList) {
-    newList = newList || [];
-
-    for (var i = 0; i < lastIdentifiers.length; i++) {
-      var identifier = lastIdentifiers[i];
-      var index = getIndexByIdentifier(identifier);
-      stylesInDOM[index].references--;
-    }
-
-    var newLastIdentifiers = modulesToDom(newList, options);
-
-    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
-      var _identifier = lastIdentifiers[_i];
-
-      var _index = getIndexByIdentifier(_identifier);
-
-      if (stylesInDOM[_index].references === 0) {
-        stylesInDOM[_index].updater();
-
-        stylesInDOM.splice(_index, 1);
-      }
-    }
-
-    lastIdentifiers = newLastIdentifiers;
-  };
-};
-
-/***/ }),
-
-/***/ 569:
-/***/ ((module) => {
-
-"use strict";
-
-
-var memo = {};
-/* istanbul ignore next  */
-
-function getTarget(target) {
-  if (typeof memo[target] === "undefined") {
-    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
-
-    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
-      try {
-        // This will throw an exception if access to iframe is blocked
-        // due to cross-origin restrictions
-        styleTarget = styleTarget.contentDocument.head;
-      } catch (e) {
-        // istanbul ignore next
-        styleTarget = null;
-      }
-    }
-
-    memo[target] = styleTarget;
-  }
-
-  return memo[target];
-}
-/* istanbul ignore next  */
-
-
-function insertBySelector(insert, style) {
-  var target = getTarget(insert);
-
-  if (!target) {
-    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
-  }
-
-  target.appendChild(style);
-}
-
-module.exports = insertBySelector;
-
-/***/ }),
-
-/***/ 216:
-/***/ ((module) => {
-
-"use strict";
-
-
-/* istanbul ignore next  */
-function insertStyleElement(options) {
-  var element = document.createElement("style");
-  options.setAttributes(element, options.attributes);
-  options.insert(element, options.options);
-  return element;
-}
-
-module.exports = insertStyleElement;
-
-/***/ }),
-
-/***/ 565:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-
-/* istanbul ignore next  */
-function setAttributesWithoutAttributes(styleElement) {
-  var nonce =  true ? __webpack_require__.nc : 0;
-
-  if (nonce) {
-    styleElement.setAttribute("nonce", nonce);
-  }
-}
-
-module.exports = setAttributesWithoutAttributes;
-
-/***/ }),
-
-/***/ 795:
-/***/ ((module) => {
-
-"use strict";
-
-
-/* istanbul ignore next  */
-function apply(styleElement, options, obj) {
-  var css = "";
-
-  if (obj.supports) {
-    css += "@supports (".concat(obj.supports, ") {");
-  }
-
-  if (obj.media) {
-    css += "@media ".concat(obj.media, " {");
-  }
-
-  var needLayer = typeof obj.layer !== "undefined";
-
-  if (needLayer) {
-    css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
-  }
-
-  css += obj.css;
-
-  if (needLayer) {
-    css += "}";
-  }
-
-  if (obj.media) {
-    css += "}";
-  }
-
-  if (obj.supports) {
-    css += "}";
-  }
-
-  var sourceMap = obj.sourceMap;
-
-  if (sourceMap && typeof btoa !== "undefined") {
-    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
-  } // For old IE
-
-  /* istanbul ignore if  */
-
-
-  options.styleTagTransform(css, styleElement, options.options);
-}
-
-function removeStyleElement(styleElement) {
-  // istanbul ignore if
-  if (styleElement.parentNode === null) {
-    return false;
-  }
-
-  styleElement.parentNode.removeChild(styleElement);
-}
-/* istanbul ignore next  */
-
-
-function domAPI(options) {
-  var styleElement = options.insertStyleElement(options);
-  return {
-    update: function update(obj) {
-      apply(styleElement, options, obj);
-    },
-    remove: function remove() {
-      removeStyleElement(styleElement);
-    }
-  };
-}
-
-module.exports = domAPI;
-
-/***/ }),
-
-/***/ 589:
-/***/ ((module) => {
-
-"use strict";
-
-
-/* istanbul ignore next  */
-function styleTagTransform(css, styleElement) {
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = css;
-  } else {
-    while (styleElement.firstChild) {
-      styleElement.removeChild(styleElement.firstChild);
-    }
-
-    styleElement.appendChild(document.createTextNode(css));
-  }
-}
-
-module.exports = styleTagTransform;
 
 /***/ }),
 
@@ -12480,7 +12879,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
+/******/ 			// no module.id needed
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -12522,66 +12921,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/nonce */
-/******/ 	(() => {
-/******/ 		__webpack_require__.nc = undefined;
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
 
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
-var injectStylesIntoStyleTag = __webpack_require__(379);
-var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
-var styleDomAPI = __webpack_require__(795);
-var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
-var insertBySelector = __webpack_require__(569);
-var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
-var setAttributesWithoutAttributes = __webpack_require__(565);
-var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
-var insertStyleElement = __webpack_require__(216);
-var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
-var styleTagTransform = __webpack_require__(589);
-var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[3]!./app/assets/styles/styles.scss
-var styles = __webpack_require__(856);
-;// CONCATENATED MODULE: ./app/assets/styles/styles.scss
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (styleTagTransform_default());
-options.setAttributes = (setAttributesWithoutAttributes_default());
-
-      options.insert = insertBySelector_default().bind(null, "head");
-    
-options.domAPI = (styleDomAPI_default());
-options.insertStyleElement = (insertStyleElement_default());
-
-var update = injectStylesIntoStyleTag_default()(styles/* default */.Z, options);
-
-
-
-
-       /* harmony default export */ const styles_styles = (styles/* default */.Z && styles/* default.locals */.Z.locals ? styles/* default.locals */.Z.locals : undefined);
-
+// EXTERNAL MODULE: ./node_modules/lazysizes/lazysizes.js
+var lazysizes = __webpack_require__(90);
 // EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js
 var jquery = __webpack_require__(755);
 var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
@@ -12599,9 +12946,9 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var StickyHeader = /*#__PURE__*/function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
-    this.siteHeader = jquery_default()('.site-header');
-    this.headerTriggerElement = jquery_default()('#large-hero__title');
-    this.arrowDown = jquery_default()('.arrow-down');
+    this.siteHeader = jquery_default()(".site-header");
+    this.headerTriggerElement = document.getElementById("large-hero__title");
+    this.arrowDown = jquery_default()(".arrow-down");
     this.createColorWaypoint();
   }
   _createClass(StickyHeader, [{
@@ -12609,14 +12956,14 @@ var StickyHeader = /*#__PURE__*/function () {
     value: function createColorWaypoint() {
       var that = this;
       new Waypoint({
-        element: this.headerTriggerElement[0],
+        element: document.getElementById("large-hero__title"),
         handler: function handler(direction) {
           if (direction == "down") {
-            that.siteHeader.addClass('site-header--fill-in-color');
-            that.arrowDown.addClass('arrow-down--fade');
+            that.siteHeader.addClass("site-header--fill-in-color");
+            that.arrowDown.addClass("arrow-down--fade");
           } else {
-            that.siteHeader.removeClass('site-header--fill-in-color');
-            that.arrowDown.removeClass('arrow-down--fade');
+            that.siteHeader.removeClass("site-header--fill-in-color");
+            that.arrowDown.removeClass("arrow-down--fade");
           }
         },
         offset: "18%"
@@ -13012,6 +13359,127 @@ var MobileMenu = /*#__PURE__*/function () {
   return MobileMenu;
 }();
 /* harmony default export */ const modules_MobileMenu = (MobileMenu);
+;// CONCATENATED MODULE: ./app/assets/scripts/modules/Lightbox.js
+function Lightbox_typeof(obj) { "@babel/helpers - typeof"; return Lightbox_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, Lightbox_typeof(obj); }
+function Lightbox_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function Lightbox_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, Lightbox_toPropertyKey(descriptor.key), descriptor); } }
+function Lightbox_createClass(Constructor, protoProps, staticProps) { if (protoProps) Lightbox_defineProperties(Constructor.prototype, protoProps); if (staticProps) Lightbox_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function Lightbox_toPropertyKey(arg) { var key = Lightbox_toPrimitive(arg, "string"); return Lightbox_typeof(key) === "symbol" ? key : String(key); }
+function Lightbox_toPrimitive(input, hint) { if (Lightbox_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (Lightbox_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var Lightbox = /*#__PURE__*/function () {
+  function Lightbox(boxToOpen, openBtn, closeBtn, classToToggle) {
+    Lightbox_classCallCheck(this, Lightbox);
+    this.lightbox = boxToOpen;
+    this.classToToggle = classToToggle;
+    this.images = document.querySelectorAll(".lightbox__img-container__image");
+    this.openBtn = openBtn;
+    this.xBtn = closeBtn;
+    this.prev = document.getElementById("js-prev");
+    this.next = document.getElementById("js-next");
+    this.showClass = "lightbox__img-container__image--visible";
+    this.hideClass = "lightbox__img-container__image--hide";
+    this.dots = document.querySelectorAll(".lightbox__img-container__dot-box__dot");
+    this.i = 0;
+    this.events();
+  }
+  Lightbox_createClass(Lightbox, [{
+    key: "events",
+    value: function events() {
+      this.openBtn.addEventListener("click", this.openLightbox.bind(this));
+      this.xBtn.addEventListener("click", this.closeLightbox.bind(this));
+      this.prev.addEventListener("click", this.prevImage.bind(this));
+      this.next.addEventListener("click", this.nextImage.bind(this));
+      this.defaultDisplay();
+    }
+  }, {
+    key: "keyPressHandler",
+    value: function keyPressHandler(e) {
+      if (e.keyCode == 27) {
+        this.closeLightbox();
+      }
+    }
+  }, {
+    key: "openLightbox",
+    value: function openLightbox(e) {
+      e.preventDefault();
+      this.lightbox.classList.add(this.classToToggle);
+    }
+  }, {
+    key: "closeLightbox",
+    value: function closeLightbox() {
+      this.lightbox.classList.remove(this.classToToggle);
+      this.lightbox.classList.remove(this.classToToggle);
+    }
+  }, {
+    key: "defaultDisplay",
+    value: function defaultDisplay() {
+      var _this = this;
+      this.images.forEach(function (image) {
+        return image.classList.add(_this.hideClass);
+      });
+      this.images[0].classList.add(this.showClass);
+      this.dots[0].classList.add("lightbox__img-container__dot-box__dot--active");
+    }
+  }, {
+    key: "showImage",
+    value: function showImage() {
+      if (this.images[this.i].classList.contains(this.hideClass)) {
+        this.images[this.i].classList.remove(this.hideClass);
+      }
+      this.images[this.i].classList.add(this.showClass);
+    }
+  }, {
+    key: "hideImage",
+    value: function hideImage() {
+      if (this.images[this.i].classList.contains(this.showClass)) {
+        this.images[this.i].classList.remove(this.showClass);
+      }
+      this.images[this.i].classList.add(this.hideClass);
+    }
+  }, {
+    key: "activateDot",
+    value: function activateDot() {
+      this.dots[this.i].classList.add("lightbox__img-container__dot-box__dot--active");
+    }
+  }, {
+    key: "deactivateDot",
+    value: function deactivateDot() {
+      this.dots[this.i].classList.remove("lightbox__img-container__dot-box__dot--active");
+    }
+  }, {
+    key: "nextImage",
+    value: function nextImage() {
+      this.hideImage();
+      this.deactivateDot();
+      if (this.i < this.images.length - 1) {
+        this.i++;
+        this.showImage();
+        this.activateDot();
+      } else {
+        this.i = 0;
+        this.showImage();
+        this.activateDot();
+      }
+    }
+  }, {
+    key: "prevImage",
+    value: function prevImage() {
+      this.hideImage();
+      that.deactivateDot();
+      if (this.i > 0) {
+        this.i--;
+        this.showImage();
+        that.activateDot();
+      } else if (this.i == 0) {
+        this.i = this.images.length - 1;
+        this.showImage();
+        that.activateDot();
+      }
+    }
+  }]);
+  return Lightbox;
+}();
+/* harmony default export */ const modules_Lightbox = (Lightbox);
 ;// CONCATENATED MODULE: ./app/assets/scripts/App.js
 
 
@@ -13023,21 +13491,28 @@ var MobileMenu = /*#__PURE__*/function () {
 
 
 
-new HeroParllax();
-new modules_FormValidate();
-new modules_StickyHeader();
-new modules_HideHeader();
-new modules_ImageCarousel();
-new modules_MobileMenu();
 
-//new RevealOnScroll($('.intro__content-container__content'), "80%", "slide-left", "slide-left--is-visible" );
-new modules_RevealOnScroll(jquery_default()(".skills__figure"), "80%", "float-in", "float-in--is-visible");
-new modules_RevealOnScroll(jquery_default()(".thank-you"), "80%", "float-in", "float-in--is-visible");
-//new RevealOnScroll($(".icon-container"), "70%", "grow", "grow--is-visible");
 
-new modules_SmoothScroll(jquery_default()(".arrow-down-link"));
-new modules_SmoothScroll(jquery_default()(".secondary-nav a"));
-console.log("hey dawg");
+function onPageLoaded() {
+  new HeroParllax();
+  new modules_FormValidate();
+  new modules_StickyHeader();
+  new modules_HideHeader();
+  new modules_ImageCarousel();
+  new modules_MobileMenu();
+  new modules_Lightbox(document.getElementsByClassName("js-lightbox")[0], document.getElementsByClassName("js-certs-btn")[0], document.getElementsByClassName("js-x-cert")[0], "lightbox--is-visible");
+  new modules_Lightbox(document.getElementsByClassName("js-resume")[0], document.getElementsByClassName("js-resume-btn")[0], document.getElementsByClassName("js-x-resume")[0], "resume--is-visible");
+
+  //new RevealOnScroll($('.intro__content-container__content'), "80%", "slide-left", "slide-left--is-visible" );
+  new modules_RevealOnScroll(jquery_default()(".skills__figure"), "80%", "float-in", "float-in--is-visible");
+  new modules_RevealOnScroll(jquery_default()(".thank-you"), "80%", "float-in", "float-in--is-visible");
+  //new RevealOnScroll($(".icon-container"), "70%", "grow", "grow--is-visible");
+
+  new modules_SmoothScroll(jquery_default()(".arrow-down-link"));
+  new modules_SmoothScroll(jquery_default()(".secondary-nav a"));
+  console.log("hey dawg");
+}
+document.addEventListener("DOMContentLoaded", onPageLoaded);
 if (false) {}
 })();
 
