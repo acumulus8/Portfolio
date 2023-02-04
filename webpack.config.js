@@ -1,13 +1,15 @@
 const htmlWebpackPlugins = require("./configs/html-webpack-plugins");
-const imageMinimizer = require("./configs/image-minimizer");
 const getLoaders = require("./configs/loaders");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
-const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const getImageMinizerPluginConfig = require("./configs/image-minimizer-plugin-config");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const postCSSLoaders = [require.resolve("postcss-simple-vars"), require.resolve("postcss-nested"), require.resolve("autoprefixer")];
-
-const loaders = getLoaders(postCSSLoaders);
+const loaders = getLoaders(postCSSLoaders, MiniCssExtractPlugin);
+const imageMinimizerPlugin = getImageMinizerPluginConfig(ImageMinimizerPlugin);
 
 const sourceMapDevToolOptions = {
 	filename: "[file].js.map",
@@ -20,8 +22,6 @@ module.exports = (env) => {
 	let config = {
 		entry: {
 			App: "./app/assets/scripts/App.js",
-			Lightbox: "./app/assets/scripts/Lightbox.js",
-			Vendor: "./app/assets/scripts/Vendor.js",
 		},
 		output: {
 			filename: "[name].js",
@@ -31,12 +31,14 @@ module.exports = (env) => {
 		module: {
 			rules: [...loaders],
 		},
-		plugins: [...htmlWebpackPlugins],
-		// plugins: [new webpack.SourceMapDevToolPlugin(sourceMapDevToolOptions), ...htmlWebpackPlugins],
-		optimization: {
-			minimize: true,
-			minimizer: [...imageMinimizer],
-		},
+		plugins: [
+			new MiniCssExtractPlugin(),
+			new CopyPlugin({
+				patterns: [{ from: "app/assets/images/resume-tim-wilburn.pdf", to: "assets/images" }],
+			}),
+			...htmlWebpackPlugins,
+		],
+		optimization: { minimizer: [imageMinimizerPlugin] },
 	};
 
 	if (mode === "development") {
