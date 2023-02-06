@@ -1,66 +1,93 @@
 .large-hero {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  //border-bottom: 4px solid $mainGray;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: $landingGradient;
 
-  &__image-container {
-    position: fixed;
-    z-index: -5;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: blur(5px);
-  }
+	&__bg {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		z-index: 5;
 
-  &__filter {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    z-index: 5;
-    background-color: rgba(34, 117, 165, 0.75);
-  }
+		@include screenSize(atMedium) {
+			height: 90vh;
+		}
 
-  &__content {
-    width: 100%;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    margin-top: -180px;
-    color: #fff;
-    text-align: center;
-    text-shadow: 1px 1px 5px $mainGray;
-    z-index: 6;
+		@include screenSize(atLarge) {
+			height: auto;
+		}
 
-    @include screenSize(atSmall) {
-      margin-top: -145px;
-    }
+		@include screenSize(ipadPro) {
+			height: 55vh;
+		}
 
-    h1 {
-      font-size: 2rem;
-      font-weight: $fontBold;
-      text-align: center;
+		&__img-left-container {
+			position: relative;
 
-      @include screenSize(atSmall) {
-        font-size: 3rem;
-      }
-    }
+			@include screenSize(atMedium) {
+				width: 50%;
+				height: 100%;
+			}
 
-    p {
-      text-shadow: 1px 1px 5px $mainGray;
-      font-size: 1.2rem;
-      letter-spacing: 0.08rem;
-      padding: 1.4rem 0;
+			&__image {
+				width: 100%;
+				height: 100%;
+			}
+		}
 
-      @include screenSize(atSmall) {
-        padding: 0;
-      }
+		&__img-right-container {
+			width: 100%;
 
-      @include screenSize(atMedium) {
-        padding: 1.4rem 0;
-      }
-    }
-  }
+			@include screenSize(atMedium) {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				width: 50%;
+			}
+		}
+	}
+
+	&__content {
+		width: 100%;
+		display: flex;
+		position: absolute;
+		top: 50%;
+		margin-top: -180px;
+		color: #fff;
+		text-align: center;
+		text-shadow: 1px 1px 5px $mainGray;
+		z-index: 6;
+
+		@include screenSize(atSmall) {
+			margin-top: -145px;
+		}
+
+		h1 {
+			font-size: 2rem;
+			font-weight: $fontBold;
+			text-align: center;
+
+			@include screenSize(atSmall) {
+				font-size: 3rem;
+			}
+		}
+
+		p {
+			text-shadow: 1px 1px 5px $mainGray;
+			font-size: 1.2rem;
+			letter-spacing: 0.08rem;
+			padding: 1.4rem 0;
+
+			@include screenSize(atSmall) {
+				padding: 0;
+			}
+
+			@include screenSize(atMedium) {
+				padding: 1.4rem 0;
+			}
+		}
+	}
 }

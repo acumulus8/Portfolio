@@ -1,94 +1,94 @@
 .button {
-  border: none;
-  border-radius: 0.5rem;
-  padding: 1rem 1.8rem;
-  margin-bottom: 10px;
-  background-color: $secondaryBlue;
-  color: #fff;
-  cursor: pointer;
-  letter-spacing: 0.1rem;
-  font-weight: $fontBold;
-  transition: all 0.3s ease-out;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1rem 1.8rem;
+	margin-bottom: 10px;
+	background-color: $secondaryBlue;
+	color: #fff;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+	font-weight: $fontBold;
+	transition: all 0.3s ease-out;
 
-  &:hover {
-    box-shadow: none;
-    transform: scale(1);
-  }
+	&:hover {
+		box-shadow: none;
+		transform: scale(1);
+	}
 
-  &--for-hire {
-    padding: 1rem 1rem;
-    background-color: $mainBlue;
-    border-radius: 2rem;
-    font-size: 1rem;
-    font-weight: $fontLight;
+	&--for-hire {
+		padding: 1rem 1rem;
+		background-color: $primaryBlue;
+		border-radius: 2rem;
+		font-size: 1rem;
+		font-weight: $fontLight;
 
-    @include screenSize(atSmall) {
-      font-size: 1.2rem;
-    }
+		@include screenSize(atSmall) {
+			font-size: 1.2rem;
+		}
 
-    a {
-      color: #fff;
-    }
+		a {
+			color: #fff;
+		}
 
-    &:hover {
-      transform: scale(1.02);
-      background-color: $mainBlueLight;
-      box-shadow: 1px 1px 8px $lightGray;
-    }
+		&:hover {
+			transform: scale(1.02);
+			background-color: $mainBlueLight;
+			box-shadow: 1px 1px 8px $lightGray;
+		}
 
-    &:active {
-      box-shadow: none;
-      transform: scale(1);
-      background-color: $mainBlue;
-    }
-  }
+		&:active {
+			box-shadow: none;
+			transform: scale(1);
+			background-color: $primaryBlue;
+		}
+	}
 
-  &--about {
-    background-color: $mainGreen;
+	&--about {
+		background-color: $mainGreen;
 
-    a {
-      color: #fff;
-    }
+		a {
+			color: #fff;
+		}
 
-    &:hover {
-      transform: scale(1.08);
-      opacity: 0.8;
-    }
-  }
+		&:hover {
+			transform: scale(1.08);
+			opacity: 0.8;
+		}
+	}
 
-  &--contact-form {
-    align-self: flex-start;
-    width: 200px;
-    margin-left: 1rem;
-    text-align: center;
-    background-color: $mainGray;
-    opacity: 0.5;
-    transition: all 0.6s ease-out;
+	&--contact-form {
+		align-self: flex-start;
+		width: 200px;
+		margin-left: 1rem;
+		text-align: center;
+		background-color: $mainGray;
+		opacity: 0.5;
+		transition: all 0.6s ease-out;
 
-    &--is-validated {
-      background-color: $mainGreen;
-      opacity: 1;
-      cursor: pointer;
-      transition: all 0.3s ease-out;
+		&--is-validated {
+			background-color: $mainGreen;
+			opacity: 1;
+			cursor: pointer;
+			transition: all 0.3s ease-out;
 
-      &:hover {
-        transform: scale(1.04);
-        opacity: 0.8;
-      }
-    }
-  }
+			&:hover {
+				transform: scale(1.04);
+				opacity: 0.8;
+			}
+		}
+	}
 
-  &--thank-you {
-    display: block;
-    margin: 3rem auto 3rem auto;
-    transition: opacity 0.4s ease-out;
+	&--thank-you {
+		display: block;
+		margin: 3rem auto 3rem auto;
+		transition: opacity 0.4s ease-out;
 
-    a {
-      color: #fff;
-    }
+		a {
+			color: #fff;
+		}
 
-    &:hover {
-      opacity: 0.75;
-    }
-  }
+		&:hover {
+			opacity: 0.75;
+		}
+	}
 }

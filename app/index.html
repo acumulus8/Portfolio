@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta content="width=device-width" name="viewport" />
-		<title>Tim Wilburn: Developer</title>
+		<title>Tim Wilburn: Design & Development</title>
 		<script
 			defer
 			src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
@@ -26,7 +26,7 @@
 						<div class="site-header__brand__text">
 							<a class="site-header__brand__text-name" href="./index.html">TIM WILBURN</a>
 							<a href="./index.html">
-								<p class="site-header__brand__text-quote">Clean code, responsive design</p>
+								<p class="site-header__brand__text-quote">Design & Development</p>
 							</a>
 						</div>
 					</div>
@@ -72,65 +72,38 @@
 		</header>
 
 		<div class="large-hero">
-			<div class="large-hero__filter">
+			<div class="large-hero__bg">
+				<div class="large-hero__bg__img-left-container">
+					<img
+						class="large-hero__bg__img-left-container__image lazyload"
+						data-srcset="./assets/images/bg-code-texture.png 550w, ./assets/images/bg-code-texture.png 1200w, ./assets/images/bg-code-texture.png 3000w"
+						aria-hidden="true"
+					/>
+				</div>
+
+				<div class="large-hero__bg__img-right-container">
+					<img
+						class="lazyload"
+						data-srcset="./assets/images/bg-design-&-dev.png 550w, ./assets/images/bg-design-&-dev.png 1200w, ./assets/images/bg-design-&-dev.png 3000w"
+						aria-hidden="true"
+					/>
+				</div>
+
 				<a href="#intro" class="arrow-down-link">
 					<div class="arrow-down"></div>
 				</a>
 			</div>
 
-			<div class="large-hero__image-container">
-				<picture class="large-hero__image-container__image">
-					<source srcset="./assets/images/hero-lrg.jpg" media="(min-width: 900px)" />
-					<source srcset="./assets/images/hero.jpg" media="(min-width: 550px)" />
-					<img src="./assets/images/hero-phone.jpg" />
-				</picture>
-			</div>
 			<div class="large-hero__content" id="trigger">
 				<div class="wrapper">
 					<h1 id="large-hero__title">Web Design and Development</h1>
 					<p>Designing, problem solving, and creating with code.</p>
 					<br />
-					<!-- <a href="./contact.html" role="button">
-            <button class="button button--for-hire" id="large-hero__button">
-              I am available for hire!
-            </button>
-          </a> -->
 				</div>
 			</div>
 		</div>
 
 		<main>
-			<section class="intro" id="intro">
-				<div class="intro__image-container">
-					<h1 class="section-header intro__image-container__mobile-greeting" id="greeting">Hello!</h1>
-					<div class="intro__image-container__image">
-						<img
-							class="lazyload"
-							data-srcset="./assets/images/intro-background-small.jpg 550w, ./assets/images/intro-background-med.jpg 1200w, ./assets/images/intro-background.jpg 3000w"
-							alt="A picture of myself."
-						/>
-					</div>
-				</div>
-
-				<div class="intro__content-container">
-					<div class="intro__content-container__content">
-						<h1 class="section-header intro__content-container__content__greeting" id="greeting">Hi, I'm Tim!</h1>
-						<p>
-							I am a web designer and developer currently based in Lexington, Kentucky. I am available for freelance, office, or remote
-							work. I specialize in front end work as well as UI design. I can assist you in any stage of the project, and make your
-							ideas a reality!
-						</p>
-						<p>
-							If you are an employer, someone looking for freelance work, or just plain curious, click below to learn more about me and
-							my skillsets!
-						</p>
-						<a href="./about.html" role="button">
-							<button class="button button--about">Learn More</button>
-						</a>
-					</div>
-				</div>
-			</section>
-
 			<section class="skills">
 				<div class="wrapper">
 					<h1 class="skills__title section-header">What can I do for you?</h1>

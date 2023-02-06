@@ -4,7 +4,6 @@ import "lazysizes";
 import $ from "jquery";
 import StickyHeader from "./modules/StickyHeader";
 import FormValidate from "./modules/FormValidate";
-import HeroParallax from "./modules/HeroParllax";
 import HideHeader from "./modules/HideHeader";
 import ImageCarousel from "./modules/ImageCarousel";
 import RevealOnScroll from "./modules/RevealOnScroll";
@@ -13,7 +12,6 @@ import MobileMenu from "./modules/MobileMenu";
 import Lightbox from "./modules/Lightbox";
 
 function onPageLoaded() {
-	new HeroParallax();
 	new FormValidate();
 	new StickyHeader();
 	new HideHeader();

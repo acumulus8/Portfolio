@@ -13465,15 +13465,15 @@ var Lightbox = /*#__PURE__*/function () {
     key: "prevImage",
     value: function prevImage() {
       this.hideImage();
-      that.deactivateDot();
+      this.deactivateDot();
       if (this.i > 0) {
         this.i--;
         this.showImage();
-        that.activateDot();
+        this.activateDot();
       } else if (this.i == 0) {
         this.i = this.images.length - 1;
         this.showImage();
-        that.activateDot();
+        this.activateDot();
       }
     }
   }]);
