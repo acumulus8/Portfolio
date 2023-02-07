@@ -1,43 +1,40 @@
 .primary-nav {
-    display: flex;
+	display: flex;
 
-    ul {
-        display: none;
+	ul {
+		display: none;
 
-        @include screenSize(atSmallMid) {
-            display: flex;
-            align-items: center;
-        }
+		@include screenSize(atSmallMid) {
+			display: flex;
+			align-items: center;
+		}
 
-        li {
-            margin-left: 2rem;
+		li {
+			margin-left: 2rem;
 
-            a {
-                position: relative;
-                color: #fff;
-                //font-weight: $fontLight;
-                letter-spacing: .09rem;
+			a {
+				position: relative;
+				color: #fff;
+				letter-spacing: 0.09rem;
 
-                &::before {
-                    content: '';
-                    height: 100%;
-                    width: 100%;
-                    position: absolute;
-                    border-bottom: 1.5px solid #fff;
-                    visibility: hidden;
-                    transform: scaleX(0);
-                    transition: all .3s ease-out;
-                }
+				&::before {
+					content: "";
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					border-bottom: 1.5px solid #fff;
+					visibility: hidden;
+					transform: scaleX(0);
+					transition: all 0.3s ease-out;
+				}
 
-                &:hover {
-
-                    &::before {
-                        visibility: visible;
-                        transform: scaleX(1);
-                    }
-                }
-            }
-        }
-    }
-    
+				&:hover {
+					&::before {
+						visibility: visible;
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+	}
 }

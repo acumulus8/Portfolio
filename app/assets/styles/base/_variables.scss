@@ -1,19 +1,42 @@
-
-//// FONTS ////
-$primaryFont: Montserrat, sans-serif;
-$paragraphFont: Raleway, sans-serif;
+//// TYPE ////
+$headingFont: Bungee, sans-serif;
+$paragraphFont: Farro, sans-serif;
 $fontVeryLight: 200;
 $fontLight: 300;
+$fontRegular: 400;
 $fontBold: 700;
+$paragraphFontLineHeight: 1.5;
 
 //// COLORS ////
 $mainGray: #333;
 $lightGray: rgb(85, 85, 85);
-$mainBlack: #0A0908;
-$mainBlue: #0A2463;
-$mainBlueLight: rgb(16, 53, 139);
-$secondaryBlue: #2274A5;
+$mainBlack: #0a0908;
+$primaryBlue: #2275a5;
+$primaryBlueShade1: #5aa2cb;
+$primaryBlueShade2: #7fbee2;
+$primaryBlueShade3: #a4d9f9;
+$primaryBlueShade4: #cbecff;
+$primaryGreen: #69a13b;
+$primaryGreenShade1: #93c769;
+$primaryGreenShade2: #c0e7a0;
+$primaryGreenShade3: #dafac0;
+$primaryGreenShade4: #edfde0;
 $mainGreen: rgb(105, 161, 59);
 $accentRed: rgb(218, 65, 62);
-$mainYellow: rgba(255, 175, 2, 1);
+$primaryYellow: rgba(255, 175, 2, 1);
 $transBlue: rgba(34, 117, 165, 0.85);
+$landingGradient: linear-gradient(113.95deg, #2275a5 25.62%, rgba(10, 36, 99, 0.92) 94.55%);
+$primaryText: #333;
+$primaryTextLight: #f0f5f8;
+
+//// LAYERS FOR Z-INDEX ////
+$layer1: 1;
+$layer2: 2;
+$layer3: 3;
+$layer4: 4;
+$layer5: 5;
+$layer6: 6;
+
+//// RADIUSES FOR CORNERS ////
+$primaryRadius: 5px;
+$secondaryRadius: 10px;

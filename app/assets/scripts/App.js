@@ -4,7 +4,6 @@ import "lazysizes";
 import $ from "jquery";
 import StickyHeader from "./modules/StickyHeader";
 import FormValidate from "./modules/FormValidate";
-import HeroParallax from "./modules/HeroParllax";
 import HideHeader from "./modules/HideHeader";
 import ImageCarousel from "./modules/ImageCarousel";
 import RevealOnScroll from "./modules/RevealOnScroll";
@@ -13,11 +12,9 @@ import MobileMenu from "./modules/MobileMenu";
 import Lightbox from "./modules/Lightbox";
 
 function onPageLoaded() {
-	new HeroParallax();
-	new FormValidate();
+	observeUrlChange();
 	new StickyHeader();
 	new HideHeader();
-	new ImageCarousel();
 	new MobileMenu();
 	new Lightbox(
 		document.getElementsByClassName("js-lightbox")[0],
@@ -31,19 +28,31 @@ function onPageLoaded() {
 		document.getElementsByClassName("js-x-resume")[0],
 		"resume--is-visible"
 	);
-
-	//new RevealOnScroll($('.intro__content-container__content'), "80%", "slide-left", "slide-left--is-visible" );
+	new ImageCarousel();
 	new RevealOnScroll($(".skills__figure"), "80%", "float-in", "float-in--is-visible");
 	new RevealOnScroll($(".thank-you"), "80%", "float-in", "float-in--is-visible");
-	//new RevealOnScroll($(".icon-container"), "70%", "grow", "grow--is-visible");
-
 	new SmoothScroll($(".arrow-down-link"));
 	new SmoothScroll($(".secondary-nav a"));
 
 	console.log("hey dawg");
 }
 
-document.addEventListener("DOMContentLoaded", onPageLoaded);
+function observeUrlChange() {
+	console.log("####observing url change!");
+	const oldHref = document.location.href;
+	const body = document.querySelector("body");
+	const observer = new MutationObserver((mutations) => {
+		mutations.forEach(() => {
+			if (oldHref !== document.location.href) {
+				oldHref = document.location.href;
+				console.log("####url changed!");
+			}
+		});
+	});
+	observer.observe(body, { childList: true, subtree: true });
+}
+
+window.onload = onPageLoaded;
 
 if (module.hot) {
 	module.hot.accept();

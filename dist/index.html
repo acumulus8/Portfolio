@@ -1,45 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tim Wilburn: Designer and Developer</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans:wght@800&display=swap" rel="stylesheet" />
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-			}
-			main {
-				display: flex;
-				width: 100vw;
-				height: 100vh;
-				background: linear-gradient(113.95deg, #2275a5 25.62%, rgba(10, 36, 99, 0.92) 94.55%);
-				flex-direction: column;
-				justify-content: center;
-			}
-			h1 {
-				font-family: "Bungee", "Open Sans", helvetica, arial, sans-serif;
-				font-size: 3rem;
-				color: #ebebeb;
-				text-align: center;
-				margin: 0;
-			}
-			p {
-				font-family: "Open Sans", helvetica, arial, sans-serif;
-				font-size: 2rem;
-				color: #ebebeb;
-				text-align: center;
-			}
-		</style>
+		<meta charset="utf-8" />
+		<meta content="width=device-width" name="viewport" />
+		<title>Tim Wilburn: Developer</title>
+		<script
+			defer="defer"
+			src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+			integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+			crossorigin="anonymous"
+		></script>
+		<link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+		<link href="App.css" rel="stylesheet" />
 	</head>
 	<body>
+		<header>
+			<nav class="site-header">
+				<div class="site-header__container wrapper">
+					<div class="site-header__brand">
+						<div class="site-header__brand__logo">
+							<a href="./index.html"><img src="assets/images/new-logo.png" alt="logo" /></a>
+						</div>
+						<div class="site-header__brand__text"><a class="site-header__brand__text-name" href="./index.html">TIM WILBURN</a></div>
+					</div>
+					<div class="site-header__menu-icon"><div class="site-header__menu-icon__middle"></div></div>
+					<div class="mobile-menu">
+						<ul class="mobile-menu__links">
+							<li><a href="./index.html">Home</a></li>
+							<li><a href="./about.html">About</a></li>
+							<li><a href="./portfolio.html">Portfolio</a></li>
+							<li><a href="./contact.html">Contact</a></li>
+						</ul>
+					</div>
+					<div class="primary-nav">
+						<ul>
+							<li><a href="./about.html">About</a></li>
+							<li><a href="./portfolio.html">Portfolio</a></li>
+							<li><a href="./contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="large-hero">
+			<div class="large-hero__filter">
+				<a href="#intro" class="arrow-down-link"><div class="arrow-down"></div></a>
+			</div>
+			<div class="large-hero__image-container">
+				<picture class="large-hero__image-container__image"
+					><source srcset="./assets/images/hero-lrg.jpg" media="(min-width: 900px)" />
+					<source srcset="./assets/images/hero.jpg" media="(min-width: 550px)" />
+					<img src="assets/images/hero-phone.jpg"
+				/></picture>
+			</div>
+			<div class="large-hero__content" id="trigger">
+				<div class="wrapper">
+					<h1 id="large-hero__title">Web Design and Development</h1>
+					<p>Designing, problem solving, and creating with code.</p>
+					<br />
+				</div>
+			</div>
+		</div>
 		<main>
-			<h1>under construction</h1>
-			<p>Check back soon!</p>
+			<section class="intro" id="intro">
+				<div class="intro__image-container">
+					<h1 class="section-header intro__image-container__mobile-greeting" id="greeting">Hello!</h1>
+					<div class="intro__image-container__image">
+						<img
+							class="lazyload"
+							data-srcset=" assets/images/intro-background-small.jpg  550w, assets/images/intro-background-med.jpg  1200w, assets/images/intro-background.jpg  3000w"
+							alt="A picture of myself."
+						/>
+					</div>
+				</div>
+				<div class="intro__content-container">
+					<div class="intro__content-container__content">
+						<h1 class="section-header intro__content-container__content__greeting" id="greeting">Hi, I'm Tim!</h1>
+						<p>
+							I am a web designer and developer currently based in Lexington, Kentucky. I am available for freelance, office, or remote
+							work. I specialize in front end work as well as UI design. I can assist you in any stage of the project, and make your
+							ideas a reality!
+						</p>
+						<p>
+							If you are an employer, someone looking for freelance work, or just plain curious, click below to learn more about me and
+							my skillsets!
+						</p>
+						<a href="./about.html" role="button"><button class="button button--about">Learn More</button></a>
+					</div>
+				</div>
+			</section>
+			<section class="skills">
+				<div class="wrapper">
+					<h1 class="skills__title section-header">What can I do for you?</h1>
+					<p class="skills__description"></p>
+					<div class="skills__figure-container">
+						<figure class="skills__figure">
+							<i class="far fa-map fa-4x skills__icon"></i>
+							<h2 class="skills__figure-title">Planning</h2>
+							<figcaption>
+								I can help you plan out your ideas into concise, user centered design: from the visual presentation to the
+								functionality, which will best serve your targeted audience.
+							</figcaption>
+						</figure>
+						<figure class="skills__figure">
+							<i class="fas fa-pencil-alt fa-4x skills__icon skills__icon--pull-right"></i>
+							<h2 class="skills__figure-title">Design</h2>
+							<figcaption>
+								Once the project is understood on a deep level, we will determine the needed amount of design: Simpler projects
+								probably use something readymade like pre-existing styles, a template, or a framework. More complex projects will
+								require a custom design. We can then prototype and iterate until we have a winning design.
+							</figcaption>
+						</figure>
+						<figure class="skills__figure">
+							<i class="fas fa-code fa-4x skills__icon"></i>
+							<h2 class="skills__figure-title">Coding</h2>
+							<figcaption>
+								I am skilled in working with multiple front end languages, frameworks, and libraries. Depending on your project needs,
+								this could look to be as simple as using something readymade like WordPress, or more in depth and flexible like a
+								custom codebase.
+							</figcaption>
+						</figure>
+					</div>
+					<div class="icon-container">
+						<h2 class="icon-container__title">Some languages I speak</h2>
+						<i class="fab fa-2x fa-html5 icon-container__icon" title="html5"></i>
+						<i class="fab fa-2x fa-css3-alt icon-container__icon" title="CSS3"></i>
+						<i class="fab fa-2x fa-sass icon-container__icon" title="SASS"></i>
+						<i class="fab fa-2x fa-js icon-container__icon" title="JavaScript"></i>
+						<i class="fab fa-2x fa-react icon-container__icon" title="React"></i>
+						<i class="fab fa-2x fa-node-js icon-container__icon" title="NodeJS"></i>
+						<i class="fab fa-2x fa-npm icon-container__icon" title="Node Project Manager"></i>
+						<i class="fab fa-2x fa-gulp icon-container__icon" title="GulpJS"></i>
+						<i class="fab fa-2x fa-git-square icon-container__icon" title="Git version control"></i>
+						<i class="fab fa-2x fa-github icon-container__icon" title="Github"></i>
+						<i class="fas fa-2x fa-terminal icon-container__icon" title="The command line"></i>
+						<i class="fab fa-2x fa-wordpress icon-container__icon" title="WordPress"></i>
+					</div>
+				</div>
+			</section>
+			<section class="my-work">
+				<div class="wrapper">
+					<h1 class="section-header">My Work</h1>
+					<h2>Start Exploring!</h2>
+					<p>Hover over, and click on any item to learn more about that project.</p>
+					<div class="my-work__container">
+						<figure class="my-work__img">
+							<a href="./portfolio.html#jammming"
+								><picture
+									><source
+										class="lazyload"
+										data-srcset="assets/images/jammming-small.png"
+										media="(min-width: 1020px)"
+										alt="Image of the Jammming project." />
+									<source
+										class="lazyload"
+										data-srcset="assets/images/jammming-med.png"
+										media="(min-width: 700px)"
+										alt="Image of the Jammming project." />
+									<img class="lazyload" data-src=" assets/images/jammming-small.png " alt="Image of the Jammming project."
+								/></picture>
+								<figcaption class="my-work__img--modal">
+									<h3>Ja<strong>mmm</strong>ing</h3>
+									<p>
+										Web Application - A spotify-like application that allows you to login to<br />your account, search songs, and
+										create playlists using the Spotify API and OAuth.
+									</p>
+								</figcaption></a
+							>
+						</figure>
+						<figure class="my-work__img">
+							<a href="./portfolio.html#clear-view"
+								><picture
+									><source
+										class="lazyload"
+										data-srcset="assets/images/clear-view-small.png"
+										media="(min-width: 1020px)"
+										alt="Image of the Clear View travel company project." />
+									<source
+										class="lazyload"
+										data-srcset="assets/images/clear-view-med.png"
+										media="(min-width: 700px)"
+										alt="Image of the Clear View travel company project." />
+									<img
+										class="lazyload"
+										data-src=" assets/images/clear-view-small.png "
+										alt="Image of the Clear View travel company project."
+								/></picture>
+								<figcaption class="my-work__img--modal">
+									<h3>Clear View Escapes</h3>
+									<p>Website - Interactive and completely responsive website built with modern workflow principles.</p>
+								</figcaption></a
+							>
+						</figure>
+						<figure class="my-work__img">
+							<a href="./portfolio.html#catch-of-day"
+								><picture
+									><source
+										class="lazyload"
+										data-srcset="assets/images/catch-of-day-small.png"
+										media="(min-width: 1020px)"
+										alt="Image of the Catch of The Day seafood restaurant project." />
+									<source
+										class="lazyload"
+										data-srcset="assets/images/catch-of-day-med.png"
+										media="(min-width: 700px)"
+										alt="Image of the Catch of The Day seafood restaurant project." />
+									<img
+										class="lazyload"
+										data-src=" assets/images/catch-of-day-small.png "
+										alt="Image of the Catch of The Day seafood restaurant project."
+								/></picture>
+								<figcaption class="my-work__img--modal">
+									<h3>Catch Of The Day</h3>
+									<p>
+										Web application - A CRUD stack web app built with React, which utilizes Firebase for data resilience and
+										OAuth.
+									</p>
+								</figcaption></a
+							>
+						</figure>
+						<figure class="my-work__img">
+							<a href="./portfolio.html#colmar"
+								><picture
+									><source
+										class="lazyload"
+										data-srcset="assets/images/colmar-small.png"
+										media="(min-width: 1020px)"
+										alt="Image of the Colmar Academy project." />
+									<source
+										class="lazyload"
+										data-srcset="assets/images/colmar-med.png"
+										media="(min-width: 700px)"
+										alt="Image of the Colmar Academy project." />
+									<img class="lazyload" data-src=" assets/images/colmar-small.png " alt="Image of the Colmar Academy project."
+								/></picture>
+								<figcaption class="my-work__img--modal">
+									<h3>Colmar Academy</h3>
+									<p>Website - A website built for screen responsiveness and accessibility.</p>
+								</figcaption></a
+							>
+						</figure>
+						<figure class="my-work__img">
+							<a href="./portfolio.html#ravenous"
+								><picture
+									><source
+										class="lazyload"
+										data-srcset="assets/images/ravenous-small.png"
+										media="(min-width: 1020px)"
+										alt="Image of the Ravenous, restaurant search project." />
+									<source
+										class="lazyload"
+										data-srcset="assets/images/ravenous-med.png"
+										media="(min-width: 700px)"
+										alt="Image of the Ravenous, restaurant search project." />
+									<img
+										class="lazyload"
+										data-src=" assets/images/ravenous-small.png "
+										alt="Image of the Ravenous, restaurant search project."
+								/></picture>
+								<figcaption class="my-work__img--modal">
+									<h3>Ravenous</h3>
+									<p>Web Application - A Yelp-like app built with React, which utilizes the Yelp API.</p>
+								</figcaption></a
+							>
+						</figure>
+						<figure class="my-work__img">
+							<a href="portfolio.html#game"
+								><picture
+									><source
+										class="lazyload"
+										data-srcset="assets/images/game-of-life-small.png"
+										media="(min-width: 1020px)"
+										alt="Image of the Game Of Life project." />
+									<source
+										class="lazyload"
+										data-srcset="assets/images/game-of-life-med.png"
+										media="(min-width: 700px)"
+										alt="Image of the Game Of Life project." />
+									<img class="lazyload" data-src=" assets/images/game-of-life-small.png " alt="Image of the Game Of Life project."
+								/></picture>
+								<figcaption class="my-work__img--modal">
+									<h3>Game of Life</h3>
+									<p>Web Application - An interesting web "game" built with React.</p>
+								</figcaption></a
+							>
+						</figure>
+					</div>
+				</div>
+			</section>
 		</main>
+		<footer class="footer">
+			<div class="site-header__brand__logo">
+				<a href="./index.html"><img src="assets/images/new-logo.png" alt="logo" /></a>
+			</div>
+			<div class="footer__text-container">Made from scratch, by yours truly :)</div>
+			<div class="footer__icon-container">
+				<a href="https://github.com/acumulus8" target="_blank"
+					><i aria-hidden="true" class="fab fa-github fa-2x footer__icon-container__icon" title="github"></i> </a
+				><a href="contact.html"
+					><i aria-hidden="true" class="fa fa-envelope fa-2x center-icon footer__icon-container__icon" title="email me!"></i> </a
+				><a href="https://www.linkedin.com/in/timothy-wilburn" target="_blank"
+					><i aria-hidden="true" class="fab fa-linkedin fa-2x footer__icon-container__icon" title="linkedin"></i
+				></a>
+			</div>
+		</footer>
+		<script type="module" src="App.js"></script>
 	</body>
 </html>

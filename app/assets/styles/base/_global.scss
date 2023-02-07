@@ -1,52 +1,63 @@
 * {
-  box-sizing: border-box;
-  //font-size: 16px;
-}
-
-body {
-  font-family: $primaryFont;
-  font-size: 16px;
-  color: $mainGray;
-  //height: 100%;
-  overflow: auto;
-  overflow-x: hidden;
-
-  @include screenSize(atSmall) {
-    font-size: 18px;
-  }
+	box-sizing: border-box;
 }
 
 html {
-  font-size: 16px;
-  color: $mainGray;
-  overflow: auto;
-  overflow-x: hidden;
+	font-size: 16px;
+	color: $mainGray;
+	overflow: auto;
+	overflow-x: hidden;
 
-  @include screenSize(atSmall) {
-    font-size: 18px;
-  }
+	@include screenSize(atSmall) {
+		font-size: 18px;
+	}
+}
+
+body {
+	p,
+	figcaption {
+		font-family: $paragraphFont;
+		font-weight: $fontLight;
+		line-height: $paragraphFontLineHeight;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $headingFont;
+	}
+	font-size: 16px;
+	overflow: auto;
+	overflow-x: hidden;
+
+	@include screenSize(atSmall) {
+		font-size: 18px;
+	}
 }
 
 img {
-  width: 100%;
-  height: 100%;
-}
-
-p {
-  line-height: 1.4;
-  font-family: $paragraphFont;
-  letter-spacing: 0.05rem;
+	width: 100%;
+	height: 100%;
 }
 
 a {
-  text-decoration: none;
-  font-family: $primaryFont;
+	text-decoration: none;
+	font-family: $paragraphFont;
 }
 
 ul {
-  list-style-type: none;
+	list-style-type: none;
+	font-family: $paragraphFont;
 }
 
 figure {
-  margin: 0;
+	margin: 0;
+}
+
+input,
+textarea,
+label {
+	font-family: $paragraphFont;
 }

@@ -4,7 +4,7 @@ import waypoints from "../../../../node_modules/waypoints/lib/noframework.waypoi
 class StickyHeader {
 	constructor() {
 		this.siteHeader = $(".site-header");
-		this.headerTriggerElement = document.getElementById("large-hero__title");
+		this.headerTriggerElement = document.getElementById("hero__title");
 		this.arrowDown = $(".arrow-down");
 		this.createColorWaypoint();
 	}
@@ -12,7 +12,7 @@ class StickyHeader {
 	createColorWaypoint() {
 		var that = this;
 		new Waypoint({
-			element: document.getElementById("large-hero__title"),
+			element: document.getElementById("hero__title"),
 			handler: function (direction) {
 				if (direction == "down") {
 					that.siteHeader.addClass("site-header--fill-in-color");
