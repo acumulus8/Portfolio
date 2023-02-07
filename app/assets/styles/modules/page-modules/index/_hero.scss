@@ -73,8 +73,13 @@
 			top: 25%;
 		}
 
+		@include screenSize(atSmallMid) {
+			top: 29%;
+		}
+
 		@include screenSize(atMedium) {
 			flex-direction: row;
+			top: 32%;
 		}
 
 		&__img {
