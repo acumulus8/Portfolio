@@ -3,10 +3,11 @@
 	border-radius: 0.5rem;
 	padding: 1rem 1.8rem;
 	margin-bottom: 10px;
-	background-color: $secondaryBlue;
+	background-color: $primaryBlueShade2;
 	color: #fff;
 	cursor: pointer;
 	letter-spacing: 0.1rem;
+	font-family: $paragraphFont;
 	font-weight: $fontBold;
 	transition: all 0.3s ease-out;
 
@@ -32,7 +33,7 @@
 
 		&:hover {
 			transform: scale(1.02);
-			background-color: $mainBlueLight;
+			background-color: $primaryBlueShade1;
 			box-shadow: 1px 1px 8px $lightGray;
 		}
 

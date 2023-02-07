@@ -1,0 +1,200 @@
+.hero {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: $landingGradient;
+
+	&__bg {
+		position: relative;
+		min-height: 100%;
+		z-index: 5;
+
+		@include screenSize(atMedium) {
+			height: 90vh;
+		}
+
+		@include screenSize(atLarge) {
+			height: auto;
+		}
+
+		@include screenSize(ipadPro) {
+			height: 55vh;
+		}
+
+		&__img-left-container {
+			position: relative;
+			width: 100%;
+
+			@include screenSize(atMedium) {
+				width: 50%;
+				height: 100%;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&__img-right-container {
+			width: 100%;
+			display: none;
+
+			img {
+				width: 100%;
+				height: 100%;
+				opacity: 0.2;
+			}
+
+			@include screenSize(atMedium) {
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				width: 50%;
+			}
+		}
+	}
+
+	&__content {
+		width: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: absolute;
+		top: 18%;
+		text-shadow: 1px 1px 5px $mainGray;
+		z-index: 6;
+
+		@include screenSize(atSmall) {
+			top: 25%;
+		}
+
+		@include screenSize(atMedium) {
+			flex-direction: row;
+		}
+
+		&__img {
+			height: 200px;
+			width: 143px;
+			position: relative;
+			z-index: $layer2;
+			margin-bottom: 40px;
+			flex: 1;
+
+			@include screenSize(atSmall) {
+				height: 272px;
+			}
+
+			@include screenSize(atMedium) {
+				margin: 0;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				z-index: $layer1;
+				background: $primaryBlueShade2;
+				width: 143px;
+				height: 180px;
+				top: 10px;
+				right: 15px;
+
+				@include screenSize(atSmall) {
+					height: 180px;
+				}
+
+				@include screenSize(atMedium) {
+					width: 215px;
+					height: 272px;
+					top: 10px;
+					right: 15px;
+				}
+			}
+
+			img {
+				display: block;
+				position: relative;
+				z-index: $layer2;
+
+				@include screenSize(atMedium) {
+					width: 215px;
+					height: 272px;
+					float: right;
+				}
+				clear: right;
+			}
+		}
+
+		&__right {
+			width: 100%;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			@include screenSize(atMedium) {
+				width: 60%;
+				padding-left: 5rem;
+				display: block;
+			}
+
+			h3 {
+				margin: 0;
+				font-size: 1.1rem;
+				font-weight: $fontBold;
+				color: $primaryTextLight;
+
+				@include screenSize(atSmall) {
+					font-size: 1.5rem;
+				}
+			}
+
+			p {
+				width: 90%;
+				text-align: center;
+				font-size: 1.1rem;
+				color: $primaryTextLight;
+				text-shadow: 1px 1px 5px $mainGray;
+
+				@include screenSize(atSmall) {
+					width: 60%;
+					padding: 0;
+				}
+
+				@include screenSize(atSmallMid) {
+					width: 50%;
+				}
+
+				@include screenSize(atMedium) {
+					width: 60%;
+					font-size: 1.4rem;
+					text-align: left;
+				}
+			}
+			&__button {
+				padding: 1rem 3.5rem;
+				background: $primaryGreen;
+				color: $primaryTextLight;
+				border: none;
+				border-radius: $primaryRadius;
+				font-size: 18px;
+				font-weight: $fontBold;
+				cursor: pointer;
+
+				@include screenSize(atSmall) {
+					margin-top: 1rem;
+					padding: 1rem 2.5rem;
+					font-size: 20px;
+				}
+
+				@include screenSize(atMedium) {
+					margin-top: 2rem;
+				}
+			}
+		}
+	}
+}

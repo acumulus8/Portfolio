@@ -3,7 +3,7 @@
 	align-items: center;
 	padding: 2rem 0;
 	text-align: center;
-	background-color: $mainYellow;
+	background-color: $primaryYellow;
 
 	@include screenSize(atMedium) {
 		padding: 4rem 0;

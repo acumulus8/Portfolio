@@ -1,46 +1,47 @@
 .arrow-down {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
 
-    &:hover {
-        cursor: pointer;
-    }
+	&:hover {
+		cursor: pointer;
+	}
 
-    &::after {
-        content: "";
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        margin: auto;
-        top: 88%;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-right: 4px solid #fff;
-        border-bottom: 4px solid #fff;
-        border-top: 4px solid transparent;
-        border-left: 4px solid transparent;
-        border-radius: 6px;
-        transform: rotate(45deg);
-        animation: 2.5s arrow infinite ease;
-    }
+	&::after {
+		content: "";
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		margin: auto;
+		top: 94%;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-right: 4px solid #fff;
+		border-bottom: 4px solid #fff;
+		border-top: 4px solid transparent;
+		border-left: 4px solid transparent;
+		border-radius: 6px;
+		transform: rotate(45deg);
+		animation: 2.5s arrow infinite ease;
+	}
 
-    @keyframes arrow {
-        0%, 100% {
-            top: 84%;
-        }
-        
-        50% {
-            top: 88%;
-            border-right: 6px solid $accentRed;
-            border-bottom: 6px solid $accentRed;
-        }
-    }
+	@keyframes arrow {
+		0%,
+		100% {
+			top: 88%;
+		}
 
-    transition: opacity .8s ease-out;
+		50% {
+			top: 92%;
+			border-right: 6px solid $accentRed;
+			border-bottom: 6px solid $accentRed;
+		}
+	}
 
-    &--fade {
-        opacity: 0;
-    }
+	transition: opacity 0.8s ease-out;
+
+	&--fade {
+		opacity: 0;
+	}
 }

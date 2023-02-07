@@ -3,6 +3,7 @@
 	width: 100%;
 	height: 50vh;
 	overflow: hidden;
+	background-color: $primaryBlue;
 	border-bottom: 6px solid $mainGray;
 
 	&--about {
@@ -10,15 +11,7 @@
 	}
 
 	@include screenSize(atMedium) {
-		height: 70vh;
-	}
-
-	&__bg {
-		position: relative;
-		width: 100%;
-		height: 70vh;
-		z-index: 5;
-		background-color: rgba(34, 117, 165, 0.75);
+		height: 50vh;
 	}
 
 	&__image-container {
@@ -26,20 +19,12 @@
 		z-index: -5;
 		top: 0;
 		width: 100%;
-		height: 50vh;
+		// height: 50vh;
 		filter: blur(3.5px);
-		/* background-image: url('../../../../assets/images/code-tablet.jpg');
-        background-position: center;
-        background-size: cover;
-        -o-background-size: cover;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed; */
 
-		@include screenSize(atMedium) {
-			height: 70vh;
-		}
+		// @include screenSize(atMedium) {
+		// 	height: 70vh;
+		// }
 	}
 
 	&__content {
@@ -66,7 +51,7 @@
 			}
 
 			&--skills {
-				@include heading-border($secondaryBlue);
+				@include heading-border($primaryBlueShade2);
 				@include heading-padding(10px);
 			}
 
@@ -76,7 +61,7 @@
 			}
 
 			&--contact {
-				@include heading-border($primaryBlue);
+				@include heading-border($primaryYellow);
 				@include heading-padding(0);
 			}
 

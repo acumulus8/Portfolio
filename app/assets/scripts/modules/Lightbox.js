@@ -31,6 +31,7 @@ class Lightbox {
 	openLightbox(e) {
 		e.preventDefault();
 		this.lightbox.classList.add(this.classToToggle);
+		e.preventDefault();
 	}
 
 	closeLightbox() {
