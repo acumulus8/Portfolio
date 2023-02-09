@@ -56,7 +56,7 @@
 			}
 
 			&--about {
-				@include heading-border($mainGreen);
+				@include heading-border($primaryGreen);
 				@include heading-padding(0);
 			}
 

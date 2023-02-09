@@ -20,7 +20,7 @@
 					<div class="site-header__brand">
 						<div class="site-header__brand__logo">
 							<a href="./index.html">
-								<img src="assets/images/new-logo.png" alt="logo" />
+								<img src="assets/images/logo-tw.png" alt="logo" />
 							</a>
 						</div>
 						<div class="site-header__brand__text">
@@ -114,20 +114,40 @@
 
 		<main>
 			<section class="skills" id="skills">
+				<div class="skills__bg">
+					<img class="skills__bg__title-img lazyload" src="./assets/images/wicdfy-bg-title.png" aria-hidden="true" />
+					<img
+						class="skills__bg__img lazyload"
+						data-srcset="./assets/images/wicdfy-bg-img-1200.png 1200w, ./assets/images/wicdfy-bg-img-900.png 900w"
+						aria-hidden="true"
+					/>
+				</div>
 				<div class="wrapper">
-					<h1 class="skills__title section-header">What can I do for you?</h1>
 					<p class="skills__description"></p>
 					<div class="skills__figure-container">
+						<div class="icon-container">
+							<i class="fab fa-2x fa-html5 icon-container__icon" title="html5"></i>
+							<i class="fab fa-2x fa-css3-alt icon-container__icon" title="CSS3"></i>
+							<i class="fab fa-2x fa-sass icon-container__icon" title="SASS"></i>
+							<i class="fab fa-2x fa-js icon-container__icon" title="JavaScript"></i>
+							<i class="fab fa-2x fa-react icon-container__icon" title="React"></i>
+							<i class="fab fa-2x fa-node-js icon-container__icon" title="NodeJS"></i>
+							<i class="fab fa-2x fa-npm icon-container__icon" title="Node Project Manager"></i>
+							<i class="fab fa-2x fa-gulp icon-container__icon" title="GulpJS"></i>
+							<i class="fab fa-2x fa-git-square icon-container__icon" title="Git version control"></i>
+							<i class="fab fa-2x fa-github icon-container__icon" title="Github"></i>
+							<i class="fas fa-2x fa-terminal icon-container__icon" title="The command line"></i>
+							<i class="fab fa-2x fa-wordpress icon-container__icon" title="WordPress"></i>
+						</div>
 						<figure class="skills__figure">
-							<i class="far fa-map fa-4x skills__icon"></i>
 							<h2 class="skills__figure-title">Planning</h2>
 							<figcaption>
-								I can help you plan out your ideas into concise, user centered design: from the visual presentation to the
-								functionality, which will best serve your targeted audience.
+								Every project is unique. It's important to understand the initial problem in order to assess the level of design and
+								programming to follow. I can help you plan out your ideas into concise, user centered design: from the visual
+								presentation to the functionality, which will best serve your targeted audience.
 							</figcaption>
 						</figure>
 						<figure class="skills__figure">
-							<i class="fas fa-pencil-alt fa-4x skills__icon skills__icon--pull-right"></i>
 							<h2 class="skills__figure-title">Design</h2>
 							<figcaption>
 								Once the project is understood on a deep level, we will determine the needed amount of design: Simpler projects
@@ -136,7 +156,6 @@
 							</figcaption>
 						</figure>
 						<figure class="skills__figure">
-							<i class="fas fa-code fa-4x skills__icon"></i>
 							<h2 class="skills__figure-title">Coding</h2>
 							<figcaption>
 								I am skilled in working with multiple front end languages, frameworks, and libraries. Depending on your project needs,
@@ -145,29 +164,15 @@
 							</figcaption>
 						</figure>
 					</div>
-					<div class="icon-container">
-						<h2 class="icon-container__title">Some languages I speak</h2>
-						<i class="fab fa-2x fa-html5 icon-container__icon" title="html5"></i>
-						<i class="fab fa-2x fa-css3-alt icon-container__icon" title="CSS3"></i>
-						<i class="fab fa-2x fa-sass icon-container__icon" title="SASS"></i>
-						<i class="fab fa-2x fa-js icon-container__icon" title="JavaScript"></i>
-						<i class="fab fa-2x fa-react icon-container__icon" title="React"></i>
-						<i class="fab fa-2x fa-node-js icon-container__icon" title="NodeJS"></i>
-						<i class="fab fa-2x fa-npm icon-container__icon" title="Node Project Manager"></i>
-						<i class="fab fa-2x fa-gulp icon-container__icon" title="GulpJS"></i>
-						<i class="fab fa-2x fa-git-square icon-container__icon" title="Git version control"></i>
-						<i class="fab fa-2x fa-github icon-container__icon" title="Github"></i>
-						<i class="fas fa-2x fa-terminal icon-container__icon" title="The command line"></i>
-						<i class="fab fa-2x fa-wordpress icon-container__icon" title="WordPress"></i>
-					</div>
 				</div>
 			</section>
 
 			<section class="my-work">
+				<div class="my-work__bg">
+					<img class="my-work__bg__title-img lazyload" src="./assets/images/my-work-bg-title-730.png" aria-hidden="true" />
+				</div>
 				<div class="wrapper">
-					<h1 class="section-header">My Work</h1>
-					<h2>Start Exploring!</h2>
-					<p>Hover over, and click on any item to learn more about that project.</p>
+					<p class="my-work__instructions">Click a tile to be taken to the Portfolio page overview for that project</p>
 					<div class="my-work__container">
 						<figure class="my-work__img">
 							<a href="./portfolio.html#jammming">
@@ -181,7 +186,7 @@
 									<source
 										class="lazyload"
 										data-srcset="assets/images/jammming-med.png"
-										media="(min-width: 700px)"
+										media="(min-width: 1019px)"
 										alt="Image of the Jammming project."
 									/>
 									<img class="lazyload" data-src="assets/images/jammming-small.png" alt="Image of the Jammming project." />
@@ -190,7 +195,7 @@
 									<h3>Ja<strong>mmm</strong>ing</h3>
 									<p>
 										Web Application - A spotify-like application that allows you to login to <br />
-										your account, search songs, and create playlists using the Spotify API and OAuth.
+										your account, search songs, and create playlists using the Spotify API and OAuth
 									</p>
 								</figcaption>
 							</a>
@@ -208,7 +213,7 @@
 									<source
 										class="lazyload"
 										data-srcset="assets/images/clear-view-med.png"
-										media="(min-width: 700px)"
+										media="(min-width: 1019px)"
 										alt="Image of the Clear View travel company project."
 									/>
 									<img
@@ -219,7 +224,7 @@
 								</picture>
 								<figcaption class="my-work__img--modal">
 									<h3>Clear View Escapes</h3>
-									<p>Website - Interactive and completely responsive website built with modern workflow principles.</p>
+									<p>Website - Interactive and completely responsive website built with modern workflow principles</p>
 								</figcaption>
 							</a>
 						</figure>
@@ -236,7 +241,7 @@
 									<source
 										class="lazyload"
 										data-srcset="assets/images/catch-of-day-med.png"
-										media="(min-width: 700px)"
+										media="(min-width: 1019px)"
 										alt="Image of the Catch of The Day seafood restaurant project."
 									/>
 									<img
@@ -248,8 +253,7 @@
 								<figcaption class="my-work__img--modal">
 									<h3>Catch Of The Day</h3>
 									<p>
-										Web application - A CRUD stack web app built with React, which utilizes Firebase for data resilience and
-										OAuth.
+										Web application - A CRUD stack web app built with React, which utilizes Firebase for data resilience and OAuth
 									</p>
 								</figcaption>
 							</a>
@@ -267,14 +271,14 @@
 									<source
 										class="lazyload"
 										data-srcset="assets/images/colmar-med.png"
-										media="(min-width: 700px)"
+										media="(min-width: 1019px)"
 										alt="Image of the Colmar Academy project."
 									/>
 									<img class="lazyload" data-src="assets/images/colmar-small.png" alt="Image of the Colmar Academy project." />
 								</picture>
 								<figcaption class="my-work__img--modal">
 									<h3>Colmar Academy</h3>
-									<p>Website - A website built for screen responsiveness and accessibility.</p>
+									<p>Website - A complicated layout built for screen responsiveness and accessibility</p>
 								</figcaption>
 							</a>
 						</figure>
@@ -291,7 +295,7 @@
 									<source
 										class="lazyload"
 										data-srcset="assets/images/ravenous-med.png"
-										media="(min-width: 700px)"
+										media="(min-width: 1019px)"
 										alt="Image of the Ravenous, restaurant search project."
 									/>
 									<img
@@ -302,7 +306,7 @@
 								</picture>
 								<figcaption class="my-work__img--modal">
 									<h3>Ravenous</h3>
-									<p>Web Application - A Yelp-like app built with React, which utilizes the Yelp API.</p>
+									<p>Web Application - A Yelp-like app built with React, which utilizes the Yelp API</p>
 								</figcaption>
 							</a>
 						</figure>
@@ -319,14 +323,14 @@
 									<source
 										class="lazyload"
 										data-srcset="assets/images/game-of-life-med.png"
-										media="(min-width: 700px)"
+										media="(min-width: 1019px)"
 										alt="Image of the Game Of Life project."
 									/>
 									<img class="lazyload" data-src="assets/images/game-of-life-small.png" alt="Image of the Game Of Life project." />
 								</picture>
 								<figcaption class="my-work__img--modal">
 									<h3>Game of Life</h3>
-									<p>Web Application - An interesting web "game" built with React.</p>
+									<p>Web Application - An interesting web "game" built with React</p>
 								</figcaption>
 							</a>
 						</figure>
@@ -353,7 +357,7 @@
 		<footer class="footer">
 			<div class="site-header__brand__logo">
 				<a href="./index.html">
-					<img src="assets/images/new-logo.png" alt="logo" />
+					<img src="assets/images/logo-tw.png" alt="logo" />
 				</a>
 			</div>
 			<p class="footer__text-container">Made from scratch, by yours truly :)</p>

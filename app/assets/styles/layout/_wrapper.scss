@@ -1,21 +1,29 @@
 .wrapper {
-  padding-left: 18px;
-  padding-right: 18px;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+	padding-left: 18px;
+	padding-right: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
 
-  @include screenSize(atSmall) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+	@include screenSize(atSmall) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@include screenSize(atMedium) {
+		max-width: 1000px;
+	}
+	@include screenSize(atMediumMid) {
+		max-width: 1200px;
+	}
+	@include screenSize(atLarge) {
+		max-width: 1400px;
+	}
 
-  &--thanks {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+	&--thanks {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }

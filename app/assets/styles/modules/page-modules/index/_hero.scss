@@ -13,11 +13,9 @@
 		@include screenSize(atMedium) {
 			height: 90vh;
 		}
-
 		@include screenSize(atLarge) {
 			height: auto;
 		}
-
 		@include screenSize(ipadPro) {
 			height: 55vh;
 		}
@@ -44,7 +42,7 @@
 			img {
 				width: 100%;
 				height: 100%;
-				opacity: 0.2;
+				opacity: 0.5;
 			}
 
 			@include screenSize(atMedium) {
@@ -169,11 +167,9 @@
 					width: 60%;
 					padding: 0;
 				}
-
 				@include screenSize(atSmallMid) {
 					width: 50%;
 				}
-
 				@include screenSize(atMedium) {
 					width: 60%;
 					font-size: 1.4rem;

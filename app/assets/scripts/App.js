@@ -12,10 +12,15 @@ import MobileMenu from "./modules/MobileMenu";
 import Lightbox from "./modules/Lightbox";
 
 function onPageLoaded() {
-	observeUrlChange();
 	new StickyHeader();
 	new HideHeader();
 	new MobileMenu();
+	loadJSonUrlChange();
+
+	console.log("hey dawg");
+}
+
+function loadAboutPageJS() {
 	new Lightbox(
 		document.getElementsByClassName("js-lightbox")[0],
 		document.getElementsByClassName("js-certs-btn")[0],
@@ -28,32 +33,27 @@ function onPageLoaded() {
 		document.getElementsByClassName("js-x-resume")[0],
 		"resume--is-visible"
 	);
-	new ImageCarousel();
-	new RevealOnScroll($(".skills__figure"), "80%", "float-in", "float-in--is-visible");
-	new RevealOnScroll($(".thank-you"), "80%", "float-in", "float-in--is-visible");
-	new SmoothScroll($(".arrow-down-link"));
 	new SmoothScroll($(".secondary-nav a"));
-
-	console.log("hey dawg");
+	new ImageCarousel();
 }
 
-function observeUrlChange() {
-	console.log("####observing url change!");
-	const oldHref = document.location.href;
-	const body = document.querySelector("body");
-	const observer = new MutationObserver((mutations) => {
-		mutations.forEach(() => {
-			if (oldHref !== document.location.href) {
-				oldHref = document.location.href;
-				console.log("####url changed!");
-			}
-		});
-	});
-	observer.observe(body, { childList: true, subtree: true });
+function loadJSonUrlChange() {
+	const currentURL = window.location.href;
+	if (currentURL.includes("index")) {
+		new SmoothScroll($(".arrow-down-link"));
+	}
+	if (currentURL.includes("about")) {
+		loadAboutPageJS();
+	}
+	if (currentURL.includes("contact")) {
+		new FormValidate();
+	}
+	if (currentURL.includes("thank-you")) {
+		new RevealOnScroll($(".thank-you"), "80%", "float-in", "float-in--is-visible");
+	}
 }
-
-window.onload = onPageLoaded;
 
 if (module.hot) {
 	module.hot.accept();
 }
+window.onload = onPageLoaded;

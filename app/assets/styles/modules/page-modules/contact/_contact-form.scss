@@ -63,7 +63,7 @@
 
 		&:focus {
 			outline: none;
-			border-color: $mainGreen;
+			border-color: $primaryGreen;
 		}
 	}
 
@@ -75,7 +75,7 @@
 	&__checkmark {
 		padding: 0 15px 0 15px;
 		opacity: 0;
-		color: $mainGreen;
+		color: $primaryGreen;
 		font-weight: $fontBold;
 		font-size: 2rem;
 		transition: opacity 0.6s ease-out;

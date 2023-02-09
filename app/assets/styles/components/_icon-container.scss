@@ -1,35 +1,28 @@
 .icon-container {
-    position: absolute;
-    z-index: 5;
-    bottom: -150px;
-    //bottom: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1.8em .8em;
-    background-color: $accentRed;
-    width: 90%;
-    border-radius: 2rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, .25);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: start;
+	background-color: $darkBlueShade2Faded;
+	width: 100%;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+	margin: 3rem 0;
+	padding: 1rem;
+	padding-bottom: 2rem;
 
-    @include screenSize(atSmall) {
-        padding: 3em 2em;
-    }
+	@include screenSize(atSmall) {
+		margin: 3rem 0;
+		padding: 1rem 1rem 2rem 1rem;
+	}
+	@include screenSize(atMedium) {
+		width: 75%;
+		padding: 1rem 1rem;
+		margin: 0;
+	}
 
-    @include screenSize(atMedium) {
-        width: 65%;
-        padding: 3em 1.5em;
-        bottom: -111px;
-    }
-
-    &__title {
-        margin: 0 0 1em 0;
-    }
-
-    &__icon {
-        margin: 2rem 0 0 2rem;
-
-        &:first-of-type {
-            margin-left: 0;
-        }
-    }
+	&__icon {
+		margin: 1rem 0 0 0;
+		flex: 1 1 30%;
+		color: $darkBlueShade4;
+	}
 }
