@@ -85,6 +85,10 @@
 		&:nth-child(2) {
 			grid-area: col2;
 			margin-top: 3rem;
+
+			@include screenSize(atSmall) {
+				margin-top: 0;
+			}
 		}
 		&:nth-child(3) {
 			grid-area: col3;
