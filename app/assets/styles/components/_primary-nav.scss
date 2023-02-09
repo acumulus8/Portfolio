@@ -17,6 +17,18 @@
 				color: #fff;
 				letter-spacing: 0.09rem;
 
+				&:hover {
+					&::before {
+						visibility: visible;
+						transform: scaleX(1);
+					}
+				}
+				&:active {
+					&::before {
+						visibility: visible;
+						transform: scaleX(1);
+					}
+				}
 				&::before {
 					content: "";
 					height: 100%;
@@ -26,13 +38,6 @@
 					visibility: hidden;
 					transform: scaleX(0);
 					transition: all 0.3s ease-out;
-				}
-
-				&:hover {
-					&::before {
-						visibility: visible;
-						transform: scaleX(1);
-					}
 				}
 			}
 		}

@@ -1,8 +1,4 @@
 .arrow-down {
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-
 	&:hover {
 		cursor: pointer;
 	}
@@ -12,30 +8,31 @@
 		width: 40px;
 		height: 40px;
 		position: absolute;
-		margin: auto;
-		top: 94%;
-		right: 0;
-		bottom: 0;
-		left: 0;
+		left: 50%;
 		border-right: 4px solid #fff;
 		border-bottom: 4px solid #fff;
 		border-top: 4px solid transparent;
 		border-left: 4px solid transparent;
 		border-radius: 6px;
-		transform: rotate(45deg);
+		transform: rotate(45deg) translateY(50%);
 		animation: 2.5s arrow infinite ease;
 	}
 
 	@keyframes arrow {
 		0%,
 		100% {
-			top: 88%;
+			top: 76%;
+			@include screenSize(atMedium) {
+				top: 88%;
+			}
 		}
-
 		50% {
-			top: 92%;
+			top: 80%;
 			border-right: 6px solid $accentRed;
 			border-bottom: 6px solid $accentRed;
+			@include screenSize(atMedium) {
+				top: 92%;
+			}
 		}
 	}
 
