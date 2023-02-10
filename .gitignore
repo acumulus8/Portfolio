@@ -14,7 +14,6 @@
 *~
 *.sass-cache
 node_modules/
-app/assets/images/
 .tmp/
 
 # OS or Editor folders
