@@ -137,7 +137,7 @@
 						<textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
 					</div>
 					<br />
-					<div data-netlify-recaptcha="true" />
+					<div data-netlify-recaptcha="true" data-callback="recaptchaCallback" />
 					<div class="contact-form__button-group">
 						<input
 							type="submit"
@@ -181,5 +181,10 @@
 		</footer>
 
 		<!-- <script src="App.js"></script> -->
+		<scripr>
+			function recaptchaCallback() { document.getElementById('contact-submit-button').removeAttribute('readonly');
+			document.getElementById('contact-submit-button').classList.add('button--contact-form--active');
+			document.getElementById('contact-submit-button').removeAttribute('disabled'); }
+		</scripr>
 	</body>
 </html>
