@@ -12947,7 +12947,7 @@ var StickyHeader = /*#__PURE__*/function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
     this.siteHeader = jquery_default()(".site-header");
-    this.headerTriggerElement = document.getElementById("large-hero__title");
+    this.headerTriggerElement = document.getElementById("hero__title");
     this.arrowDown = jquery_default()(".arrow-down");
     this.createColorWaypoint();
   }
@@ -12956,7 +12956,7 @@ var StickyHeader = /*#__PURE__*/function () {
     value: function createColorWaypoint() {
       var that = this;
       new Waypoint({
-        element: document.getElementById("large-hero__title"),
+        element: document.getElementById("hero__title"),
         handler: function handler(direction) {
           if (direction == "down") {
             that.siteHeader.addClass("site-header--fill-in-color");
@@ -12980,134 +12980,82 @@ function FormValidate_defineProperties(target, props) { for (var i = 0; i < prop
 function FormValidate_createClass(Constructor, protoProps, staticProps) { if (protoProps) FormValidate_defineProperties(Constructor.prototype, protoProps); if (staticProps) FormValidate_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function FormValidate_toPropertyKey(arg) { var key = FormValidate_toPrimitive(arg, "string"); return FormValidate_typeof(key) === "symbol" ? key : String(key); }
 function FormValidate_toPrimitive(input, hint) { if (FormValidate_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (FormValidate_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
 var FormValidate = /*#__PURE__*/function () {
   function FormValidate() {
     FormValidate_classCallCheck(this, FormValidate);
-    this.form = jquery_default()('#contact-form');
-    this.name = jquery_default()('#name');
-    this.email = jquery_default()('#email');
-    this.message = jquery_default()('#message');
-    this.button = jquery_default()('#button');
-    this.error = jquery_default()('#error');
-    this.checkmark = jquery_default()('#checkmark');
-    this.handleButton();
-    this.handleErrorMessage();
-    this.handleErrorHighlight();
+    this.form = document.getElementById("contact-form");
+    this.name = document.getElementById("name");
+    this.email = document.getElementById("email");
+    this.message = document.getElementById("message");
+    this.button = document.getElementById("button");
+    this.error = document.getElementById("error");
+    this.checkmark = document.getElementById("checkmark");
+    this.handleButton.bind(this);
+    this.handleErrorMessage.bind(this);
+    this.handleErrorHighlight.bind(this);
   }
   FormValidate_createClass(FormValidate, [{
     key: "handleButton",
     value: function handleButton() {
-      var that = this;
       this.form.keyup(function () {
-        if (that.email.val() !== '' && that.name.val() !== '' && that.message.val() !== '') {
-          that.button.addClass('button--contact-form--is-validated');
-          that.button.attr('type', 'submit');
-          that.checkmark.addClass('contact-form__checkmark--is-showing');
+        if (this.email.val() !== "" && this.name.val() !== "" && this.message.val() !== "") {
+          this.button.classList.add("button--contact-form--is-validated");
+          this.button.attr("type", "submit");
+          this.checkmark.classList.add("contact-form__checkmark--is-showing");
         } else {
-          that.button.removeClass('button--contact-form--is-validated');
-          that.button.removeAttr('type', 'submit');
-          that.checkmark.removeClass('contact-form__checkmark--is-showing');
+          this.button.classList.remove("button--contact-form--is-validated");
+          this.button.removeAttr("type", "submit");
+          this.checkmark.classList.remove("contact-form__checkmark--is-showing");
         }
-        ;
       });
     }
   }, {
     key: "handleErrorMessage",
     value: function handleErrorMessage() {
-      var that = this;
       this.button.click(function () {
-        if (that.email.val() == '' || that.name.val() == '' || that.message.val() == '') {
-          that.error.removeClass('contact-form__error--is-hidden');
+        if (this.email.val() == "" || this.name.val() == "" || this.message.val() == "") {
+          this.error.classList.remove("contact-form__error--is-hidden");
         } else {
-          that.error.addClass('contact-form__error--is-hidden');
-          that.showCheckmark();
+          this.error.classList.add("contact-form__error--is-hidden");
+          this.checkmark.classList.add("contact-form__checkmark--is-showing");
         }
-        ;
       });
       this.form.keyup(function () {
-        if (that.email.val() !== '' && that.name.val() !== '' && that.message.val() !== '') {
-          that.error.addClass('contact-form__error--is-hidden');
+        if (this.email.val() !== "" && this.name.val() !== "" && this.message.val() !== "") {
+          this.error.classList.add("contact-form__error--is-hidden");
         }
-        ;
       });
     }
   }, {
     key: "handleErrorHighlight",
     value: function handleErrorHighlight() {
-      var that = this;
       this.button.click(function () {
-        if (that.email.val() == '') {
-          that.email.addClass('contact-form--error-highlight');
+        if (this.email.val() == "") {
+          this.email.classList.add("contact-form--error-highlight");
         }
-        ;
-        if (that.name.val() == '') {
-          that.name.addClass('contact-form--error-highlight');
+        if (this.name.val() == "") {
+          this.name.classList.add("contact-form--error-highlight");
         }
-        ;
-        if (that.message.val() == '') {
-          that.message.addClass('contact-form--error-highlight');
+        if (this.message.val() == "") {
+          this.message.classList.add("contact-form--error-highlight");
         }
-        ;
       });
       this.form.keyup(function () {
-        if (that.email.val() !== '') {
-          that.email.removeClass('contact-form--error-highlight');
+        if (this.email.val() !== "") {
+          this.email.classList.remove("contact-form--error-highlight");
         }
-        ;
-        if (that.name.val() !== '') {
-          that.name.removeClass('contact-form--error-highlight');
+        if (this.name.val() !== "") {
+          this.name.classList.remove("contact-form--error-highlight");
         }
-        ;
-        if (that.message.val() !== '') {
-          that.message.removeClass('contact-form--error-highlight');
+        if (this.message.val() !== "") {
+          this.message.classList.remove("contact-form--error-highlight");
         }
-        ;
       });
     }
   }]);
   return FormValidate;
 }();
-;
 /* harmony default export */ const modules_FormValidate = (FormValidate);
-;// CONCATENATED MODULE: ./app/assets/scripts/modules/HeroParllax.js
-function HeroParllax_typeof(obj) { "@babel/helpers - typeof"; return HeroParllax_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, HeroParllax_typeof(obj); }
-function HeroParllax_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function HeroParllax_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, HeroParllax_toPropertyKey(descriptor.key), descriptor); } }
-function HeroParllax_createClass(Constructor, protoProps, staticProps) { if (protoProps) HeroParllax_defineProperties(Constructor.prototype, protoProps); if (staticProps) HeroParllax_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function HeroParllax_toPropertyKey(arg) { var key = HeroParllax_toPrimitive(arg, "string"); return HeroParllax_typeof(key) === "symbol" ? key : String(key); }
-function HeroParllax_toPrimitive(input, hint) { if (HeroParllax_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (HeroParllax_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-
-var HeroParallax = /*#__PURE__*/function () {
-  function HeroParallax() {
-    HeroParllax_classCallCheck(this, HeroParallax);
-    this.background = jquery_default()('.large-hero__image-container');
-    this.hero = jquery_default()('.large-hero');
-    this.content = jquery_default()('.large-hero__content');
-    this.window = jquery_default()(window);
-    this.scrollImage();
-  }
-  HeroParllax_createClass(HeroParallax, [{
-    key: "scrollImage",
-    value: function scrollImage() {
-      var that = this;
-      var heroHeight = this.hero.height();
-      this.window.scroll(function () {
-        var windowScroll = that.window.scrollTop();
-        if (windowScroll <= heroHeight) {
-          that.background.css({
-            'transform': 'translate(0px, -' + windowScroll / 14.8 + '%)'
-          });
-          that.content.css({
-            'transform': 'translate(0px, ' + windowScroll / 8 + '%)'
-          });
-        }
-      });
-    }
-  }]);
-  return HeroParallax;
-}();
-/* harmony default export */ const HeroParllax = (HeroParallax);
 ;// CONCATENATED MODULE: ./app/assets/scripts/modules/HideHeader.js
 function HideHeader_typeof(obj) { "@babel/helpers - typeof"; return HideHeader_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, HideHeader_typeof(obj); }
 function HideHeader_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13403,6 +13351,7 @@ var Lightbox = /*#__PURE__*/function () {
     value: function openLightbox(e) {
       e.preventDefault();
       this.lightbox.classList.add(this.classToToggle);
+      e.preventDefault();
     }
   }, {
     key: "closeLightbox",
@@ -13492,28 +13441,36 @@ var Lightbox = /*#__PURE__*/function () {
 
 
 
-
 function onPageLoaded() {
-  new HeroParllax();
-  new modules_FormValidate();
   new modules_StickyHeader();
   new modules_HideHeader();
-  new modules_ImageCarousel();
   new modules_MobileMenu();
-  new modules_Lightbox(document.getElementsByClassName("js-lightbox")[0], document.getElementsByClassName("js-certs-btn")[0], document.getElementsByClassName("js-x-cert")[0], "lightbox--is-visible");
-  new modules_Lightbox(document.getElementsByClassName("js-resume")[0], document.getElementsByClassName("js-resume-btn")[0], document.getElementsByClassName("js-x-resume")[0], "resume--is-visible");
-
-  //new RevealOnScroll($('.intro__content-container__content'), "80%", "slide-left", "slide-left--is-visible" );
-  new modules_RevealOnScroll(jquery_default()(".skills__figure"), "80%", "float-in", "float-in--is-visible");
-  new modules_RevealOnScroll(jquery_default()(".thank-you"), "80%", "float-in", "float-in--is-visible");
-  //new RevealOnScroll($(".icon-container"), "70%", "grow", "grow--is-visible");
-
-  new modules_SmoothScroll(jquery_default()(".arrow-down-link"));
-  new modules_SmoothScroll(jquery_default()(".secondary-nav a"));
+  loadJSonUrlChange();
   console.log("hey dawg");
 }
-document.addEventListener("DOMContentLoaded", onPageLoaded);
+function loadAboutPageJS() {
+  new modules_Lightbox(document.getElementsByClassName("js-lightbox")[0], document.getElementsByClassName("js-certs-btn")[0], document.getElementsByClassName("js-x-cert")[0], "lightbox--is-visible");
+  new modules_Lightbox(document.getElementsByClassName("js-resume")[0], document.getElementsByClassName("js-resume-btn")[0], document.getElementsByClassName("js-x-resume")[0], "resume--is-visible");
+  new modules_SmoothScroll(jquery_default()(".secondary-nav a"));
+  new modules_ImageCarousel();
+}
+function loadJSonUrlChange() {
+  var currentURL = window.location.href;
+  if (currentURL.includes("index")) {
+    new modules_SmoothScroll(jquery_default()(".arrow-down-link"));
+  }
+  if (currentURL.includes("about")) {
+    loadAboutPageJS();
+  }
+  if (currentURL.includes("contact")) {
+    new modules_FormValidate();
+  }
+  if (currentURL.includes("thank-you")) {
+    new modules_RevealOnScroll(jquery_default()(".thank-you"), "80%", "float-in", "float-in--is-visible");
+  }
+}
 if (false) {}
+window.onload = onPageLoaded;
 })();
 
 /******/ })()
