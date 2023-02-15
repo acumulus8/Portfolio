@@ -110,7 +110,7 @@
 					<br />
 					<p>* = required field</p>
 				</article>
-				<form netlify class="contact-form page-section--contact" id="contact-form" nonvalidate>
+				<form netlify data-netlify-recaptcha="true" class="contact-form page-section--contact" id="contact-form" nonvalidate>
 					<div class="contact-form__info-group">
 						<div class="contact-form__group">
 							<label class="contact-form__label">*Name</label>
@@ -129,6 +129,7 @@
 						<textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
 					</div>
 					<br />
+					<div data-netlify-recaptcha="true" />
 					<div class="contact-form__button-group">
 						<input class="button button--contact-form" id="contact-submit-button" readonly="readonly" value="submit" />
 						<div class="contact-form__checkmark-container">
