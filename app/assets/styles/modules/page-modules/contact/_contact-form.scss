@@ -17,7 +17,7 @@
 		margin-top: 1rem;
 
 		&--textarea {
-			margin-top: 2rem;
+			margin: 1.5rem 0 30px 0;
 		}
 
 		textarea {
@@ -39,14 +39,12 @@
 
 	&__button-group {
 		display: flex;
-		//flex-direction: column;
 		flex-wrap: wrap;
-		align-items: top;
+		margin-top: 20px;
 
 		@include screenSize(atSmall) {
 			display: flex;
 			flex-direction: row;
-			align-items: top;
 		}
 	}
 
