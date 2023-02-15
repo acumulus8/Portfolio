@@ -61,3 +61,8 @@ textarea,
 label {
 	font-family: $paragraphFont;
 }
+
+.totally-hidden {
+	visibility: hidden;
+	display: none;
+}
