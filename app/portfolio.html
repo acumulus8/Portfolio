@@ -94,6 +94,49 @@
 						<picture>
 							<source
 								class="lazyload"
+								data-srcset="assets/images/tiny-house-web-app.png"
+								media="(min-width: 1020px)"
+								alt="Image of the tinyhouse project."
+							/>
+							<source
+								class="lazyload"
+								data-srcset="assets/images/tiny-house-web-app.png"
+								media="(min-width: 700px)"
+								alt="Image of the tinyhouse project."
+							/>
+							<img class="lazyload" data-src="assets/images/tiny-house-web-app.png" alt="Image of the tinyhouse project." />
+						</picture>
+						<!-- <img class="lazyload" data-src="assets/images/clear-view.png"> -->
+					</div>
+					<div class="project__text">
+						<h2 class="project__heading">Tinyhouse</h2>
+						<h4>AirBnb clone - web application</h4>
+						<p>
+							This AirBnb clone is built with React, TypeScript, GraphQL, Node.js, and MongDB. It is a web app that allows users to view
+							and book listings, and create an account to host their own listings. The app uses Google GeoLocation API, Google OAuth,
+							Stripe API to process payments, and Cloudinary to handle image upload and retrieval. The UI is build with Ant Design
+						</p>
+						<div class="project__link-container">
+							<span class="project__link-container__link">
+								<a href="https://tiny-house-app.com" target="about_blank">View project</a>
+							</span>
+							<span class="project__link-container__link project__link-container__link--move-right">
+								<a href="https://github.com/acumulus8/tinyhouse-client" target="about_blank" id="tinyhouse">View client code</a>
+							</span>
+							<span class="project__link-container__link project__link-container__link--move-right">
+								<a href="https://github.com/acumulus8/tinyhouse-server" target="about_blank" id="tinyhouse">View server code</a>
+							</span>
+						</div>
+					</div>
+				</article>
+
+				<hr class="project__divider" />
+
+				<article class="project">
+					<div class="project__image-container">
+						<picture>
+							<source
+								class="lazyload"
 								data-srcset="assets/images/clear-view-small.png"
 								media="(min-width: 1020px)"
 								alt="Image of the Clear View travel company project."
@@ -120,12 +163,14 @@
 							written to incorporate BEM methodology: taking advantage of reusable and scalable code. The site is built together with
 							GulpJS and Webpack, utilizing Babel to transpile modern Es6 JavaScript.
 						</p>
-						<span class="project__link">
-							<a href="https://acumulus8.github.io/fake-travel-site/" target="about_blank">View project</a>
-						</span>
-						<span class="project__link project__link--move-right">
-							<a href="https://github.com/acumulus8/fake-travel-site" target="about_blank" id="jammming">View code</a>
-						</span>
+						<div class="project__link-container">
+							<span class="project__link-container__link">
+								<a href="https://acumulus8.github.io/fake-travel-site/" target="about_blank">View project</a>
+							</span>
+							<span class="project__link-container__link project__link-container__link--move-right">
+								<a href="https://github.com/acumulus8/fake-travel-site" target="about_blank" id="jammming">View code</a>
+							</span>
+						</div>
 					</div>
 				</article>
 
@@ -160,12 +205,14 @@
 							<br /><br />
 							*<em>Project not mobile responsive</em>
 						</p>
-						<span class="project__link">
-							<a href="https://jammming-proj.netlify.app" target="about_blank">View project</a>
-						</span>
-						<span class="project__link project__link--move-right">
-							<a href="https://github.com/acumulus8/jammming" target="about_blank" id="catch-of-day">View code</a>
-						</span>
+						<div class="project__link-container">
+							<span class="project__link-container__link">
+								<a href="https://jammming-proj.netlify.app" target="about_blank">View project</a>
+							</span>
+							<span class="project__link-container__link project__link-container__link--move-right">
+								<a href="https://github.com/acumulus8/jammming" target="about_blank" id="catch-of-day">View code</a>
+							</span>
+						</div>
 					</div>
 				</article>
 
@@ -203,49 +250,14 @@
 							storage and account authentication.<br /><br />
 							*<em>Project not mobile responsive</em>
 						</p>
-						<span class="project__link">
-							<a href="http://catchoftheday.netlify.com" target="about_blank">View project</a>
-						</span>
-						<span class="project__link project__link--move-right">
-							<a href="https://github.com/acumulus8/catch-of-the-day" target="about_blank" id="colmar">View code</a>
-						</span>
-					</div>
-				</article>
-
-				<hr class="project__divider" />
-
-				<article class="project">
-					<div class="project__image-container">
-						<picture>
-							<source
-								class="lazyload"
-								data-srcset="assets/images/colmar-small.png"
-								media="(min-width: 1020px)"
-								alt="Image of the Colmar Academy project."
-							/>
-							<source
-								class="lazyload"
-								data-srcset="assets/images/colmar-med.png"
-								media="(min-width: 700px)"
-								alt="Image of the Colmar Academy project."
-							/>
-							<img class="lazyload" data-src="assets/images/colmar-small.png" alt="Image of the Colmar Academy project." />
-						</picture>
-						<!-- <img class="lazyload" data-src="assets/images/Colmar.png"> -->
-					</div>
-					<div class="project__text">
-						<h2 class="project__heading">Colmar Academy</h2>
-						<h4>Fictional University - website</h4>
-						<p>
-							This website was built from a design mockup with HTML and CSS. It is a static page built with an emphasis on layout and
-							ARIA accessibility attributes. Media queries are used to ensure a beautiful experience on all screen sizes.
-						</p>
-						<span class="project__link">
-							<a href="https://acumulus8.github.io/Colmar-Academy/" target="about_blank">View project</a>
-						</span>
-						<span class="project__link project__link--move-right">
-							<a href="https://github.com/acumulus8/Colmar-Academy" target="about_blank" id="ravenous">View code</a>
-						</span>
+						<div class="project__link-container">
+							<span class="project__link-container__link">
+								<a href="http://catchoftheday.netlify.com" target="about_blank">View project</a>
+							</span>
+							<span class="project__link-container__link project__link-container__link--move-right">
+								<a href="https://github.com/acumulus8/catch-of-the-day" target="about_blank" id="colmar">View code</a>
+							</span>
+						</div>
 					</div>
 				</article>
 
@@ -284,12 +296,14 @@
 							their rating. <br /><br />
 							*<em>Project not mobile responsive</em>
 						</p>
-						<span class="project__link">
-							<a href="http://ravenous-tim-wilburn.surge.sh/" target="about_blank">View project</a>
-						</span>
-						<span class="project__link project__link--move-right">
-							<a href="https://github.com/acumulus8/ravenous" target="about_blank" id="game">View code</a>
-						</span>
+						<div class="project__link-container">
+							<span class="project__link-container__link">
+								<a href="http://ravenous-tim-wilburn.surge.sh/" target="about_blank">View project</a>
+							</span>
+							<span class="project__link-container__link project__link-container__link--move-right">
+								<a href="https://github.com/acumulus8/ravenous" target="about_blank" id="game">View code</a>
+							</span>
+						</div>
 					</div>
 				</article>
 
@@ -324,12 +338,14 @@
 							aspects of the game. <br /><br />
 							*<em>Project not mobile responsive</em>
 						</p>
-						<span class="project__link">
-							<a href="https://upbeat-leakey-464ff6.netlify.com/" target="about_blank">View project</a>
-						</span>
-						<span class="project__link project__link--move-right">
-							<a href="https://github.com/acumulus8/gameOfLife" target="about_blank">View code</a>
-						</span>
+						<div class="project__link-container">
+							<span class="project__link-container__link">
+								<a href="https://upbeat-leakey-464ff6.netlify.com/" target="about_blank">View project</a>
+							</span>
+							<span class="project__link-container__link project__link-container__link--move-right">
+								<a href="https://github.com/acumulus8/gameOfLife" target="about_blank">View code</a>
+							</span>
+						</div>
 					</div>
 				</article>
 			</section>
