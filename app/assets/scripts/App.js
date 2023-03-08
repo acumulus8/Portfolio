@@ -10,14 +10,14 @@ import RevealOnScroll from "./modules/RevealOnScroll";
 import SmoothScroll from "./modules/SmoothScroll";
 import MobileMenu from "./modules/MobileMenu";
 import Lightbox from "./modules/Lightbox";
+import BackgroundHeight from "./modules/BackgroundHeight";
 
 function onPageLoaded() {
 	new StickyHeader();
 	new HideHeader();
 	new MobileMenu();
+	new BackgroundHeight();
 	loadJSonUrlChange();
-
-	console.log("hey dawg");
 }
 
 function loadAboutPageJS() {

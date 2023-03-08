@@ -10,12 +10,6 @@
 			integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
 			crossorigin="anonymous"
 		></script>
-		<script
-			defer
-			src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
-			integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
-			crossorigin="anonymous"
-		></script>
 		<!-- <link rel="stylesheet" type="text/css" href="./assets/styles/styles.scss" /> -->
 		<!-- <script src="./assets/scripts/Vendor.js"></script> -->
 		<link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
@@ -24,7 +18,7 @@
 
 	<body>
 		<header>
-			<nav class="site-header site-header--not-index">
+			<nav class="site-header">
 				<div class="site-header__container wrapper">
 					<div class="site-header__brand">
 						<div class="site-header__brand__logo">
@@ -81,32 +75,30 @@
 		</header>
 
 		<div class="page-header page-header--about">
-			<div class="page-header__filter"></div>
+			<div class="page-header__content wrapper">
+				<h1 class="page-header__content__h1 page-header__content__h1--about" id="hero__title">About</h1>
+			</div>
 			<div class="page-header__image-container">
-				<picture>
-					<source srcset="./assets/images/code-tablet.jpg" media="(min-width: 550px)" />
-					<img src="./assets/images/code-phone.jpg" />
-				</picture>
-			</div>
-			<div class="page-header__content">
-				<h1 class="page-header__content__h1 page-header__content__h1--about" id="hero__title">About Me</h1>
-				<h2 class="page-header__content__h2 page-header__content__h2--about" id="trigger">Let me tell you about myself</h2>
+				<img src="./assets/images/header-bg.png" aria-hidden="true" />
 			</div>
 		</div>
-
-		<div class="secondary-nav">
-			<ul>
-				<li>
-					<a href="#my-story">My Story</a>
-				</li>
-				<li>
-					<a class="js-resume-btn" href="">My Resume</a>
-				</li>
-				<li>
-					<a class="js-certs-btn" href="">My Certificates</a>
-				</li>
-			</ul>
-		</div>
+		<section class="wrapper">
+			<div class="secondary-nav">
+				<!-- <div class="wrapper"> -->
+				<ul>
+					<li>
+						<a href="#my-story">My Story</a>
+					</li>
+					<li>
+						<a class="js-resume-btn" href="">My Resume</a>
+					</li>
+					<li>
+						<a class="js-certs-btn" href="">My Certificates</a>
+					</li>
+				</ul>
+				<!-- </div> -->
+			</div>
+		</section>
 
 		<main>
 			<!-- LIGHT BOX CONTENT INITIALLY HIDDEN-->
@@ -185,7 +177,6 @@
 
 			<section class="wrapper">
 				<div class="about-me">
-					<h1 class="section-header">Working Together</h1>
 					<div class="about-me__img-container">
 						<img
 							class="lazyload"
@@ -207,7 +198,7 @@
 						<p>With my experience in coding and User Interface design, I can help you make your ideas a reality.</p>
 					</div>
 					<div class="about-me__working-with-me">
-						<h2>Working With Me</h2>
+						<h2 id="trigger">Working With Me</h2>
 						<p>
 							I can offer services to help plan your project, design your project, and then build and publish the final product. From
 							the beginning, we will work directly together to understand the goals of your project, the intended audience, and then any
@@ -315,7 +306,7 @@
 
 			<section class="wrapper" id="my-story">
 				<div class="my-story" id="my-story">
-					<h1 class="section-header">My Story...</h1>
+					<h2 class="">My Story...</h2>
 					<p class="p1">
 						I currently live in Lexington, Kentucky with my wife Sarah and our cat, Hunter (see adorable image). I grew up in Cincinnati,
 						Ohio and relocated to Lexington to attend school at the University of Kentucky, where I studied music performance (focus on
@@ -349,13 +340,16 @@
 			</section>
 		</main>
 
+		<div class="page-background" aria-hidden="true"></div>
+		<div class="page-background__sub-bg" aria-hidden="true"></div>
+
 		<footer class="footer">
 			<div class="site-header__brand__logo">
 				<a href="./index.html">
 					<img src="assets/images/logo-tw.png" alt="logo" />
 				</a>
 			</div>
-			<p class="footer__text-container">Made from scratch, by yours truly :)</p>
+			<p class="footer__text-container">This site is made with HTML, SCSS, and JavaScript</p>
 			<div class="footer__icon-container">
 				<a href="https://github.com/acumulus8" target="_blank">
 					<i aria-hidden="true" class="fab fa-github fa-2x footer__icon-container__icon" title="github"></i>

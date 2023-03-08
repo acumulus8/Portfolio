@@ -1,11 +1,16 @@
+//// Layout ////
+$siteHeaderHeight: 98px;
+$pageHeaderHeight: 177px;
+
 //// TYPE ////
-$headingFont: Bungee, sans-serif;
-$paragraphFont: Farro, sans-serif;
+$headingFont: "Hanken Grotesk", sans-serif;
+$paragraphFont: "Roboto Flex", sans-serif;
 $fontVeryLight: 200;
 $fontLight: 300;
 $fontRegular: 400;
 $fontMedium: 500;
 $fontBold: 700;
+$fontVeryBold: 900;
 $paragraphFontLineHeight: 1.5;
 
 //// COLORS ////
@@ -40,6 +45,7 @@ $primaryText: #333;
 $primaryTextLight: #f0f5f8;
 
 //// LAYERS FOR Z-INDEX ////
+$layerBG: -1;
 $layer1: 1;
 $layer2: 2;
 $layer3: 3;

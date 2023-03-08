@@ -2,28 +2,26 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin-top: 2rem;
+	z-index: $layer1;
 
 	&:first-child {
-		margin-top: 3.4rem;
+		margin-top: 0;
 	}
 
 	@include screenSize(atSmall) {
-		padding: 2.5rem 0;
 	}
 
 	@include screenSize(atMedium) {
 		display: flex;
 		flex-direction: row;
-		padding: 5rem 0;
+		padding: 3rem 0;
 	}
 
 	&__image-container {
 		width: 100%;
-		//margin: 0 5% 8% 0;
 
 		@include screenSize(atMedium) {
-			margin: 0 5% 8% 0;
+			margin-left: 5%;
 			width: 50%;
 		}
 	}
@@ -33,10 +31,12 @@
 	}
 
 	&__text {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 		font-weight: $fontLight;
 		position: relative;
-		padding-bottom: 4rem;
+		color: $primaryTextLight;
 
 		@include screenSize(atMedium) {
 			width: 50%;
@@ -45,7 +45,7 @@
 
 	&__heading {
 		margin: 0;
-		margin-top: 1rem;
+		color: $primaryGreenShade1;
 
 		@include screenSize(atMedium) {
 			margin: 0;
@@ -54,7 +54,7 @@
 
 	h4 {
 		margin-top: 0.2rem;
-		font-weight: $fontLight;
+		font-family: $paragraphFont;
 
 		@include screenSize(atMedium) {
 			margin-top: 0.5rem;
@@ -62,55 +62,14 @@
 	}
 
 	&__link-container {
-		width: 100%;
-
-		&__link {
-			margin-right: 30px;
-			// position: absolute;
-			// position: relative;
-			width: 180px;
-			text-align: left;
-
-			/* @include screenSize(atMedium) {
-            text-align: center;
-        } */
-
-			&--move-right {
-				// left: 50%;
-
-				@include screenSize(atSmall) {
-					// left: 40%;
-				}
-			}
-		}
-
-		a {
-			width: auto;
-			text-decoration: none;
-			font-weight: 300;
-			transform: scale(1);
-			transition: all 0.22s ease-out;
-
-			&:visited {
-				color: $primaryBlue;
-			}
-
-			&:hover {
-				// font-size: 1.2rem;
-				font-weight: 700;
-				transform: scale(1.6);
-				color: $primaryGreen;
-			}
-
-			&:active {
-				color: $primaryBlue;
-			}
-		}
+		margin-top: auto;
+		width: 60% !important;
 	}
 
 	&__divider {
 		visibility: none;
 		display: none;
+		opacity: 0.5;
 
 		@include screenSize(atSmall) {
 			visibility: visible;

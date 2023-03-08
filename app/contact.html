@@ -75,17 +75,12 @@
 			</nav>
 		</header>
 
-		<div class="page-header page-header--about">
-			<div class="page-header__filter"></div>
-			<div class="page-header__image-container">
-				<picture>
-					<source srcset="./assets/images/code-tablet.jpg" media="(min-width: 550px)" />
-					<img src="./assets/images/code-phone.jpg" />
-				</picture>
+		<div class="page-header page-header--contact">
+			<div class="page-header__content wrapper">
+				<h1 class="page-header__content__h1 page-header__content__h1--contact" id="hero__title">Contact</h1>
 			</div>
-			<div class="page-header__content">
-				<h1 class="page-header__content__h1 page-header__content__h1--contact" id="hero__title">Contact Me</h1>
-				<h2 class="page-header__content__h2 page-header__content__h2--contact" id="trigger">Let's work together!</h2>
+			<div class="page-header__image-container">
+				<img src="./assets/images/header-bg.png" aria-hidden="true" />
 			</div>
 		</div>
 
@@ -126,14 +121,14 @@
 						</div>
 						<div class="contact-form__group">
 							<label class="contact-form__label">*Email</label>
-							<input name="_replyto" class="contact-form__input" id="email" placeholder="Email" />
+							<input type="text" name="_replyto" class="contact-form__input" id="email" placeholder="Email" />
 							<label class="contact-form__label contact-form__error--is-hidden" id="email-error-label"
 								>Please enter a valid email</label
 							>
 						</div>
 					</div>
 					<div class="contact-form__group contact-form__group--textarea">
-						<label class="contact-form__label">*Message</label>
+						<label class="contact-form__label" id="trigger">*Message</label>
 						<textarea name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
 					</div>
 					<br />
@@ -153,13 +148,16 @@
 			</div>
 		</main>
 
+		<div class="page-background" aria-hidden="true"></div>
+		<div class="page-background__sub-bg" aria-hidden="true"></div>
+
 		<footer class="footer">
 			<div class="site-header__brand__logo">
 				<a href="./index.html">
 					<img src="assets/images/logo-tw.png" alt="logo" />
 				</a>
 			</div>
-			<p class="footer__text-container">Made from scratch, by yours truly :)</p>
+			<p class="footer__text-container">This site is made with HTML, SCSS, and JavaScript</p>
 			<div class="footer__icon-container">
 				<a href="https://github.com/acumulus8" target="_blank">
 					<i aria-hidden="true" class="fab fa-github fa-2x footer__icon-container__icon" title="github"></i>
@@ -173,11 +171,10 @@
 			</div>
 		</footer>
 
-		<!-- <script src="App.js"></script> -->
-		<scripr>
+		<!-- <scripr>
 			function recaptchaCallback() { document.getElementById('contact-submit-button').removeAttribute('readonly');
 			document.getElementById('contact-submit-button').classList.add('button--contact-form--active');
 			document.getElementById('contact-submit-button').removeAttribute('disabled'); }
-		</scripr>
+		</scripr> -->
 	</body>
 </html>

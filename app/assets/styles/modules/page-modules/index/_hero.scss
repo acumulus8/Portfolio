@@ -8,7 +8,7 @@
 	&__bg {
 		position: relative;
 		min-height: 100%;
-		z-index: 5;
+		z-index: $layer1;
 
 		@include screenSize(atMedium) {
 			height: 90vh;
@@ -65,7 +65,7 @@
 		position: absolute;
 		top: 18%;
 		text-shadow: 1px 1px 5px $mainGray;
-		z-index: 6;
+		z-index: $layer2;
 
 		@include screenSize(atSmall) {
 			top: 25%;
