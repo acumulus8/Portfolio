@@ -8,7 +8,7 @@
 	&__bg {
 		position: relative;
 		min-height: 100%;
-		z-index: 5;
+		z-index: $layer1;
 
 		@include screenSize(atMedium) {
 			height: 90vh;
@@ -65,7 +65,7 @@
 		position: absolute;
 		top: 18%;
 		text-shadow: 1px 1px 5px $mainGray;
-		z-index: 6;
+		z-index: $layer2;
 
 		@include screenSize(atSmall) {
 			top: 25%;
@@ -178,23 +178,6 @@
 			}
 			&__button {
 				padding: 1rem 3.5rem;
-				background: $primaryGreen;
-				color: $primaryTextLight;
-				border: none;
-				border-radius: $primaryRadius;
-				font-size: 18px;
-				font-weight: $fontBold;
-				cursor: pointer;
-
-				@include screenSize(atSmall) {
-					margin-top: 1rem;
-					padding: 1rem 2.5rem;
-					font-size: 20px;
-				}
-
-				@include screenSize(atMedium) {
-					margin-top: 2rem;
-				}
 			}
 		}
 	}

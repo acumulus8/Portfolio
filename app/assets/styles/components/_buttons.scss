@@ -3,8 +3,8 @@
 	border-radius: 0.5rem;
 	padding: 1rem 1.8rem;
 	margin-bottom: 10px;
-	background-color: $primaryBlueShade2;
-	color: #fff;
+	background-color: $primaryGreenShade2;
+	color: $darkBlue;
 	cursor: pointer;
 	letter-spacing: 0.1rem;
 	font-family: $paragraphFont;
@@ -17,18 +17,19 @@
 	}
 
 	&--for-hire {
-		padding: 1rem 1rem;
-		background-color: $primaryBlue;
-		border-radius: 2rem;
+		padding: 1rem 1.5rem;
+		color: $darkBlue;
+		background-color: $primaryGreenShade2;
+		// border-radius: 2rem;
 		font-size: 1rem;
-		font-weight: $fontLight;
+		font-weight: $fontMedium;
 
 		@include screenSize(atSmall) {
 			font-size: 1.2rem;
 		}
 
 		a {
-			color: #fff;
+			color: $primaryTextLight;
 		}
 
 		&:hover {
@@ -48,7 +49,7 @@
 		background-color: $primaryGreen;
 
 		a {
-			color: #fff;
+			color: $primaryTextLight;
 		}
 
 		&:hover {
@@ -85,7 +86,7 @@
 		transition: opacity 0.4s ease-out;
 
 		a {
-			color: #fff;
+			color: $primaryTextLight;
 		}
 
 		&:hover {

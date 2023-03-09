@@ -3,12 +3,14 @@
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 10;
-	padding-top: 1.75rem;
+	z-index: $layer6;
+	// padding-top: 1.75rem;
 	box-shadow: 6px 0 10px transparent;
 	transition: all 0.5s ease-out;
+	max-height: $siteHeaderHeightMobile;
 
 	@include screenSize(atMedium) {
+		max-height: $siteHeaderHeight;
 		transform: scale(1.05);
 	}
 	@include screenSize(atMediumMid) {
@@ -33,12 +35,12 @@
 		}
 
 		&__logo {
-			max-width: 60px;
+			max-width: 50px;
 			margin: 0.5rem 0.75em 0.5rem 0;
 			filter: drop-shadow(-5px 5px 6px rgba(22, 26, 49, 0.25));
 
 			@include screenSize(atSmall) {
-				max-width: 100px;
+				max-width: 60px;
 				margin: 0.5rem 0.75em 0.5rem 0;
 			}
 		}
@@ -54,6 +56,7 @@
 				// font-weight: $fontBold;
 				// letter-spacing: 0.2rem;
 				font-family: $headingFont;
+				font-weight: $fontBold;
 				text-shadow: 1px 1px $mainGray;
 			}
 			//!do we need the below?

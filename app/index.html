@@ -104,8 +104,8 @@
 						I specialize in front end web development as well as UI design. I can manage a project from inception to launch, redesign
 						existing sites, and can help make your ideas real!
 					</p>
-					<a href="./about.html" role="button">
-						<button class="hero__content__right__button">LEARN MORE</button>
+					<a href="./about.html" class="hero__content__right__button" role="button">
+						<button class="button">LEARN MORE</button>
 					</a>
 				</div>
 				<br />
@@ -133,6 +133,7 @@
 							<i class="fab fa-2x fa-react icon-container__icon" title="React"></i>
 							<i class="fab fa-2x fa-node-js icon-container__icon" title="NodeJS"></i>
 							<i class="fab fa-2x fa-npm icon-container__icon" title="Node Project Manager"></i>
+							<i class="fa fa-2x icon-container__icon" title="Webpack" data-src="./assets/images/webpack-icon.svg"></i>
 							<i class="fab fa-2x fa-gulp icon-container__icon" title="GulpJS"></i>
 							<i class="fab fa-2x fa-git-square icon-container__icon" title="Git version control"></i>
 							<i class="fab fa-2x fa-github icon-container__icon" title="Github"></i>
@@ -174,6 +175,32 @@
 				<div class="wrapper">
 					<p class="my-work__instructions">Click a tile to be taken to the Portfolio page overview for that project</p>
 					<div class="my-work__container">
+						<figure class="my-work__img">
+							<a href="./portfolio.html#colmar">
+								<picture>
+									<source
+										class="lazyload"
+										data-srcset="assets/images/tiny-house-web-app.png"
+										media="(min-width: 1020px)"
+										alt="Image of the Tinyhouse project."
+									/>
+									<img
+										class="lazyload"
+										data-src="assets/images/tiny-house-web-app-small.png"
+										alt="Image of the Tinyhouse project."
+									/>
+								</picture>
+								<figcaption class="my-work__img--modal">
+									<h3>Tinyhouse</h3>
+									<p>
+										Web Application - full stack AirBnb clone built with React, NodeJS, GraphQL, Apollo, and MongoDB. API's
+										include Google OAuth for authentication, Google GeoLocation API, Google People API, and Stripe for processing
+										payments.
+									</p>
+								</figcaption>
+							</a>
+						</figure>
+
 						<figure class="my-work__img">
 							<a href="./portfolio.html#jammming">
 								<picture>
@@ -260,30 +287,6 @@
 						</figure>
 
 						<figure class="my-work__img">
-							<a href="./portfolio.html#colmar">
-								<picture>
-									<source
-										class="lazyload"
-										data-srcset="assets/images/colmar-small.png"
-										media="(min-width: 1020px)"
-										alt="Image of the Colmar Academy project."
-									/>
-									<source
-										class="lazyload"
-										data-srcset="assets/images/colmar-med.png"
-										media="(min-width: 1019px)"
-										alt="Image of the Colmar Academy project."
-									/>
-									<img class="lazyload" data-src="assets/images/colmar-small.png" alt="Image of the Colmar Academy project." />
-								</picture>
-								<figcaption class="my-work__img--modal">
-									<h3>Colmar Academy</h3>
-									<p>Website - A complicated layout built for screen responsiveness and accessibility</p>
-								</figcaption>
-							</a>
-						</figure>
-
-						<figure class="my-work__img">
 							<a href="./portfolio.html#ravenous">
 								<picture>
 									<source
@@ -338,20 +341,18 @@
 				</div>
 			</section>
 
-			<!-- <section class="work-together">
-        <div class="wrapper">
-          <div class="work-together__content">
-            <h1 class="section-header">Let's work together!</h1>
-            <div class="work-together__button-container">
-              <a href="./contact.html" role="button">
-                <button class="button button--for-hire">
-                  I am available for hire!
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> -->
+			<section class="work-together">
+				<div class="wrapper">
+					<div class="work-together__content">
+						<h1 class="section-header">Let's work together!</h1>
+						<div class="work-together__button-container">
+							<a href="./contact.html" role="button">
+								<button class="button button--for-hire">Contact Me</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer class="footer">
@@ -360,7 +361,7 @@
 					<img src="assets/images/logo-tw.png" alt="logo" />
 				</a>
 			</div>
-			<p class="footer__text-container">Made from scratch, by yours truly :)</p>
+			<p class="footer__text-container">This site is made with HTML, SCSS, and JavaScript</p>
 			<div class="footer__icon-container">
 				<a href="https://github.com/acumulus8" target="_blank">
 					<i aria-hidden="true" class="fab fa-github fa-2x footer__icon-container__icon" title="github"></i>
