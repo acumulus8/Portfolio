@@ -4,6 +4,11 @@
 	flex-direction: column;
 	margin-bottom: 2rem;
 
+	&__heading {
+		margin: 0;
+		color: $primaryGreenShade3;
+	}
+
 	&__alert {
 		background-color: $primaryGreenShade2;
 		color: $primaryText;

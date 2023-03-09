@@ -5,16 +5,17 @@
 
 	&::after {
 		content: "";
-		width: 40px;
-		height: 40px;
+		width: 32px;
+		height: 32px;
 		position: absolute;
 		left: 50%;
-		border-right: 4px solid #fff;
-		border-bottom: 4px solid #fff;
+		border-right: 4px solid $primaryBlueShade2;
+		border-bottom: 4px solid $primaryBlueShade2;
 		border-top: 4px solid transparent;
 		border-left: 4px solid transparent;
 		border-radius: 6px;
 		transform: rotate(45deg) translateY(50%);
+		transition: all 0.5s ease-out;
 		animation: 2.5s arrow infinite ease;
 	}
 
@@ -28,8 +29,8 @@
 		}
 		50% {
 			top: 80%;
-			border-right: 6px solid $accentRed;
-			border-bottom: 6px solid $accentRed;
+			border-right: 6px solid $primaryGreenShade3;
+			border-bottom: 6px solid $primaryGreenShade3;
 			@include screenSize(atMedium) {
 				top: 92%;
 			}

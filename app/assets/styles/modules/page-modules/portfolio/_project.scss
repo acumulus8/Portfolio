@@ -2,13 +2,23 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 4rem;
 	z-index: $layer1;
 
 	&:first-child {
 		margin-top: 0;
 	}
+	&:last-child {
+		border-bottom: none;
+		padding-bottom: 6rem;
+
+		@include screenSize(atMedium) {
+			padding-bottom: 0;
+		}
+	}
 
 	@include screenSize(atSmall) {
+		padding: 1rem 0;
 	}
 
 	@include screenSize(atMedium) {
@@ -19,26 +29,27 @@
 
 	&__image-container {
 		width: 100%;
+		margin: 0 0 1rem 0;
+		order: 1;
 
 		@include screenSize(atMedium) {
-			margin-left: 5%;
+			margin: 0 0 0 5%;
 			width: 50%;
+			order: 2;
 		}
-	}
-
-	&:last-child {
-		border-bottom: none;
 	}
 
 	&__text {
 		display: flex;
 		flex-direction: column;
+		order: 2;
 		width: 100%;
 		font-weight: $fontLight;
 		position: relative;
 		color: $primaryTextLight;
 
 		@include screenSize(atMedium) {
+			order: 1;
 			width: 50%;
 		}
 	}
@@ -55,10 +66,15 @@
 	h4 {
 		margin-top: 0.2rem;
 		font-family: $paragraphFont;
+		font-weight: $fontVeryLight;
 
 		@include screenSize(atMedium) {
 			margin-top: 0.5rem;
 		}
+	}
+
+	p {
+		margin: 0;
 	}
 
 	&__link-container {
@@ -69,7 +85,7 @@
 	&__divider {
 		visibility: none;
 		display: none;
-		opacity: 0.5;
+		opacity: 0.35;
 
 		@include screenSize(atSmall) {
 			visibility: visible;

@@ -1,15 +1,16 @@
 .page-header {
 	position: relative;
-	margin-top: $siteHeaderHeight;
+	margin-top: $siteHeaderHeightMobile;
 	width: 100%;
 	overflow: hidden;
 	background: $darkBlue;
+	height: $pageHeaderHeightMobile;
 
 	&--about {
 		border-bottom: none;
 	}
 
-	@include screenSize(atMedium) {
+	@include screenSize(atSmall) {
 		height: $pageHeaderHeight;
 	}
 

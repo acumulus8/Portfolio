@@ -1,6 +1,8 @@
 //// Layout ////
 $siteHeaderHeight: 98px;
+$siteHeaderHeightMobile: 60px;
 $pageHeaderHeight: 177px;
+$pageHeaderHeightMobile: 77px;
 
 //// TYPE ////
 $headingFont: "Hanken Grotesk", sans-serif;
@@ -10,7 +12,8 @@ $fontLight: 300;
 $fontRegular: 400;
 $fontMedium: 500;
 $fontBold: 700;
-$fontVeryBold: 900;
+$fontVeryBold: 800;
+$fontBlack: 900;
 $paragraphFontLineHeight: 1.5;
 
 //// COLORS ////
@@ -29,11 +32,12 @@ $darkBlueShade2: #5f7cc2;
 $darkBlueShade2Faded: rgba(94, 124, 194, 0.5);
 $darkBlueShade3: #98afe5;
 $darkBlueShade4: #d3dffe;
+$darkGreen: #315a10;
 $primaryGreen: #69a13b;
 $primaryGreenShade1: #93c769;
 $primaryGreenShade2: #c0e7a0;
 $primaryGreenShade3: #dafac0;
-$primaryGreenShade4: #edfde0;
+$primaryGreenShade4: #f6ffef;
 $primaryYellow: #ffaf02;
 $primaryYellowShade1: #ffc94d;
 $primaryYellowShade2: #ffe0a0;
@@ -42,7 +46,7 @@ $primaryYellowShade4: #fffbe0;
 $accentRed: rgb(218, 65, 62);
 $landingGradient: linear-gradient(113.95deg, #2275a5 25.62%, rgba(10, 36, 99, 0.92) 94.55%);
 $primaryText: #333;
-$primaryTextLight: #f0f5f8;
+$primaryTextLight: #f1f5f7;
 
 //// LAYERS FOR Z-INDEX ////
 $layerBG: -1;

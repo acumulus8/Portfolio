@@ -1,17 +1,16 @@
 .work-together {
-	display: flex;
-	align-items: center;
 	padding: 2rem 0;
 	text-align: center;
-	background-color: $primaryYellow;
+	background-color: $primaryGreenShade4;
 
 	@include screenSize(atMedium) {
 		padding: 4rem 0;
 	}
 
 	h2 {
-		color: $primaryBlue;
-		font-size: 1.7rem;
+		margin: 0 0 1rem 0;
+		color: $primaryGreen;
+		font-size: 1.2rem;
 
 		@include screenSize(atMedium) {
 			font-size: 2rem;
@@ -20,11 +19,11 @@
 
 	h1 {
 		margin-top: 0;
-		color: #fff;
+		line-height: 1;
+		color: $darkBlue;
 	}
 
 	&__button-container {
 		text-align: center;
-		margin-top: 3rem;
 	}
 }

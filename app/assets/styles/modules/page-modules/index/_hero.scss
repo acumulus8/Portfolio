@@ -178,23 +178,6 @@
 			}
 			&__button {
 				padding: 1rem 3.5rem;
-				background: $primaryGreen;
-				color: $primaryTextLight;
-				border: none;
-				border-radius: $primaryRadius;
-				font-size: 18px;
-				font-weight: $fontBold;
-				cursor: pointer;
-
-				@include screenSize(atSmall) {
-					margin-top: 1rem;
-					padding: 1rem 2.5rem;
-					font-size: 20px;
-				}
-
-				@include screenSize(atMedium) {
-					margin-top: 2rem;
-				}
 			}
 		}
 	}
