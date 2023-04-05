@@ -44,7 +44,7 @@ module.exports = (env) => {
 	if (mode === "development") {
 		console.log("!@#!@!@!@!@! DEV MODE !@!@!@!@");
 		config.devServer = {
-			compress: true,
+			// compress: true,
 			hot: true,
 			port: 3000,
 		};

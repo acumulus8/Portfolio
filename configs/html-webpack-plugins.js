@@ -26,6 +26,9 @@ module.exports = [
 		filename: "contact.html",
 		template: "./app/contact.html",
 		scriptLoading: "module",
+		minify: {
+			removeRedundantAttributes: false,
+		},
 	}),
 	new HtmlWebpackPlugin({
 		title: "Tim Wilburn: Developer",
