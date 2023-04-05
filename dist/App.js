@@ -12978,79 +12978,109 @@ function FormValidate_typeof(obj) { "@babel/helpers - typeof"; return FormValida
 function FormValidate_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function FormValidate_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, FormValidate_toPropertyKey(descriptor.key), descriptor); } }
 function FormValidate_createClass(Constructor, protoProps, staticProps) { if (protoProps) FormValidate_defineProperties(Constructor.prototype, protoProps); if (staticProps) FormValidate_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _defineProperty(obj, key, value) { key = FormValidate_toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function FormValidate_toPropertyKey(arg) { var key = FormValidate_toPrimitive(arg, "string"); return FormValidate_typeof(key) === "symbol" ? key : String(key); }
 function FormValidate_toPrimitive(input, hint) { if (FormValidate_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (FormValidate_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 var FormValidate = /*#__PURE__*/function () {
   function FormValidate() {
+    var _this = this;
     FormValidate_classCallCheck(this, FormValidate);
+    _defineProperty(this, "formUiAction", {
+      highlightInput: function highlightInput(input) {
+        return _this[input].classList.add(_this.highlightErrorClass);
+      },
+      unHighlightInput: function unHighlightInput(input) {
+        return _this[input].classList.remove(_this.highlightErrorClass);
+      },
+      showEmailErrorLabel: function showEmailErrorLabel() {
+        return _this.emailErrorLabel.classList.remove(_this.hideErrorMsgClass);
+      },
+      hideEmailErrorLabel: function hideEmailErrorLabel() {
+        return _this.emailErrorLabel.classList.add(_this.hideErrorMsgClass);
+      },
+      disableButton: function disableButton() {
+        _this.button.classList.remove(_this.buttonValidClass);
+        _this.button.removeAttribute("type", "submit");
+        _this.error.classList.remove(_this.hideErrorMsgClass);
+        _this.checkmark.classList.remove(_this.showCheckMarkClass);
+      },
+      enableButton: function enableButton() {
+        _this.button.classList.add(_this.buttonValidClass);
+        _this.button.setAttribute("type", "submit");
+        _this.error.classList.add(_this.hideErrorMsgClass);
+        _this.checkmark.classList.add(_this.showCheckMarkClass);
+      }
+    });
     this.form = document.getElementById("contact-form");
     this.name = document.getElementById("name");
     this.email = document.getElementById("email");
+    this.emailErrorLabel = document.getElementById("email-error-label");
     this.message = document.getElementById("message");
-    this.button = document.getElementById("button");
+    this.button = document.getElementById("contact-submit-button");
     this.error = document.getElementById("error");
     this.checkmark = document.getElementById("checkmark");
-    this.handleButton.bind(this);
-    this.handleErrorMessage.bind(this);
-    this.handleErrorHighlight.bind(this);
+    this.emailRegex = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/);
+    this.buttonValidClass = "button--contact-form--is-validated";
+    this.showCheckMarkClass = "contact-form__checkmark--is-visible";
+    this.highlightErrorClass = "contact-form--error-highlight";
+    this.hideErrorMsgClass = "contact-form__error--is-hidden";
+    this.handleInputErrorHighlight = this.handleInputErrorHighlight.bind(this);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+    this.checkWholeForm = this.checkWholeForm.bind(this);
+    this.events();
   }
   FormValidate_createClass(FormValidate, [{
-    key: "handleButton",
-    value: function handleButton() {
-      this.form.keyup(function () {
-        if (this.email.val() !== "" && this.name.val() !== "" && this.message.val() !== "") {
-          this.button.classList.add("button--contact-form--is-validated");
-          this.button.attr("type", "submit");
-          this.checkmark.classList.add("contact-form__checkmark--is-showing");
-        } else {
-          this.button.classList.remove("button--contact-form--is-validated");
-          this.button.removeAttr("type", "submit");
-          this.checkmark.classList.remove("contact-form__checkmark--is-showing");
-        }
-      });
+    key: "events",
+    value: function events() {
+      this.button.addEventListener("click", this.handleButtonClick);
+      this.email.addEventListener("blur", this.handleInputErrorHighlight);
+      this.email.addEventListener("keyup", this.handleInputErrorHighlight);
+      this.name.addEventListener("blur", this.handleInputErrorHighlight);
+      this.name.addEventListener("keyup", this.handleInputErrorHighlight);
+      this.message.addEventListener("blur", this.handleInputErrorHighlight);
+      this.message.addEventListener("keyup", this.handleInputErrorHighlight);
     }
   }, {
-    key: "handleErrorMessage",
-    value: function handleErrorMessage() {
-      this.button.click(function () {
-        if (this.email.val() == "" || this.name.val() == "" || this.message.val() == "") {
-          this.error.classList.remove("contact-form__error--is-hidden");
-        } else {
-          this.error.classList.add("contact-form__error--is-hidden");
-          this.checkmark.classList.add("contact-form__checkmark--is-showing");
-        }
-      });
-      this.form.keyup(function () {
-        if (this.email.val() !== "" && this.name.val() !== "" && this.message.val() !== "") {
-          this.error.classList.add("contact-form__error--is-hidden");
-        }
-      });
+    key: "checkWholeForm",
+    value: function checkWholeForm() {
+      if (this.email.value == "" || this.name.value == "" || this.message.value == "" || !this.emailRegex.test(this.email.value)) {
+        this.formUiAction.disableButton();
+      } else {
+        this.formUiAction.enableButton();
+      }
     }
   }, {
-    key: "handleErrorHighlight",
-    value: function handleErrorHighlight() {
-      this.button.click(function () {
-        if (this.email.val() == "") {
-          this.email.classList.add("contact-form--error-highlight");
+    key: "handleButtonClick",
+    value: function handleButtonClick() {
+      if (this.email.value == "") this.formUiAction.highlightInput("email");
+      if (!this.emailRegex.test(this.email.value)) {
+        this.formUiAction.showEmailErrorLabel();
+        this.formUiAction.highlightInput("email");
+      }
+      if (this.name.value == "") this.formUiAction.highlightInput("name");
+      if (this.message.value == "") this.formUiAction.highlightInput("message");
+      this.checkWholeForm();
+    }
+  }, {
+    key: "handleInputErrorHighlight",
+    value: function handleInputErrorHighlight(e) {
+      var input = e.target.id;
+      if (this[input].value == "") {
+        this.formUiAction.highlightInput(input);
+        if (input === "email" && !this.emailRegex.test(this.email.value)) this.formUiAction.showEmailErrorLabel();
+      } else {
+        this.formUiAction.unHighlightInput(input);
+        if (input === "email") {
+          if (this.emailRegex.test(this.email.value)) {
+            this.formUiAction.unHighlightInput("email");
+            this.formUiAction.hideEmailErrorLabel();
+          } else {
+            this.formUiAction.highlightInput("email");
+            this.formUiAction.showEmailErrorLabel();
+          }
         }
-        if (this.name.val() == "") {
-          this.name.classList.add("contact-form--error-highlight");
-        }
-        if (this.message.val() == "") {
-          this.message.classList.add("contact-form--error-highlight");
-        }
-      });
-      this.form.keyup(function () {
-        if (this.email.val() !== "") {
-          this.email.classList.remove("contact-form--error-highlight");
-        }
-        if (this.name.val() !== "") {
-          this.name.classList.remove("contact-form--error-highlight");
-        }
-        if (this.message.val() !== "") {
-          this.message.classList.remove("contact-form--error-highlight");
-        }
-      });
+        this.checkWholeForm();
+      }
     }
   }]);
   return FormValidate;
@@ -13429,7 +13459,54 @@ var Lightbox = /*#__PURE__*/function () {
   return Lightbox;
 }();
 /* harmony default export */ const modules_Lightbox = (Lightbox);
+;// CONCATENATED MODULE: ./app/assets/scripts/modules/BackgroundHeight.js
+function BackgroundHeight_typeof(obj) { "@babel/helpers - typeof"; return BackgroundHeight_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, BackgroundHeight_typeof(obj); }
+function BackgroundHeight_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function BackgroundHeight_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, BackgroundHeight_toPropertyKey(descriptor.key), descriptor); } }
+function BackgroundHeight_createClass(Constructor, protoProps, staticProps) { if (protoProps) BackgroundHeight_defineProperties(Constructor.prototype, protoProps); if (staticProps) BackgroundHeight_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function BackgroundHeight_toPropertyKey(arg) { var key = BackgroundHeight_toPrimitive(arg, "string"); return BackgroundHeight_typeof(key) === "symbol" ? key : String(key); }
+function BackgroundHeight_toPrimitive(input, hint) { if (BackgroundHeight_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (BackgroundHeight_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var BackgroundHeight = /*#__PURE__*/function () {
+  function BackgroundHeight() {
+    BackgroundHeight_classCallCheck(this, BackgroundHeight);
+    this.siteHeader = document.querySelector(".site-header");
+    this.pageContent = document.querySelector("main");
+    this.secondaryNav = document.querySelector(".secondary-nav");
+    this.gradientBackground = document.querySelector(".page-background");
+    this.subBackground = document.querySelector(".page-background__sub-bg");
+    this.pageHeaderHeight = 177;
+    if (!window.location.href.includes("index")) {
+      this.adjustSubBackgroundHeight();
+      this.adjustBackgroundsTopOffset();
+    }
+  }
+  BackgroundHeight_createClass(BackgroundHeight, [{
+    key: "adjustSubBackgroundHeight",
+    value: function adjustSubBackgroundHeight() {
+      var newHeight = this.pageContent.offsetHeight - this.gradientBackground.offsetHeight;
+      if (!!this.secondaryNav) {
+        newHeight += this.secondaryNav.offsetHeight;
+      }
+      this.subBackground.style.height = "".concat(newHeight, "px");
+    }
+  }, {
+    key: "adjustBackgroundsTopOffset",
+    value: function adjustBackgroundsTopOffset() {
+      var gradientOffset = this.siteHeader.offsetHeight + this.pageHeaderHeight;
+      var subOffset = this.siteHeader.offsetHeight + this.pageHeaderHeight + this.gradientBackground.offsetHeight;
+      if (!!this.secondaryNav) {
+        gradientOffset += this.secondaryNav.offsetHeight;
+        subOffset += this.secondaryNav.offsetHeight;
+      }
+      this.gradientBackground.style.top = "".concat(gradientOffset, "px");
+      this.subBackground.style.top = "".concat(subOffset, "px");
+    }
+  }]);
+  return BackgroundHeight;
+}();
+/* harmony default export */ const modules_BackgroundHeight = (BackgroundHeight);
 ;// CONCATENATED MODULE: ./app/assets/scripts/App.js
+
 
 
 
@@ -13445,8 +13522,8 @@ function onPageLoaded() {
   new modules_StickyHeader();
   new modules_HideHeader();
   new modules_MobileMenu();
+  new modules_BackgroundHeight();
   loadJSonUrlChange();
-  console.log("hey dawg");
 }
 function loadAboutPageJS() {
   new modules_Lightbox(document.getElementsByClassName("js-lightbox")[0], document.getElementsByClassName("js-certs-btn")[0], document.getElementsByClassName("js-x-cert")[0], "lightbox--is-visible");

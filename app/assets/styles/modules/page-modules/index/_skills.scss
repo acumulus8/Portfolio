@@ -26,12 +26,15 @@
 		z-index: $layer1;
 
 		&__title-img {
-			width: 100%;
+			display: block;
+			width: 90%;
+			margin: 0 auto;
 			height: auto;
 			opacity: 1;
 
 			@include screenSize(atSmall) {
 				opacity: 0.8;
+				display: inline;
 			}
 			@include screenSize(atMedium) {
 				width: 60%;
