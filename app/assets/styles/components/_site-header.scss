@@ -11,13 +11,13 @@
 
 	@include screenSize(atMedium) {
 		max-height: $siteHeaderHeight;
-		transform: scale(1.05);
+		// transform: scale(1.05);
 	}
 	@include screenSize(atMediumMid) {
-		transform: scale(1.12);
+		// transform: scale(1.12);
 	}
 	@include screenSize(ipadPro) {
-		transform: scale(1);
+		// transform: scale(1);
 	}
 
 	&__container {
@@ -85,7 +85,7 @@
 
 		@include screenSize(atSmall) {
 			right: 6%;
-			transform: scale(1.5);
+			// transform: scale(1.5);
 		}
 		@include screenSize(atSmallMid) {
 			display: none;
