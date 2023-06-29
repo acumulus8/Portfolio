@@ -14,17 +14,15 @@
 
 ## **About**
 
-> I'm a self taught developer with a passion for developing a better world through technology. I'm currently working on a few projects that I hope to share with the world soon. I'm also looking for a job in the tech industry. If you're interested in hiring me, please reach out to me at timwilburn8@gmail.com
-
-This site serves first and foremost as a portfolio for my work. It also serves as a demonstration of foundational web development skills, advanced styling, project architecture, and Object Oriented Programming demonstrated with JavaScript.
+> I'm a self taught developer with a passion for developing a better Web. This site serves first and foremost as a portfolio for my work. It also serves as a demonstration of foundational web development skills, advanced styling, project architecture, Object Oriented Programming with JavaScript, and DevOps with Webpack and continuos deployment through GitHub and Netlify.
 
 ## **Technical Summary**
 
--   The site is a custom codebase compiled and built with Webpack and deployed to Netlify through continuous integration with a github repository.
+-   The site is a raw HTML, and JavaScript codebase compiled and built with Webpack and deployed to Netlify through continuous integration with this GitHub repository.
 
--   It is built with HTML, CSS, and JavaScript (JQuery being removed slowly).
+-   It is built with HTML, CSS, and JavaScript. It is a custom codebase with minimal libraries. Custom JavaScript is implemented as a learning tool, sticking to an Object Oriented feature approach but utilized functionally. Future custom implementations include lazy loading with browser fall-back support, Netlify Error handling for form submissions, and page smooth-scrolling.
 
--   The project is built with a mobile first approach. The mobile styles are defined first and then custom media queries are used to add styles for larger screens using custom mixins and variables.
+-   The project is built with a mobile-first approach. HTML structure, naming, and styling purposes are all considered through the lens of mobile browsing and strict naming and code architecture conventions (BEM and OOCSS methodology). The mobile styles are defined first, then styling for larger screens is done using custom mixins and variables nested within that code using SASS.
 
 ## **Project Structure**
 
