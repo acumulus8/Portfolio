@@ -1,7 +1,6 @@
 .secondary-nav {
 	position: relative;
-	width: 100%;
-	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 
 	@include screenSize(atSmall) {
 		width: 40%;

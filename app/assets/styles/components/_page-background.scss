@@ -1,18 +1,17 @@
 .page-background {
 	position: absolute;
 	display: inline;
-	// top: calc($siteHeaderHeight + $pageHeaderHeight);
 	width: 100%;
 	height: 100vh;
-	background: linear-gradient(180deg, $darkBlue 0%, $primaryBlue 75.33%);
+	background: linear-gradient($darkBlue 0%, 50%, $primaryBlue 100%);
+	backdrop-filter: blur(6px);
 	z-index: $layerBG;
 
 	&__sub-bg {
 		position: absolute;
 		display: inline-flex;
-		// top: calc($siteHeaderHeight + $pageHeaderHeight + 100vh);
 		width: 100%;
-		z-index: $layerBG;
 		background: $primaryBlue;
+		z-index: $layerBG;
 	}
 }

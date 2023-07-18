@@ -11,13 +11,6 @@
 
 	@include screenSize(atMedium) {
 		max-height: $siteHeaderHeight;
-		// transform: scale(1.05);
-	}
-	@include screenSize(atMediumMid) {
-		// transform: scale(1.12);
-	}
-	@include screenSize(ipadPro) {
-		// transform: scale(1);
 	}
 
 	&__container {
@@ -53,13 +46,10 @@
 			}
 
 			&-name {
-				// font-weight: $fontBold;
-				// letter-spacing: 0.2rem;
-				font-family: $headingFont;
-				font-weight: $fontBold;
+				font-family: $paragraphFont;
 				text-shadow: 1px 1px $mainGray;
 			}
-			//!do we need the below?
+			//!do we need the paragraph code below?
 			p {
 				margin: 0;
 				color: #fff;
