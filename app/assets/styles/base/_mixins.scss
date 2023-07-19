@@ -48,9 +48,17 @@
 	font-size: $fontSize36;
 	text-transform: uppercase;
 	font-weight: $fontBlack;
+	word-wrap: break-word;
+	max-width: 90%;
 
+	@include screenSize(atTiny) {
+		max-width: 100%;
+	}
+	@include screenSize(atSmall) {
+		max-width: 100%;
+	}
 	@include screenSize(atMedium) {
-		margin: 6rem 0 3rem 25%;
+		// margin: 6rem 0 3rem 25%;
 	}
 }
 

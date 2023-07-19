@@ -45,7 +45,14 @@
 	}
 
 	&__section-title {
+		z-index: $layer2;
+
 		@include sectionTitle($primaryGreenShade3);
+
+		@include screenSize(atMedium) {
+			margin-top: 5rem;
+			margin-left: 25%;
+		}
 	}
 
 	&__figure-container {
