@@ -32,11 +32,11 @@ module.exports = (env) => {
 			rules: [...loaders],
 		},
 		plugins: [
+			...htmlWebpackPlugins,
 			new MiniCssExtractPlugin(),
 			new CopyPlugin({
 				patterns: [{ from: "app/assets/images/resume-tim-wilburn.pdf", to: "assets/images" }],
 			}),
-			...htmlWebpackPlugins,
 		],
 		optimization: { minimizer: [imageMinimizerPlugin] },
 	};

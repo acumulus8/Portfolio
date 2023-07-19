@@ -2,11 +2,12 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	background: linear-gradient(180deg, #0a2463 54.17%, #2275a5 100%);
+	background: linear-gradient(180deg, $darkBlue 54.17%, $primaryBlueShade1 100%);
 	overflow: hidden;
+	padding-top: 3rem;
 
 	@include screenSize(atTiny) {
-		padding: 2.5rem 0 20rem 0;
+		padding: 2.5rem 0 4rem 0;
 	}
 	@include screenSize(atMedium) {
 		padding: 2.5rem 0 14rem 0;
@@ -24,22 +25,6 @@
 		bottom: 0;
 		right: 0;
 		z-index: $layer1;
-
-		&__title-img {
-			display: block;
-			width: 90%;
-			margin: 0 auto;
-			height: auto;
-			opacity: 1;
-
-			@include screenSize(atSmall) {
-				opacity: 0.8;
-				display: inline;
-			}
-			@include screenSize(atMedium) {
-				width: 60%;
-			}
-		}
 
 		&__img {
 			display: none;
@@ -59,10 +44,20 @@
 		}
 	}
 
+	&__section-title {
+		z-index: $layer2;
+
+		@include sectionTitle($primaryGreenShade3);
+
+		@include screenSize(atMedium) {
+			margin-top: 5rem;
+			margin-left: 25%;
+		}
+	}
+
 	&__figure-container {
 		display: grid;
 		position: relative;
-		padding-top: 5rem;
 		z-index: $layer2;
 		grid-template-areas:
 			"col2"
@@ -79,15 +74,19 @@
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas: "col1 col2 col3 col4";
 			grid-column-gap: 1em;
-			margin-top: 8%;
+			// padding-top: 3rem;
 		}
 	}
 
 	&__figure {
-		margin-bottom: 3rem;
+		margin-bottom: 1.5rem;
+
+		@include screenSize(atMedium) {
+			margin: 0;
+		}
+
 		&:nth-child(2) {
 			grid-area: col2;
-			margin-top: 3rem;
 
 			@include screenSize(atSmall) {
 				margin-top: 0;
@@ -101,20 +100,15 @@
 			margin-bottom: 0;
 		}
 
-		@include screenSize(atMedium) {
-			margin: 0;
-		}
-
 		h2 {
-			font-family: $headingFont;
-			// font-weight: $fontBold;
+			font-family: $paragraphFont;
+			font-weight: normal;
 			font-size: 1.1rem;
 			color: $primaryGreenShade2;
 		}
 
 		figcaption {
 			padding: 0.5rem 0.5rem 0 0;
-			// font-size: 1.3rem;
 			color: $primaryTextLight;
 		}
 	}

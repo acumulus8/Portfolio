@@ -42,7 +42,7 @@
 			img {
 				width: 100%;
 				height: 100%;
-				opacity: 0.5;
+				opacity: 0.25;
 			}
 
 			@include screenSize(atMedium) {
@@ -63,21 +63,21 @@
 		align-items: center;
 		flex-direction: column;
 		position: absolute;
-		top: 18%;
+		top: 12%;
 		text-shadow: 1px 1px 5px $mainGray;
 		z-index: $layer2;
 
-		@include screenSize(atSmall) {
-			top: 25%;
-		}
-
 		@include screenSize(atSmallMid) {
-			top: 29%;
+			top: 16%;
 		}
 
 		@include screenSize(atMedium) {
 			flex-direction: row;
-			top: 32%;
+			top: 24%;
+		}
+
+		@include screenSize(atLarge) {
+			top: 30%;
 		}
 
 		&__img {
@@ -141,7 +141,7 @@
 
 			@include screenSize(atMedium) {
 				width: 60%;
-				padding-left: 5rem;
+				padding-left: 3rem;
 				display: block;
 			}
 
@@ -154,12 +154,15 @@
 				@include screenSize(atSmall) {
 					font-size: 1.5rem;
 				}
+				@include screenSize(atMedium) {
+					font-size: 2rem;
+				}
 			}
 
 			p {
 				width: 90%;
 				text-align: center;
-				font-size: 1.1rem;
+				font-size: 1rem;
 				color: $primaryTextLight;
 				text-shadow: 1px 1px 5px $mainGray;
 
@@ -175,9 +178,6 @@
 					font-size: 1.4rem;
 					text-align: left;
 				}
-			}
-			&__button {
-				padding: 1rem 3.5rem;
 			}
 		}
 	}

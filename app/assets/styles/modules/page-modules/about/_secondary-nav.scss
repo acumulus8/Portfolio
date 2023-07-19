@@ -1,11 +1,15 @@
 .secondary-nav {
 	position: relative;
+	padding: 1.5rem 0;
 	width: 100%;
-	padding-top: 1.5rem;
 
-	@include screenSize(atSmall) {
-		width: 40%;
-	}
+	// @include screenSize(atSmall) {
+	// 	width: 40%;
+	// }
+
+	// @include screenSize(atMedium) {
+	// 	width: 100%;
+	// }
 
 	ul {
 		height: 100%;
@@ -19,23 +23,15 @@
 		border-radius: 26px;
 
 		li {
-			font-size: 1rem;
+			font-size: $fontSize14;
 			text-align: center;
 
 			@include screenSize(atSmall) {
-				font-size: 1rem;
-			}
-
-			@include screenSize(atMedium) {
-				// margin: 0;
+				font-size: $fontSize16;
 			}
 
 			&:nth-child(2) {
 				display: none;
-
-				/* @include screenSize(atSmall) {
-                    margin: 0 5em;
-                } */
 
 				@include screenSize(atMedium) {
 					display: block;

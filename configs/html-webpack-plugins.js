@@ -9,7 +9,8 @@ module.exports = [
 		path: path.resolve(__dirname, "./app"),
 		filename: "index.html",
 		template: "./app/index.html",
-		scriptLoading: "module",
+		scriptLoading: "defer",
+		minify: true,
 	}),
 	new HtmlWebpackPlugin({
 		title: "Tim Wilburn: Developer",
@@ -17,7 +18,8 @@ module.exports = [
 		path: path.resolve(__dirname, "./app"),
 		filename: "about.html",
 		template: "./app/about.html",
-		scriptLoading: "module",
+		scriptLoading: "defer",
+		minify: true,
 	}),
 	new HtmlWebpackPlugin({
 		title: "Tim Wilburn: Developer",
@@ -25,7 +27,7 @@ module.exports = [
 		path: path.resolve(__dirname, "./app"),
 		filename: "contact.html",
 		template: "./app/contact.html",
-		scriptLoading: "module",
+		scriptLoading: "defer",
 		minify: {
 			removeRedundantAttributes: false,
 		},
@@ -36,7 +38,8 @@ module.exports = [
 		path: path.resolve(__dirname, "./app"),
 		filename: "portfolio.html",
 		template: "./app/portfolio.html",
-		scriptLoading: "module",
+		scriptLoading: "defer",
+		minify: true,
 	}),
 	new HtmlWebpackPlugin({
 		title: "Tim Wilburn: Developer",
@@ -44,6 +47,7 @@ module.exports = [
 		path: path.resolve(__dirname, "./app"),
 		filename: "thankyou.html",
 		template: "./app/thankyou.html",
-		scriptLoading: "module",
+		scriptLoading: "defer",
+		minify: true,
 	}),
 ];

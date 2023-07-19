@@ -9,21 +9,11 @@
 
 	h2 {
 		margin: 0 0 1rem 0;
-		color: $primaryGreen;
-		font-size: 1.2rem;
-
-		@include screenSize(atMedium) {
-			font-size: 2rem;
-		}
-	}
-
-	h1 {
-		margin-top: 0;
-		line-height: 1;
+		font-size: $fontSize48;
 		color: $darkBlue;
 	}
 
-	&__button-container {
-		text-align: center;
+	p {
+		color: $darkBlue;
 	}
 }

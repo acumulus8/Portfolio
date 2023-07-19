@@ -3,12 +3,13 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 3rem 0;
+	padding: 3rem 1rem;
 	color: $primaryTextLight;
 	background-color: $darkBlue;
 
 	&__text-container {
 		padding: 0 0 2rem 0;
+		text-align: center;
 	}
 
 	&__icon-container {

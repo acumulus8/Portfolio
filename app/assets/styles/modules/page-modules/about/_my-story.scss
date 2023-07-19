@@ -54,5 +54,9 @@
 		grid-area: picture;
 		padding: 0 1rem 1rem 1rem;
 		max-height: 400px;
+
+		img {
+			max-height: 100%;
+		}
 	}
 }

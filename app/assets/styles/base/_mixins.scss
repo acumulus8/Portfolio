@@ -1,72 +1,124 @@
 @mixin screenSize($size) {
-    $atTiny: "max-width: 340px";
-    $atSmall: "min-width: 570px";
-    $atSmallMid: "min-width: 960px";
-    $atMedium: "min-width: 1010px";
-    $atMediumMid: "min-width: 1150px";
-    $atLarge: "min-width: 1600px";
-    $ipad: "min-height: 1100";
-    $ipadPro: "min-height: 1366px";
+	$atTiny: "max-width: 340px";
+	$atSmall: "min-width: 570px";
+	$atSmallMid: "min-width: 960px";
+	$atMedium: "min-width: 1010px";
+	$atMediumMid: "min-width: 1150px";
+	$atLarge: "min-width: 1600px";
+	$ipad: "min-height: 1100";
+	$ipadPro: "min-height: 1366px";
 
-    @if $size == atSmall {
-        @media ($atSmall) {@content;}
-    } 
-    @else if $size == atSmallMid {
-        @media ($atSmallMid) {@content;}
-    }
-    @else if $size == atMedium {
-        @media ($atMedium) {@content;}
-    }
-    @else if $size == atMediumMid {
-        @media ($atMediumMid) {@content;}
-    }
-    @else if $size == atLarge {
-        @media ($atLarge) {@content;}
-    }
-    @else if $size == atTiny {
-        @media ($atTiny) {@content;}
-    }
-    @else if $size == ipad {
-        @media ($ipad) {@content;}
-    }
-    @else if $size == ipadPro {
-        @media ($ipadPro) {@content;}
-    }
+	@if $size == atTiny {
+		@media ($atTiny) {
+			@content;
+		}
+	} @else if $size == atSmall {
+		@media ($atSmall) {
+			@content;
+		}
+	} @else if $size == atSmallMid {
+		@media ($atSmallMid) {
+			@content;
+		}
+	} @else if $size == atMedium {
+		@media ($atMedium) {
+			@content;
+		}
+	} @else if $size == atMediumMid {
+		@media ($atMediumMid) {
+			@content;
+		}
+	} @else if $size == atLarge {
+		@media ($atLarge) {
+			@content;
+		}
+	} @else if $size == ipad {
+		@media ($ipad) {
+			@content;
+		}
+	} @else if $size == ipadPro {
+		@media ($ipadPro) {
+			@content;
+		}
+	}
+}
+
+@mixin sectionTitle($color) {
+	color: $color;
+	font-size: $fontSize36;
+	text-transform: uppercase;
+	font-weight: $fontBlack;
+	word-wrap: break-word;
+	max-width: 90%;
+
+	@include screenSize(atTiny) {
+		max-width: 100%;
+	}
+	@include screenSize(atSmall) {
+		max-width: 100%;
+	}
+	@include screenSize(atMedium) {
+		// margin: 6rem 0 3rem 25%;
+	}
+}
+
+@mixin elementRectangleShade($color, $direction) {
+	background-color: $color;
+	content: "";
+	position: absolute;
+	z-index: $layer1;
+	background: $primaryBlueShade2;
+	width: 100%;
+	height: 100%;
+	top: 10px;
+
+	@if $direction == left {
+		left: 15px;
+		right: auto;
+	} @else if $direction == right {
+		right: 15px;
+		left: auto;
+	}
+
+	// @include screenSize(atMedium) {
+	// 	top: 10px;
+	// 	right: 15px;
+	// }
 }
 
 @mixin parallaxEffect {
-    transform: translateZ(-1px);
-    perspective: 1px;
-    overflow-x: hidden;
-    overflow-y: auto;
+	transform: translateZ(-1px);
+	perspective: 1px;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 @mixin heading-border($color) {
-    border-left: .6rem solid $color;
-    border-bottom: .6rem solid $color;
+	border-left: 0.6rem solid $color;
+	border-bottom: 0.6rem solid $color;
 
-    @include screenSize(atSmall) {
-        border-left: 1rem solid $color;
-        border-bottom: 1rem solid $color;
-    }
+	@include screenSize(atSmall) {
+		border-left: 1rem solid $color;
+		border-bottom: 1rem solid $color;
+	}
 
-    @include screenSize(atMedium) {
-        border-left: 1rem solid $color;
-        border-bottom: 1rem solid $color;
-    }
+	@include screenSize(atMedium) {
+		border-left: 1rem solid $color;
+		border-bottom: 1rem solid $color;
+	}
 }
 
 @mixin heading-padding($bottom) {
-    padding-left: 10px;
-    padding-bottom: $bottom;
+	padding-left: 10px;
+	padding-bottom: $bottom;
 
-    @include screenSize(atSmall) {
-        padding-left: 20px;
-    }
+	@include screenSize(atSmall) {
+		padding-left: 20px;
+	}
 }
 
 @mixin clearFloats {
-    content: "";
-    clear: both;
-    display: table;
+	content: "";
+	clear: both;
+	display: table;
 }

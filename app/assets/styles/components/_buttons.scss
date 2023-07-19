@@ -8,41 +8,50 @@
 	cursor: pointer;
 	letter-spacing: 0.1rem;
 	font-family: $paragraphFont;
-	font-weight: $fontBold;
+	// font-weight: $fontBold;
 	transition: all 0.3s ease-out;
 
 	&:hover {
-		box-shadow: none;
-		transform: scale(1);
+		transform: scale(1.005);
+		background-color: $primaryGreenShade3;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+		border: none;
 	}
 
-	&--for-hire {
-		padding: 1rem 1.5rem;
+	&:active {
+		box-shadow: none;
+		transform: scale(1);
+		background-color: $primaryGreenShade3;
+	}
+
+	&--spacer {
+		margin: 0.5rem 0.5rem 1.5rem 0.5rem;
+	}
+
+	&--outlined {
+		transform: scale(1);
+		background-color: transparent;
+		border: 2px solid $darkBlue;
 		color: $darkBlue;
-		background-color: $primaryGreenShade2;
-		// border-radius: 2rem;
-		font-size: 1rem;
-		font-weight: $fontMedium;
-
-		@include screenSize(atSmall) {
-			font-size: 1.2rem;
-		}
-
-		a {
-			color: $primaryTextLight;
-		}
 
 		&:hover {
-			transform: scale(1.02);
-			background-color: $primaryBlueShade1;
-			box-shadow: 1px 1px 8px $lightGray;
+			transform: scale(1.04);
+			box-shadow: none;
+			background-color: transparent;
+			border: 2px solid $darkBlueShade1;
+			color: $darkBlueShade1;
 		}
 
 		&:active {
 			box-shadow: none;
 			transform: scale(1);
-			background-color: $primaryBlue;
+			background-color: transparent;
+			border: 2px solid $darkBlueShade1;
 		}
+	}
+
+	&--hero-content {
+		padding: 1rem 0;
 	}
 
 	&--about {
@@ -72,11 +81,6 @@
 			opacity: 1;
 			cursor: pointer;
 			transition: all 0.3s ease-out;
-
-			&:hover {
-				transform: scale(1.04);
-				opacity: 0.8;
-			}
 		}
 	}
 
@@ -87,10 +91,6 @@
 
 		a {
 			color: $primaryTextLight;
-		}
-
-		&:hover {
-			opacity: 0.75;
 		}
 	}
 }
