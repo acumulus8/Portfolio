@@ -31,6 +31,7 @@
 		width: 100%;
 		margin: 0 0 1rem 0;
 		order: 1;
+		position: relative;
 
 		@include screenSize(atMedium) {
 			margin: 0 0 0 5%;

@@ -2,11 +2,12 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	background: linear-gradient(180deg, #0a2463 54.17%, #2275a5 100%);
+	background: linear-gradient(180deg, $darkBlue 54.17%, $primaryBlueShade1 100%);
 	overflow: hidden;
+	padding-top: 3rem;
 
 	@include screenSize(atTiny) {
-		padding: 2.5rem 0 20rem 0;
+		padding: 2.5rem 0 4rem 0;
 	}
 	@include screenSize(atMedium) {
 		padding: 2.5rem 0 14rem 0;
@@ -44,13 +45,7 @@
 	}
 
 	&__section-title {
-		color: $primaryGreenShade2;
-		font-size: $fontSize36;
-		text-transform: uppercase;
-
-		@include screenSize(atMedium) {
-			margin: 6rem 0 3rem 25%;
-		}
+		@include sectionTitle($primaryGreenShade3);
 	}
 
 	&__figure-container {
@@ -77,10 +72,14 @@
 	}
 
 	&__figure {
-		margin-bottom: 3rem;
+		margin-bottom: 1.5rem;
+
+		@include screenSize(atMedium) {
+			margin: 0;
+		}
+
 		&:nth-child(2) {
 			grid-area: col2;
-			margin-top: 3rem;
 
 			@include screenSize(atSmall) {
 				margin-top: 0;
@@ -92,10 +91,6 @@
 		&:nth-child(4) {
 			grid-area: col4;
 			margin-bottom: 0;
-		}
-
-		@include screenSize(atMedium) {
-			margin: 0;
 		}
 
 		h2 {
