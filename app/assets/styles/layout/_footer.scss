@@ -10,11 +10,12 @@
 	&__text-container {
 		padding: 0 0 2rem 0;
 		text-align: center;
+		color: $primaryGreenShade2;
 	}
 
 	&__icon-container {
 		&__icon {
-			color: #fff;
+			color: $primaryGreenShade2;
 			transition: all 0.2s ease-out;
 
 			&:hover {

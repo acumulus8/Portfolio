@@ -6,21 +6,21 @@
 	z-index: $layer1;
 
 	&:first-child {
-		margin-top: 2rem;
+		padding-top: 4rem;
 	}
+
 	&:last-child {
 		border-bottom: none;
 		padding-bottom: 6rem;
 
-		@include screenSize(atMedium) {
-			padding-bottom: 0;
-		}
+		// @include screenSize(atMedium) {
+		// 	padding-bottom: 0;
+		// }
 	}
 
 	@include screenSize(atSmall) {
 		padding: 1rem 0;
 	}
-
 	@include screenSize(atMedium) {
 		display: flex;
 		flex-direction: row;
@@ -37,6 +37,11 @@
 			margin: 0 0 0 5%;
 			width: 50%;
 			order: 2;
+		}
+
+		img {
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+				0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
 		}
 	}
 

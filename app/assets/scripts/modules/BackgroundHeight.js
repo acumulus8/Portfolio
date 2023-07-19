@@ -10,7 +10,25 @@ class BackgroundHeight {
 		if (!window.location.href.includes("index")) {
 			this.adjustSubBackgroundHeight();
 			this.adjustBackgroundsTopOffset();
+			this.waitForImagesToLoad();
 		}
+	}
+
+	waitForImagesToLoad() {
+		const images = this.pageContent.querySelectorAll("img");
+
+		const onImageLoad = () => {
+			this.adjustSubBackgroundHeight();
+			this.adjustBackgroundsTopOffset();
+		};
+
+		images.forEach((image) => {
+			if (image.hasAttribute("height")) {
+				onImageLoad();
+			} else {
+				image.addEventListener("load", onImageLoad);
+			}
+		});
 	}
 
 	adjustSubBackgroundHeight() {
