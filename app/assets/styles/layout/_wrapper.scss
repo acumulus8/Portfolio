@@ -10,14 +10,17 @@
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+	@include screenSize(atSmallMid) {
+		max-width: 800px;
+	}
 	@include screenSize(atMedium) {
 		max-width: 1000px;
 	}
 	@include screenSize(atMediumMid) {
-		max-width: 1200px;
+		max-width: 1100px;
 	}
 	@include screenSize(atLarge) {
-		max-width: 1400px;
+		max-width: 1300px;
 	}
 
 	&--thanks {

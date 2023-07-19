@@ -14,7 +14,7 @@
 
 	@include screenSize(atSmall) {
 		height: $pageHeaderHeight;
-		margin-top: $siteHeaderHeight;
+		margin-top: calc($siteHeaderHeight - 60px) px;
 	}
 
 	&__image-container {
@@ -44,37 +44,29 @@
 			color: $primaryTextLight;
 			z-index: $layer4;
 
-			&--portfolio {
-				// @include heading-border($accentRed);
-				// @include heading-padding(10px);
-			}
-
-			&--skills {
-				// @include heading-border($primaryBlueShade2);
-				// @include heading-padding(10px);
-			}
-
-			&--about {
-				// @include heading-border($primaryGreen);
-				// @include heading-padding(0);
-			}
-
-			&--contact {
-				// @include heading-border($primaryYellow);
-				// @include heading-padding(0);
-			}
-
 			@include screenSize(atSmall) {
 				font-size: 3rem;
 			}
-
 			@include screenSize(atMedium) {
 				font-size: 4rem;
 			}
-
 			@include screenSize(atLarge) {
 				font-size: 5rem;
 			}
+		}
+	}
+
+	&__secondary-nav-container {
+		width: 100%;
+
+		@include screenSize(atSmall) {
+			width: 80%;
+		}
+		@include screenSize(atSmallMid) {
+			width: 60%;
+		}
+		@include screenSize(atMedium) {
+			width: 50%;
 		}
 	}
 }

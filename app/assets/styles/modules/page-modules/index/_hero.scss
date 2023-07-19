@@ -67,10 +67,6 @@
 		text-shadow: 1px 1px 5px $mainGray;
 		z-index: $layer2;
 
-		// @include screenSize(atSmall) {
-		// 	top: 25%;
-		// }
-
 		@include screenSize(atSmallMid) {
 			top: 16%;
 		}
@@ -158,12 +154,15 @@
 				@include screenSize(atSmall) {
 					font-size: 1.5rem;
 				}
+				@include screenSize(atMedium) {
+					font-size: 2rem;
+				}
 			}
 
 			p {
 				width: 90%;
 				text-align: center;
-				font-size: 1.1rem;
+				font-size: 1rem;
 				color: $primaryTextLight;
 				text-shadow: 1px 1px 5px $mainGray;
 
@@ -179,9 +178,6 @@
 					font-size: 1.4rem;
 					text-align: left;
 				}
-			}
-			&__button {
-				padding: 1rem 0;
 			}
 		}
 	}

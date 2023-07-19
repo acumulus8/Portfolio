@@ -6,7 +6,7 @@
 	z-index: $layer1;
 
 	&:first-child {
-		margin-top: 0;
+		margin-top: 2rem;
 	}
 	&:last-child {
 		border-bottom: none;
@@ -57,9 +57,12 @@
 	&__heading {
 		margin: 0;
 		color: $primaryGreenShade1;
+		font-weight: bold;
+		font-size: $fontSize30;
 
 		@include screenSize(atMedium) {
 			margin: 0;
+			font-size: $fontSize24;
 		}
 	}
 
@@ -79,7 +82,17 @@
 
 	&__link-container {
 		margin-top: auto;
-		width: 60% !important;
+		width: 100%;
+
+		@include screenSize(atSmall) {
+			width: 80% !important;
+		}
+		@include screenSize(atSmallMid) {
+			width: 60% !important;
+		}
+		@include screenSize(atMedium) {
+			width: 100% !important;
+		}
 	}
 
 	&__divider {
