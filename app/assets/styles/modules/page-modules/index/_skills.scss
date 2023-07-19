@@ -25,6 +25,8 @@
 		bottom: 0;
 		right: 0;
 		z-index: $layer1;
+		filter: blur(1px);
+		-webkit-filter: blur(1px);
 
 		&__img {
 			display: none;

@@ -6,6 +6,7 @@
 	background: linear-gradient($darkBlue 0%, 50%, $primaryBlue 100%);
 	backdrop-filter: blur(6px);
 	z-index: $layerBG;
+	transition: all 0.3s ease-in-out;
 
 	&__sub-bg {
 		position: absolute;
@@ -13,5 +14,6 @@
 		width: 100%;
 		background: $primaryBlue;
 		z-index: $layerBG;
+		transition: all 0.3s ease-in-out;
 	}
 }

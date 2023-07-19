@@ -82,6 +82,7 @@
 			</div>
 		</div>
 
+		<!-- <main class="page-header-spacer"> -->
 		<main>
 			<section class="page-section wrapper">
 				<article class="project">
@@ -106,12 +107,14 @@
 						</div>
 					</div>
 					<div class="project__image-container">
-						<picture>
-							<source class="lazyload" data-srcset="assets/images/tiny-house-web-app-small.png 800w" media="(max-width: 800px)" />
-							<source class="lazyload" data-srcset="assets/images/tiny-house-web-app-med.png 1250w" media="(max-width: 1000px)" />
-							<source class="lazyload" data-srcset="assets/images/tiny-house-web-app-small.png 800w" media="(min-width: 1001px)" />
-							<img class="lazyload" data-src="assets/images/tiny-house-web-app-small.png" alt="Image of the tinyhouse project." />
-						</picture>
+						<a href="https://github.com/acumulus8/tinyhouse-client" target="about_blank" id="tinyhouse">
+							<picture>
+								<source class="lazyload" data-srcset="assets/images/tiny-house-web-app-small.png 800w" media="(max-width: 800px)" />
+								<source class="lazyload" data-srcset="assets/images/tiny-house-web-app-med.png 1250w" media="(max-width: 1000px)" />
+								<source class="lazyload" data-srcset="assets/images/tiny-house-web-app-small.png 800w" media="(min-width: 1001px)" />
+								<img class="lazyload" data-src="assets/images/tiny-house-web-app-small.png" alt="Image of the tinyhouse project." />
+							</picture>
+						</a>
 					</div>
 				</article>
 
@@ -122,8 +125,8 @@
 						<h2 class="project__heading">This website!</h2>
 						<h4>Personal Development Portfolio - static website</h4>
 						<p>
-							This site serves first and foremost as a portfolio for my work. It also serves as a demonstration of foundational web
-							development skills, advanced styling, project architecture, and Object Oriented Programming demonstrated with JavaScript.
+							This site serves, first and foremost, as a portfolio for my work. It also demonstrates foundational web development
+							skills, advanced styling, project architecture, and Object Oriented Programming.
 						</p>
 						<div class="secondary-nav project__link-container">
 							<ul>
@@ -135,12 +138,14 @@
 						</div>
 					</div>
 					<div class="project__image-container">
-						<picture>
-							<source class="lazyload" data-srcset="assets/images/portfolio-small.png 800w" media="(max-width: 800px)" />
-							<source class="lazyload" data-srcset="assets/images/portfolio-med.png 1250w" media="(max-width: 1000px)" />
-							<source class="lazyload" data-srcset="assets/images/portfolio-small.png 800w" media="(min-width: 1001px)" />
-							<img class="lazyload" data-src="assets/images/portfolio-small.png" alt="Image of the personal portfolio project." />
-						</picture>
+						<a href="https://github.com/acumulus8/Portfolio" target="about_blank">
+							<picture>
+								<source class="lazyload" data-srcset="assets/images/portfolio-small.png 800w" media="(max-width: 800px)" />
+								<source class="lazyload" data-srcset="assets/images/portfolio-med.png 1250w" media="(max-width: 1000px)" />
+								<source class="lazyload" data-srcset="assets/images/portfolio-small.png 800w" media="(min-width: 1001px)" />
+								<img class="lazyload" data-src="assets/images/portfolio-small.png" alt="Image of the personal portfolio project." />
+							</picture>
+						</a>
 					</div>
 				</article>
 
@@ -148,46 +153,14 @@
 
 				<article class="project">
 					<div class="project__text">
-						<h2 class="project__heading">Clear View Escapes</h2>
-						<h4>Fictional travel business - website</h4>
-						<p>
-							This is a fully responsive and interactive single page website created using Html, SCSS, and JavaScript. The SCSS is
-							written to incorporate BEM methodology: taking advantage of reusable and scalable code. The site is built together with
-							GulpJS and Webpack, utilizing Babel to transpile modern Es6 JavaScript.
-						</p>
-						<div class="secondary-nav project__link-container">
-							<ul>
-								<li><a href="https://acumulus8.github.io/fake-travel-site/" target="about_blank">View Project</a></li>
-								<li><a href="https://github.com/acumulus8/fake-travel-site" target="about_blank" id="jammming">View Code</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="project__image-container">
-						<picture>
-							<source class="lazyload" data-srcset="assets/images/clear-view-small.png 800w" media="(max-width: 800px)" />
-							<source class="lazyload" data-srcset="assets/images/clear-view-med.png 1250w" media="(max-width: 1000px)" />
-							<source class="lazyload" data-srcset="assets/images/clear-view-small.png 800w" media="(min-width: 1001px)" />
-							<img
-								class="lazyload"
-								data-src="assets/images/clear-view-small.png"
-								alt="Image of the Clear View travel company project"
-							/>
-						</picture>
-					</div>
-				</article>
-
-				<hr class="project__divider" />
-
-				<article class="project">
-					<div class="project__text">
 						<h2 class="project__heading">Ja<strong>mmm</strong>ing</h2>
 						<h4>Spotify clone - web application</h4>
 						<p>
-							This is a single page web application built using React. The application utilizes the Spotify API and the JavaScript Fetch
-							API to allow users to login to their accounts using OAuth. The users can then search for songs, build playlists, and then
-							add them to be saved to their Spotify accounts.
+							This is a Spotify clone built with React. The application allows users to log in to their Spotify accounts, search songs
+							and assemble playlists, and save them to their accounts. This project demonstrates Object Oriented Programming,
+							asynchronous programming, and efficient error handling and UI feedback.
 							<br /><br />
-							*<em>Project not mobile responsive</em>
+							*<em>Project not yet mobile responsive</em>
 						</p>
 						<div class="secondary-nav project__link-container">
 							<ul>
@@ -197,12 +170,48 @@
 						</div>
 					</div>
 					<div class="project__image-container">
-						<picture>
-							<source class="lazyload" data-srcset="assets/images/jammming-small.png 800w" media="(max-width: 800px)" />
-							<source class="lazyload" data-srcset="assets/images/jammming-med.png 1250w" media="(max-width: 1000px)" />
-							<source class="lazyload" data-srcset="assets/images/jammming-small.png 800w" media="(min-width: 1001px)" />
-							<img class="lazyload" data-src="assets/images/jammming-small.png" alt="Image of the Jammming project." />
-						</picture>
+						<a href="https://jammming-proj.netlify.app" target="about_blank">
+							<picture>
+								<source class="lazyload" data-srcset="assets/images/jammming-small.png 800w" media="(max-width: 800px)" />
+								<source class="lazyload" data-srcset="assets/images/jammming-med.png 1250w" media="(max-width: 1000px)" />
+								<source class="lazyload" data-srcset="assets/images/jammming-small.png 800w" media="(min-width: 1001px)" />
+								<img class="lazyload" data-src="assets/images/jammming-small.png" alt="Image of the Jammming project." />
+							</picture>
+						</a>
+					</div>
+				</article>
+
+				<hr class="project__divider" />
+
+				<article class="project">
+					<div class="project__text">
+						<h2 class="project__heading">Catch Of The Day</h2>
+						<h4>Fictional Seafood Store - web application</h4>
+						<p>
+							This is a single-page CRUD stack web application built using React. This project uses React Router client-side routing,
+							PropTypes for code resiliency, CSSTransitions, and Firebase for data storage and retrieval and account authentication.<br /><br />
+							*<em>Project not mobile responsive</em>
+						</p>
+						<div class="secondary-nav project__link-container">
+							<ul>
+								<li><a href="http://catchoftheday.netlify.com" target="about_blank">View Project</a></li>
+								<li><a href="https://github.com/acumulus8/catch-of-the-day" target="about_blank" id="colmar">View Code</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="project__image-container">
+						<a href="http://catchoftheday.netlify.com" target="about_blank">
+							<picture>
+								<source class="lazyload" data-srcset="assets/images/catch-of-day-small.png" media="(max-width: 800px)" />
+								<source class="lazyload" data-srcset="assets/images/catch-of-day-med.png" media="(max-width: 1000px)" />
+								<source class="lazyload" data-srcset="assets/images/catch-of-day-small.png" media="(min-width: 1001px)" />
+								<img
+									class="lazyload"
+									data-src="assets/images/catch-of-day-small.png"
+									alt="Image of the Catch of The Day seafood restaurant project."
+								/>
+							</picture>
+						</a>
 					</div>
 				</article>
 			</section>
@@ -219,49 +228,15 @@
 				</div>
 			</section>
 
-			<section class="page-section wrapper">
-				<article class="project">
-					<div class="project__text">
-						<h2 class="project__heading">Catch Of The Day</h2>
-						<h4>Fictional Seafood Store - web application</h4>
-						<p>
-							This is a single page CRUD (Create, Read, Update, Delete) stack web application built using React. This project makes use
-							of features such as React router for page handling, prop types for resiliency, CSSTransitions, and Firebase for data
-							storage and account authentication.<br /><br />
-							*<em>Project not mobile responsive</em>
-						</p>
-						<div class="secondary-nav project__link-container">
-							<ul>
-								<li><a href="http://catchoftheday.netlify.com" target="about_blank">View Project</a></li>
-								<li><a href="https://github.com/acumulus8/catch-of-the-day" target="about_blank" id="colmar">View Code</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="project__image-container">
-						<picture>
-							<source class="lazyload" data-srcset="assets/images/catch-of-day-small.png" media="(max-width: 800px)" />
-							<source class="lazyload" data-srcset="assets/images/catch-of-day-med.png" media="(max-width: 1000px)" />
-							<source class="lazyload" data-srcset="assets/images/catch-of-day-small.png" media="(min-width: 1001px)" />
-							<img
-								class="lazyload"
-								data-src="assets/images/catch-of-day-small.png"
-								alt="Image of the Catch of The Day seafood restaurant project."
-							/>
-						</picture>
-					</div>
-				</article>
-
-				<hr class="project__divider" />
-
+			<section class="page-section page-header-spacer wrapper">
 				<article class="project">
 					<div class="project__text">
 						<h2 class="project__heading">Ravenous</h2>
 						<h4>Yelp clone - web application</h4>
 						<p>
-							This is a web application built with React. It utilizes the fetch API to retrieve data from the Yelp API. The user is able
-							to search a restaurant or style of food in any city. They can then filter these searches through 'Best Match', 'Highest
-							Rated', and 'Most Reviewed.' The results are then returned containing basic information about the restaurant as well as
-							their rating. <br /><br />
+							This web application built with React utilizes the vanilla JavaScript fetch API to interact with the open-source Yelp API.
+							Users can search for a restaurant or style of food in any city. They can filter these searches through 'Best Match,'
+							'Highest Rated,' and 'Most Reviewed.' <br /><br />
 							*<em>Project not mobile responsive</em>
 						</p>
 						<div class="secondary-nav project__link-container">
@@ -272,16 +247,52 @@
 						</div>
 					</div>
 					<div class="project__image-container">
-						<picture>
-							<source class="lazyload" data-srcset="assets/images/ravenous-small.png 800w" media="(max-width: 800px)" />
-							<source class="lazyload" data-srcset="assets/images/ravenous-med.png 1250w" media="(max-width: 1000px)" />
-							<source class="lazyload" data-srcset="assets/images/ravenous-small.png 800w" media="(min-width: 1001px)" />
-							<img
-								class="lazyload"
-								data-src="assets/images/ravenous-small.png"
-								alt="Image of the Ravenous, restaurant search project."
-							/>
-						</picture>
+						<a href="http://ravenous-tim-wilburn.surge.sh/" target="about_blank">
+							<picture>
+								<source class="lazyload" data-srcset="assets/images/ravenous-small.png 800w" media="(max-width: 800px)" />
+								<source class="lazyload" data-srcset="assets/images/ravenous-med.png 1250w" media="(max-width: 1000px)" />
+								<source class="lazyload" data-srcset="assets/images/ravenous-small.png 800w" media="(min-width: 1001px)" />
+								<img
+									class="lazyload"
+									data-src="assets/images/ravenous-small.png"
+									alt="Image of the Ravenous, restaurant search project."
+								/>
+							</picture>
+						</a>
+					</div>
+				</article>
+
+				<hr class="project__divider" />
+
+				<article class="project">
+					<div class="project__text">
+						<h2 class="project__heading">Clear View Escapes</h2>
+						<h4>Fictional travel business - website</h4>
+						<p>
+							This fully responsive and interactive single-page website was created using Html, SCSS, and JavaScript. The SCSS is
+							written to incorporate BEM methodology: taking advantage of reusable and scalable code. The site is built with GulpJS and
+							Webpack, utilizing Babel to transpile modern JavaScript.
+						</p>
+						<div class="secondary-nav project__link-container">
+							<ul>
+								<li><a href="https://acumulus8.github.io/fake-travel-site/" target="about_blank">View Project</a></li>
+								<li><a href="https://github.com/acumulus8/fake-travel-site" target="about_blank" id="jammming">View Code</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="project__image-container">
+						<a href="https://acumulus8.github.io/fake-travel-site/" target="about_blank">
+							<picture>
+								<source class="lazyload" data-srcset="assets/images/clear-view-small.png 800w" media="(max-width: 800px)" />
+								<source class="lazyload" data-srcset="assets/images/clear-view-med.png 1250w" media="(max-width: 1000px)" />
+								<source class="lazyload" data-srcset="assets/images/clear-view-small.png 800w" media="(min-width: 1001px)" />
+								<img
+									class="lazyload"
+									data-src="assets/images/clear-view-small.png"
+									alt="Image of the Clear View travel company project"
+								/>
+							</picture>
+						</a>
 					</div>
 				</article>
 
@@ -293,10 +304,10 @@
 						<h4>Interactive game - web application</h4>
 						<p>
 							The Game Of Life is a non-interactive game built using React. This game focuses on JavaScript logic. The game sets a few
-							rules: squares are first populated with color and when the game starts, squares are filled or emptied based on their
-							location to other squares. The game is scalable with multiple grid sizes and feature buttons for control over simple
-							aspects of the game. <br /><br />
-							*<em>Project not mobile responsive</em>
+							rules: cells are first populated with color, and when the game starts, squares are filled or emptied based on their
+							location to other cells. The game is scalable with multiple grid sizes and feature buttons for control over simple aspects
+							of the game. <br /><br />
+							*<em>Project not yet mobile responsive</em>
 						</p>
 						<div class="secondary-nav project__link-container">
 							<ul>
@@ -306,12 +317,14 @@
 						</div>
 					</div>
 					<div class="project__image-container">
-						<picture>
-							<source class="lazyload" data-srcset="assets/images/game-of-life-small.png 800w" media="(max-width: 800px)" />
-							<source class="lazyload" data-srcset="assets/images/game-of-life-med.png 1250w" media="(max-width: 1000px)" />
-							<source class="lazyload" data-srcset="assets/images/game-of-life-small.png 800w" media="(min-width: 1001px)" />
-							<img class="lazyload" data-src="assets/images/game-of-life-small.png" alt="Image of the Game Of Life project." />
-						</picture>
+						<a href="https://upbeat-leakey-464ff6.netlify.com/" target="about_blank">
+							<picture>
+								<source class="lazyload" data-srcset="assets/images/game-of-life-small.png 800w" media="(max-width: 800px)" />
+								<source class="lazyload" data-srcset="assets/images/game-of-life-med.png 1250w" media="(max-width: 1000px)" />
+								<source class="lazyload" data-srcset="assets/images/game-of-life-small.png 800w" media="(min-width: 1001px)" />
+								<img class="lazyload" data-src="assets/images/game-of-life-small.png" alt="Image of the Game Of Life project." />
+							</picture>
+						</a>
 					</div>
 				</article>
 			</section>
