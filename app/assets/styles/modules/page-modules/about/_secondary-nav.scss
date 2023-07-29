@@ -3,14 +3,6 @@
 	padding: 1.5rem 0;
 	width: 100%;
 
-	// @include screenSize(atSmall) {
-	// 	width: 40%;
-	// }
-
-	// @include screenSize(atMedium) {
-	// 	width: 100%;
-	// }
-
 	ul {
 		height: 100%;
 		display: flex;
@@ -31,7 +23,7 @@
 			}
 
 			&:nth-child(2) {
-				display: none;
+				// display: none;
 
 				@include screenSize(atMedium) {
 					display: block;
