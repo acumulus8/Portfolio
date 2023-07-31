@@ -57,6 +57,7 @@ function loadPortfolioPageJS() {
 			shadedArticle: allShadedArticles[i],
 		});
 		new SmoothScroll($(`#${allShowShadeButtons[i].id} a`));
+		new SmoothScroll($("#side-projects-link"));
 	}
 
 	shadeButtonGroups.forEach((group) => {
