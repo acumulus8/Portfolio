@@ -100,7 +100,7 @@
 				content: "";
 				position: absolute;
 				z-index: $layer1;
-				background: $primaryBlueShade2;
+				background: $primaryBlueShade3;
 				width: 143px;
 				height: 180px;
 				top: 10px;
@@ -147,8 +147,7 @@
 
 			h3 {
 				margin: 0;
-				font-size: 1.1rem;
-				font-weight: $fontBold;
+				font-size: 2rem;
 				color: $primaryGreenShade2;
 
 				@include screenSize(atSmall) {

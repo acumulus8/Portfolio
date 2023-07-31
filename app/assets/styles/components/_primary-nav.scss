@@ -14,8 +14,9 @@
 
 			a {
 				position: relative;
-				color: #fff;
-				letter-spacing: 0.09rem;
+				color: $primaryBlueShade4;
+				font-family: $headingFont;
+				font-size: 1.5rem;
 
 				&:hover {
 					&::before {

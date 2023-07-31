@@ -4,7 +4,6 @@
 	width: 100%;
 	top: 0;
 	z-index: $layer6;
-	// padding-top: 1.75rem;
 	box-shadow: 6px 0 10px transparent;
 	transition: all 0.5s ease-out;
 	max-height: $siteHeaderHeightMobile;
@@ -24,7 +23,9 @@
 		cursor: pointer;
 
 		a {
-			color: #fff;
+			font-family: $paragraphFont;
+			font-size: 1rem;
+			color: $primaryBlueShade4;
 		}
 
 		&__logo {
@@ -46,14 +47,14 @@
 			}
 
 			&-name {
-				font-family: $paragraphFont;
 				text-shadow: 1px 1px $mainGray;
 			}
-			//!do we need the paragraph code below?
+
 			p {
 				margin: 0;
-				color: #fff;
-				font-size: 0.8rem;
+				color: $primaryBlueShade4;
+				font-family: $paragraphFont;
+				font-size: 0.75rem;
 				text-shadow: 1px 1px $mainGray;
 				display: none;
 
@@ -111,7 +112,7 @@
 			left: 0;
 			width: 20px;
 			height: 3px;
-			background-color: white;
+			background-color: $primaryBlueShade4;
 			transform-origin: 0 100%;
 			transition: transform 0.3s ease-out;
 		}
