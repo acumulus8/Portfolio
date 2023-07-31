@@ -15,12 +15,12 @@
 		border-radius: 26px;
 
 		li {
-			font-size: $fontSize14;
+			font-size: 1.2rem;
 			text-align: center;
 
-			@include screenSize(atSmall) {
-				font-size: $fontSize16;
-			}
+			// @include screenSize(atSmall) {
+			// 	font-size: $fontSize16;
+			// }
 
 			&:nth-child(2) {
 				// display: none;
@@ -34,6 +34,7 @@
 		a {
 			position: relative;
 			color: $primaryTextLight;
+			font-family: $headingFont;
 
 			&::before {
 				content: "";

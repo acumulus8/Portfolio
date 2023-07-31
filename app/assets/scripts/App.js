@@ -37,6 +37,21 @@ function loadAboutPageJS() {
 	new ImageCarousel();
 }
 
+function loadPortfolioPageJS() {
+	new Lightbox(
+		document.getElementsByClassName("js-lightbox")[0],
+		document.getElementsByClassName("js-certs-btn")[0],
+		document.getElementsByClassName("js-x-cert")[0],
+		"lightbox--is-visible"
+	);
+	new Lightbox(
+		document.getElementsByClassName("js-resume")[0],
+		document.getElementsByClassName("js-resume-btn")[0],
+		document.getElementsByClassName("js-x-resume")[0],
+		"resume--is-visible"
+	);
+}
+
 function loadJSonUrlChange() {
 	const currentURL = window.location.href;
 	if (currentURL.includes("index")) {
@@ -44,6 +59,9 @@ function loadJSonUrlChange() {
 	}
 	if (currentURL.includes("about")) {
 		loadAboutPageJS();
+	}
+	if (currentURL.includes("portfolio")) {
+		loadPortfolioPageJS();
 	}
 	if (currentURL.includes("contact")) {
 		new FormValidate();

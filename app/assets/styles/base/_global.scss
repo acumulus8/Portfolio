@@ -17,6 +17,14 @@ html {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	overflow: auto;
+	overflow-x: hidden;
+
+	@include screenSize(atSmall) {
+		font-size: 18px;
+	}
+
 	p,
 	figcaption {
 		font-family: $paragraphFont;
@@ -30,50 +38,45 @@ body {
 	h5,
 	h6 {
 		font-family: $headingFont;
-		font-weight: $fontBold;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
 	}
-	font-size: 16px;
-	overflow: auto;
-	overflow-x: hidden;
 
-	@include screenSize(atSmall) {
-		font-size: 18px;
+	img {
+		width: 100%;
 	}
-}
 
-img {
-	width: 100%;
-}
+	a {
+		text-decoration: none;
+		font-family: $paragraphFont;
+	}
 
-a {
-	text-decoration: none;
-	font-family: $paragraphFont;
-}
+	ul {
+		list-style-type: none;
+		font-family: $paragraphFont;
+	}
 
-ul {
-	list-style-type: none;
-	font-family: $paragraphFont;
-}
+	figure {
+		margin: 0;
+	}
 
-figure {
-	margin: 0;
-}
+	input,
+	textarea,
+	label {
+		font-family: $paragraphFont;
+		color: $primaryTextLight;
+	}
 
-input,
-textarea,
-label {
-	font-family: $paragraphFont;
-	color: $primaryTextLight;
-}
+	input[type="text"],
+	textarea {
+		color: $primaryTextLight;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 
-input[type="text"],
-textarea {
-	color: $primaryTextLight;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.page-header-spacer {
-	padding-top: 4rem;
+	.page-header-spacer {
+		padding-top: 4rem;
+	}
 }
 
 .totally-hidden {
