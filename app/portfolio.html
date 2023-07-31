@@ -176,12 +176,12 @@
 					links for legal reasons)
 				</p>
 
-				<div class="project-category">
+				<div class="project-category" id="materials-lab">
 					<h2>Professional Projects</h2>
-					<hr class="project-category__divider" id="trigger" />
+					<hr class="project-category__divider" />
 				</div>
 
-				<article class="project">
+				<article class="project project--professional">
 					<div class="project__text">
 						<h3 class="project__heading">Materials Testing Online Order System</h3>
 						<h4>International Materials Testing Labrotory</h4>
@@ -246,6 +246,26 @@
 							many states of information and highly conditional and crucial information. Higher order functions and keeping a map of
 							expected results made it much easier to reuse conditional UI logic within those tables and forms.
 						</p>
+						<br />
+						<p>
+							<em>Personal Learnings:</em> Working with these clients was a slower process than usual because of the density and
+							complexity of the information involved. The initial design's auditing, analysis, and discovery portions took longer than
+							expected. Because of scheduling and traveling issues, the UX/UI interviews and design reviews were conducted with a
+							different team member each time. This made things more complex and eventually led to the discovery of some pretty deep
+							miscommunications. We don't blame the clients, so adjustments were made to meeting notes templates to include
+							who-said-what-when. The React Context API worked great in a functional paradigm, where each state context was considered a
+							feature and came with a hook ('useFeature'). This led to highly organized code and functionality that was easy to
+							understand. This project was the first time I'd conducted interviews and a complete design process, and this became a
+							great learning opportunity. I learned to communicate design needs better throughout the discussions, to ask the right
+							questions, and when something is genuinely complicated, taking the time to diagram and document the App requirements
+							became invaluable when approving designs before development could start.
+						</p>
+						<button class="button" id="show-shade-btn">
+							<a href="#materials-lab"> Show Less... </a>
+						</button>
+					</div>
+					<div class="project--professional__shade">
+						<button class="button" id="hide-shade-btn">Show More...</button>
 					</div>
 				</article>
 
@@ -545,7 +565,7 @@
 				<article class="project">
 					<div class="project__text">
 						<h3 class="project__heading">Game Of Life</h3>
-						<h4>Interactive game - web application</h4>
+						<h4>Non-Interactive game - web application</h4>
 						<p>
 							The Game Of Life is a non-interactive game built using React. This game focuses on JavaScript logic. The game sets a few
 							rules: cells are first populated with color, and when the game starts, squares are filled or emptied based on their

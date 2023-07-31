@@ -11,12 +11,15 @@ import SmoothScroll from "./modules/SmoothScroll";
 import MobileMenu from "./modules/MobileMenu";
 import Lightbox from "./modules/Lightbox";
 import BackgroundHeight from "./modules/BackgroundHeight";
+import ProjectShade from "./modules/ProjectShade";
 
 function onPageLoaded() {
 	new StickyHeader();
 	new HideHeader();
-	new MobileMenu();
 	new BackgroundHeight();
+	if (document.body.style.width < "960px") {
+		new MobileMenu();
+	}
 	loadJSonUrlChange();
 }
 
@@ -33,11 +36,34 @@ function loadAboutPageJS() {
 		document.getElementsByClassName("js-x-resume")[0],
 		"resume--is-visible"
 	);
-	new SmoothScroll($(".secondary-nav a"));
+	new SmoothScroll($("#my-story-link"));
 	new ImageCarousel();
 }
 
 function loadPortfolioPageJS() {
+	const allShadedArticles = document.querySelectorAll(".project--professional");
+	const allShades = document.querySelectorAll(".project--professional__shade");
+	console.log("allShades", allShades);
+	const allShowShadeButtons = document.querySelectorAll("#show-shade-btn");
+	const allHideShadeButtons = document.querySelectorAll("#hide-shade-btn");
+
+	let shadeButtonGroups = [];
+	for (let i = 0; i < allShades.length; i++) {
+		console.log("allShowShadeButtons[i] id", allShowShadeButtons[i].id);
+		shadeButtonGroups.push({
+			shade: allShades[i],
+			showShadeBtn: allShowShadeButtons[i],
+			hideShadeBtn: allHideShadeButtons[i],
+			shadedArticle: allShadedArticles[i],
+		});
+		new SmoothScroll($(`#${allShowShadeButtons[i].id} a`));
+	}
+
+	shadeButtonGroups.forEach((group) => {
+		console.log(group);
+		new ProjectShade(group.shade, group.showShadeBtn, group.hideShadeBtn, group.shadedArticle);
+	});
+
 	new Lightbox(
 		document.getElementsByClassName("js-lightbox")[0],
 		document.getElementsByClassName("js-certs-btn")[0],

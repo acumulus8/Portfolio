@@ -125,6 +125,51 @@
 			display: block;
 		}
 	}
+
+	#show-shade-btn {
+		margin-top: 2rem;
+		display: none;
+	}
+
+	&--professional {
+		position: relative;
+		max-height: 400px;
+		overflow: hidden;
+		margin-bottom: 3rem;
+
+		&--hidden {
+			max-height: 400px;
+			animation: 2s ease-in-out both slidein;
+		}
+		&--revealed {
+			max-height: 100%;
+			animation: 2s ease-in-out both slidein;
+		}
+
+		&__shade {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 50%;
+			background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, $primaryBlueShade2 100%);
+			backdrop-filter: blur(0.5px);
+
+			&--hidden {
+				display: none;
+			}
+			&--revealed {
+				display: flex;
+			}
+
+			button {
+				margin-top: 2rem;
+			}
+		}
+	}
 }
 
 .project-category {
