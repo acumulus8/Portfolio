@@ -17,9 +17,7 @@ function onPageLoaded() {
 	new StickyHeader();
 	new HideHeader();
 	new BackgroundHeight();
-	if (document.body.style.width < "960px") {
-		new MobileMenu();
-	}
+	new MobileMenu();
 	loadJSonUrlChange();
 }
 
