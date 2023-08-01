@@ -17,7 +17,9 @@ function onPageLoaded() {
 	new StickyHeader();
 	new HideHeader();
 	new BackgroundHeight();
-	new MobileMenu();
+	if (document.body.style.width < "960px") {
+		new MobileMenu();
+	}
 	loadJSonUrlChange();
 }
 
@@ -79,7 +81,8 @@ function loadPortfolioPageJS() {
 
 function loadJSonUrlChange() {
 	const currentURL = window.location.href;
-	if (currentURL.includes("index")) {
+	const isIndexPage = currentURL.includes("index") || currentURL.endsWith("/");
+	if (isIndexPage) {
 		new SmoothScroll($(".arrow-down-link"));
 	}
 	if (currentURL.includes("about")) {
