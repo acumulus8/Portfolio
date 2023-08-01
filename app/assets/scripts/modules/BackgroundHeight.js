@@ -43,9 +43,9 @@ class BackgroundHeight {
 		let gradientOffset = this.siteHeader.offsetHeight + this.pageHeaderHeight;
 		let subOffset = this.siteHeader.offsetHeight + this.pageHeaderHeight + this.gradientBackground.offsetHeight;
 
-		if (!!this.secondaryNav) {
-			gradientOffset += this.secondaryNav.offsetHeight;
-			subOffset += this.secondaryNav.offsetHeight;
+		if (this.secondaryNav) {
+			gradientOffset += this.secondaryNav?.offsetHeight;
+			subOffset += this.secondaryNav?.offsetHeight;
 		}
 
 		this.gradientBackground.style.top = `${gradientOffset}px`;
