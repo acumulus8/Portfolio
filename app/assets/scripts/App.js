@@ -81,7 +81,11 @@ function loadPortfolioPageJS() {
 
 function loadJSonUrlChange() {
 	const currentURL = window.location.href;
-	const isIndexPage = currentURL.includes("index") || currentURL.endsWith("/");
+	const isIndexPage =
+		currentURL.includes("index") ||
+		currentURL.endsWith("/") ||
+		currentURL.endsWith(".com") ||
+		(!currentURL.includes("about") && !currentURL.includes("portfolio") && !currentURL.includes("contact"));
 	if (isIndexPage) {
 		new SmoothScroll($(".arrow-down-link"));
 	}

@@ -32,24 +32,28 @@ class BackgroundHeight {
 	}
 
 	adjustSubBackgroundHeight() {
-		let newHeight = this.pageContent.offsetHeight - this.gradientBackground.offsetHeight;
-		if (!!this.secondaryNav) {
-			newHeight += this.secondaryNav.offsetHeight;
+		if (this.gradientBackground && this.subBackground) {
+			let newHeight = this.pageContent.offsetHeight - this.gradientBackground.offsetHeight;
+			if (!!this.secondaryNav) {
+				newHeight += this.secondaryNav.offsetHeight;
+			}
+			this.subBackground.style.height = `${newHeight}px`;
 		}
-		this.subBackground.style.height = `${newHeight}px`;
 	}
 
 	adjustBackgroundsTopOffset() {
-		let gradientOffset = this.siteHeader.offsetHeight + this.pageHeaderHeight;
-		let subOffset = this.siteHeader.offsetHeight + this.pageHeaderHeight + this.gradientBackground.offsetHeight;
+		if (this.gradientBackground && this.subBackground) {
+			let gradientOffset = this.siteHeader.offsetHeight + this.pageHeaderHeight;
+			let subOffset = this.siteHeader.offsetHeight + this.pageHeaderHeight + this.gradientBackground.offsetHeight;
 
-		if (this.secondaryNav) {
-			gradientOffset += this.secondaryNav?.offsetHeight;
-			subOffset += this.secondaryNav?.offsetHeight;
+			if (this.secondaryNav) {
+				gradientOffset += this.secondaryNav?.offsetHeight;
+				subOffset += this.secondaryNav?.offsetHeight;
+			}
+
+			this.gradientBackground.style.top = `${gradientOffset}px`;
+			this.subBackground.style.top = `${subOffset}px`;
 		}
-
-		this.gradientBackground.style.top = `${gradientOffset}px`;
-		this.subBackground.style.top = `${subOffset}px`;
 	}
 }
 
