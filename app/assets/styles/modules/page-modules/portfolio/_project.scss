@@ -112,6 +112,10 @@
 		@include screenSize(atMedium) {
 			width: 70% !important;
 		}
+
+		&--full-width {
+			width: 100% !important;
+		}
 	}
 
 	&__divider {
