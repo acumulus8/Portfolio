@@ -1,149 +1,164 @@
 .lightbox {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  transform: scale(1.4);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.6s ease-out;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -5;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.85);
+	transform: scale(1.4);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s ease-out;
 
-  &--is-visible {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-    z-index: 100;
-  }
+	&--is-visible {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+		z-index: 100;
+	}
 
-  .x {
-    position: absolute;
-    top: 6%;
-    right: 4%;
-    color: rgb(194, 194, 194);
-    transition: all 0.4s ease-out;
+	.x {
+		position: absolute;
+		top: 6%;
+		right: 4%;
+		color: rgb(194, 194, 194);
+		transition: all 0.4s ease-out;
 
-    &:hover {
-      cursor: pointer;
-      color: #fff;
-      transform: scale(1.3);
-    }
+		&:hover {
+			cursor: pointer;
+			color: #fff;
+			transform: scale(1.3);
+		}
 
-    &:active {
-      color: rgb(194, 194, 194);
-      transform: scale(1);
-    }
-  }
+		&:active {
+			color: rgb(194, 194, 194);
+			transform: scale(1);
+		}
+	}
 
-  &__img-container {
-    width: 86%;
-    height: 54%;
-    position: relative;
+	&__img-container {
+		width: 86%;
+		height: 54%;
+		position: relative;
 
-    &__image {
-      position: absolute;
-      transition: visibility 1s, opacity 2s ease-in-out;
-      
-      &--hide {
-        animation: hide 1.2s linear both;
-      }
-      &--visible {
-        animation: show 0.7s linear both;
-       }
+		&__image {
+			position: absolute;
+			transition: visibility 1s, opacity 2s ease-in-out;
+			max-height: 100%;
+			top: 50%;
+			transform: translateY(-50%);
 
-       @keyframes hide {
-         0% { opacity: 1 }
-         50% { opacity: 0.3 }
-         100% { opacity: 0 }
-       }
-       
-       @keyframes show {
-         0% { opacity: 0 }
-         50% { opacity: 0 }
-         100% { opacity: 1 }
-       }
-    }
+			&--hide {
+				animation: hide 1.2s linear both;
+			}
+			&--visible {
+				animation: show 0.7s linear both;
+			}
 
-    &__dot-box {
-      position: absolute;
-      left: 50%;
-      bottom: -35px;
-      transform: translateX(-50%);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 120px;
+			@keyframes hide {
+				0% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0.3;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
 
-      &__dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: rgb(175, 175, 175);
-        transition: all 0.9s linear;
+			@keyframes show {
+				0% {
+					opacity: 0;
+				}
+				50% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		}
 
-        &--active {
-          background: #fff;
-          width: 15px;
-          height: 15px;
-        }
-      }
-    }
+		&__dot-box {
+			position: absolute;
+			left: 50%;
+			bottom: -35px;
+			transform: translateX(-50%);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 180px;
 
-    @include screenSize(atSmallMid) {
-      width: 65%;
-      height: 85%;
-    }
+			&__dot {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: rgb(175, 175, 175);
+				transition: all 0.9s linear;
 
-    &__prev,
-    &__next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      transform: rotate(45deg);
-      width: 20px;
-      height: 20px;
-      border: 4px solid #fff;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.4s ease-out;
+				&--active {
+					background: #fff;
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
 
-      @include screenSize(atSmallMid) {
-        width: 30px;
-        height: 30px;
-      }
+		@include screenSize(atSmallMid) {
+			width: 65%;
+			height: 85%;
+		}
 
-      &:hover {
-        transform: rotate(45deg) scale(1.3);
-      }
+		&__prev,
+		&__next {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			transform: rotate(45deg);
+			width: 20px;
+			height: 20px;
+			border: 4px solid #fff;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: all 0.4s ease-out;
 
-      &:active {
-        transform: rotate(45deg) scale(1);
-      }
-    }
+			@include screenSize(atSmallMid) {
+				width: 30px;
+				height: 30px;
+			}
 
-    &__prev {
-      left: -18px;
-      border-top: none;
-      border-right: none;
+			&:hover {
+				transform: rotate(45deg) scale(1.3);
+			}
 
-      @include screenSize(atSmallMid) {
-        left: -40px;
-      }
-    }
+			&:active {
+				transform: rotate(45deg) scale(1);
+			}
+		}
 
-    &__next {
-      right: -18px;
-      border-bottom: none;
-      border-left: none;
+		&__prev {
+			left: -18px;
+			border-top: none;
+			border-right: none;
 
-      @include screenSize(atSmallMid) {
-        right: -40px;
-      }
-    }
-  }
+			@include screenSize(atSmallMid) {
+				left: -40px;
+			}
+		}
+
+		&__next {
+			right: -18px;
+			border-bottom: none;
+			border-left: none;
+
+			@include screenSize(atSmallMid) {
+				right: -40px;
+			}
+		}
+	}
 }

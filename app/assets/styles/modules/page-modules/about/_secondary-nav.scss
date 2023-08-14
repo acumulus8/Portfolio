@@ -18,13 +18,7 @@
 			font-size: 1.2rem;
 			text-align: center;
 
-			// @include screenSize(atSmall) {
-			// 	font-size: $fontSize16;
-			// }
-
 			&:nth-child(2) {
-				// display: none;
-
 				@include screenSize(atMedium) {
 					display: block;
 				}
