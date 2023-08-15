@@ -263,6 +263,140 @@
 
 				<article class="project project--professional">
 					<div class="project__text">
+						<h3 class="project__heading">Mobile Point of Sale System with React Native and Stripe</h3>
+						<h4>Regional Franchised Salon Business Project</h4>
+						<p>
+							<em>Project Description:</em> My employer and I had already rebuilt a new front-to-back business system for this
+							long-term, ongoing Client. They planned to improve their salon Employee experience by providing an in-store Point of Sale
+							system. This would include payment transaction mobile apps for iOS and Android and physical card readers to connect to
+							their phones and interface with the app. The previous business model included Employees handling their own payment
+							transactions, and this new system would be optional and included a small fee from which the business profited. This was a
+							phase two feature addition as part of a more significant rebranding and redesign of the entire business and marketing push
+							to increase Employee and Customer engagement. We were ahead of schedule at every stage and had a faster beta testing
+							period than we thought. Ultimately the feature was never launched due to the global pandemic in 2019 and the Client being
+							forced to make hard business decisions.
+						</p>
+						<br />
+						<p>
+							<em>System Requirements:</em> The app would be responsive on iOS and Android, supporting up to 5 and 4 versions,
+							respectively. The app would use React Native, Stripe API for account creation, management, transaction processing, and
+							Stripe client-side components to handle client credentials. The app would work with the phone's Location and Bluetooth
+							Devices API to detect, pair to, and monitor a Bluetooth card reader. The app would automatically detect and pair to the
+							card reader whenever it was near, making it an almost frictionless onboarding process as long as the device was powered on
+							and the app was open. This system was intended to integrate into the existing business management web app, and stylists
+							could opt-in to the service. The app would always be available on the App Stores, so a verification was implemented to
+							guide the user from the web app to Stripe for account creation and back to the web app for an interim waiting period while
+							Stripe verifies bank account credentials. This could be expected to take anywhere from 5 minutes to 24 hours, so a
+							notification system running on a NodeJS server was implemented to email the user about their verification status to be
+							redirected back to the web app to view their Stripe account page and a link to their appropriate mobile App Store listing.
+							Once the app was installed, the user was verified in our system as being 'Stripe account ready' and logged in. They could
+							then view all their upcoming and past appointments as an invoice. They could initiate a payment from the invoice based on
+							the booking fee for the Client, the appointment service price, taxes, and a small processing fee. The user experience was
+							then intended to be passed over to the Client to input their card details, input tip amount, and confirm their email for a
+							receipt. An employee could use the app to view a complete history of transactions in the mobile app and web app and be
+							linked back to their Stripe page for more in-depth analytics and account management. There was already a Report system for
+							employee and admin business analytics in the web app, so a new Report was added to monitor transaction statistics, income
+							earned, and fees paid, and transaction analytics by employees, locations, and regions added to the administration side web
+							app.
+						</p>
+						<br />
+						<p>
+							<em>Technical Requirements: </em> All documentation, design, and prototyping were done with Figma. The mobile app was
+							built with the following:
+						</p>
+						<ul>
+							<li>- React Native</li>
+							<li>- Metro and Expo for building and testing</li>
+							<li>- TypeScript</li>
+							<li>- React Context for all state and physical device state management</li>
+							<li>- Stripe API</li>
+							<li>- Material UI and Axios for React Native</li>
+							<li>- NodeJS server interfacing with Stripe and an existing proprietary SQL database.</li>
+							<li>- Sentry for error tracking, beta testing feedback, and user feedback at production.</li>
+							<li>- Google Analytics 4</li>
+						</ul>
+						<p>Changes for system integration to the Employee and Admin web apps, as well as the public-facing site involved:</p>
+						<ul>
+							<li>- React</li>
+							<li>- Redux and Redux Saga</li>
+							<li>- Material UI</li>
+							<li>- Axios</li>
+							<li>- AWS Cognito and Amplify for user pools, permissions, and authentication</li>
+							<li>- A current NodeJS server and proprietary SQL Database</li>
+						</ul>
+						<p>And public-facing changes included:</p>
+						<ul>
+							<li>- A WordPress site with:</li>
+							<ul>
+								<li>- account management system</li>
+								<li>- booking and down payment system</li>
+								<li>- locations and stylist search system</li>
+								<li>- Stylist business and services presentation</li>
+							</ul>
+							<li>- Figma for asset design and site design updates</li>
+						</ul>
+					</div>
+
+					<div class="project__image-container project__image-container--no-image">
+						<br />
+						<p>
+							<em>Role and Responsibilities:</em> I was to document all business requirements into technical/system requirements, design
+							UI's for a brand new Mobile App using Material UI, develop all React and React Native user interfaces, document and
+							implement custom error tracking using the Sentry API, and document and implement the Mobile Payment App analytics events
+							tracking and monthly usage reports. The project leads had already met with the Client, who had worked out all legal,
+							business, and terms-based requirements. I worked with one of the leads to discuss their discovery; I compiled the initial
+							Design and Tech requirements documentation and went through a round of approval and editing. This was followed by
+							diagramming the individual parts of the project:
+						</p>
+						<ul>
+							<li>- The Employee Stripe onboarding flow</li>
+							<li>- The Mobile App onboarding and transaction flows</li>
+							<li>- The Client and Employee (Stylist) notification flows</li>
+							<li>- The Customer booking and payment flow</li>
+						</ul>
+						<p>As well as high-level views of the project:</p>
+						<ul>
+							<li>- The in-store interaction between the Client and the Employee (Stylist)</li>
+							<li>
+								- The Employee experience flow (all onboarding to Stripe account verification and mobile app access, including
+								integration between the web app and mobile app and Stripe)
+							</li>
+							<li>
+								- The entire Customer/Client experience, from booking online to receiving an emailed receipt at the end of the
+								appointment.
+							</li>
+						</ul>
+						<p>
+							After the flows were approved, and project leads, designers, and developers were on the same page, design began on the
+							Mobile App page layout and UI, followed by the web app pages and UI updates. Once initial UI designs were approved, I
+							started working on the React Native setup. I set up the Expo project, built the navigator, set up the global state and
+							transaction state, and built the entire UI. My senior developer handled the server-side programming, front-end Bluetooth
+							code, and state management for interfacing with the physical card reader. When the mobile app was finished and tested, I
+							built the UI and Stripe integration with the Employee web app. At the same time, my senior worked on the server-side code
+							to support the new transaction analytics reports for the Employee and Admin web apps. Once all UI was complete and tested
+							manually, I began designing each App Store's marketing assets and icons. The business already had a logo, so this payment
+							app used the same mark with a different color and a small credit card icon overlay. Next came UI design for public-facing
+							changes to the WordPress site. Once completed, the project lead updated the booking process and any other UI changes.
+							While the finishing touches were taking place on the back end and WordPress systems, I could write articles and record
+							screencast tutorial videos to be released for product launch. We were then able to test the product starting with the
+							clients, then a small group of Employee volunteers to beta test the system. I implemented a beta bug reporting system
+							using Sentry for custom messaging and labeling in our Sentry project.
+						</p>
+						<br />
+						<button class="button" id="show-shade-btn">
+							<a href="#materials-lab"> Show Less... </a>
+						</button>
+					</div>
+
+					<div class="project--professional__shade">
+						<button class="button" id="hide-shade-btn">Show More...</button>
+					</div>
+				</article>
+
+				<hr class="project__divider" />
+
+				<article class="project project--professional">
+					<div class="project__text">
 						<h3 class="project__heading">Materials Testing Online Ordering System</h3>
 						<h4>International Materials Testing Laboratory</h4>
 						<p>
