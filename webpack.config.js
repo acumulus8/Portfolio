@@ -12,7 +12,8 @@ const loaders = getLoaders(postCSSLoaders, MiniCssExtractPlugin);
 const imageMinimizerPlugin = getImageMinizerPluginConfig(ImageMinimizerPlugin);
 
 module.exports = (env) => {
-	const mode = env.mode;
+	const isProduction = env.mode === "production";
+	const imagesPath = "assets/images";
 
 	let config = {
 		entry: {
@@ -21,7 +22,7 @@ module.exports = (env) => {
 		output: {
 			filename: "[name].js",
 			path: path.resolve(__dirname, "dist"),
-			assetModuleFilename: "assets/images/[name][ext]",
+			assetModuleFilename: `${imagesPath}/[name][ext]`,
 		},
 		module: {
 			rules: [...loaders],
@@ -30,24 +31,24 @@ module.exports = (env) => {
 			...htmlWebpackPlugins,
 			new MiniCssExtractPlugin(),
 			new CopyPlugin({
-				patterns: [{ from: "app/assets/images/resume-tim-wilburn.pdf", to: "assets/images" }],
+				patterns: [{ from: `app/${imagesPath}/resume-tim-wilburn.pdf`, to: imagesPath }],
 			}),
 		],
 		optimization: { minimizer: [imageMinimizerPlugin] },
 	};
 
-	if (mode === "development") {
+	if (isProduction) {
+		console.log("!@#!@!@!@!@! PRODUCTION MODE !@!@!@!@");
+		config.mode = "production";
+		config.plugins.push(new CleanWebpackPlugin({ path: path.resolve(__dirname, "./dist") }));
+	} else {
 		console.log("!@#!@!@!@!@! DEV MODE !@!@!@!@");
+		config.mode = "development";
 		config.devServer = {
 			hot: true,
 			port: 3000,
 		};
-		config.mode = mode;
 	}
-	if (mode === "production") {
-		console.log("!@#!@!@!@!@! PRODUCTION MODE !@!@!@!@");
-		config.plugins.push(new CleanWebpackPlugin({ path: path.resolve(__dirname, "./dist") }));
-		config.mode = mode;
-	}
+
 	return config;
 };
