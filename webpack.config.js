@@ -11,11 +11,6 @@ const postCSSLoaders = [require.resolve("postcss-simple-vars"), require.resolve(
 const loaders = getLoaders(postCSSLoaders, MiniCssExtractPlugin);
 const imageMinimizerPlugin = getImageMinizerPluginConfig(ImageMinimizerPlugin);
 
-const sourceMapDevToolOptions = {
-	filename: "[file].js.map",
-	exclude: ["Vendor.js"],
-};
-
 module.exports = (env) => {
 	const mode = env.mode;
 
@@ -44,7 +39,6 @@ module.exports = (env) => {
 	if (mode === "development") {
 		console.log("!@#!@!@!@!@! DEV MODE !@!@!@!@");
 		config.devServer = {
-			// compress: true,
 			hot: true,
 			port: 3000,
 		};
