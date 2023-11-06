@@ -47,6 +47,8 @@ function loadPortfolioPageJS() {
 	const allShowShadeButtons = document.querySelectorAll("#show-shade-btn");
 	const allHideShadeButtons = document.querySelectorAll("#hide-shade-btn");
 
+	new SmoothScroll(document.getElementById("side-projects-link"));
+
 	let shadeButtonGroups = [];
 	for (let i = 0; i < allShades.length; i++) {
 		shadeButtonGroups.push({
@@ -56,7 +58,6 @@ function loadPortfolioPageJS() {
 			shadedArticle: allShadedArticles[i],
 		});
 		new SmoothScroll(document.getElementById(`${allShowShadeButtons[i].getAttribute("id")}`));
-		new SmoothScroll(document.getElementById("side-projects-link"));
 	}
 
 	shadeButtonGroups.forEach((group) => {

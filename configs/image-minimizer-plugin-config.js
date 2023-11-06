@@ -10,7 +10,6 @@ module.exports = (ImageMinimizerPlugin, isProduction) => {
 					["imagemin-pngquant", { quality: [0.65, 0.9] }],
 					["imagemin-mozjpeg", { quality: 65, progressive: true }],
 					["imagemin-svgo"],
-					["imagemin-gifsicle"],
 				],
 			},
 		},

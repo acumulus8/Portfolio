@@ -41,7 +41,7 @@
 			margin: 0;
 			font-size: 2.6rem;
 			text-shadow: 1px 1px $mainGray;
-			color: $primaryBlueShade4;
+			color: $primaryWhite;
 			z-index: $layer4;
 
 			@include screenSize(atSmall) {

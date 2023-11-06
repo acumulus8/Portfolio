@@ -7,7 +7,8 @@ class SmoothScroll {
 	addSmoothScroll() {
 		this.link.addEventListener("click", (event) => {
 			event.preventDefault();
-			const targetId = this.link.getAttribute("href");
+			const targetId = this.link.dataset.href;
+			console.log("_________targetId", targetId);
 			const targetElement = document.querySelector(targetId);
 			targetElement.scrollIntoView({ behavior: "smooth" });
 		});
