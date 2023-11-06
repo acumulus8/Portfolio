@@ -6,7 +6,6 @@ class StickyHeader {
 		this.siteHeader = document.getElementsByClassName("site-header")[0];
 		this.headerTriggerElement = document.getElementById("hero__title");
 		this.arrowDown = document.querySelector(".arrow-down");
-		console.log("arrowDown", this.arrowDown);
 		this.createColorWaypoint();
 	}
 
