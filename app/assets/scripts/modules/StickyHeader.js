@@ -3,9 +3,9 @@ import waypoints from "../../../../node_modules/waypoints/lib/noframework.waypoi
 
 class StickyHeader {
 	constructor() {
-		this.siteHeader = $(".site-header");
+		this.siteHeader = document.getElementsByClassName("site-header")[0];
 		this.headerTriggerElement = document.getElementById("hero__title");
-		this.arrowDown = $(".arrow-down");
+		this.arrowDown = document.querySelector(".arrow-down");
 		this.createColorWaypoint();
 	}
 
@@ -14,12 +14,14 @@ class StickyHeader {
 		new Waypoint({
 			element: document.getElementById("hero__title"),
 			handler: function (direction) {
-				if (direction == "down") {
-					that.siteHeader.addClass("site-header--fill-in-color");
-					that.arrowDown.addClass("arrow-down--fade");
-				} else {
-					that.siteHeader.removeClass("site-header--fill-in-color");
-					that.arrowDown.removeClass("arrow-down--fade");
+				that.siteHeader.classList.add("site-header--fill-in-color");
+				if (that.siteHeader.classList.contains("site-header--transparent")) {
+					if (direction == "down") {
+						that.arrowDown.classList.add("arrow-down--fade");
+					} else {
+						that.siteHeader.classList.remove("site-header--fill-in-color");
+						that.arrowDown.classList.remove("arrow-down--fade");
+					}
 				}
 			},
 			offset: "18%",

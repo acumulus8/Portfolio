@@ -9,10 +9,10 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 const postCSSLoaders = [require.resolve("postcss-simple-vars"), require.resolve("postcss-nested"), require.resolve("autoprefixer")];
 const loaders = getLoaders(postCSSLoaders, MiniCssExtractPlugin);
-const imageMinimizerPlugin = getImageMinizerPluginConfig(ImageMinimizerPlugin);
 
 module.exports = (env) => {
 	const isProduction = env.mode === "production";
+	const imageMinimizerPlugin = getImageMinizerPluginConfig(ImageMinimizerPlugin, isProduction);
 	const imagesPath = "assets/images";
 
 	let config = {
@@ -29,12 +29,13 @@ module.exports = (env) => {
 		},
 		plugins: [
 			...htmlWebpackPlugins,
+			imageMinimizerPlugin,
 			new MiniCssExtractPlugin(),
 			new CopyPlugin({
 				patterns: [{ from: `app/${imagesPath}/resume-tim-wilburn.pdf`, to: imagesPath }],
 			}),
 		],
-		optimization: { minimizer: [imageMinimizerPlugin] },
+		// optimization: { minimizer: [imageMinimizerPlugin] },
 	};
 
 	if (isProduction) {

@@ -1,6 +1,3 @@
-import $ from "jquery";
-import smoothScroll from "jquery-smooth-scroll";
-
 class SmoothScroll {
 	constructor(link) {
 		this.link = link;
@@ -8,7 +5,12 @@ class SmoothScroll {
 	}
 
 	addSmoothScroll() {
-		this.link.smoothScroll();
+		this.link.addEventListener("click", (event) => {
+			event.preventDefault();
+			const targetId = this.link.dataset.href;
+			const targetElement = document.querySelector(targetId);
+			targetElement.scrollIntoView({ behavior: "smooth" });
+		});
 	}
 }
 
