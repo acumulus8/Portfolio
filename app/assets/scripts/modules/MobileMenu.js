@@ -10,8 +10,8 @@ class MobileMenu {
 	}
 
 	toggleMenu() {
-		this.mobileMenu.toggleClass("mobile-menu--is-visible");
-		this.menuIcon.toggleClass("site-header__menu-icon--close-x");
+		this.mobileMenu.classList.toggle("mobile-menu--is-visible");
+		this.menuIcon.classList.toggle("site-header__menu-icon--close-x");
 	}
 }
 
