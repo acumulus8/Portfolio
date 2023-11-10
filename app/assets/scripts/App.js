@@ -57,7 +57,6 @@ function loadPortfolioPageJS() {
 			hideShadeBtn: allHideShadeButtons[i],
 			shadedArticle: allShadedArticles[i],
 		});
-		console.log("_______SHADE ELEMENT: ", allShowShadeButtons[i]);
 		new SmoothScroll(allShowShadeButtons[i]);
 		// new SmoothScroll(document.getElementById(`${allShowShadeButtons[i].getAttribute("id")}`));
 	}
