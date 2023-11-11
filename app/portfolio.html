@@ -18,54 +18,55 @@
 
 	<body>
 		<header>
-			<nav class="site-header">
+			<nav class="site-header" aria-label="Site Navigation">
 				<div class="site-header__container wrapper">
 					<div class="site-header__brand">
 						<div class="site-header__brand__logo">
-							<a href="./index.html">
-								<img src="assets/images/logo-tw.png" alt="logo" />
+							<a href="./index.html" aria-label="Home link">
+								<img src="assets/images/logo-tw.png" alt="logo" aria-label="Tim Wilburn's logo" />
 							</a>
 						</div>
 						<div class="site-header__brand__text">
-							<a class="site-header__brand__text-name" href="./index.html">Tim Wilburn</a>
-							<a href="./index.html">
+							<a class="site-header__brand__text-name" href="./index.html" aria-label="Tim Wilburn">Tim Wilburn</a>
+							<a href="./index.html" aria-label="Design and Development">
 								<p class="site-header__brand__text-quote">Design & Development</p>
 							</a>
 						</div>
 					</div>
 
-					<!-- menu icon, phone screens only-->
-					<div class="site-header__menu-icon">
+					<!-- menu icon, small screens only-->
+					<div class="site-header__menu-icon" role="button" aria-label="Mobile Menu" aria-expanded="false" aria-controls="mobile-menu">
 						<div class="site-header__menu-icon__middle"></div>
 					</div>
 
-					<div class="mobile-menu">
-						<ul class="mobile-menu__links">
+					<!-- Mobile menu -->
+					<div class="mobile-menu" aria-label="Mobile Navigation">
+						<ul class="mobile-menu__links" role="navigation" aria-label="Mobile Navigation Links">
 							<li>
-								<a href="./index.html">Home</a>
+								<a href="./index.html" role="menuitem" aria-label="Home">Home</a>
 							</li>
 							<li>
-								<a href="./about.html">About</a>
+								<a href="./about.html" role="menuitem" aria-label="About">About</a>
 							</li>
 							<li>
-								<a href="./portfolio.html">Portfolio</a>
+								<a href="./portfolio.html" role="menuitem" aria-label="Portfolio">Portfolio</a>
 							</li>
 							<li>
-								<a href="./contact.html">Contact</a>
+								<a href="./contact.html" role="menuitem" aria-label="Contact">Contact</a>
 							</li>
 						</ul>
 					</div>
 
-					<div class="primary-nav">
+					<div class="primary-nav" aria-label="Primary Navigation" role="navigation">
 						<ul>
 							<li>
-								<a href="./about.html">About</a>
+								<a href="./about.html" role="menuitem" aria-label="About">About</a>
 							</li>
 							<li>
-								<a href="./portfolio.html">Portfolio</a>
+								<a href="./portfolio.html" role="menuitem" aria-label="Portfolio">Portfolio</a>
 							</li>
 							<li>
-								<a href="./contact.html">Contact</a>
+								<a href="./contact.html" role="menuitem" aria-label="Contact">Contact</a>
 							</li>
 						</ul>
 					</div>
