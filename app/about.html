@@ -85,7 +85,7 @@
 
 		<section class="wrapper">
 			<div class="page-header__secondary-nav-container">
-				<div class="secondary-nav">
+				<div class="secondary-nav" role="navigation" aria-label="Secondary Navigation">
 					<ul>
 						<li>
 							<a data-href="#my-story" id="my-story-link">My Story</a>
@@ -103,9 +103,15 @@
 
 		<main class="page-header-spacer">
 			<!-- LIGHT BOX CONTENT INITIALLY HIDDEN-->
-			<div class="lightbox js-lightbox">
+			<div
+				class="lightbox js-lightbox"
+				role="dialog"
+				aria-modal="true"
+				aria-labelledby="lightbox-title"
+				aria-describedby="lightbox-description"
+			>
 				<div class="js-x-cert">
-					<i class="far fa-3x fa-times-circle x"></i>
+					<i class="far fa-3x fa-times-circle x" role="button" aria-label="Close"></i>
 				</div>
 				<div class="lightbox__img-container">
 					<img
@@ -116,6 +122,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Learn TypeScript Course Certificate issued by Codecademy."
+						aria-label="Learn TypeScript Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -125,6 +132,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Pass the Technical Interview Course Certificate issued by Codecademy."
+						aria-label="Pass the Technical Interview Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -134,6 +142,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Learn React JS Course Certificate issued by Codecademy."
+						aria-label="Learn React JS Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -143,6 +152,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Learn React JS 2 Course Certificate issued by Codecademy."
+						aria-label="Learn React JS 2 Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -152,6 +162,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Learn Node JS Course Certificate issued by Codecademy."
+						aria-label="Learn Node JS Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -161,6 +172,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="JavaScript Error Handling Course Certificate issued by Codecademy."
+						aria-label="JavaScript Error Handling Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -170,6 +182,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Google Analytics For Beginners Course certificate issued by Google."
+						aria-label="Google Analytics For Beginners Course certificate issued by Google."
 					/>
 					<img
 						srcset="
@@ -179,6 +192,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Redux Saga With React Redux Course certificate issued by Udemy."
+						aria-label="Redux Saga With React Redux Course certificate issued by Udemy."
 					/>
 					<img
 						srcset="
@@ -188,6 +202,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Build Web Apps Course certificate issued by Codecademy."
+						aria-label="Build Web Apps Course certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -197,6 +212,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Build Website UI Course certificate issued by Codecademy."
+						aria-label="Build Website UI Course certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -206,6 +222,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Web Development Fundamentals Course certificate issued by Udemy."
+						aria-label="Web Development Fundamentals Course certificate issued by Udemy."
 					/>
 					<img
 						srcset="
@@ -215,6 +232,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Build Websites from Scratch Course certificate issued by Codecademy."
+						aria-label="Build Websites from Scratch Course certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -224,34 +242,35 @@
 						"
 						class="lightbox__img-container__image"
 						alt="WordPress for Beginners Course certificate issued by Udemy."
+						aria-label="WordPress for Beginners Course certificate issued by Udemy."
 					/>
 
-					<div class="lightbox__img-container__prev" id="js-prev"></div>
-					<div class="lightbox__img-container__next" id="js-next"></div>
+					<div class="lightbox__img-container__prev" id="js-prev" role="button" aria-label="Previous Image Button"></div>
+					<div class="lightbox__img-container__next" id="js-next" role="button" aria-label="Next Image Button"></div>
 
-					<div class="lightbox__img-container__dot-box">
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
+					<div class="lightbox__img-container__dot-box" aria-label="Image Counter">
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 1"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 2"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 3"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 4"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 5"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 6"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 7"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 8"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 9"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 10"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 11"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 12"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 13"></div>
 					</div>
 				</div>
 			</div>
 
-			<div class="resume js-resume">
+			<div class="resume js-resume" role="dialog" aria-modal="true" aria-labelledby="resume-title">
 				<div class="js-x-resume">
-					<i class="far fa-3x fa-times-circle x"></i>
+					<i class="far fa-3x fa-times-circle x" role="button" aria-label="Close Resume Dialog"></i>
 				</div>
-				<embed src="assets/images/resume-tim-wilburn.pdf" type="application/pdf" />
+				<embed src="assets/images/resume-tim-wilburn.pdf" type="application/pdf" aria-label="Resume PDF" />
 			</div>
 
 			<!--ACTUAL PAGE CONTENT BEGINS HERE-->
@@ -263,10 +282,11 @@
 							class="lazyload"
 							data-srcset="./assets/images/bench-small.jpg 550w, ./assets/images/bench-med.jpg 931w"
 							alt="Tim, sitting on a bench with a scarecrow."
+							aria-label="Image of Tim sitting on a bench with a scarecrow."
 						/>
 					</div>
-					<div class="about-me__what-i-do">
-						<h2>What I can do for you</h2>
+					<div class="about-me__what-i-do" aria-labelledby="what-i-do-heading">
+						<h2 id="what-i-do-heading">What I can do for you</h2>
 						<p>
 							I build websites and web applications. I can work on personal, professional, or commercial projects and ensure an
 							optimized experience on any screen size.
@@ -278,8 +298,8 @@
 						</p>
 						<p>With my experience in coding and User Interface design, I can help you make your ideas a reality.</p>
 					</div>
-					<div class="about-me__working-with-me">
-						<h2 id="trigger">Working With Me</h2>
+					<div class="about-me__working-with-me" aria-labelledby="working-with-me-heading">
+						<h2 id="working-with-me-heading">Working With Me</h2>
 						<p>
 							I can offer services to help plan, design, build, and publish the live product. From the beginning, we will work directly
 							together to understand the goals of your project, the intended audience, and any design specifics you need.
@@ -295,9 +315,11 @@
 						</p>
 					</div>
 					<div class="about-me__technology-i-use">
-						<h2>Technologies I Use</h2>
-						<p>Some technologies and languages I use to get things done:</p>
-						<ul class="about-me__technology-i-use__list-one">
+						<h2 id="technologies-heading" aria-label="Technologies I Use">Technologies I Use</h2>
+						<p aria-label="List of technologies and languages I use to get things done">
+							Some technologies and languages I use to get things done:
+						</p>
+						<ul class="about-me__technology-i-use__list-one" aria-labelledby="technologies-heading">
 							<li>Html5</li>
 							<li>CSS3</li>
 							<li>SASS</li>
@@ -310,7 +332,7 @@
 							<li>Node JS</li>
 							<li>SQL / PostgreSQL</li>
 						</ul>
-						<ul class="about-me__technology-i-use__list-two">
+						<ul class="about-me__technology-i-use__list-two" aria-labelledby="technologies-heading">
 							<li>MongoDB</li>
 							<li>FireBase</li>
 							<li>AWS Amplify</li>
@@ -329,16 +351,16 @@
 
 			<section class="my-work">
 				<div class="wrapper">
-					<div class="my-work__content-container">
+					<div class="my-work__content-container" role="banner" aria-labelledby="my-work-heading">
 						<div class="my-work__container-left">
-							<h2 class="my-work__container-left__section-title">My Portfolio</h2>
-							<p class="my-work__container-left__section-description">
+							<h2 class="my-work__container-left__section-title" id="my-work-heading">My Portfolio</h2>
+							<p class="my-work__container-left__section-description" aria-label="Description of my portfolio">
 								I've built a variety of static HTML/JavaScript sites and React web applications using various state management
 								libraries and various backend services. Check out my portfolio to see my work and learn more about my skills and
 								experience.
 							</p>
-							<a href="./portfolio.html" role="button">
-								<button class="button button--spacer">View Portfolio</button>
+							<a href="./portfolio.html" role="button" aria-label="View Portfolio">
+								<button class="button button--spacer" aria-label="View Portfolio">View Portfolio</button>
 							</a>
 						</div>
 						<div class="my-work__container-right">
@@ -347,12 +369,14 @@
 								src="assets/images/tiny-house-web-app-laptop.png"
 								class="my-work__container-right__laptop-image"
 								alt="Tiny House Web App on a laptop screen"
+								aria-label="Tiny House Web App on a laptop screen"
 							/>
 							<img
 								lazyload
 								src="assets/images/tiny-house-web-app-phone.png"
 								class="my-work__container-right__phone-image"
 								alt="Tiny House Web App on a phone screen"
+								aria-label="Tiny House Web App on a phone screen"
 							/>
 						</div>
 					</div>
@@ -361,13 +385,13 @@
 
 			<section class="wrapper" id="my-story">
 				<div class="my-story" id="my-story">
-					<h2 class="">My Story...</h2>
-					<p class="p1">
+					<h2 class="" aria-label="My Story">My Story...</h2>
+					<p class="p1" aria-label="Biographical content">
 						I currently live in Lexington, Kentucky with my wife Sarah and our cat, Hunter (see adorable image). I grew up in Cincinnati,
 						Ohio and relocated to Lexington to attend school at the University of Kentucky, where I studied music performance (focus on
 						percussion) and have been here ever since!
 					</p>
-					<p class="p2">
+					<p class="p2" aria-label="Biographical content">
 						For years I worked as a Stage Manager and Live Sound Engineer for multiple venues in Lexington. Wanting to be involved in
 						music more directly, I pursued music education, teaching private lessons and percussion at Middle Schools and High Schools in
 						the Cincinnati area. While teaching, I still performed and picked up the occasional freelance gig, but eventually I wanted to
@@ -375,17 +399,17 @@
 						the time. I decided to dive back in, now having more time to research and learn about this exciting new field. Lowe and
 						behold, a passion was born!
 					</p>
-					<p class="p3">
+					<p class="p3" aria-label="Biographical content">
 						I immediately fell in love. I couldn't help but feel the joy for learning, creating, problem solving, and a deep affinity for
 						coding languages and theory. I dove in headfirst taking online courses, going through tutorials, and basically absorbing as
 						much material as possible. I have continued to learn, expand my skillset, and hone my craft ever since.
 					</p>
-					<p class="p4">
+					<p class="p4" aria-label="Biographical content">
 						One of the most appealing aspects to coding is how broad the field is. There is so much to learn and so much mental
 						stimulation and engagement that takes place every single day. Whether it be a new framework, file architecture, new language,
 						or method of programming, everyday working in this field has brought something new, exciting, and fulfilling.
 					</p>
-					<div class="my-story__img-container">
+					<div class="my-story__img-container" aria-label="Image of myself and Hunter the cat!">
 						<img
 							srcset="assets/images/hunter-small.jpg 550w, assets/images/hunter-med.jpg 900w"
 							alt="A picture of myself and Hunter the cat!"
@@ -394,12 +418,12 @@
 				</div>
 			</section>
 
-			<section class="work-together">
+			<section class="work-together" aria-label="Work Together">
 				<div class="wrapper">
 					<div class="work-together__content">
 						<h2>Let's work together</h2>
 						<p>I'm excited to learn more about your opportunity and how I might help you!</p>
-						<a href="./contact.html" role="button">
+						<a href="./contact.html" role="button" aria-label="Contact Me">
 							<button class="button button--spacer button--outlined">Contact Me</button>
 						</a>
 					</div>
