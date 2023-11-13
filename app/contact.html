@@ -86,11 +86,11 @@
 
 		<main class="page-header-spacer">
 			<div class="wrapper">
-				<h2 class="contact-form__heading">Tell me about your project!</h2>
+				<h2 class="contact-form__heading" role="heading" aria-level="2">Tell me about your project!</h2>
 				<p>
 					Use the form below to send me basic personal information, project information, or any specific services your project may require.
 				</p>
-				<p class="contact-form__alert">
+				<p class="contact-form__alert" role="alert">
 					<em>Your information will not be used for purposes other than direct communication between you and me. </em>
 				</p>
 				<br />
@@ -103,31 +103,55 @@
 					class="contact-form page-section--contact"
 					id="contact-form"
 					netlify-honeypot="bot-field"
+					role="form"
+					aria-label="Contact Form"
 				>
-					<input name="bot-field" class="totally-hidden" />
+					<input name="bot-field" class="totally-hidden" aria-hidden="true" />
 					<div class="contact-form__info-group">
 						<div class="contact-form__group">
-							<label class="contact-form__label">*Name</label>
-							<input type="text" name="name" class="contact-form__input" id="name" placeholder="Name" />
+							<label class="contact-form__label" for="name">*Name</label>
+							<input type="text" name="name" class="contact-form__input" id="name" placeholder="Name" aria-required="true" />
 						</div>
 						<div class="contact-form__group">
-							<label class="contact-form__label">*Email</label>
-							<input type="text" name="_replyto" class="contact-form__input" id="email" placeholder="Email" />
+							<label class="contact-form__label" for="email">*Email</label>
+							<input
+								type="text"
+								name="_replyto"
+								class="contact-form__input"
+								id="email"
+								placeholder="Email"
+								aria-required="true"
+								aria-describedby="email-error-label"
+							/>
 							<label class="contact-form__label contact-form__error--is-hidden" id="email-error-label"
 								>Please enter a valid email</label
 							>
 						</div>
 					</div>
 					<div class="contact-form__group contact-form__group--textarea">
-						<label class="contact-form__label" id="trigger">*Message</label>
-						<textarea type="text" name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
+						<label class="contact-form__label" for="message" id="trigger">*Message</label>
+						<textarea
+							type="text"
+							name="message"
+							class="contact-form__input"
+							id="message"
+							placeholder="What can I do for you?"
+							aria-required="true"
+						></textarea>
 					</div>
 					<br />
 					<!-- <div data-netlify-recaptcha="true" data-callback="recaptchaCallback" /> -->
 					<div class="contact-form__button-group">
-						<input type="submit" class="button button--contact-form" id="contact-submit-button" readonly="readonly" value="Submit" />
+						<input
+							type="submit"
+							class="button button--contact-form"
+							id="contact-submit-button"
+							readonly="readonly"
+							value="Submit"
+							aria-label="Submit form"
+						/>
 						<div class="contact-form__checkmark-container">
-							<div class="contact-form__checkmark" id="checkmark">&#10004;</div>
+							<div class="contact-form__checkmark" id="checkmark" aria-hidden="true">&#10004;</div>
 						</div>
 						<div class="contact-form__error contact-form__error--is-hidden" id="error">
 							<img src="assets/images/exclamation-circle.svg" />
