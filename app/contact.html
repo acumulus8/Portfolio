@@ -19,55 +19,55 @@
 
 	<body>
 		<header>
-			<nav class="site-header">
+			<nav class="site-header" aria-label="Site Navigation">
 				<div class="site-header__container wrapper">
 					<div class="site-header__brand">
 						<div class="site-header__brand__logo">
-							<a href="./index.html">
-								<img src="assets/images/logo-tw.png" alt="logo" />
+							<a href="./index.html" aria-label="Home link">
+								<img src="assets/images/logo-tw.png" alt="logo" aria-label="Tim Wilburn's logo" />
 							</a>
 						</div>
 						<div class="site-header__brand__text">
-							<a class="site-header__brand__text-name" href="./index.html">Tim Wilburn</a>
-							<a href="./index.html">
+							<a class="site-header__brand__text-name" href="./index.html" aria-label="Tim Wilburn">Tim Wilburn</a>
+							<a href="./index.html" aria-label="Design and Development">
 								<p class="site-header__brand__text-quote">Design & Development</p>
 							</a>
 						</div>
 					</div>
 
 					<!-- menu icon, small screens only-->
-					<div class="site-header__menu-icon">
+					<div class="site-header__menu-icon" role="button" aria-label="Mobile Menu" aria-expanded="false" aria-controls="mobile-menu">
 						<div class="site-header__menu-icon__middle"></div>
 					</div>
 
 					<!-- Mobile menu -->
-					<div class="mobile-menu">
-						<ul class="mobile-menu__links">
+					<div class="mobile-menu" aria-label="Mobile Navigation">
+						<ul class="mobile-menu__links" role="navigation" aria-label="Mobile Navigation Links">
 							<li>
-								<a href="./index.html">Home</a>
+								<a href="./index.html" role="menuitem" aria-label="Home">Home</a>
 							</li>
 							<li>
-								<a href="./about.html">About</a>
+								<a href="./about.html" role="menuitem" aria-label="About">About</a>
 							</li>
 							<li>
-								<a href="./portfolio.html">Portfolio</a>
+								<a href="./portfolio.html" role="menuitem" aria-label="Portfolio">Portfolio</a>
 							</li>
 							<li>
-								<a href="./contact.html">Contact</a>
+								<a href="./contact.html" role="menuitem" aria-label="Contact">Contact</a>
 							</li>
 						</ul>
 					</div>
 
-					<div class="primary-nav">
+					<div class="primary-nav" aria-label="Primary Navigation" role="navigation">
 						<ul>
 							<li>
-								<a href="./about.html">About</a>
+								<a href="./about.html" role="menuitem" aria-label="About">About</a>
 							</li>
 							<li>
-								<a href="./portfolio.html">Portfolio</a>
+								<a href="./portfolio.html" role="menuitem" aria-label="Portfolio">Portfolio</a>
 							</li>
 							<li>
-								<a href="./contact.html">Contact</a>
+								<a href="./contact.html" role="menuitem" aria-label="Contact">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -75,22 +75,22 @@
 			</nav>
 		</header>
 
-		<div class="page-header page-header--contact">
+		<div class="page-header page-header--contact" role="banner" aria-label="Page Header">
 			<div class="page-header__content wrapper">
-				<h1 class="page-header__content__h1 page-header__content__h1--contact" id="hero__title">Contact</h1>
+				<h1 class="page-header__content__h1 page-header__content__h1--contact" id="hero__title" role="heading" aria-level="1">Contact</h1>
 			</div>
-			<div class="page-header__image-container">
-				<img src="./assets/images/header-bg.png" aria-hidden="true" />
+			<div class="page-header__image-container" aria-hidden="true">
+				<img src="./assets/images/header-bg.png" role="presentation" aria-hidden="true" />
 			</div>
 		</div>
 
 		<main class="page-header-spacer">
 			<div class="wrapper">
-				<h2 class="contact-form__heading">Tell me about your project!</h2>
+				<h2 class="contact-form__heading" role="heading" aria-level="2">Tell me about your project!</h2>
 				<p>
 					Use the form below to send me basic personal information, project information, or any specific services your project may require.
 				</p>
-				<p class="contact-form__alert">
+				<p class="contact-form__alert" role="alert">
 					<em>Your information will not be used for purposes other than direct communication between you and me. </em>
 				</p>
 				<br />
@@ -103,31 +103,55 @@
 					class="contact-form page-section--contact"
 					id="contact-form"
 					netlify-honeypot="bot-field"
+					role="form"
+					aria-label="Contact Form"
 				>
-					<input name="bot-field" class="totally-hidden" />
+					<input name="bot-field" class="totally-hidden" aria-hidden="true" />
 					<div class="contact-form__info-group">
 						<div class="contact-form__group">
-							<label class="contact-form__label">*Name</label>
-							<input type="text" name="name" class="contact-form__input" id="name" placeholder="Name" />
+							<label class="contact-form__label" for="name">*Name</label>
+							<input type="text" name="name" class="contact-form__input" id="name" placeholder="Name" aria-required="true" />
 						</div>
 						<div class="contact-form__group">
-							<label class="contact-form__label">*Email</label>
-							<input type="text" name="_replyto" class="contact-form__input" id="email" placeholder="Email" />
+							<label class="contact-form__label" for="email">*Email</label>
+							<input
+								type="text"
+								name="_replyto"
+								class="contact-form__input"
+								id="email"
+								placeholder="Email"
+								aria-required="true"
+								aria-describedby="email-error-label"
+							/>
 							<label class="contact-form__label contact-form__error--is-hidden" id="email-error-label"
 								>Please enter a valid email</label
 							>
 						</div>
 					</div>
 					<div class="contact-form__group contact-form__group--textarea">
-						<label class="contact-form__label" id="trigger">*Message</label>
-						<textarea type="text" name="message" class="contact-form__input" id="message" placeholder="What can I do for you?"></textarea>
+						<label class="contact-form__label" for="message" id="trigger">*Message</label>
+						<textarea
+							type="text"
+							name="message"
+							class="contact-form__input"
+							id="message"
+							placeholder="What can I do for you?"
+							aria-required="true"
+						></textarea>
 					</div>
 					<br />
 					<!-- <div data-netlify-recaptcha="true" data-callback="recaptchaCallback" /> -->
 					<div class="contact-form__button-group">
-						<input type="submit" class="button button--contact-form" id="contact-submit-button" readonly="readonly" value="Submit" />
+						<input
+							type="submit"
+							class="button button--contact-form"
+							id="contact-submit-button"
+							readonly="readonly"
+							value="Submit"
+							aria-label="Submit form"
+						/>
 						<div class="contact-form__checkmark-container">
-							<div class="contact-form__checkmark" id="checkmark">&#10004;</div>
+							<div class="contact-form__checkmark" id="checkmark" aria-hidden="true">&#10004;</div>
 						</div>
 						<div class="contact-form__error contact-form__error--is-hidden" id="error">
 							<img src="assets/images/exclamation-circle.svg" />
@@ -142,21 +166,23 @@
 		<div class="page-background" aria-hidden="true"></div>
 		<div class="page-background__sub-bg" aria-hidden="true"></div>
 
-		<footer class="footer">
+		<footer class="footer" role="contentinfo" aria-label="Footer">
 			<div class="site-header__brand__logo">
 				<a href="./index.html">
 					<img src="assets/images/logo-tw.png" alt="logo" />
 				</a>
 			</div>
-			<p class="footer__text-container">This site is made with HTML, SCSS, and JavaScript</p>
-			<div class="footer__icon-container">
-				<a href="https://github.com/acumulus8" target="_blank">
+			<p class="footer__text-container" aria-label="Site made with HTML, SCSS, and JavaScript">
+				This site is made with HTML, SCSS, and JavaScript
+			</p>
+			<div class="footer__icon-container" role="navigation" aria-label="Social media links">
+				<a href="https://github.com/acumulus8" target="_blank" aria-label="GitHub profile">
 					<i aria-hidden="true" class="fab fa-github fa-2x footer__icon-container__icon" title="github"></i>
 				</a>
-				<a href="contact.html" target="_blank">
+				<a href="contact.html" aria-label="Contact page">
 					<i aria-hidden="true" class="fa fa-envelope fa-2x center-icon footer__icon-container__icon" title="email me!"></i>
 				</a>
-				<a href="https://www.linkedin.com/in/timothy-wilburn" target="_blank">
+				<a href="https://www.linkedin.com/in/timothy-wilburn" target="_blank" aria-label="LinkedIn profile">
 					<i aria-hidden="true" class="fab fa-linkedin fa-2x footer__icon-container__icon" title="linkedin"></i>
 				</a>
 			</div>
