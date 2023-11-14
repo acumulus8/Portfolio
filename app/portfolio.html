@@ -99,9 +99,15 @@
 				</div>
 			</section>
 
-			<div class="lightbox js-lightbox">
+			<div
+				class="lightbox js-lightbox"
+				role="dialog"
+				aria-modal="true"
+				aria-labelledby="lightbox-title"
+				aria-describedby="lightbox-description"
+			>
 				<div class="js-x-cert">
-					<i class="far fa-3x fa-times-circle x"></i>
+					<i class="far fa-3x fa-times-circle x" role="button" aria-label="Close"></i>
 				</div>
 				<div class="lightbox__img-container">
 					<img
@@ -112,6 +118,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Learn TypeScript Course Certificate issued by Codecademy."
+						aria-label="Learn TypeScript Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -121,6 +128,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Pass the Technical Interview Course Certificate issued by Codecademy."
+						aria-label="Pass the Technical Interview Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -130,6 +138,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Learn React JS Course Certificate issued by Codecademy."
+						aria-label="Learn React JS Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -139,6 +148,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Learn React JS 2 Course Certificate issued by Codecademy."
+						aria-label="Learn React JS 2 Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -148,6 +158,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Learn Node JS Course Certificate issued by Codecademy."
+						aria-label="Learn Node JS Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -157,6 +168,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="JavaScript Error Handling Course Certificate issued by Codecademy."
+						aria-label="JavaScript Error Handling Course Certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -166,6 +178,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Google Analytics For Beginners Course certificate issued by Google."
+						aria-label="Google Analytics For Beginners Course certificate issued by Google."
 					/>
 					<img
 						srcset="
@@ -175,6 +188,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Redux Saga With React Redux Course certificate issued by Udemy."
+						aria-label="Redux Saga With React Redux Course certificate issued by Udemy."
 					/>
 					<img
 						srcset="
@@ -184,6 +198,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Build Web Apps Course certificate issued by Codecademy."
+						aria-label="Build Web Apps Course certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -193,6 +208,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Build Website UI Course certificate issued by Codecademy."
+						aria-label="Build Website UI Course certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -202,6 +218,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Web Development Fundamentals Course certificate issued by Udemy."
+						aria-label="Web Development Fundamentals Course certificate issued by Udemy."
 					/>
 					<img
 						srcset="
@@ -211,6 +228,7 @@
 						"
 						class="lightbox__img-container__image"
 						alt="Build Websites from Scratch Course certificate issued by Codecademy."
+						aria-label="Build Websites from Scratch Course certificate issued by Codecademy."
 					/>
 					<img
 						srcset="
@@ -220,53 +238,54 @@
 						"
 						class="lightbox__img-container__image"
 						alt="WordPress for Beginners Course certificate issued by Udemy."
+						aria-label="WordPress for Beginners Course certificate issued by Udemy."
 					/>
 
-					<div class="lightbox__img-container__prev" id="js-prev"></div>
-					<div class="lightbox__img-container__next" id="js-next"></div>
+					<div class="lightbox__img-container__prev" id="js-prev" role="button" aria-label="Previous Image Button"></div>
+					<div class="lightbox__img-container__next" id="js-next" role="button" aria-label="Next Image Button"></div>
 
-					<div class="lightbox__img-container__dot-box">
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
-						<div class="lightbox__img-container__dot-box__dot"></div>
+					<div class="lightbox__img-container__dot-box" aria-label="Image Counter">
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 1"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 2"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 3"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 4"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 5"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 6"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 7"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 8"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 9"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 10"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 11"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 12"></div>
+						<div class="lightbox__img-container__dot-box__dot" aria-label="Image 13"></div>
 					</div>
 				</div>
 			</div>
 
-			<div class="resume js-resume">
+			<div class="resume js-resume" role="dialog" aria-modal="true" aria-labelledby="resume-title">
 				<div class="js-x-resume">
-					<i class="far fa-3x fa-times-circle x"></i>
+					<i class="far fa-3x fa-times-circle x" role="button" aria-label="Close Resume Dialog"></i>
 				</div>
-				<embed src="assets/images/resume-tim-wilburn.pdf" type="application/pdf" />
+				<embed src="assets/images/resume-tim-wilburn.pdf" type="application/pdf" aria-label="Resume PDF" />
 			</div>
 
 			<section class="page-section wrapper">
-				<p class="portfolio-page-description">
+				<p class="portfolio-page-description" aria-label="Portfolio Description">
 					Below is my portfolio of professional projects built as a team at previous employers and
-					<a data-href="#side-projects" id="side-projects-link">side projects</a> constructed by myself. (The professional projects are
-					slightly vague and do not contain links for legal reasons)
+					<a data-href="#side-projects" id="side-projects-link" role="button" aria-label="Side Projects Link">side projects</a> constructed
+					by myself. (The professional projects are slightly vague and do not contain links for legal reasons)
 				</p>
 
-				<div class="project-category" id="pos-proj-scroll-anchor">
-					<h2>Professional Projects</h2>
-					<hr class="project-category__divider" />
+				<div class="project-category" id="pos-proj-scroll-anchor" aria-label="Professional Projects">
+					<h2 aria-hidden="true">Professional Projects</h2>
+					<hr class="project-category__divider" role="separator" aria-label="Divider" />
 				</div>
 
-				<article class="project project--professional">
+				<article class="project project--professional" role="article" aria-label="Professional Project - Mobile Point of Sale System">
 					<div class="project__text">
-						<h3 class="project__heading">Mobile Point of Sale System with React Native and Stripe</h3>
-						<h4>Regional Franchised Salon Business Project</h4>
-						<h5>TLDR Summary:</h5>
+						<h3 class="project__heading" role="heading" aria-level="3">Mobile Point of Sale System with React Native and Stripe</h3>
+						<h4 role="heading" aria-level="4">Regional Franchised Salon Business Project</h4>
+						<h5 role="heading" aria-level="5" aria-label="TLDR Summary">TLDR Summary:</h5>
 						<p>
 							This project aimed to enhance the salon employee experience by creating an in-store Point of Sale system through a mobile
 							payment app for iOS and Android, along with physical card readers. The app integrated with Stripe API, utilized React
@@ -280,19 +299,14 @@
 						</p>
 						<br />
 						<p>
-							<em>Project Description:</em> My employer and I had already rebuilt a new front-to-back business system for this
-							long-term, ongoing Client. They planned to improve their salon Employee experience by providing an in-store Point of Sale
-							system. This would include payment transaction mobile apps for iOS and Android and physical card readers to connect to
-							their phones and interface with the app. The previous business model included Employees handling their own payment
-							transactions, and this new system would be optional and included a small fee from which the business profited. This was a
-							phase two feature addition as part of a more significant rebranding and redesign of the entire business and marketing push
-							to increase Employee and Customer engagement. We were ahead of schedule at every stage and had a faster beta testing
-							period than we thought. Ultimately the feature was never launched due to the global pandemic in 2020 and the Client being
-							forced to make hard business decisions.
+							<em aria-label="Project Description">Project Description:</em> 
+							<p>
+								My employer and I had already rebuilt a new front-to-back business system for this long-term, ongoing Client. They planned to improve their salon Employee experience by providing an in-store Point of Sale system. This would include payment transaction mobile apps for iOS and Android and physical card readers to connect to their phones and interface with the app. The previous business model included Employees handling their own payment transactions, and this new system would be optional and included a small fee from which the business profited. This was a phase two feature addition as part of a more significant rebranding and redesign of the entire business and marketing push to increase Employee and Customer engagement. We were ahead of schedule at every stage and had a faster beta testing period than we thought. Ultimately the feature was never launched due to the global pandemic in 2020 and the Client being forced to make hard business decisions.
+							</p>
 						</p>
 						<br />
 						<p>
-							<em>System Requirements:</em> The app would be responsive on iOS and Android, supporting up to 5 and 4 versions,
+							<em aria-label="System Requirements">System Requirements:</em> The app would be responsive on iOS and Android, supporting up to 5 and 4 versions,
 							respectively. The app would use React Native, Stripe API for account creation, management, transaction processing, and
 							Stripe client-side components to handle client credentials. The app would work with the phone's Location and Bluetooth
 							Devices API to detect, pair to, and monitor a Bluetooth card reader. The app would automatically detect and pair to the
@@ -315,7 +329,7 @@
 						</p>
 						<br />
 						<p>
-							<em>Technical Requirements: </em> All documentation, design, and prototyping were done with Figma. The mobile app was
+							<em aria-label="Technical Requirements">Technical Requirements: </em> All documentation, design, and prototyping were done with Figma. The mobile app was
 							built with the following:
 						</p>
 						<ul>
@@ -354,7 +368,7 @@
 					<div class="project__image-container project__image-container--no-image">
 						<br />
 						<p>
-							<em>Role and Responsibilities:</em> I was to document all business requirements into technical/system requirements, design
+							<em aria-label="Role and Responsibilities">Role and Responsibilities:</em> I was to document all business requirements into technical/system requirements, design
 							UI's for a brand new Mobile App using Material UI, develop all React and React Native user interfaces, document and
 							implement custom error tracking using the Sentry API, and document and implement the Mobile Payment App analytics events
 							tracking and monthly usage reports. The project leads had already met with the Client, who had worked out all legal,
@@ -397,22 +411,22 @@
 							reporting system using Sentry for custom messaging and labeling in our Sentry project.
 						</p>
 						<br />
-						<button class="button" id="show-shade-btn" data-href="#pos-proj-scroll-anchor">
-							<a> Show Less... </a>
+						<button class="button" id="show-shade-btn" data-href="#pos-proj-scroll-anchor" aria-label="Show Less">
+							Show Less...
 						</button>
 					</div>
 
-					<div class="project--professional__shade">
-						<button class="button" id="hide-shade-btn">Show More...</button>
+					<div class="project--professional__shade" aria-hidden="true" aria-expanded="false">
+						<button class="button" id="hide-shade-btn" aria-controls="pos-proj-scroll-anchor">Show More...</button>
 					</div>
 				</article>
 
-				<article class="project project--professional" id="materials-proj-scroll-anchor">
+				<article class="project project--professional" id="materials-proj-scroll-anchor" role="article" aria-label="Materials Testing Online Ordering System">
 					<div class="project__text">
-						<h3 class="project__heading">Materials Testing Online Ordering System</h3>
-						<h4>International Materials Testing Laboratory</h4>
+						<h3 class="project__heading" role="heading" aria-level="3">Materials Testing Online Ordering System</h3>
+						<h4 aria-level="4">International Materials Testing Laboratory</h4>
 						<p>
-							<em>Project Description:</em> a client approached my employer about rebuilding their proprietary ordering system into a
+							<em aria-label="Project Description">Project Description:</em> a client approached my employer about rebuilding their proprietary ordering system into a
 							modern web application. The existing system was a desktop app built in the 90s in C# and was very difficult to use, on top
 							of being highly specialized. This laboratory provides technical testing and analysis for materials and coatings used in
 							aerospace machinery. Some challenges faced included restructuring and reorganizing the entire process to be more modern,
@@ -424,7 +438,7 @@
 						</p>
 						<br />
 						<p>
-							<em>System Requirements:</em> Users of the system would be Materials Scientists, who would order particular types of tests
+							<em aria-label="System Requirements">System Requirements:</em> Users of the system would be Materials Scientists, who would order particular types of tests
 							to be conducted on various material coatings. Users would then ship their coated materials to be tested, the Testing
 							laboratory (our client) would then run the tests and record the results in their database, and the results would be
 							returned in the ordering web app, email, as well as paper mail (Paper mailing was handled by their offices). Before an
@@ -442,7 +456,7 @@
 							<li>- Nightly updates system</li>
 						</ul>
 						<p>
-							<em>Technologies and Tools:</em> React, React Router, React Context for state management, JWST and protected routes for
+							<em aria-label="Technologies and Tools">Technologies and Tools:</em> React, React Router, React Context for state management, JWST and protected routes for
 							authentication, Material-UI, React-Forms, and Stripe for payment processing and acceptance. Back-end technologies would
 							include a NodeJS server, the client's existing SQL database, and a proprietary middleman SQL database.
 						</p>
@@ -450,7 +464,7 @@
 					<div class="project__image-container project__image-container--no-image">
 						<br />
 						<p>
-							<em>Role and Responsibilities:</em> My overall role in the project was UI/UX Designer and Front-End Developer. Initial
+							<em aria-label="Role and Responsibilities">Role and Responsibilities:</em> My overall role in the project was UI/UX Designer and Front-End Developer. Initial
 							tasks involved surveying the existing, very minimal, documentation of the current ordering system, the system itself, and
 							new requirements documentation. I then met one-on-one with the clients to discuss the registration process and the
 							complicated forms users would fill out when putting together their orders. We were then able to specify the various
@@ -461,7 +475,7 @@
 						</p>
 						<br />
 						<p>
-							<em>Challenges and Solutions:</em> The coating specification forms were brutal to understand and required unique solutions
+							<em aria-label="Challenges and Solutions">Challenges and Solutions:</em> The coating specification forms were brutal to understand and required unique solutions
 							like dynamic and conditional API calls to validate spec selection and calculate expected test result deviations. The
 							highly specialized nature of the information allowed for creative solutions like element and card nesting to better
 							communicate complex form element relationships and form section hierarchies. The color was straightforward and pragmatic,
@@ -474,7 +488,7 @@
 						</p>
 						<br />
 						<p>
-							<em>Personal Learnings:</em> Working with these clients was a slower process than usual because of the density and
+							<em aria-label="Personal Learnings">Personal Learnings:</em> Working with these clients was a slower process than usual because of the density and
 							complexity of the information involved. The initial design's auditing, analysis, and discovery portions took longer than
 							expected. Because of scheduling and traveling issues, the UX/UI interviews and design reviews were conducted with a
 							different team member each time. This made things more complex and eventually led to the discovery of some pretty deep
@@ -486,12 +500,12 @@
 							questions, and when something is genuinely complicated, taking the time to diagram and document the App requirements
 							became invaluable when approving designs before development could start.
 						</p>
-						<button class="button" id="show-shade-btn" data-href="#materials-proj-scroll-anchor">
-							<a> Show Less... </a>
+						<button class="button" id="show-shade-btn" data-href="#materials-proj-scroll-anchor" aria-hidden="true" aria-expanded="false">
+							Show Less...
 						</button>
 					</div>
-					<div class="project--professional__shade">
-						<button class="button" id="hide-shade-btn">Show More...</button>
+					<div class="project--professional__shade" aria-hidden="true" aria-expanded="false">
+						<button class="button" id="hide-shade-btn" aria-controls="materials-proj-scroll-anchor">Show More...</button>
 					</div>
 				</article>
 
@@ -574,23 +588,23 @@
 							grew so much faster than anticipated that we eventually had to rework some component subdirectories to accommodate new
 							style files and functionality.
 						</p>
-						<button class="button" id="show-shade-btn" data-href="#salon-proj-scroll-anchor">
-							<a> Show Less... </a>
+						<button class="button" id="show-shade-btn" data-href="#salon-proj-scroll-anchor" aria-hidden="true" aria-expanded="false">
+							Show Less...
 						</button>
 					</div>
-					<div class="project--professional__shade">
-						<button class="button" id="hide-shade-btn">Show More...</button>
+					<div class="project--professional__shade" aria-hidden="true" aria-expanded="false">
+						<button class="button" id="hide-shade-btn" aria-controls="salon-proj-scroll-anchor">Show More...</button>
 					</div>
 				</article>
 
 				<div class="project-category" id="side-projects">
-					<h2>Side Projects</h2>
-					<hr class="project-category__divider" id="trigger" />
+					<h2 id="side-projects" aria-label="Side Projects" role="heading">Side Projects</h2>
+					<hr class="project-category__divider" id="trigger" role="separator" aria-labelledby="side-projects" />
 				</div>
 
-				<article class="project">
+				<article class="project" aria-labelledby="reddthat-heading">
 					<div class="project__text">
-						<h3 class="project__heading">Reddthat</h3>
+						<h3 class="project__heading" id="reddthat-heading">Reddthat</h3>
 						<h4>Reddit clone - web application - <em>Unfinished</em></h4>
 						<p>
 							This project is a client clone of Reddit built with React, Redux-Thunk, TypeScript, and Ant Design. The project aims to
@@ -600,7 +614,7 @@
 							documentation, and a link to the codebase. The project is ongoing, and the documentation is updated as the project
 							progresses.
 						</p>
-						<div class="secondary-nav project__link-container project__link-container--full-width">
+						<div class="secondary-nav project__link-container project__link-container--full-width" aria-label="Reddthat links">
 							<ul>
 								<li><a href="https://reddthat.dev" target="about_blank">View Project</a></li>
 								<li><a href="https://github.com/acumulus8/Reddthat" target="about_blank">View Code</a></li>
@@ -619,7 +633,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="project__image-container">
+					<div class="project__image-container" aria-hidden="true" aria-label="Reddthat image">
 						<a href="https://github.com/acumulus8/Reddthat" target="about_blank">
 							<img
 								class="lazyload"
@@ -631,31 +645,24 @@
 					</div>
 				</article>
 
-				<hr class="project__divider" id="trigger" />
+				<hr class="project__divider" id="trigger" role="separator" aria-label="Project divider" />
 
-				<article class="project">
+				<article class="project" aria-labelledby="tinyhouse-heading">
 					<div class="project__text">
-						<h3 class="project__heading">Tinyhouse</h3>
+						<h3 class="project__heading" id="tinyhouse-heading">Tinyhouse</h3>
 						<h4>AirBnb clone - web application</h4>
 						<p>
-							This full-stack AirBnb clone is built with React, TypeScript, GraphQL, Node.js, and MongDB. It is a web app that allows
-							users to view and book listings, and create an account to host their own listings. The app uses Google GeoLocation API,
-							Google OAuth, Stripe API to process payments, and Cloudinary to handle image upload and retrieval. The UI is built with
-							Ant Design.
+							This full-stack AirBnb clone is built with React, TypeScript, GraphQL, Node.js, and MongDB. It is a web app that allows users to view and book listings, and create an account to host their own listings. The app uses Google GeoLocation API, Google OAuth, Stripe API to process payments, and Cloudinary to handle image upload and retrieval. The UI is built with Ant Design.
 						</p>
-						<div class="secondary-nav project__link-container">
+						<div class="secondary-nav project__link-container" aria-label="Tinyhouse links">
 							<ul>
 								<li><a href="https://tiny-house-app.com" target="about_blank">View Project</a></li>
-								<li>
-									<a href="https://github.com/acumulus8/tinyhouse-client" target="about_blank" id="tinyhouse">Client Code</a>
-								</li>
-								<li>
-									<a href="https://github.com/acumulus8/tinyhouse-server" target="about_blank" id="tinyhouse">Server Code</a>
-								</li>
+								<li><a href="https://github.com/acumulus8/tinyhouse-client" target="about_blank" id="tinyhouse">Client Code</a></li>
+								<li><a href="https://github.com/acumulus8/tinyhouse-server" target="about_blank" id="tinyhouse">Server Code</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="project__image-container">
+					<div class="project__image-container" aria-hidden="true" aria-label="Tinyhouse image">
 						<a href="https://github.com/acumulus8/tinyhouse-client" target="about_blank" id="tinyhouse">
 							<picture>
 								<source class="lazyload" data-srcset="assets/images/tiny-house-web-app-small.png 800w" media="(max-width: 800px)" />
@@ -667,33 +674,28 @@
 					</div>
 				</article>
 
-				<hr class="project__divider" id="trigger" />
+				<hr class="project__divider" id="trigger" role="separator" aria-label="Divider between projects" />
 
-				<article class="project">
+				<article class="project" aria-labelledby="portfolio-heading">
 					<div class="project__text">
-						<h3 class="project__heading">This website!</h3>
+						<h3 class="project__heading" id="portfolio-heading">This website!</h3>
 						<h4>Personal Development Portfolio - static website</h4>
 						<p>
-							This site serves, first and foremost, as a portfolio for my work. It also demonstrates foundational web development
-							skills, advanced styling, project architecture, and Object Oriented Programming.
+							This site serves, first and foremost, as a portfolio for my work. It also demonstrates foundational web development skills, advanced styling, project architecture, and Object Oriented Programming.
 						</p>
-						<div class="secondary-nav project__link-container">
+						<div class="secondary-nav project__link-container" aria-label="Portfolio links">
 							<ul>
 								<!-- <li><a href="https://timwilburn.com" target="about_blank">View Project</a></li> -->
 								<li>
 									<a href="https://github.com/acumulus8/Portfolio" target="about_blank">View Code</a>
 								</li>
 								<li>
-									<a
-										href="https://www.figma.com/file/4J3WWaDgLEuWLCjTAFbfwv/Portfolio-Site-Redesign?type=design&node-id=0%3A1&mode=design&t=24CZJeQ6bN28LtyF-1"
-										target="about_blank"
-										>Figma File</a
-									>
+									<a href="https://www.figma.com/file/4J3WWaDgLEuWLCjTAFbfwv/Portfolio-Site-Redesign?type=design&node-id=0%3A1&mode=design&t=24CZJeQ6bN28LtyF-1" target="about_blank">Figma File</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<div class="project__image-container">
+					<div class="project__image-container" aria-hidden="true" aria-label="Portfolio image">
 						<a href="https://github.com/acumulus8/Portfolio" target="about_blank">
 							<picture>
 								<source class="lazyload" data-srcset="assets/images/portfolio-small.png 800w" media="(max-width: 800px)" />
@@ -705,27 +707,25 @@
 					</div>
 				</article>
 
-				<hr class="project__divider" id="trigger" />
+				<hr class="project__divider" id="trigger" role="separator" aria-label="Project divider" />
 
-				<article class="project">
+				<article class="project" aria-labelledby="jammming-heading">
 					<div class="project__text">
-						<h3 class="project__heading">Ja<strong>mmm</strong>ing</h3>
+						<h3 class="project__heading" id="jammming-heading">Ja<strong>mmm</strong>ing</h3>
 						<h4>Spotify clone - web application</h4>
 						<p>
-							This is a Spotify clone built with React. The application allows users to log in to their Spotify accounts, search songs
-							and assemble playlists, and save them to their accounts. This project demonstrates Object Oriented Programming,
-							asynchronous programming, and efficient error handling and UI feedback.
+							This is a Spotify clone built with React. The application allows users to log in to their Spotify accounts, search songs and assemble playlists, and save them to their accounts. This project demonstrates Object Oriented Programming, asynchronous programming, and efficient error handling and UI feedback.
 							<br /><br />
 							*<em>Project not yet mobile responsive</em>
 						</p>
-						<div class="secondary-nav project__link-container">
+						<div class="secondary-nav project__link-container" aria-label="Jammming links">
 							<ul>
 								<li><a href="https://jammming-proj.netlify.app" target="about_blank">View Project</a></li>
 								<li><a href="https://github.com/acumulus8/jammming" target="about_blank" id="catch-of-day">View Code</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="project__image-container">
+					<div class="project__image-container" aria-hidden="true" aria-label="Jammming image">
 						<a href="https://jammming-proj.netlify.app" target="about_blank">
 							<picture>
 								<source class="lazyload" data-srcset="assets/images/jammming-small.png 800w" media="(max-width: 800px)" />
@@ -737,25 +737,25 @@
 					</div>
 				</article>
 
-				<hr class="project__divider" />
+				<hr class="project__divider" role="separator" aria-label="Project divider" />
 
-				<article class="project">
+				<article class="project" aria-labelledby="catch-of-the-day-heading">
 					<div class="project__text">
-						<h3 class="project__heading">Catch Of The Day</h3>
+						<h3 class="project__heading" id="catch-of-the-day-heading">Catch Of The Day</h3>
 						<h4>Fictional Seafood Store - web application</h4>
 						<p>
 							This is a single-page CRUD stack web application built using React. This project uses React Router client-side routing,
 							PropTypes for code resiliency, CSSTransitions, and Firebase for data storage and retrieval and account authentication.<br /><br />
 							*<em>Project not mobile responsive</em>
 						</p>
-						<div class="secondary-nav project__link-container">
+						<div class="secondary-nav project__link-container" aria-label="Catch Of The Day links">
 							<ul>
 								<li><a href="http://catchoftheday.netlify.com" target="about_blank">View Project</a></li>
 								<li><a href="https://github.com/acumulus8/catch-of-the-day" target="about_blank" id="colmar">View Code</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="project__image-container">
+					<div class="project__image-container" aria-hidden="true" aria-label="Catch Of The Day image">
 						<a href="http://catchoftheday.netlify.com" target="about_blank">
 							<picture>
 								<source class="lazyload" data-srcset="assets/images/catch-of-day-small.png" media="(max-width: 800px)" />
@@ -772,12 +772,12 @@
 				</article>
 			</section>
 
-			<section class="work-together">
+			<section class="work-together" aria-label="Work Together">
 				<div class="wrapper">
 					<div class="work-together__content">
 						<h2>Let's work together</h2>
 						<p>I'm excited to learn more about your opportunity and how I might help you!</p>
-						<a href="./contact.html" role="button">
+						<a href="./contact.html" role="button" aria-label="Contact Me">
 							<button class="button button--spacer button--outlined">Contact Me</button>
 						</a>
 					</div>
@@ -785,9 +785,9 @@
 			</section>
 
 			<section class="page-section page-header-spacer wrapper">
-				<article class="project">
+				<article class="project" aria-labelledby="ravenous-heading">
 					<div class="project__text">
-						<h3 class="project__heading">Ravenous</h3>
+						<h3 class="project__heading" id="ravenous-heading">Ravenous</h3>
 						<h4>Yelp clone - web application</h4>
 						<p>
 							This web application built with React utilizes the vanilla JavaScript fetch API to interact with the open-source Yelp API.
@@ -795,14 +795,14 @@
 							'Highest Rated,' and 'Most Reviewed.' <br /><br />
 							*<em>Project not mobile responsive</em>
 						</p>
-						<div class="secondary-nav project__link-container">
+						<div class="secondary-nav project__link-container" aria-label="Ravenous links">
 							<ul>
 								<li><a href="http://ravenous-tim-wilburn.surge.sh/" target="about_blank">View Project</a></li>
 								<li><a href="https://github.com/acumulus8/ravenous" target="about_blank" id="game">View Code</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="project__image-container">
+					<div class="project__image-container" aria-hidden="true" aria-label="Ravenous image">
 						<a href="http://ravenous-tim-wilburn.surge.sh/" target="about_blank">
 							<picture>
 								<source class="lazyload" data-srcset="assets/images/ravenous-small.png 800w" media="(max-width: 800px)" />
@@ -818,61 +818,52 @@
 					</div>
 				</article>
 
-				<hr class="project__divider" />
+				<hr class="project__divider" role="separator" aria-label="Project divider" />
 
-				<article class="project">
+				<article class="project" aria-labelledby="clear-view-heading">
 					<div class="project__text">
-						<h3 class="project__heading">Clear View Escapes</h3>
+						<h3 class="project__heading" id="clear-view-heading">Clear View Escapes</h3>
 						<h4>Fictional travel business - website</h4>
 						<p>
-							This fully responsive and interactive single-page website was created using Html, SCSS, and JavaScript. The SCSS is
-							written to incorporate BEM methodology: taking advantage of reusable and scalable code. The site is built with GulpJS and
-							Webpack, utilizing Babel to transpile modern JavaScript.
+							This fully responsive and interactive single-page website was created using Html, SCSS, and JavaScript. The SCSS is written to incorporate BEM methodology: taking advantage of reusable and scalable code. The site is built with GulpJS and Webpack, utilizing Babel to transpile modern JavaScript.
 						</p>
-						<div class="secondary-nav project__link-container">
+						<div class="secondary-nav project__link-container" aria-label="Clear View Escapes links">
 							<ul>
 								<li><a href="https://acumulus8.github.io/fake-travel-site/" target="about_blank">View Project</a></li>
 								<li><a href="https://github.com/acumulus8/fake-travel-site" target="about_blank" id="jammming">View Code</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="project__image-container">
+					<div class="project__image-container" aria-hidden="true" aria-label="Clear View Escapes image">
 						<a href="https://acumulus8.github.io/fake-travel-site/" target="about_blank">
 							<picture>
 								<source class="lazyload" data-srcset="assets/images/clear-view-small.png 800w" media="(max-width: 800px)" />
 								<source class="lazyload" data-srcset="assets/images/clear-view-med.png 1250w" media="(max-width: 1000px)" />
 								<source class="lazyload" data-srcset="assets/images/clear-view-small.png 800w" media="(min-width: 1001px)" />
-								<img
-									class="lazyload"
-									data-src="assets/images/clear-view-small.png"
-									alt="Image of the Clear View travel company project"
-								/>
+								<img class="lazyload" data-src="assets/images/clear-view-small.png" alt="Image of the Clear View travel company project" />
 							</picture>
 						</a>
 					</div>
 				</article>
 
-				<hr class="project__divider" />
+				<hr class="project__divider" role="separator" aria-label="Project divider" />
 
-				<article class="project">
+				<article class="project" aria-labelledby="game-of-life-heading">
 					<div class="project__text">
-						<h3 class="project__heading">Game Of Life</h3>
+						<h3 class="project__heading" id="game-of-life-heading">Game Of Life</h3>
 						<h4>Non-Interactive game - web application</h4>
 						<p>
-							The Game Of Life is a non-interactive game built using React. This game focuses on JavaScript logic. The game sets a few
-							rules: cells are first populated with color, and when the game starts, squares are filled or emptied based on their
-							location to other cells. The game is scalable with multiple grid sizes and feature buttons for control over simple aspects
-							of the game. <br /><br />
+							The Game Of Life is a non-interactive game built using React. This game focuses on JavaScript logic. The game sets a few rules: cells are first populated with color, and when the game starts, squares are filled or emptied based on their location to other cells. The game is scalable with multiple grid sizes and feature buttons for control over simple aspects of the game. <br /><br />
 							*<em>Project not yet mobile responsive</em>
 						</p>
-						<div class="secondary-nav project__link-container">
+						<div class="secondary-nav project__link-container" aria-label="Game Of Life links">
 							<ul>
 								<li><a href="https://upbeat-leakey-464ff6.netlify.com/" target="about_blank">View Project</a></li>
 								<li><a href="https://github.com/acumulus8/gameOfLife" target="about_blank">View Code</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="project__image-container">
+					<div class="project__image-container" aria-hidden="true" aria-label="Game Of Life image">
 						<a href="https://upbeat-leakey-464ff6.netlify.com/" target="about_blank">
 							<picture>
 								<source class="lazyload" data-srcset="assets/images/game-of-life-small.png 800w" media="(max-width: 800px)" />
