@@ -2,6 +2,9 @@
 	"name": "portfolio",
 	"version": "1.0.0",
 	"private": true,
+	"engines": {
+		"node": "18.x"
+	},
 	"scripts": {
 		"start": "webpack serve --env mode=development --hot --port 3000 --open",
 		"webpack": "webpack",
