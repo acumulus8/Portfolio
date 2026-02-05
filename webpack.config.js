@@ -14,6 +14,7 @@ module.exports = (env) => {
 	const isProduction = env.mode === "production";
 	const imageMinimizerPlugin = getImageMinizerPluginConfig(ImageMinimizerPlugin, isProduction);
 	const imagesPath = "assets/images";
+	const filesPath = "assets/files";
 
 	let config = {
 		entry: {
@@ -32,7 +33,7 @@ module.exports = (env) => {
 			imageMinimizerPlugin,
 			new MiniCssExtractPlugin(),
 			new CopyPlugin({
-				patterns: [{ from: `app/${imagesPath}/resume-tim-wilburn.pdf`, to: imagesPath }],
+				patterns: [{ from: `app/${filesPath}/Tim-Wilburn-Resume.pdf`, to: filesPath }],
 			}),
 		],
 		// optimization: { minimizer: [imageMinimizerPlugin] },
