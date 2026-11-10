@@ -1,8 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;/home/timwilburn8/webdev/Projects/Portfolio&quot;
-  }
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f522b237-3594-4ff2-bc64-07099f4c04f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/assets/files/Resume-Dev-2026.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/files/Tim-Wilburn-Resume.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="174" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000581321265676" />
+      <entry key="MS500" value="1.625640400595966" />
+      <entry key="S2" value="5.923278079680303" />
+      <entry key="S5" value="9.811341267046341" />
+      <entry key="S10" value="14.07565026860582" />
+      <entry key="S30" value="22.45096704046643" />
+      <entry key="S60" value="26.491435992416715" />
+      <entry key="M2" value="29.04131587253824" />
+      <entry key="M5" value="31.170711837317743" />
+      <entry key="M10" value="32.75627275875739" />
+      <entry key="M15" value="33.68046575426135" />
+      <entry key="M30" value="35.00922543173733" />
+      <entry key="H1" value="35.89970000515377" />
+      <entry key="H2" value="36.42012829846207" />
+      <entry key="H4" value="36.70214090151791" />
+      <entry key="D1" value="36.94921160349989" />
+      <entry key="W1" value="36.99271586409206" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.325829020638424E-71" />
+      <entry key="MS500" value="6.6757106453537446E-15" />
+      <entry key="S2" value="2.8584090357229976E-4" />
+      <entry key="S5" value="0.03823400128537084" />
+      <entry key="S10" value="0.19553516636495555" />
+      <entry key="S30" value="0.5804190060143415" />
+      <entry key="S60" value="0.7618633840636642" />
+      <entry key="M2" value="0.877522581320841" />
+      <entry key="M5" value="1.1242233293927268" />
+      <entry key="M10" value="1.5683488595493584" />
+      <entry key="M15" value="1.873479176209516" />
+      <entry key="M30" value="2.326205728634231" />
+      <entry key="H1" value="2.6296256766208552" />
+      <entry key="H2" value="2.8055774768114956" />
+      <entry key="H4" value="2.9003618264118898" />
+      <entry key="D1" value="2.9830460519987927" />
+      <entry key="W1" value="2.997569354563907" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.03024204289783026" />
+      <entry key="MS500" value="1.1185634566348177" />
+      <entry key="S2" value="5.753810666077873" />
+      <entry key="S5" value="9.756671169590204" />
+      <entry key="S10" value="14.192483687684932" />
+      <entry key="S30" value="22.980338995493533" />
+      <entry key="S60" value="27.221919234011175" />
+      <entry key="M2" value="29.901267551022414" />
+      <entry key="M5" value="32.286290819977815" />
+      <entry key="M10" value="34.31872055771094" />
+      <entry key="M15" value="35.54921371972116" />
+      <entry key="M30" value="37.33242170572068" />
+      <entry key="H1" value="38.527588558736454" />
+      <entry key="H2" value="39.22476689504732" />
+      <entry key="H4" value="39.6020139109614" />
+      <entry key="D1" value="39.93217332771916" />
+      <entry key="W1" value="39.99027309954788" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
 }</component>
+  <component name="ProjectId" id="3LfEMw7UTtWuitjytyaW5zp4Wkg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/timwilburn/Develop/PersonalProjects/Sites/Portfolio/app/assets/files",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/files" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-PS-262.11879.104" />
+        <option value="bundled-php-predefined-a98d8de5180a-9522f28f0b20-com.jetbrains.php.sharedIndexes-PS-262.11879.104" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f522b237-3594-4ff2-bc64-07099f4c04f2" name="Changes" comment="" />
+      <created>1793836678048</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793836678048</updated>
+      <workItem from="1793836679220" duration="1249000" />
+      <workItem from="1793838358841" duration="647000" />
+      <workItem from="1793840461240" duration="521000" />
+      <workItem from="1793840989558" duration="4916000" />
+      <workItem from="1794349070347" duration="1562000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/webpack.config.js</url>
+          <line>44</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
 </project>

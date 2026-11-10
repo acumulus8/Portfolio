@@ -33,7 +33,7 @@ module.exports = (env) => {
 			imageMinimizerPlugin,
 			new MiniCssExtractPlugin(),
 			new CopyPlugin({
-				patterns: [{ from: `app/${filesPath}/Tim-Wilburn-Resume.pdf`, to: filesPath }],
+				patterns: [{ from: `app/${filesPath}/Resume-Dev-2026.pdf`, to: filesPath }],
 			}),
 		],
 		// optimization: { minimizer: [imageMinimizerPlugin] },
